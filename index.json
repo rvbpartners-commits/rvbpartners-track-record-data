@@ -35,12 +35,12 @@
           "weight": 0.3239
         }
       ],
-      "cumulative_return": 0.001077140000000032,
+      "cumulative_return": 0.0017711899999999225,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-GROWTH-AGG",
-      "last_session": "2026-08-12",
-      "latest_detail_session": "2026-08-11",
+      "last_session": "2026-08-13",
+      "latest_detail_session": "2026-08-12",
       "paths": {
         "analytics": "books/best_cagr/analytics.json",
         "attributed": "books/best_cagr/attributed.csv",
@@ -53,7 +53,7 @@
         "nav": "books/best_cagr/nav.csv",
         "snapshots": "books/best_cagr/snapshots/"
       },
-      "sessions": 3,
+      "sessions": 4,
       "tagline_en": "Selected for compound growth",
       "tagline_fr": "Sélectionné pour la croissance composée"
     },
@@ -85,12 +85,12 @@
           "weight": 0.310769
         }
       ],
-      "cumulative_return": 0.001601100000000022,
+      "cumulative_return": 0.002954450000000053,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-SR-STAB",
-      "last_session": "2026-08-12",
-      "latest_detail_session": "2026-08-11",
+      "last_session": "2026-08-13",
+      "latest_detail_session": "2026-08-12",
       "paths": {
         "analytics": "books/best_sharpe/analytics.json",
         "attributed": "books/best_sharpe/attributed.csv",
@@ -103,7 +103,7 @@
         "nav": "books/best_sharpe/nav.csv",
         "snapshots": "books/best_sharpe/snapshots/"
       },
-      "sessions": 3,
+      "sessions": 4,
       "tagline_en": "Selected for risk-adjusted return",
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
     },
@@ -135,12 +135,12 @@
           "weight": 0.108135
         }
       ],
-      "cumulative_return": 0.00037562000000002094,
+      "cumulative_return": 0.0019905999999998425,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-DD-DEF",
-      "last_session": "2026-08-12",
-      "latest_detail_session": "2026-08-11",
+      "last_session": "2026-08-13",
+      "latest_detail_session": "2026-08-13",
       "paths": {
         "analytics": "books/best_mdd/analytics.json",
         "attributed": "books/best_mdd/attributed.csv",
@@ -153,7 +153,7 @@
         "nav": "books/best_mdd/nav.csv",
         "snapshots": "books/best_mdd/snapshots/"
       },
-      "sessions": 3,
+      "sessions": 4,
       "tagline_en": "Selected to limit drawdown",
       "tagline_fr": "Sélectionné pour limiter le drawdown"
     },
@@ -185,12 +185,12 @@
           "weight": 0.81868
         }
       ],
-      "cumulative_return": 0.004808469999999954,
+      "cumulative_return": 0.00464130000000007,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-BLEND-CORE",
-      "last_session": "2026-08-12",
-      "latest_detail_session": "2026-08-11",
+      "last_session": "2026-08-13",
+      "latest_detail_session": "2026-08-12",
       "paths": {
         "analytics": "books/best_composite/analytics.json",
         "attributed": "books/best_composite/attributed.csv",
@@ -203,13 +203,13 @@
         "nav": "books/best_composite/nav.csv",
         "snapshots": "books/best_composite/snapshots/"
       },
-      "sessions": 3,
+      "sessions": 4,
       "tagline_en": "Balanced across all three objectives",
       "tagline_fr": "Équilibré sur les trois objectifs"
     }
   ],
   "chain": {
-    "entries": 12,
+    "entries": 16,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -280,7 +280,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-13T19:56:15+00:00",
+  "published_at": "2026-08-13T22:10:01+00:00",
   "publisher": "RVB Partners live paper-trading desk",
   "schema": "rvb.track-record.index/1"
 }

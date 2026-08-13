@@ -34,23 +34,24 @@
       "weight": 0.310769
     }
   ],
-  "chain_head": "5ea3ddf09efc83307f84a1bd18643bf8f6ee048c9e3e8b83cfde4292b7869b2a",
+  "chain_head": "4f709d3622f04f504c53e1d4c7af475a556558de35e0358ffd29d70ab76090c0",
   "currency": "USD",
-  "desk_manifest_hash": "526edc8688e984672795c59e1dc19669b4e2db31c2cd572d4fd142f34e532213",
+  "desk_manifest_hash": "6aa5dd26466a9a6ccbe21455da372a47815902afcdfb4a6e2e431b98e9d13ef4",
   "detail_lag_days": 0,
   "detail_sessions": [
-    "2026-08-11"
+    "2026-08-11",
+    "2026-08-12"
   ],
   "inception": "2026-08-08",
   "inception_anchored_to_funded_capital": true,
   "inception_note": "Curve starts at the broker's equity on the last day before the first trade, so the first session's P&L is inside the record.",
   "initial_capital": 1000000.0,
-  "intraday_points": 315,
+  "intraday_points": 316,
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-08-12",
-  "latest_detail_session": "2026-08-11",
+  "last_session": "2026-08-13",
+  "latest_detail_session": "2026-08-12",
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-13T19:56:15+00:00",
-  "sessions": 3
+  "published_at": "2026-08-13T22:10:01+00:00",
+  "sessions": 4
 }
