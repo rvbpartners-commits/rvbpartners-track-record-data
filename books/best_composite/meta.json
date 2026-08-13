@@ -1,0 +1,56 @@
+{
+  "account_flags": {
+    "account_blocked": false,
+    "currency": "USD",
+    "multiplier": "4",
+    "shorting_enabled": true,
+    "status": "ACTIVE",
+    "trading_blocked": false
+  },
+  "account_number": null,
+  "account_ref": "sha256:1211346e15573c00",
+  "account_type": "alpaca_paper",
+  "book": "best_composite",
+  "categories": [
+    {
+      "category": "mean_reversion",
+      "code": "MR",
+      "label": "Mean reversion",
+      "strategies": 2,
+      "weight": 0.110695
+    },
+    {
+      "category": "momentum",
+      "code": "MOM",
+      "label": "Momentum",
+      "strategies": 1,
+      "weight": 0.070626
+    },
+    {
+      "category": "seasonal",
+      "code": "SEA",
+      "label": "Seasonal",
+      "strategies": 2,
+      "weight": 0.81868
+    }
+  ],
+  "chain_head": "e6e8ada4e9dde1b80e52fb476b522fe776680c071f88f2c2474461544f4be714",
+  "currency": "USD",
+  "desk_manifest_hash": "2013a44c1949d3f4ef6e4eac3127d1c2626bd244771934ad7df429caa3bffed7",
+  "detail_lag_days": 0,
+  "detail_sessions": [
+    "2026-08-11"
+  ],
+  "inception": "2026-08-08",
+  "inception_anchored_to_funded_capital": true,
+  "inception_note": "Curve starts at the broker's equity on the last day before the first trade, so the first session's P&L is inside the record.",
+  "initial_capital": 1000000.0,
+  "intraday_points": 237,
+  "intraday_resolution": "5 minutes (broker equity)",
+  "intraday_sessions_rejected": [],
+  "last_session": "2026-08-12",
+  "latest_detail_session": "2026-08-11",
+  "min_sessions_for_annualised": 60,
+  "published_at": "2026-08-13T13:09:40+00:00",
+  "sessions": 3
+}

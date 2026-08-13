@@ -1,0 +1,286 @@
+{
+  "books": [
+    {
+      "account_number": null,
+      "account_ref": "sha256:54f7df38b17a2581",
+      "annualised_gated": true,
+      "book": "best_cagr",
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 4,
+          "weight": 0.3901
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.1968
+        },
+        {
+          "category": "trend_following",
+          "code": "TF",
+          "label": "Trend following",
+          "strategies": 1,
+          "weight": 0.0892
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 1,
+          "weight": 0.3239
+        }
+      ],
+      "cumulative_return": 0.001077140000000032,
+      "inception": "2026-08-08",
+      "initial_capital": 1000000.0,
+      "label": "RVB-GROWTH-AGG",
+      "last_session": "2026-08-12",
+      "latest_detail_session": "2026-08-11",
+      "paths": {
+        "analytics": "books/best_cagr/analytics.json",
+        "attributed": "books/best_cagr/attributed.csv",
+        "benchmark": "books/best_cagr/benchmark.csv",
+        "benchmark_intraday": "books/best_cagr/benchmark_intraday.csv",
+        "detail": "books/best_cagr/detail/",
+        "intraday": "books/best_cagr/intraday.csv",
+        "meta": "books/best_cagr/meta.json",
+        "metrics": "books/best_cagr/metrics.json",
+        "nav": "books/best_cagr/nav.csv",
+        "snapshots": "books/best_cagr/snapshots/"
+      },
+      "sessions": 3,
+      "tagline_en": "Selected for compound growth",
+      "tagline_fr": "Sélectionné pour la croissance composée"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:93f4f6ad17de9f95",
+      "annualised_gated": true,
+      "book": "best_sharpe",
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 5,
+          "weight": 0.580242
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.108989
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.310769
+        }
+      ],
+      "cumulative_return": 0.001601100000000022,
+      "inception": "2026-08-08",
+      "initial_capital": 1000000.0,
+      "label": "RVB-SR-STAB",
+      "last_session": "2026-08-12",
+      "latest_detail_session": "2026-08-11",
+      "paths": {
+        "analytics": "books/best_sharpe/analytics.json",
+        "attributed": "books/best_sharpe/attributed.csv",
+        "benchmark": "books/best_sharpe/benchmark.csv",
+        "benchmark_intraday": "books/best_sharpe/benchmark_intraday.csv",
+        "detail": "books/best_sharpe/detail/",
+        "intraday": "books/best_sharpe/intraday.csv",
+        "meta": "books/best_sharpe/meta.json",
+        "metrics": "books/best_sharpe/metrics.json",
+        "nav": "books/best_sharpe/nav.csv",
+        "snapshots": "books/best_sharpe/snapshots/"
+      },
+      "sessions": 3,
+      "tagline_en": "Selected for risk-adjusted return",
+      "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:862dc86cb72b80a6",
+      "annualised_gated": true,
+      "book": "best_mdd",
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 6,
+          "weight": 0.737709
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 2,
+          "weight": 0.154156
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 1,
+          "weight": 0.108135
+        }
+      ],
+      "cumulative_return": 0.00037562000000002094,
+      "inception": "2026-08-08",
+      "initial_capital": 1000000.0,
+      "label": "RVB-DD-DEF",
+      "last_session": "2026-08-12",
+      "latest_detail_session": "2026-08-11",
+      "paths": {
+        "analytics": "books/best_mdd/analytics.json",
+        "attributed": "books/best_mdd/attributed.csv",
+        "benchmark": "books/best_mdd/benchmark.csv",
+        "benchmark_intraday": "books/best_mdd/benchmark_intraday.csv",
+        "detail": "books/best_mdd/detail/",
+        "intraday": "books/best_mdd/intraday.csv",
+        "meta": "books/best_mdd/meta.json",
+        "metrics": "books/best_mdd/metrics.json",
+        "nav": "books/best_mdd/nav.csv",
+        "snapshots": "books/best_mdd/snapshots/"
+      },
+      "sessions": 3,
+      "tagline_en": "Selected to limit drawdown",
+      "tagline_fr": "Sélectionné pour limiter le drawdown"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:1211346e15573c00",
+      "annualised_gated": true,
+      "book": "best_composite",
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 2,
+          "weight": 0.110695
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.070626
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.81868
+        }
+      ],
+      "cumulative_return": 0.004808469999999954,
+      "inception": "2026-08-08",
+      "initial_capital": 1000000.0,
+      "label": "RVB-BLEND-CORE",
+      "last_session": "2026-08-12",
+      "latest_detail_session": "2026-08-11",
+      "paths": {
+        "analytics": "books/best_composite/analytics.json",
+        "attributed": "books/best_composite/attributed.csv",
+        "benchmark": "books/best_composite/benchmark.csv",
+        "benchmark_intraday": "books/best_composite/benchmark_intraday.csv",
+        "detail": "books/best_composite/detail/",
+        "intraday": "books/best_composite/intraday.csv",
+        "meta": "books/best_composite/meta.json",
+        "metrics": "books/best_composite/metrics.json",
+        "nav": "books/best_composite/nav.csv",
+        "snapshots": "books/best_composite/snapshots/"
+      },
+      "sessions": 3,
+      "tagline_en": "Balanced across all three objectives",
+      "tagline_fr": "Équilibré sur les trois objectifs"
+    }
+  ],
+  "chain": {
+    "entries": 12,
+    "file": "CHAIN.jsonl"
+  },
+  "detail_lag_days": 0,
+  "disclosures": [
+    {
+      "body_en": "These results come from Alpaca PAPER accounts. No real money is invested, no capital is at risk, and every fill is simulated by the broker's paper engine against its market data. They are a live-execution rehearsal of the strategies, not a record of managing client money.",
+      "body_fr": "Ces résultats proviennent de comptes PAPIER Alpaca. Aucun argent réel n'est investi, aucun capital n'est engagé, et chaque exécution est simulée par le moteur papier du courtier à partir de ses données de marché. Il s'agit d'une répétition en conditions réelles d'exécution, pas d'un historique de gestion de capitaux de clients.",
+      "id": "paper_account",
+      "severity": "critical",
+      "title_en": "Paper accounts — no capital at risk",
+      "title_fr": "Comptes papier — aucun capital engagé"
+    },
+    {
+      "body_en": "Nothing on this site is investment advice, an offer, or a solicitation to buy or sell any financial instrument. Past performance — simulated or otherwise — is not indicative of future results.",
+      "body_fr": "Rien sur ce site ne constitue un conseil en investissement, une offre ou une sollicitation d'achat ou de vente d'un instrument financier. Les performances passées — simulées ou non — ne préjugent pas des performances futures.",
+      "id": "not_advice",
+      "severity": "critical",
+      "title_en": "Past performance is not indicative of future results",
+      "title_fr": "Les performances passées ne préjugent pas des performances futures"
+    },
+    {
+      "body_en": "Book-level equity and returns are EXACT: they are read from the broker's own account endpoint. Per-strategy returns are not. The broker nets our orders, so each net fill is attributed back to the strategies whose write-ahead intents contributed to it, pro-rata by requested size. That attribution is a model. It is internally consistent and it sums to the book, but a different attribution rule would produce different per-strategy numbers from the same fills.",
+      "body_fr": "L'équité et les rendements au niveau du portefeuille sont EXACTS : ils sont lus directement depuis le compte du courtier. Les rendements par stratégie ne le sont pas. Le courtier nette nos ordres ; chaque exécution nette est donc réattribuée aux stratégies l'ayant demandée, au prorata des tailles. Cette attribution est un modèle : cohérent et dont la somme redonne le portefeuille, mais une autre règle d'attribution donnerait d'autres chiffres par stratégie.",
+      "id": "attributed_returns",
+      "severity": "important",
+      "title_en": "Per-strategy figures are an attributed model",
+      "title_fr": "Les chiffres par stratégie sont un modèle d'attribution"
+    },
+    {
+      "body_en": "The desk consumes Alpaca's free IEX feed, roughly 2-3% of consolidated US equity volume. The daily range the paper fill engine sees is therefore narrower than the real tape, and resting limit orders that the consolidated market would have touched are recorded as expired. Measured over the first sessions: market orders filled 100% (72/72), limit orders 6% (7/120), and of 18 expired limits not one had touched its IEX bar. The direction of the bias is certain — live results UNDERSTATE the limit-order strategies. The magnitude has not been measured and is not stated here.",
+      "body_fr": "Le desk utilise le flux IEX gratuit d'Alpaca, soit environ 2-3 % du volume consolidé des actions américaines. L'amplitude quotidienne vue par le moteur d'exécution papier est donc plus étroite que celle du marché réel, et des ordres à cours limité que le marché consolidé aurait touchés sont enregistrés comme expirés. Mesuré sur les premières séances : ordres au marché exécutés à 100 % (72/72), ordres à cours limité à 6 % (7/120) ; sur 18 limites expirées, aucune n'avait touché sa barre IEX. Le sens du biais est certain — les résultats publiés MINORENT les stratégies à cours limité. L'ampleur n'a pas été mesurée et n'est pas chiffrée ici.",
+      "id": "limit_fill_bias",
+      "severity": "important",
+      "title_en": "Limit-order fills are biased low — these results understate",
+      "title_fr": "Les exécutions à cours limité sont sous-estimées — ces résultats minorent"
+    },
+    {
+      "body_en": "Sharpe, CAGR, Calmar, volatility and maximum drawdown are suppressed until a book has at least 60 marked sessions. On a handful of sessions they are not imprecise, they are meaningless. Cumulative return and the equity curve are shown from the first day, because those are statements of what happened.",
+      "body_fr": "Le Sharpe, le CAGR, le Calmar, la volatilité et le drawdown maximum sont masqués tant qu'un portefeuille n'a pas au moins 60 séances marquées. Sur quelques séances, ces mesures ne sont pas imprécises : elles n'ont pas de sens. Le rendement cumulé et la courbe d'équité sont affichés dès le premier jour, car ce sont des constats.",
+      "id": "short_history",
+      "severity": "important",
+      "title_en": "Annualised statistics are withheld until there is enough history",
+      "title_fr": "Les statistiques annualisées sont retenues faute d'historique"
+    },
+    {
+      "body_en": "NAV, returns and metrics are published with no delay. Order, fill and position detail is published as soon as the cycle that produced it has ACTUALLY EXECUTED — there is no additional waiting period. What is never published is the pending order plan: the desk computes its orders after the close for the next open, and that plan stays private until it has been sent. The execution test, not a delay, is what prevents publishing orders before they exist at the broker. The consequence is deliberate: current holdings are public.",
+      "body_fr": "La VL, les rendements et les métriques sont publiés sans délai. Le détail des ordres, exécutions et positions est publié dès que le cycle correspondant a RÉELLEMENT été exécuté — sans délai supplémentaire. Ce qui n'est jamais publié, c'est le plan d'ordres en attente : le desk calcule ses ordres après la clôture pour l'ouverture suivante, et ce plan reste privé jusqu'à son envoi. C'est le test d'exécution, et non un délai, qui empêche de publier des ordres avant qu'ils n'existent chez le courtier. La conséquence est assumée : les positions courantes sont publiques.",
+      "id": "detail_lag",
+      "severity": "note",
+      "title_en": "Everything is published as soon as it is real",
+      "title_fr": "Tout est publié dès que c'est réel"
+    },
+    {
+      "body_en": "Positions and attribution are grouped by the STYLE of the strategy that holds them — mean reversion, momentum, trend following, seasonal — and never by the individual strategy. The category answers what kind of risk is being taken; the identity of each strategy, and its logic, are not published. Per-position profit and loss is reported at the category level for the same reason: a per-symbol P&L line under a named style is the trade record itself.",
+      "body_fr": "Les positions et l'attribution sont regroupées par STYLE de stratégie — retour à la moyenne, momentum, suivi de tendance, saisonnalité — et jamais par stratégie individuelle. La catégorie indique le type de risque pris ; l'identité de chaque stratégie et sa logique ne sont pas publiées. Le résultat par position est agrégé au niveau de la catégorie pour la même raison : une ligne de P&L par titre sous un style nommé constitue le journal de trading lui-même.",
+      "id": "strategy_identity",
+      "severity": "note",
+      "title_en": "Holdings are shown by strategy category, not by strategy",
+      "title_fr": "Les positions sont présentées par catégorie de stratégie"
+    },
+    {
+      "body_en": "Returns are time-weighted, which with no external cash flows reduces to simple compounding of daily NAV. The presentation is informed by GIPS practice but makes NO claim of GIPS compliance: that requires third-party verification, which has not been performed.",
+      "body_fr": "Les rendements sont pondérés par le temps ; en l'absence de flux externes, cela revient à la capitalisation simple de la VL quotidienne. La présentation s'inspire des pratiques GIPS mais ne revendique AUCUNE conformité GIPS : celle-ci exige une vérification par un tiers, qui n'a pas été réalisée.",
+      "id": "not_gips",
+      "severity": "note",
+      "title_en": "GIPS-informed, not GIPS-compliant",
+      "title_fr": "Inspiré des normes GIPS, sans conformité GIPS"
+    }
+  ],
+  "min_sessions_for_annualised": 60,
+  "published_at": "2026-08-13T13:09:40+00:00",
+  "publisher": "RVB Partners live paper-trading desk",
+  "schema": "rvb.track-record.index/1"
+}
