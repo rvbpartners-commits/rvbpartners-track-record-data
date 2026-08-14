@@ -1,0 +1,69 @@
+{
+  "as_of": "2026-08-14",
+  "benchmark_cum": [
+    {
+      "cash": 0.0,
+      "date": "2026-08-13",
+      "spy": 0.0
+    },
+    {
+      "cash": 0.0001538359788360033,
+      "date": "2026-08-14",
+      "spy": -0.0019798416126710627
+    }
+  ],
+  "book": "best_composite_100k",
+  "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
+  "daily_returns": [
+    {
+      "date": "2026-08-14",
+      "return": -1.8599999999979744e-05
+    }
+  ],
+  "distribution": {
+    "bins": [],
+    "note": "not enough sessions to bin"
+  },
+  "drawdown": [
+    {
+      "date": "2026-08-13",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-08-14",
+      "drawdown": -1.8599999999979744e-05
+    }
+  ],
+  "drawdown_consistent_with_metrics": true,
+  "drawdown_episodes": [
+    {
+      "depth": -1.8599999999979744e-05,
+      "ongoing": true,
+      "recovered": null,
+      "sessions": 1,
+      "start": "2026-08-14",
+      "trough": "2026-08-14"
+    }
+  ],
+  "gated": true,
+  "min_sessions_for_annualised": 60,
+  "monthly_returns": [
+    {
+      "month": 8,
+      "partial": true,
+      "return": -1.8599999999979744e-05,
+      "sessions": 1,
+      "year": 2026
+    }
+  ],
+  "published_at": "2026-08-14T22:15:01+00:00",
+  "quantiles": [],
+  "risk_free_annual": 0.038766666666666665,
+  "risk_free_source": "FRED DGS3MO",
+  "rolling_sharpe": {},
+  "rolling_sortino": {},
+  "rolling_volatility": {},
+  "sessions": 1,
+  "summary": {},
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 1."
+}

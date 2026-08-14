@@ -238,10 +238,61 @@
       "sessions": 5,
       "tagline_en": "Balanced across all three objectives",
       "tagline_fr": "Équilibré sur les trois objectifs"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:22b1e1442449e5de",
+      "annualised_gated": true,
+      "book": "best_composite_100k",
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 2,
+          "weight": 0.110695
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.070626
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.81868
+        }
+      ],
+      "cumulative_return": -1.8599999999979744e-05,
+      "inception": "2026-08-13",
+      "initial_capital": 100000.0,
+      "label": "RVB-BLEND-100K",
+      "last_session": "2026-08-14",
+      "latest_detail_session": "2026-08-14",
+      "live": null,
+      "paths": {
+        "analytics": "books/best_composite_100k/analytics.json",
+        "attributed": "books/best_composite_100k/attributed.csv",
+        "benchmark": "books/best_composite_100k/benchmark.csv",
+        "benchmark_intraday": "books/best_composite_100k/benchmark_intraday.csv",
+        "detail": "books/best_composite_100k/detail/",
+        "intraday": "books/best_composite_100k/intraday.csv",
+        "meta": "books/best_composite_100k/meta.json",
+        "metrics": "books/best_composite_100k/metrics.json",
+        "nav": "books/best_composite_100k/nav.csv",
+        "snapshots": "books/best_composite_100k/snapshots/"
+      },
+      "sessions": 2,
+      "tagline_en": "Balanced across all three objectives, at $100k",
+      "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
     }
   ],
   "chain": {
-    "entries": 20,
+    "entries": 22,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -304,7 +355,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-14T22:00:01+00:00",
+  "published_at": "2026-08-14T22:15:01+00:00",
   "publisher": "RVB Partners live paper-trading desk",
   "schema": "rvb.track-record.index/1"
 }
