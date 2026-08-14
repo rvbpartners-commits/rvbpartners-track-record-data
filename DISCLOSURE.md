@@ -22,12 +22,6 @@ Nothing on this site is investment advice, an offer, or a solicitation to buy or
 
 Book-level equity and returns are EXACT: they are read from the broker's own account endpoint. Per-strategy returns are not. The broker nets our orders, so each net fill is attributed back to the strategies whose write-ahead intents contributed to it, pro-rata by requested size. That attribution is a model. It is internally consistent and it sums to the book, but a different attribution rule would produce different per-strategy numbers from the same fills.
 
-## Limit-order fills are biased low — these results understate
-
-*IMPORTANT*
-
-The desk consumes Alpaca's free IEX feed, roughly 2-3% of consolidated US equity volume. The daily range the paper fill engine sees is therefore narrower than the real tape, and resting limit orders that the consolidated market would have touched are recorded as expired. Measured over the first sessions: market orders filled 100% (72/72), limit orders 6% (7/120), and of 18 expired limits not one had touched its IEX bar. The direction of the bias is certain — live results UNDERSTATE the limit-order strategies. The magnitude has not been measured and is not stated here.
-
 ## Annualised statistics are withheld until there is enough history
 
 *IMPORTANT*

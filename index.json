@@ -271,14 +271,6 @@
       "title_fr": "Les chiffres par stratégie sont un modèle d'attribution"
     },
     {
-      "body_en": "The desk consumes Alpaca's free IEX feed, roughly 2-3% of consolidated US equity volume. The daily range the paper fill engine sees is therefore narrower than the real tape, and resting limit orders that the consolidated market would have touched are recorded as expired. Measured over the first sessions: market orders filled 100% (72/72), limit orders 6% (7/120), and of 18 expired limits not one had touched its IEX bar. The direction of the bias is certain — live results UNDERSTATE the limit-order strategies. The magnitude has not been measured and is not stated here.",
-      "body_fr": "Le desk utilise le flux IEX gratuit d'Alpaca, soit environ 2-3 % du volume consolidé des actions américaines. L'amplitude quotidienne vue par le moteur d'exécution papier est donc plus étroite que celle du marché réel, et des ordres à cours limité que le marché consolidé aurait touchés sont enregistrés comme expirés. Mesuré sur les premières séances : ordres au marché exécutés à 100 % (72/72), ordres à cours limité à 6 % (7/120) ; sur 18 limites expirées, aucune n'avait touché sa barre IEX. Le sens du biais est certain — les résultats publiés MINORENT les stratégies à cours limité. L'ampleur n'a pas été mesurée et n'est pas chiffrée ici.",
-      "id": "limit_fill_bias",
-      "severity": "important",
-      "title_en": "Limit-order fills are biased low — these results understate",
-      "title_fr": "Les exécutions à cours limité sont sous-estimées — ces résultats minorent"
-    },
-    {
       "body_en": "Sharpe, CAGR, Calmar, volatility and maximum drawdown are suppressed until a book has at least 60 marked sessions. On a handful of sessions they are not imprecise, they are meaningless. Cumulative return and the equity curve are shown from the first day, because those are statements of what happened.",
       "body_fr": "Le Sharpe, le CAGR, le Calmar, la volatilité et le drawdown maximum sont masqués tant qu'un portefeuille n'a pas au moins 60 séances marquées. Sur quelques séances, ces mesures ne sont pas imprécises : elles n'ont pas de sens. Le rendement cumulé et la courbe d'équité sont affichés dès le premier jour, car ce sont des constats.",
       "id": "short_history",
@@ -312,7 +304,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-14T20:15:01+00:00",
+  "published_at": "2026-08-14T20:43:05+00:00",
   "publisher": "RVB Partners live paper-trading desk",
   "schema": "rvb.track-record.index/1"
 }
