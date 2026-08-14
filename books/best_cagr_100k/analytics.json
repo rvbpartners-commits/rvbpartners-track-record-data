@@ -12,12 +12,12 @@
       "spy": -0.0019798416126710627
     }
   ],
-  "book": "best_composite_100k",
+  "book": "best_cagr_100k",
   "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
   "daily_returns": [
     {
       "date": "2026-08-14",
-      "return": -1.8599999999979744e-05
+      "return": 0.00022780000000000022
     }
   ],
   "distribution": {
@@ -31,27 +31,18 @@
     },
     {
       "date": "2026-08-14",
-      "drawdown": -1.8599999999979744e-05
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
-  "drawdown_episodes": [
-    {
-      "depth": -1.8599999999979744e-05,
-      "ongoing": true,
-      "recovered": null,
-      "sessions": 1,
-      "start": "2026-08-14",
-      "trough": "2026-08-14"
-    }
-  ],
+  "drawdown_episodes": [],
   "gated": true,
   "min_sessions_for_annualised": 60,
   "monthly_returns": [
     {
       "month": 8,
       "partial": true,
-      "return": -1.8599999999979744e-05,
+      "return": 0.00022780000000000022,
       "sessions": 1,
       "year": 2026
     }

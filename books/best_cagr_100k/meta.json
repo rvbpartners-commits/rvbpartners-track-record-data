@@ -8,35 +8,42 @@
     "trading_blocked": false
   },
   "account_number": null,
-  "account_ref": "sha256:22b1e1442449e5de",
+  "account_ref": "sha256:5f78e28e5b52f09d",
   "account_type": "alpaca_paper",
-  "book": "best_composite_100k",
+  "book": "best_cagr_100k",
   "categories": [
     {
       "category": "mean_reversion",
       "code": "MR",
       "label": "Mean reversion",
-      "strategies": 2,
-      "weight": 0.110695
+      "strategies": 4,
+      "weight": 0.3901
     },
     {
       "category": "momentum",
       "code": "MOM",
       "label": "Momentum",
       "strategies": 1,
-      "weight": 0.070626
+      "weight": 0.1968
+    },
+    {
+      "category": "trend_following",
+      "code": "TF",
+      "label": "Trend following",
+      "strategies": 1,
+      "weight": 0.0892
     },
     {
       "category": "seasonal",
       "code": "SEA",
       "label": "Seasonal",
-      "strategies": 2,
-      "weight": 0.81868
+      "strategies": 1,
+      "weight": 0.3239
     }
   ],
-  "chain_head": "45f18f6b7650f23a6195047f56b562163dc11456969782cd69ef01149ada2e38",
+  "chain_head": "990c357be357612694ec1ea8432789d96d35b1f2f50efaf36794e4a2b3b928a3",
   "currency": "USD",
-  "desk_manifest_hash": "b8989effa58642be2e6efd9715be071d06db77c3b9d17b6ece3d584e71c4407e",
+  "desk_manifest_hash": "6bb550623330104290b8ca96290dd2300b4b2e8adad7ee5216b6edc17b511934",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-14"
