@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-13",
+  "as_of": "2026-08-14",
   "benchmark_cum": [
     {
       "cash": 0.0,
@@ -20,6 +20,11 @@
       "cash": 0.0004615789366737566,
       "date": "2026-08-13",
       "spy": 0.006053080862952198
+    },
+    {
+      "cash": 0.0006154859229572374,
+      "date": "2026-08-14",
+      "spy": 0.00406125510890365
     }
   ],
   "book": "best_composite",
@@ -36,12 +41,16 @@
     {
       "date": "2026-08-13",
       "return": -0.0001663700147749303
+    },
+    {
+      "date": "2026-08-14",
+      "return": 0.0006236056590547268
     }
   ],
   "distribution": {
     "bins": [
       {
-        "count": 2,
+        "count": 3,
         "from": -0.0009727400000000275,
         "to": 0.0012804530299520924
       },
@@ -73,6 +82,10 @@
     {
       "date": "2026-08-13",
       "drawdown": -0.0001663700147749303
+    },
+    {
+      "date": "2026-08-14",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -87,9 +100,9 @@
     },
     {
       "depth": -0.0001663700147749303,
-      "ongoing": true,
-      "recovered": null,
-      "sessions": 1,
+      "ongoing": false,
+      "recovered": "2026-08-14",
+      "sessions": 2,
       "start": "2026-08-13",
       "trough": "2026-08-13"
     }
@@ -100,19 +113,29 @@
     {
       "month": 8,
       "partial": true,
-      "return": 0.00464130000000007,
-      "sessions": 3,
+      "return": 0.005267800000000156,
+      "sessions": 4,
       "year": 2026
     }
   ],
-  "published_at": "2026-08-14T21:30:01+00:00",
-  "quantiles": [],
+  "published_at": "2026-08-14T22:00:01+00:00",
+  "quantiles": [
+    {
+      "horizon": "Daily",
+      "max": 0.005786839089856333,
+      "median": 0.00022861782213989823,
+      "min": -0.0009727400000000275,
+      "n": 4,
+      "q25": -0.0003679625110812046,
+      "q75": 0.0019144140167551282
+    }
+  ],
   "risk_free_annual": 0.038766666666666665,
   "risk_free_source": "FRED DGS3MO",
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 3,
+  "sessions": 4,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 3."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 4."
 }
