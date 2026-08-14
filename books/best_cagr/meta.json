@@ -53,7 +53,7 @@
   "inception_anchored_to_funded_capital": true,
   "inception_note": "Curve starts at the broker's equity on the last day before the first trade, so the first session's P&L is inside the record.",
   "initial_capital": 1000000.0,
-  "intraday_points": 250,
+  "intraday_points": 253,
   "intraday_pre_trading_sessions": [
     "2026-08-10"
   ],
@@ -62,6 +62,6 @@
   "last_session": "2026-08-13",
   "latest_detail_session": "2026-08-12",
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-14T14:30:01+00:00",
+  "published_at": "2026-08-14T14:45:01+00:00",
   "sessions": 4
 }
