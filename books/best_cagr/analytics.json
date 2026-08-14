@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-13",
+  "as_of": "2026-08-14",
   "benchmark_cum": [
     {
       "cash": 0.0,
@@ -20,6 +20,11 @@
       "cash": 0.0004619758842241417,
       "date": "2026-08-13",
       "spy": 0.006053080862952198
+    },
+    {
+      "cash": 0.0006160152678127417,
+      "date": "2026-08-14",
+      "spy": 0.006053080862952198
     }
   ],
   "book": "best_cagr",
@@ -36,6 +41,10 @@
     {
       "date": "2026-08-13",
       "return": 0.000693303215374419
+    },
+    {
+      "date": "2026-08-14",
+      "return": 0.0010586848679488003
     }
   ],
   "distribution": {
@@ -51,7 +60,7 @@
         "to": 0.0008359963216660142
       },
       {
-        "count": 1,
+        "count": 2,
         "from": 0.0008359963216660142,
         "to": 0.001430344482499013
       }
@@ -73,6 +82,10 @@
     {
       "date": "2026-08-13",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-08-14",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -92,19 +105,29 @@
     {
       "month": 8,
       "partial": true,
-      "return": 0.0017711899999999225,
-      "sessions": 3,
+      "return": 0.0028317499999999107,
+      "sessions": 4,
       "year": 2026
     }
   ],
-  "published_at": "2026-08-14T20:43:05+00:00",
-  "quantiles": [],
+  "published_at": "2026-08-14T20:45:01+00:00",
+  "quantiles": [
+    {
+      "horizon": "Daily",
+      "max": 0.001430344482499013,
+      "median": 0.0008759940416616097,
+      "min": -0.0003526999999999836,
+      "n": 4,
+      "q25": 0.00043180241153081833,
+      "q75": 0.0011515997715863535
+    }
+  ],
   "risk_free_annual": 0.0388,
   "risk_free_source": "FRED DGS3MO",
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 3,
+  "sessions": 4,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 3."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 4."
 }
