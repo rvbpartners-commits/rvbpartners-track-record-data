@@ -3,3 +3,6 @@
 .DS_Store
 Thumbs.db
 *.tmp
+# `ots upgrade` writes a .bak of the superseded, still-pending proof.
+# The confirmed proof replaces it; the backup evidences nothing.
+*.ots.bak
