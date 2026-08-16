@@ -129,8 +129,10 @@ follow from the equity curve by open code.
 would have happened in a real market, or that we are not running other,
 unpublished books. Git history can be rewritten by whoever controls the
 repository — which is exactly why the hash chain, the OpenTimestamps proofs and
-branch protection (no force-push, no deletion on `main`) are used together rather
-than relying on any one of them.
+the branch ruleset on `main` (no deletion, no force-push, linear history,
+signatures required) are used together rather than relying on any one of them.
+Every publish commit is signed; `git log --show-signature` checks that against
+the key, and GitHub shows it as Verified.
 
 **And it says nothing about the results being good.** These are paper accounts
 with a short history. The point of this repository is that the record is
