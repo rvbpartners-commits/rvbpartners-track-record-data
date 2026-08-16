@@ -85,11 +85,45 @@ same date and the difference from our published NAV in basis points. The two
 endpoints have different timing bases and are expected to differ slightly; both
 are broker figures and neither is adjusted to match the other.
 
+## 6. The trades, and the intraday curve
+
+Snapshots are write-once: a second version is a restatement and the publisher
+refuses. Execution detail is deliberately *correctable* (the first release keyed
+positions by strategy slug, and withdrawing that was worth a rewrite), and the
+5-minute series is accumulated rather than derived, so neither can live in the
+write-once chain.
+
+`DETAIL_CHAIN.jsonl` is where they are recorded instead: append-only, each entry
+linked to the last, one entry per version of each artefact.
+
+```python
+import hashlib, json, pathlib
+chain = [json.loads(l) for l in open("DETAIL_CHAIN.jsonl", encoding="utf-8") if l.strip()]
+prev = "0" * 64
+for e in chain:                                   # links intact
+    body = {k: v for k, v in e.items() if k != "hash"}
+    assert e["prev_hash"] == prev
+    prev = e["hash"]
+latest = {(e["book"], e["session_date"], e["kind"]): e["sha256"] for e in chain}
+for (book, session, kind), digest in latest.items():
+    if kind == "detail":                          # the orders and fills
+        raw = pathlib.Path(f"books/{book}/detail/{session}.json").read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == digest, (book, session)
+```
+
+A correction appends; it never overwrites. So a session whose detail changed
+appears twice, with two timestamps, and only the newest entry matches the file
+on disk. What this forbids is the quiet substitution: publishing one set of fills
+and later serving another with nothing to show for it.
+
 ## What this does and does not prove
 
 **It proves:** no published number has been edited after the fact; no session has
-been quietly dropped; each record existed when it claims to; the metrics follow
-from the equity curve by open code.
+been quietly dropped; each record existed when it claims to (`desk publish
+--verify` opens every proof, checks it commits to that exact file, and reports
+the Bitcoin block it is anchored in); the orders, fills and intraday curve match
+the digests recorded for them, and any correction to them is visible; the metrics
+follow from the equity curve by open code.
 
 **It does not prove:** that the trading itself was skilful, that the paper fills
 would have happened in a real market, or that we are not running other,
