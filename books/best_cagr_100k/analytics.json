@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-14",
+  "as_of": "2026-08-17",
   "benchmark_cum": [
     {
       "cash": 0.0,
@@ -10,6 +10,11 @@
       "cash": 0.00015367063492055522,
       "date": "2026-08-14",
       "spy": -0.0019798416126710627
+    },
+    {
+      "cash": 0.00030736488450511246,
+      "date": "2026-08-17",
+      "spy": -0.006710891700092647
     }
   ],
   "book": "best_cagr_100k",
@@ -18,11 +23,30 @@
     {
       "date": "2026-08-14",
       "return": 0.00022780000000000022
+    },
+    {
+      "date": "2026-08-17",
+      "return": 0.0006193589100402797
     }
   ],
   "distribution": {
-    "bins": [],
-    "note": "not enough sessions to bin"
+    "bins": [
+      {
+        "count": 1,
+        "from": 0.00022780000000000022,
+        "to": 0.00035831963668009337
+      },
+      {
+        "count": 0,
+        "from": 0.00035831963668009337,
+        "to": 0.0004888392733601865
+      },
+      {
+        "count": 1,
+        "from": 0.0004888392733601865,
+        "to": 0.0006193589100402797
+      }
+    ]
   },
   "drawdown": [
     {
@@ -31,6 +55,10 @@
     },
     {
       "date": "2026-08-14",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-08-17",
       "drawdown": 0.0
     }
   ],
@@ -42,19 +70,19 @@
     {
       "month": 8,
       "partial": true,
-      "return": 0.00022780000000000022,
-      "sessions": 1,
+      "return": 0.0008472999999999953,
+      "sessions": 2,
       "year": 2026
     }
   ],
-  "published_at": "2026-08-17T22:05:02+00:00",
+  "published_at": "2026-08-17T22:20:02+00:00",
   "quantiles": [],
   "risk_free_annual": 0.038724999999999996,
   "risk_free_source": "FRED DGS3MO",
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 1,
+  "sessions": 2,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 1."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 2."
 }
