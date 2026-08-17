@@ -151,12 +151,12 @@
           "weight": 0.108135
         }
       ],
-      "cumulative_return": 0.0017842899999997996,
+      "cumulative_return": 0.0006818199999996111,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-DD-DEF",
-      "last_session": "2026-08-14",
-      "latest_detail_session": "2026-08-13",
+      "last_session": "2026-08-17",
+      "latest_detail_session": "2026-08-14",
       "live": {
         "at": "2026-08-17T20:00:00+00:00",
         "cumulative_return": 0.0007441999999999727,
@@ -177,7 +177,7 @@
         "nav": "books/best_mdd/nav.csv",
         "snapshots": "books/best_mdd/snapshots/"
       },
-      "sessions": 5,
+      "sessions": 6,
       "tagline_en": "Selected to limit drawdown",
       "tagline_fr": "Sélectionné pour limiter le drawdown"
     },
@@ -364,7 +364,7 @@
     }
   ],
   "chain": {
-    "entries": 26,
+    "entries": 27,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -427,7 +427,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-17T21:05:02+00:00",
+  "published_at": "2026-08-17T21:25:02+00:00",
   "publisher": "RVB Partners live paper-trading desk",
   "schema": "rvb.track-record.index/1"
 }
