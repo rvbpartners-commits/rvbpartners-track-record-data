@@ -2,7 +2,7 @@
   "account_flags": {
     "account_blocked": false,
     "currency": "USD",
-    "multiplier": "4",
+    "multiplier": "2",
     "shorting_enabled": true,
     "status": "ACTIVE",
     "trading_blocked": false
@@ -34,9 +34,9 @@
       "weight": 0.81868
     }
   ],
-  "chain_head": "45f18f6b7650f23a6195047f56b562163dc11456969782cd69ef01149ada2e38",
+  "chain_head": "9b38a33dcd0925a374f24de120df75c2e876d85b6a5e5442ff14d14cf21efee1",
   "currency": "USD",
-  "desk_manifest_hash": "b8989effa58642be2e6efd9715be071d06db77c3b9d17b6ece3d584e71c4407e",
+  "desk_manifest_hash": "df43ea63620a14a391cd675e4f90fba6f4f2a933d7c17e9c244c114ca99993e7",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-14"
@@ -51,7 +51,7 @@
   "intraday_sessions_rejected": [
     "2026-08-14 (max deviation 100.0% from published NAV)"
   ],
-  "last_session": "2026-08-14",
+  "last_session": "2026-08-17",
   "latest_detail_session": "2026-08-14",
   "live": {
     "at": "2026-08-17T20:00:00+00:00",
@@ -62,6 +62,6 @@
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-17T21:50:02+00:00",
-  "sessions": 2
+  "published_at": "2026-08-17T22:05:02+00:00",
+  "sessions": 3
 }
