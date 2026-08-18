@@ -2,7 +2,7 @@
   "account_flags": {
     "account_blocked": false,
     "currency": "USD",
-    "multiplier": "2",
+    "multiplier": "4",
     "shorting_enabled": true,
     "status": "ACTIVE",
     "trading_blocked": false
@@ -41,12 +41,13 @@
       "weight": 0.3239
     }
   ],
-  "chain_head": "3c8d32414b1d813baeb2ef140b6be063f90e63ed990c91309813951af3471d5a",
+  "chain_head": "f4f373c2579ea6c0565888f0b6de0d8f88a000ec322c1b3163482cdf84562a4c",
   "currency": "USD",
-  "desk_manifest_hash": "a021e28a737eb251e3141f999068ecc3663976a83fb30134454f7b149303215f",
+  "desk_manifest_hash": "debb323d5b57551dec92b3a77a0cde4be7425904a0d464223cb616a570d9bf7a",
   "detail_lag_days": 0,
   "detail_sessions": [
-    "2026-08-14"
+    "2026-08-14",
+    "2026-08-17"
   ],
   "inception": "2026-08-13",
   "inception_anchored_to_funded_capital": true,
@@ -58,8 +59,8 @@
   "intraday_sessions_rejected": [
     "2026-08-14 (max deviation 100.1% from published NAV)"
   ],
-  "last_session": "2026-08-17",
-  "latest_detail_session": "2026-08-14",
+  "last_session": "2026-08-18",
+  "latest_detail_session": "2026-08-17",
   "live": {
     "at": "2026-08-18T20:00:00+00:00",
     "cumulative_return": -0.0006707000000000241,
@@ -69,6 +70,6 @@
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-18T22:05:02+00:00",
-  "sessions": 3
+  "published_at": "2026-08-18T22:20:02+00:00",
+  "sessions": 4
 }
