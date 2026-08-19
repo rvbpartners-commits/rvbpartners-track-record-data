@@ -34,16 +34,17 @@
       "weight": 0.310769
     }
   ],
-  "chain_head": "ba84ce3b000c8c8339d36852a50293e56927bcaf93650d16cc8e2f5e137c301b",
+  "chain_head": "b08c8cf725dfa3211a50e5e717ad9590207fe117a81e924a703342c19fa60102",
   "currency": "USD",
-  "desk_manifest_hash": "b4bf2c76ce2842a8d17b74f1a7c1ae503ce503d68879ec6bad302a2fc0311328",
+  "desk_manifest_hash": "383125ab1795ba03c9d679ef85b2c6b60a7758c97bd88f3933a8c9069288fd73",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-11",
     "2026-08-12",
     "2026-08-13",
     "2026-08-14",
-    "2026-08-17"
+    "2026-08-17",
+    "2026-08-18"
   ],
   "inception": "2026-08-08",
   "inception_anchored_to_funded_capital": true,
@@ -53,8 +54,8 @@
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-08-18",
-  "latest_detail_session": "2026-08-17",
+  "last_session": "2026-08-19",
+  "latest_detail_session": "2026-08-18",
   "live": {
     "at": "2026-08-19T20:00:00+00:00",
     "cumulative_return": 0.003048989999999918,
@@ -64,6 +65,6 @@
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-19T20:45:02+00:00",
-  "sessions": 7
+  "published_at": "2026-08-19T21:05:03+00:00",
+  "sessions": 8
 }
