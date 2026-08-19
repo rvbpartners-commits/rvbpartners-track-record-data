@@ -1,0 +1,228 @@
+{
+  "book": "best_composite_100k",
+  "categories": [
+    {
+      "category": "mean_reversion",
+      "code": "MR",
+      "cost_basis": 1712.57,
+      "label": "Mean reversion",
+      "market_value": 1698.22,
+      "n_long": 1,
+      "n_positions": 1,
+      "n_short": 0,
+      "open_pnl": -14.35,
+      "open_pnl_pct": -0.008379219535551865,
+      "partial": false,
+      "positions": [
+        {
+          "avg_price": 41.77,
+          "cost_basis": 1712.5700000000002,
+          "mark": 41.42,
+          "qty": 41.0,
+          "symbol": "LUV"
+        }
+      ],
+      "unmarked": 0
+    },
+    {
+      "category": "momentum",
+      "code": "MOM",
+      "cost_basis": 7076.55,
+      "label": "Momentum",
+      "market_value": 7082.2,
+      "n_long": 7,
+      "n_positions": 7,
+      "n_short": 0,
+      "open_pnl": 5.65,
+      "open_pnl_pct": 0.0007988127306399991,
+      "partial": false,
+      "positions": [
+        {
+          "avg_price": 40.57370511616562,
+          "cost_basis": 1013.5409726384554,
+          "mark": 43.46,
+          "qty": 24.980242000000004,
+          "symbol": "APA"
+        },
+        {
+          "avg_price": 22.793737514274348,
+          "cost_basis": 901.152395682,
+          "mark": 23.145,
+          "qty": 39.535087,
+          "symbol": "HST"
+        },
+        {
+          "avg_price": 33.6264963527737,
+          "cost_basis": 1143.2885350701442,
+          "mark": 33.98,
+          "qty": 33.999632999999996,
+          "symbol": "BEN"
+        },
+        {
+          "avg_price": 50.39947075089409,
+          "cost_basis": 897.3714974259922,
+          "mark": 50.68,
+          "qty": 17.805177,
+          "symbol": "CSX"
+        },
+        {
+          "avg_price": 20.8,
+          "cost_basis": 1113.8493808000003,
+          "mark": 20.76,
+          "qty": 53.55045100000001,
+          "symbol": "DOC"
+        },
+        {
+          "avg_price": 59.533869,
+          "cost_basis": 1024.927408834899,
+          "mark": 53.125,
+          "qty": 17.215871,
+          "symbol": "HPE"
+        },
+        {
+          "avg_price": 15.9937212665045,
+          "cost_basis": 982.416919777884,
+          "mark": 16.24,
+          "qty": 61.425162,
+          "symbol": "VTRS"
+        }
+      ],
+      "unmarked": 0
+    }
+  ],
+  "fills": [
+    {
+      "price": 43.094,
+      "qty": -0.249727,
+      "symbol": "APA",
+      "ts": "2026-08-19T09:31:05.584737-04:00"
+    },
+    {
+      "price": 34.212,
+      "qty": 0.047436,
+      "symbol": "BEN",
+      "ts": "2026-08-19T09:31:05.681972-04:00"
+    },
+    {
+      "price": 50.45,
+      "qty": -0.040682,
+      "symbol": "CSX",
+      "ts": "2026-08-19T09:31:05.769760-04:00"
+    },
+    {
+      "price": 20.548,
+      "qty": -0.199289,
+      "symbol": "DOC",
+      "ts": "2026-08-19T09:31:05.857415-04:00"
+    },
+    {
+      "price": 55.772,
+      "qty": -0.45265,
+      "symbol": "HPE",
+      "ts": "2026-08-19T09:31:05.944689-04:00"
+    },
+    {
+      "price": 23.02,
+      "qty": 2.205743,
+      "symbol": "HST",
+      "ts": "2026-08-19T09:46:07.601161-04:00"
+    },
+    {
+      "price": 16.48,
+      "qty": 1.328209,
+      "symbol": "VTRS",
+      "ts": "2026-08-19T09:46:07.692405-04:00"
+    },
+    {
+      "price": 41.77,
+      "qty": 41.0,
+      "symbol": "LUV",
+      "ts": "2026-08-19T17:58:02.931543-04:00"
+    }
+  ],
+  "note": "Released only after the cycle executed. Quantities are as the desk recorded them. Holdings are grouped by strategy CATEGORY; individual strategy identities are not published. The grouping is the attributed model, not a broker statement.",
+  "orders": [
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 43.094,
+      "filled_qty": 0.249727,
+      "qty": 0.249727,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:04.562988175Z",
+      "symbol": "APA"
+    },
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 34.212,
+      "filled_qty": 0.047436,
+      "qty": 0.047436,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:04.704119765Z",
+      "symbol": "BEN"
+    },
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 50.45,
+      "filled_qty": 0.040682,
+      "qty": 0.040682,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:04.858178195Z",
+      "symbol": "CSX"
+    },
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 20.548,
+      "filled_qty": 0.199289,
+      "qty": 0.199289,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:04.963679138Z",
+      "symbol": "DOC"
+    },
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 55.772,
+      "filled_qty": 0.45265,
+      "qty": 0.45265,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:05.057194222Z",
+      "symbol": "HPE"
+    },
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 23.02,
+      "filled_qty": 2.205743,
+      "qty": 2.205743,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:05.168944449Z",
+      "symbol": "HST"
+    },
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 16.48,
+      "filled_qty": 1.328209,
+      "qty": 1.328209,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:05.304137621Z",
+      "symbol": "VTRS"
+    },
+    {
+      "cycle_ts": "2026-08-18",
+      "filled_avg_price": 41.77,
+      "filled_qty": 41.0,
+      "qty": 41.0,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-08-19T13:31:05.442024594Z",
+      "symbol": "LUV"
+    }
+  ],
+  "released_under_lag_days": 0,
+  "session_date": "2026-08-18"
+}
