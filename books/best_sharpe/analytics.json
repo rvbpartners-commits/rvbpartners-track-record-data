@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-19",
+  "as_of": "2026-08-20",
   "benchmark_cum": [
     {
       "cash": 0.0,
@@ -40,6 +40,11 @@
       "cash": 0.001075098203526137,
       "date": "2026-08-19",
       "spy": -0.005264110921413323
+    },
+    {
+      "cash": 0.0012287779861754888,
+      "date": "2026-08-20",
+      "spy": -0.013632365875109853
     }
   ],
   "book": "best_sharpe",
@@ -72,23 +77,32 @@
     {
       "date": "2026-08-19",
       "return": 0.0019459694768249047
+    },
+    {
+      "date": "2026-08-20",
+      "return": -0.001062668469324679
     }
   ],
   "distribution": {
     "bins": [
       {
         "count": 4,
-        "from": -0.0006289617639165801,
-        "to": 0.00030092098542862844
+        "from": -0.001062668469324679,
+        "to": -0.00025682973096374795
       },
       {
-        "count": 0,
-        "from": 0.00030092098542862844,
-        "to": 0.001230803734773837
+        "count": 1,
+        "from": -0.00025682973096374795,
+        "to": 0.0005490090073971832
       },
       {
-        "count": 3,
-        "from": 0.001230803734773837,
+        "count": 1,
+        "from": 0.0005490090073971832,
+        "to": 0.0013548477457581143
+      },
+      {
+        "count": 2,
+        "from": 0.0013548477457581143,
         "to": 0.0021606864841190454
       }
     ]
@@ -125,6 +139,10 @@
     {
       "date": "2026-08-19",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-08-20",
+      "drawdown": -0.00106266846932479
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -136,6 +154,14 @@
       "sessions": 4,
       "start": "2026-08-14",
       "trough": "2026-08-18"
+    },
+    {
+      "depth": -0.00106266846932479,
+      "ongoing": true,
+      "recovered": null,
+      "sessions": 1,
+      "start": "2026-08-20",
+      "trough": "2026-08-20"
     },
     {
       "depth": -0.0005583799999999695,
@@ -152,21 +178,21 @@
     {
       "month": 8,
       "partial": true,
-      "return": 0.0037843699999999814,
-      "sessions": 7,
+      "return": 0.0027176799999999446,
+      "sessions": 8,
       "year": 2026
     }
   ],
-  "published_at": "2026-08-20T20:45:03+00:00",
+  "published_at": "2026-08-20T21:05:03+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
       "max": 0.0021606864841190454,
-      "median": 7.775931612030718e-05,
-      "min": -0.0006289617639165801,
-      "n": 7,
-      "q25": -0.0005618810975408506,
-      "q75": 0.0016485780459677413
+      "median": -0.00024031034193983114,
+      "min": -0.001062668469324679,
+      "n": 8,
+      "q25": -0.0005812770872904438,
+      "q75": 0.0014998823305391595
     }
   ],
   "risk_free_annual": 0.03868571428571428,
@@ -174,7 +200,7 @@
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 7,
+  "sessions": 8,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 7."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 8."
 }
