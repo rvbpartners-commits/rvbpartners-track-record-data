@@ -34,9 +34,9 @@
       "weight": 0.81868
     }
   ],
-  "chain_head": "b65025bf1767f29cdfed4a12ed4a18e5e10b59323a184c75a33e82ba92205d44",
+  "chain_head": "373bd4073a1444180f46e5c772b263e876ef18f43df8e9cdcf6b2c9c3a7bcd7b",
   "currency": "USD",
-  "desk_manifest_hash": "b417304513507f5af0a00462b5f5f55060d13dfe2c5f187cc725ef3781c4d7ca",
+  "desk_manifest_hash": "58615833e2f36474442df9f7a04937d08e4972c8682837a094bca7c2855549a3",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-11",
@@ -44,7 +44,8 @@
     "2026-08-13",
     "2026-08-14",
     "2026-08-17",
-    "2026-08-18"
+    "2026-08-18",
+    "2026-08-19"
   ],
   "inception": "2026-08-08",
   "inception_anchored_to_funded_capital": true,
@@ -56,8 +57,8 @@
   "intraday_sessions_rejected": [
     "2026-08-11 (max deviation 100.3% from published NAV)"
   ],
-  "last_session": "2026-08-19",
-  "latest_detail_session": "2026-08-18",
+  "last_session": "2026-08-20",
+  "latest_detail_session": "2026-08-19",
   "live": {
     "at": "2026-08-20T20:00:00+00:00",
     "cumulative_return": 0.005587039999999988,
@@ -67,6 +68,6 @@
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-20T21:25:03+00:00",
-  "sessions": 8
+  "published_at": "2026-08-20T21:50:03+00:00",
+  "sessions": 9
 }
