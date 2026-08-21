@@ -55,7 +55,7 @@
   "inception_anchored_to_funded_capital": true,
   "inception_note": "Curve starts at the broker's equity on the last day before the first trade, so the first session's P&L is inside the record.",
   "initial_capital": 100000.0,
-  "intraday_points": 348,
+  "intraday_points": 349,
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [
@@ -64,14 +64,14 @@
   "last_session": "2026-08-20",
   "latest_detail_session": "2026-08-19",
   "live": {
-    "at": "2026-08-21T16:05:00+00:00",
-    "cumulative_return": 0.002074200000000026,
-    "equity": 100207.42,
+    "at": "2026-08-21T16:10:00+00:00",
+    "cumulative_return": 0.002096000000000098,
+    "equity": 100209.6,
     "marked": false,
     "session_date": "2026-08-21",
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-21T16:05:03+00:00",
+  "published_at": "2026-08-21T16:10:03+00:00",
   "sessions": 6
 }
