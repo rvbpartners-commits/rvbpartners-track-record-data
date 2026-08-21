@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-20",
+  "as_of": "2026-08-21",
   "benchmark_cum": [
     {
       "cash": 0.0,
@@ -30,6 +30,11 @@
       "cash": 0.0007678448526786674,
       "date": "2026-08-20",
       "spy": -0.019567006068086035
+    },
+    {
+      "cash": 0.0009214845590188592,
+      "date": "2026-08-21",
+      "spy": -0.015684459528952033
     }
   ],
   "book": "best_cagr_100k",
@@ -54,6 +59,10 @@
     {
       "date": "2026-08-20",
       "return": -0.0016647423891601454
+    },
+    {
+      "date": "2026-08-21",
+      "return": 0.00293202144810234
     }
   ],
   "distribution": {
@@ -61,17 +70,17 @@
       {
         "count": 2,
         "from": -0.0016647423891601454,
-        "to": -0.0006265351488239368
-      },
-      {
-        "count": 1,
-        "from": -0.0006265351488239368,
-        "to": 0.0004116720915122718
+        "to": -0.0001324877767393169
       },
       {
         "count": 2,
-        "from": 0.0004116720915122718,
-        "to": 0.0014498793318484804
+        "from": -0.0001324877767393169,
+        "to": 0.0013997668356815116
+      },
+      {
+        "count": 2,
+        "from": 0.0013997668356815116,
+        "to": 0.00293202144810234
       }
     ]
   },
@@ -99,15 +108,19 @@
     {
       "date": "2026-08-20",
       "drawdown": -0.001876210287023894
+    },
+    {
+      "date": "2026-08-21",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
   "drawdown_episodes": [
     {
       "depth": -0.001876210287023894,
-      "ongoing": true,
-      "recovered": null,
-      "sessions": 3,
+      "ongoing": false,
+      "recovered": "2026-08-21",
+      "sessions": 4,
       "start": "2026-08-18",
       "trough": "2026-08-20"
     }
@@ -118,21 +131,21 @@
     {
       "month": 8,
       "partial": true,
-      "return": -0.0010305000000000453,
-      "sessions": 5,
+      "return": 0.0018985000000000252,
+      "sessions": 6,
       "year": 2026
     }
   ],
-  "published_at": "2026-08-21T22:05:03+00:00",
+  "published_at": "2026-08-21T22:20:02+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
-      "max": 0.0014498793318484804,
-      "median": 0.00022780000000000022,
+      "max": 0.00293202144810234,
+      "median": 0.00042357945502013994,
       "min": -0.0016647423891601454,
-      "n": 5,
-      "q25": -0.0016592940801258838,
-      "q75": 0.0006193589100402797
+      "n": 6,
+      "q25": -0.0011875205600944128,
+      "q75": 0.0012422492263964302
     }
   ],
   "risk_free_annual": 0.03868750000000001,
@@ -140,7 +153,7 @@
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 5,
+  "sessions": 6,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 5."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 6."
 }
