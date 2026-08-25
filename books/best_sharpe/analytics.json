@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-24",
+  "as_of": "2026-08-25",
   "benchmark_cum": [
     {
       "cash": 0.0,
@@ -55,6 +55,11 @@
       "cash": 0.001536776008719043,
       "date": "2026-08-24",
       "spy": -0.012545915463810786
+    },
+    {
+      "cash": 0.001690583442177651,
+      "date": "2026-08-25",
+      "spy": -0.009532308965802705
     }
   ],
   "book": "best_sharpe",
@@ -99,6 +104,10 @@
     {
       "date": "2026-08-24",
       "return": 0.0015299855317985056
+    },
+    {
+      "date": "2026-08-25",
+      "return": 1.3864621789094755e-05
     }
   ],
   "distribution": {
@@ -109,7 +118,7 @@
         "to": -0.0004179974786359342
       },
       {
-        "count": 2,
+        "count": 3,
         "from": -0.0004179974786359342,
         "to": 0.00022667351205281068
       },
@@ -174,6 +183,10 @@
     {
       "date": "2026-08-24",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-08-25",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -209,21 +222,21 @@
     {
       "month": 8,
       "partial": true,
-      "return": 0.003994209999999887,
-      "sessions": 10,
+      "return": 0.004008129999999888,
+      "sessions": 11,
       "year": 2026
     }
   ],
-  "published_at": "2026-08-25T20:45:02+00:00",
+  "published_at": "2026-08-25T21:05:02+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
       "max": 0.0021606864841190454,
-      "median": -8.938176842637757e-05,
+      "median": 1.3864621789094755e-05,
       "min": -0.001062668469324679,
-      "n": 10,
-      "q25": -0.0005636316463112911,
-      "q75": 0.0014852858026265237
+      "n": 11,
+      "q25": -0.0005618810975408506,
+      "q75": 0.0014405860734545417
     }
   ],
   "risk_free_annual": 0.0387,
@@ -231,7 +244,7 @@
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 10,
+  "sessions": 11,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 10."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 11."
 }
