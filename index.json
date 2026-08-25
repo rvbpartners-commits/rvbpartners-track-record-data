@@ -267,12 +267,12 @@
           "weight": 0.81868
         }
       ],
-      "cumulative_return": 0.00010739999999986871,
+      "cumulative_return": -0.0007147000000001791,
       "inception": "2026-08-13",
       "initial_capital": 100000.0,
       "label": "RVB-BLEND-100K",
-      "last_session": "2026-08-24",
-      "latest_detail_session": "2026-08-21",
+      "last_session": "2026-08-25",
+      "latest_detail_session": "2026-08-24",
       "live": {
         "at": "2026-08-25T20:00:00+00:00",
         "cumulative_return": -0.0006219000000000641,
@@ -293,7 +293,7 @@
         "nav": "books/best_composite_100k/nav.csv",
         "snapshots": "books/best_composite_100k/snapshots/"
       },
-      "sessions": 8,
+      "sessions": 9,
       "tagline_en": "Balanced across all three objectives, at $100k",
       "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
     },
@@ -364,7 +364,7 @@
     }
   ],
   "chain": {
-    "entries": 64,
+    "entries": 65,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -427,7 +427,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-25T21:50:02+00:00",
+  "published_at": "2026-08-25T22:05:02+00:00",
   "publisher": "RVB Partners live paper-trading desk",
   "schema": "rvb.track-record.index/1"
 }
