@@ -1,0 +1,9 @@
+# Le contenu de ce depot est verifie par son sha256 : les octets doivent
+# survivre au clone, sur toute plateforme. Sans cette ligne, Git for Windows
+# (core.autocrlf=true par defaut, au niveau systeme) convertit les fins de
+# ligne au checkout, et le script publie sur /verify echoue des son premier
+# fichier. Mesure : sha256 obtenu 1e489496..., chaine caeb3ad0...
+#
+# Aucun octet publie ne change : les blobs stockes sont deja en LF, c-est le
+# checkout qui les abimait. Ni reecriture, ni restatement.
+* -text
