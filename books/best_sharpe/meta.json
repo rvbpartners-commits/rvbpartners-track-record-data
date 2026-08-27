@@ -36,9 +36,9 @@
       "weight": 0.310769
     }
   ],
-  "chain_head": "3d2cfc5f0d2bb2d09b0edbafbc6da626a29a2ba8348bce59eeac80a9c8a9d63f",
+  "chain_head": "86f054001c4fc960aede7e059f699e1a2f0604af3feaffee708dea652eccb0ca",
   "currency": "USD",
-  "desk_manifest_hash": "31a2b2b35825204223ab2d001f94f95c5952da375a567ef21666918289e29c08",
+  "desk_manifest_hash": "2da3caea8cbd93fb2c62be7d1ff5557537e4bea5f270ef002277a0e6b79d9384",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-11",
@@ -51,7 +51,8 @@
     "2026-08-20",
     "2026-08-21",
     "2026-08-24",
-    "2026-08-25"
+    "2026-08-25",
+    "2026-08-26"
   ],
   "inception": "2026-08-08",
   "inception_anchored_to_funded_capital": true,
@@ -61,8 +62,8 @@
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-08-26",
-  "latest_detail_session": "2026-08-25",
+  "last_session": "2026-08-27",
+  "latest_detail_session": "2026-08-26",
   "live": {
     "at": "2026-08-27T20:00:00+00:00",
     "cumulative_return": 0.005824749999999934,
@@ -72,10 +73,10 @@
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-27T20:45:02+00:00",
+  "published_at": "2026-08-27T21:05:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 13
+  "sessions": 14
 }
