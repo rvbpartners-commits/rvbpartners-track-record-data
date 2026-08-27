@@ -375,16 +375,16 @@
       "book": "maker_01",
       "capital_at_risk": true,
       "categories": [],
-      "cumulative_return": -0.0087291843237568,
-      "inception": "2026-08-04",
-      "initial_capital": 30.54,
+      "cumulative_return": 0.004197264121946542,
+      "inception": "2026-08-12",
+      "initial_capital": 449.567698,
       "label": "RVB-MAKER-01",
       "last_session": "2026-08-26",
       "latest_detail_session": null,
       "live": {
-        "at": "2026-08-27T10:03:30+00:00",
-        "cumulative_return": -0.01955773674919592,
-        "equity": 455.023188,
+        "at": "2026-08-27T10:39:23+00:00",
+        "cumulative_return": 0.0050610689164356515,
+        "equity": 455.036237,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "both venue accounts, read directly"
@@ -396,7 +396,7 @@
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
-      "sessions": 16,
+      "sessions": 10,
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
@@ -465,7 +465,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-27T10:03:30+00:00",
+  "published_at": "2026-08-27T10:39:23+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
