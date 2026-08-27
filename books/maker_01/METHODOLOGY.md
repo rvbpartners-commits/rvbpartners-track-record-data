@@ -101,15 +101,26 @@ that measures the calendar rather than the strategy. Annualised statistics stay
 withheld until **30 round trips** — a stricter bar than the desk's 60 sessions,
 because sessions accumulate by the passage of time and round trips do not.
 
-## 6. What the record refuses to publish
+## 6. Open positions are disclosed, never marked
 
-A session is published only if the book was **economically flat** at its close:
-no position on the derivatives venue, and no unpaired volume on the broker side.
-A book that is merely locked has a deterministic value and is publishable; a
-book carrying open risk is not, and the publication stops rather than marking it
-at a number it does not have.
+Every closed session is published, **whether or not the book was flat at that
+close**. The value is what this record measures and nothing else: closed deals,
+plus the profit of the opposite ticket pairs locked on that broker day.
 
-Each locked pair must attach to **exactly one** round trip. Zero would drop the
+An unmatched remainder is not in that number — not marked, not estimated. Its
+value is not determined yet, and it will appear on the day it locks. It carries
+the only market risk the book holds, and none of the published profit. Each
+snapshot states it: `nav.unmatched.tickets` and `nav.unmatched.net_volume`.
+
+This was once a refusal to publish, and that was wrong twice over. It defended a
+claim this curve does not make — a mark-to-market equivalence that only held
+under the earlier one-leg convention. And it would have gone off constantly: the
+strategy opens its positions in the evening by construction (26 August, entered
+22:31 UTC, held until 00:26), so a flatness requirement would have switched the
+record off every other night.
+
+What the record still refuses: a session whose value cannot be established. A
+locked pair must attach to **exactly one** round trip. Zero would drop the
 amount from the total; two would count it twice; neither is visible in a total.
 Both refuse to publish.
 
