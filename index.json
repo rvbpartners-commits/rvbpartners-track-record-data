@@ -367,10 +367,42 @@
       "sessions": 13,
       "tagline_en": "Selected for risk-adjusted return",
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:d1d2e72a37083261",
+      "annualised_gated": true,
+      "book": "maker_01",
+      "capital_at_risk": true,
+      "categories": [],
+      "cumulative_return": -0.0087291843237568,
+      "inception": "2026-08-04",
+      "initial_capital": 30.54,
+      "label": "RVB-MAKER-01",
+      "last_session": "2026-08-26",
+      "latest_detail_session": null,
+      "live": {
+        "at": "2026-08-27T08:07:05+00:00",
+        "cumulative_return": -0.01954592759168927,
+        "equity": 455.311713,
+        "marked": false,
+        "session_date": "2026-08-27",
+        "source": "both venue accounts, read directly"
+      },
+      "paths": {
+        "benchmark": "books/maker_01/benchmark.csv",
+        "meta": "books/maker_01/meta.json",
+        "metrics": "books/maker_01/metrics.json",
+        "nav": "books/maker_01/nav.csv",
+        "snapshots": "books/maker_01/snapshots/"
+      },
+      "sessions": 16,
+      "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
+      "tagline_fr": null
     }
   ],
   "chain": {
-    "entries": 72,
+    "entries": 88,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -433,7 +465,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-27T08:00:02+00:00",
+  "published_at": "2026-08-27T08:07:05+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

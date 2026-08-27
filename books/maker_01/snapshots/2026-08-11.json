@@ -1,0 +1,114 @@
+{
+  "active_sessions": 1,
+  "book": "maker_01",
+  "cumulative_return": -0.014898068107400131,
+  "daily_return": 0.0,
+  "disclosure": {
+    "account_type": "live",
+    "annualised_metrics_gated_at_sessions": 60,
+    "book_returns": "reconstructed from realised P&L and treasury movements, then reconciled against the equity read on both accounts; neither venue serves a usable equity history",
+    "capital_at_risk": true,
+    "fills": "executed by the venues; not simulated",
+    "fx_convention": "the published curve is converted at the inception rate; the spot rate, the spot-converted NAV and the difference in basis points are published in every snapshot",
+    "gips": "GIPS-informed, NOT GIPS-compliant (no third-party verification)",
+    "hedged_since": "2026-08-13",
+    "hedging_notice": "before that date the second leg was not funded, so what executed was not this strategy; nothing has been removed from the record",
+    "not_investment_advice": true,
+    "notice": "This book trades REAL capital, which belongs to the operator. No third-party money is managed. Past performance is not indicative of future results. Nothing here is investment advice, an offer, or a solicitation.",
+    "out_of_scope_executions": "fee-calibration executions on other instruments are excluded from the return and treated as a capital adjustment; their aggregate is published, their instruments are not",
+    "return_convention": "time-weighted, via unitisation: a deposit buys units at the day's price, so it moves equity and never the price",
+    "strategy_identity": "not published",
+    "venues": "published under neutral labels"
+  },
+  "executions": {
+    "venue_a": 0,
+    "venue_b": 0
+  },
+  "flows": {
+    "note": "moves equity, never the unit price",
+    "session_usd": 0.0
+  },
+  "fx": {
+    "delta_bps": 0.0,
+    "nav_at_session_rate_usd": 213.115013,
+    "published_rate": 1.15323,
+    "published_rate_basis": "inception close",
+    "quote_currency": "EUR",
+    "session_close_rate": 1.15425,
+    "venue_a_usd": 213.115013,
+    "venue_b_quote": 0.0
+  },
+  "hash": "2c795d3884f045ca9482e0c09b7197a7373483aa22bfab3203e3338e5a45456e",
+  "inception": "2026-08-04",
+  "initial_capital_usd": 30.54,
+  "metrics": {
+    "annualised_basis": 259,
+    "annualised_basis_note": "measured: 400 daily bars over 564 calendar days on the broker's own calendar",
+    "computed_by": "rvb.metrics.compute_core_metrics",
+    "insufficient_history": {
+      "have": 5,
+      "label_en": "insufficient history — 5/60",
+      "label_fr": "historique insuffisant — 5/60",
+      "need": 60,
+      "suppressed": [
+        "sharpe",
+        "sharpe_gross",
+        "sharpe_autocorr_adj",
+        "sortino",
+        "sortino_gross",
+        "calmar",
+        "calmar_gross",
+        "cagr",
+        "volatility",
+        "max_drawdown",
+        "var_normal_95",
+        "skew",
+        "kurtosis",
+        "ev_excess_annual",
+        "win_rate"
+      ]
+    },
+    "risk_free_annual": 0.03875,
+    "risk_free_source": "FRED DGS3MO",
+    "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
+    "values": {
+      "best_day": 0.0,
+      "cagr": null,
+      "calmar": null,
+      "calmar_gross": null,
+      "cumulative_return": -0.014898068107400131,
+      "ev_excess_annual": null,
+      "kurtosis": null,
+      "max_drawdown": null,
+      "n_obs": 5,
+      "negative_days": 1,
+      "positive_days": 0,
+      "sharpe": null,
+      "sharpe_autocorr_adj": null,
+      "sharpe_gross": null,
+      "skew": null,
+      "sortino": null,
+      "sortino_gross": null,
+      "var_normal_95": null,
+      "volatility": null,
+      "win_rate": null,
+      "worst_day": -0.014898068107400131
+    }
+  },
+  "nav": {
+    "equity_usd": 213.115013,
+    "source": "reconstructed from realised P&L and treasury movements",
+    "unit_price": 0.9851019319,
+    "units": 216.33803173
+  },
+  "out_of_scope": {
+    "executions": 0,
+    "impact_usd": 0.0,
+    "note": "fee calibration on other instruments; instruments not published"
+  },
+  "prev_hash": "dd32fc26eda479ac3a229de6c6a55a1c1c88af791358141aabac66cd2c2e5362",
+  "published_at": "2026-08-27T08:07:05+00:00",
+  "schema": "rvb.track-record.snapshot/maker/1",
+  "session_date": "2026-08-11",
+  "sessions": 5
+}

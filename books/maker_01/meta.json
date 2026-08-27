@@ -1,0 +1,52 @@
+{
+  "account_number": null,
+  "account_ref": "sha256:d1d2e72a37083261",
+  "account_type": "live",
+  "active_sessions": 3,
+  "active_sessions_note": "sessions on which the book actually executed. Counted from executions, never from non-zero returns: funding accrues while a position is held without any order being placed",
+  "book": "maker_01",
+  "capital_at_risk": true,
+  "categories": [],
+  "chain_head": "3c714b419daafb1aa36829190928bf30ef4dffde320e4b92756834667222391f",
+  "currency": "USD",
+  "desk_manifest_hash": null,
+  "detail_lag_days": 0,
+  "detail_sessions": [],
+  "hedged_since": "2026-08-13",
+  "inception": "2026-08-04",
+  "inception_anchored_to_funded_capital": true,
+  "inception_note": "anchored to the equity held the session before the first execution, so that session's profit and loss sits inside the curve rather than behind its starting point",
+  "initial_capital": 30.54,
+  "intraday_points": 0,
+  "intraday_resolution": "per closed round trip",
+  "intraday_sessions_rejected": [],
+  "last_session": "2026-08-26",
+  "latest_detail_session": null,
+  "live": {
+    "at": "2026-08-27T08:07:05+00:00",
+    "cumulative_return": -0.01954592759168927,
+    "equity": 455.311713,
+    "marked": false,
+    "session_date": "2026-08-27",
+    "source": "both venue accounts, read directly"
+  },
+  "min_sessions_for_annualised": 60,
+  "out_of_scope_total": {
+    "executions": 28,
+    "impact_usd": -0.107376,
+    "note": "fee-calibration executions on other instruments, excluded from the return and treated as a capital adjustment; the instruments are not published"
+  },
+  "published_at": "2026-08-27T08:07:05+00:00",
+  "reconciliation": {
+    "marked_usd": 454.857691,
+    "note": "the curve is reconstructed from realised profit and loss, so it is checked against what the two accounts actually report. The unrealised legs are added back before comparing, because while a position is open a realised series cannot equal a marked one — and in hedging mode that gap is structural: the closed leg realises while the opposite leg is still open. What is left is read drift: the two venues are queried one after the other while the account keeps trading. Published whether or not it is zero — a field that only appears when it is inconvenient is not a measurement",
+    "read_usd": 455.311713,
+    "realised_usd": 449.775806,
+    "residual_bps": -9.97,
+    "unrealised_venue_a_usd": 0,
+    "unrealised_venue_b_usd": 5.081885
+  },
+  "risk_free_annual": 0.03875,
+  "risk_free_source": "FRED DGS3MO",
+  "sessions": 16
+}
