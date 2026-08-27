@@ -15,9 +15,10 @@
     "measured": "counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 USD where the pair makes it +0.18; the book's sign inverted, from -1.80 to +3.19",
     "out_of_scope": "fee-calibration executions on other instruments are inside the return, not treated as a capital adjustment. They are real money lost on the account inside the book's window, and excluding them would FLATTER the curve by 3.5% of its result",
     "pnl": "combined across both venues on a single calendar: derivatives realised (fills - fees + funding), plus broker deals, plus the profit of opposite ticket PAIRS locked that day",
+    "schema_label_of_2026_08_27": "the 2026-08-27 record is labelled schema maker/3 and carries the maker/4 field set. The correction that added them landed between the run that wrote that record and the schema bump that named the new shape. It is not rewritten: a write-once record is not rewritten because its label is inconvenient. It is stated here instead, and its hash verifies as published",
     "superseded_chain": "this book's chain was restarted at this convention. The previous chain -- one leg, and the wrong sign -- is kept verbatim under books/maker_01/superseded/, never rewritten and never presented",
     "superseded_snapshots": "sessions published before this correction carry the previous convention and are left untouched -- a chained, timestamped record is not rewritten. They are why snapshots exist for dates before this book's inception",
-    "version": "maker/3",
+    "version": "maker/4",
     "why_locked_pairs": "the broker account is in hedging mode: an opposing order opens a second ticket rather than closing the first. A matched buy+sell pair has a combined profit that does not depend on the market price -- it cancels between the legs -- so the pair is economically realised the moment the second ticket opens, even though the broker still shows it as floating",
     "window": "performance is measured from the operator-declared start of the bot. Earlier executions were manual fee calibration: they moved money, so they are inside the opening capital, and they are inside no performance figure"
   },
@@ -42,7 +43,7 @@
   "last_session": "2026-08-27",
   "latest_detail_session": null,
   "live": {
-    "at": "2026-08-27T21:10:03+00:00",
+    "at": "2026-08-27T21:12:11+00:00",
     "cumulative_return": 0.0063252234287078934,
     "equity": 454.960597,
     "marked": false,
@@ -74,7 +75,7 @@
     "impact_usd": -0.107376,
     "note": "fee-calibration executions on other instruments, excluded from the return and treated as a capital adjustment; the instruments are not published"
   },
-  "published_at": "2026-08-27T21:10:03+00:00",
+  "published_at": "2026-08-27T21:12:11+00:00",
   "reconciliation": {
     "marked_usd": 455.007075,
     "note": "the curve is reconstructed from realised profit and loss, so it is checked against what the two accounts actually report. The unrealised legs are added back before comparing, because while a position is open a realised series cannot equal a marked one — and in hedging mode that gap is structural: the closed leg realises while the opposite leg is still open. What is left is read drift: the two venues are queried one after the other while the account keeps trading. Published whether or not it is zero — a field that only appears when it is inconvenient is not a measurement",
