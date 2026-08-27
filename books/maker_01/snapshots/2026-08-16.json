@@ -1,8 +1,8 @@
 {
-  "active_sessions": 2,
+  "active_sessions": 1,
   "book": "maker_01",
-  "cumulative_return": 0.005974390520339323,
-  "daily_return": 0.001477408586385606,
+  "cumulative_return": 0.004729318883296196,
+  "daily_return": 0.0,
   "disclosure": {
     "account_type": "live",
     "annualised_metrics_gated_at_sessions": 60,
@@ -21,8 +21,8 @@
     "venues": "published under neutral labels"
   },
   "executions": {
-    "venue_a": 7,
-    "venue_b": 4
+    "venue_a": 0,
+    "venue_b": 0
   },
   "flows": {
     "note": "moves equity, never the unit price",
@@ -31,15 +31,15 @@
   "fx": {
     "basis": "flow conversion",
     "basis_note": "each session's broker leg is converted once, at that session's close rate, and never revalued. No exchange-rate movement therefore enters the curve",
-    "delta_bps": 68.12,
+    "delta_bps": 20.19,
     "delta_note": "gap against the other convention -- revaluing the whole broker leg at this session's rate, as a live dashboard does. It is the only difference between this curve and the operator's local view",
-    "nav_if_whole_leg_at_session_rate_usd": 455.090037,
+    "nav_if_whole_leg_at_session_rate_usd": 452.362993,
     "quote_currency": "EUR",
-    "session_close_rate": 1.16743,
-    "venue_a_usd": 216.619111,
-    "venue_b_quote": 204.27
+    "session_close_rate": 1.1569,
+    "venue_a_usd": 214.215128,
+    "venue_b_quote": 205.85
   },
-  "hash": "33a11fc9fc974bab63e40e2216cceb32edf8c61b03234a0143f11231bd6c3c44",
+  "hash": "c15d5fa9d2dcfeaf62a2256beeb0a4233b1055ead50125843d8f39b0c1e7f1b4",
   "inception": "2026-08-12",
   "initial_capital_usd": 449.411898,
   "metrics": {
@@ -47,9 +47,9 @@
     "annualised_basis_note": "measured: 400 daily bars over 564 calendar days on the broker's own calendar",
     "computed_by": "rvb.metrics.compute_core_metrics",
     "insufficient_history": {
-      "have": 14,
-      "label_en": "insufficient history — 14/60",
-      "label_fr": "historique insuffisant — 14/60",
+      "have": 5,
+      "label_en": "insufficient history — 5/60",
+      "label_fr": "historique insuffisant — 5/60",
       "need": 60,
       "suppressed": [
         "sharpe",
@@ -77,13 +77,13 @@
       "cagr": null,
       "calmar": null,
       "calmar_gross": null,
-      "cumulative_return": 0.005974390520339323,
+      "cumulative_return": 0.004729318883296196,
       "ev_excess_annual": null,
       "kurtosis": null,
       "max_drawdown": null,
-      "n_obs": 14,
-      "negative_days": 3,
-      "positive_days": 3,
+      "n_obs": 5,
+      "negative_days": 0,
+      "positive_days": 2,
       "sharpe": null,
       "sharpe_autocorr_adj": null,
       "sharpe_gross": null,
@@ -93,33 +93,33 @@
       "var_normal_95": null,
       "volatility": null,
       "win_rate": null,
-      "worst_day": -8.751127025496963e-05
+      "worst_day": 0.0
     }
   },
   "nav": {
     "basis": "mark-to-market, verified flat at the session close",
-    "equity_usd": 452.010887,
+    "equity_usd": 451.451443,
     "flat_at_close": true,
     "source": "reconstructed from realised P&L and treasury movements",
-    "unit_price": 1.0059743905,
+    "unit_price": 1.0047293189,
     "units": 449.32643501
   },
   "out_of_scope": {
     "executions": 0,
-    "impact_usd": 0,
+    "impact_usd": 0.0,
     "note": "fee calibration on other instruments; instruments not published"
   },
   "pnl": {
-    "broker_leg_quote": -1.58,
+    "broker_leg_quote": 0.0,
     "carry_quote": 0.0,
-    "cumulative_usd": 2.639524,
-    "locked_pairs_quote": -1.58,
-    "session_usd": 0.66682,
-    "settled_deals_quote_not_summed": -1.58
+    "cumulative_usd": 2.08008,
+    "locked_pairs_quote": 0.0,
+    "session_usd": 0.0,
+    "settled_deals_quote_not_summed": 0.0
   },
-  "prev_hash": "17ca401294e2cf63f8769df6356707a8c2d03158234c37a43eae39c4eff98246",
+  "prev_hash": "b41357852f267f498e4155238921dbffd73b9bfffcbc482310238db0cd3cece3",
   "published_at": "2026-08-27T11:43:06+00:00",
   "schema": "rvb.track-record.snapshot/maker/3",
-  "session_date": "2026-08-25",
-  "sessions": 14
+  "session_date": "2026-08-16",
+  "sessions": 5
 }

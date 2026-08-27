@@ -1,8 +1,8 @@
 {
   "active_sessions": 2,
   "book": "maker_01",
-  "cumulative_return": 0.005974390520339323,
-  "daily_return": 0.001477408586385606,
+  "cumulative_return": -0.010240141803382397,
+  "daily_return": 0.0,
   "disclosure": {
     "account_type": "live",
     "annualised_metrics_gated_at_sessions": 60,
@@ -21,27 +21,26 @@
     "venues": "published under neutral labels"
   },
   "executions": {
-    "venue_a": 7,
-    "venue_b": 4
+    "venue_a": 0,
+    "venue_b": 0
   },
   "flows": {
     "note": "moves equity, never the unit price",
-    "session_usd": 0.0
+    "session_usd": -0.072075
   },
   "fx": {
-    "basis": "flow conversion",
-    "basis_note": "each session's broker leg is converted once, at that session's close rate, and never revalued. No exchange-rate movement therefore enters the curve",
-    "delta_bps": 68.12,
-    "delta_note": "gap against the other convention -- revaluing the whole broker leg at this session's rate, as a live dashboard does. It is the only difference between this curve and the operator's local view",
-    "nav_if_whole_leg_at_session_rate_usd": 455.090037,
+    "delta_bps": 59.95,
+    "nav_at_session_rate_usd": 454.207075,
+    "published_rate": 1.15323,
+    "published_rate_basis": "inception close",
     "quote_currency": "EUR",
-    "session_close_rate": 1.16743,
-    "venue_a_usd": 216.619111,
-    "venue_b_quote": 204.27
+    "session_close_rate": 1.16638,
+    "venue_a_usd": 214.107752,
+    "venue_b_quote": 205.85
   },
-  "hash": "33a11fc9fc974bab63e40e2216cceb32edf8c61b03234a0143f11231bd6c3c44",
-  "inception": "2026-08-12",
-  "initial_capital_usd": 449.411898,
+  "hash": "1196b94b4d5084a492491df525f21fd91e5fd7da2d318b72d8a0fa8ba357c5f8",
+  "inception": "2026-08-04",
+  "initial_capital_usd": 30.54,
   "metrics": {
     "annualised_basis": 259,
     "annualised_basis_note": "measured: 400 daily bars over 564 calendar days on the broker's own calendar",
@@ -69,21 +68,21 @@
         "win_rate"
       ]
     },
-    "risk_free_annual": 0.038669999999999996,
+    "risk_free_annual": 0.03875,
     "risk_free_source": "FRED DGS3MO",
     "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
     "values": {
-      "best_day": 0.004538253235120138,
+      "best_day": 0.004537304412827181,
       "cagr": null,
       "calmar": null,
       "calmar_gross": null,
-      "cumulative_return": 0.005974390520339323,
+      "cumulative_return": -0.010240141803382397,
       "ev_excess_annual": null,
       "kurtosis": null,
       "max_drawdown": null,
       "n_obs": 14,
-      "negative_days": 3,
-      "positive_days": 3,
+      "negative_days": 1,
+      "positive_days": 2,
       "sharpe": null,
       "sharpe_autocorr_adj": null,
       "sharpe_gross": null,
@@ -93,33 +92,23 @@
       "var_normal_95": null,
       "volatility": null,
       "win_rate": null,
-      "worst_day": -8.751127025496963e-05
+      "worst_day": -0.014898068107400131
     }
   },
   "nav": {
-    "basis": "mark-to-market, verified flat at the session close",
-    "equity_usd": 452.010887,
-    "flat_at_close": true,
+    "equity_usd": 451.500147,
     "source": "reconstructed from realised P&L and treasury movements",
-    "unit_price": 1.0059743905,
-    "units": 449.32643501
+    "unit_price": 0.9897598582,
+    "units": 456.1714074
   },
   "out_of_scope": {
-    "executions": 0,
-    "impact_usd": 0,
+    "executions": 12,
+    "impact_usd": -0.072075,
     "note": "fee calibration on other instruments; instruments not published"
   },
-  "pnl": {
-    "broker_leg_quote": -1.58,
-    "carry_quote": 0.0,
-    "cumulative_usd": 2.639524,
-    "locked_pairs_quote": -1.58,
-    "session_usd": 0.66682,
-    "settled_deals_quote_not_summed": -1.58
-  },
-  "prev_hash": "17ca401294e2cf63f8769df6356707a8c2d03158234c37a43eae39c4eff98246",
-  "published_at": "2026-08-27T11:43:06+00:00",
-  "schema": "rvb.track-record.snapshot/maker/3",
-  "session_date": "2026-08-25",
+  "prev_hash": "7f7a957d637778b88e20e3a894aa6b8766e06be7fcf1b206c89742e87a591ec7",
+  "published_at": "2026-08-27T08:07:05+00:00",
+  "schema": "rvb.track-record.snapshot/maker/1",
+  "session_date": "2026-08-24",
   "sessions": 14
 }

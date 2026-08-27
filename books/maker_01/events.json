@@ -1,0 +1,54 @@
+{
+  "book": "maker_01",
+  "events": [
+    {
+      "at": "2026-08-12T22:07:00Z",
+      "detail": "Inception of the published record. Both legs funded and live.",
+      "kind": "inception",
+      "label": "First trade"
+    },
+    {
+      "at": "2026-08-13T09:00:00Z",
+      "detail": "The first run was stopped and the system migrated to dedicated hosting.",
+      "kind": "maintenance",
+      "label": "Halted for migration"
+    },
+    {
+      "at": "2026-08-14T00:00:00Z",
+      "detail": "Trading resumed after the migration.",
+      "kind": "maintenance",
+      "label": "Resumed on new host"
+    },
+    {
+      "at": "2026-08-24T21:47:00Z",
+      "detail": "The host restarted; the system came back up unattended.",
+      "kind": "outage",
+      "label": "Host reboot"
+    },
+    {
+      "at": "2026-08-24T22:55:00Z",
+      "detail": "Operating parameters were changed. The values are not published: they are the strategy.",
+      "kind": "parameter",
+      "label": "Parameter change"
+    },
+    {
+      "at": "2026-08-26T18:54:00Z",
+      "detail": "The broker terminal was signed out for 2 h 11 min. No orders could be placed in that window.",
+      "kind": "outage",
+      "label": "Broker session lost"
+    },
+    {
+      "at": "2026-08-26T21:39:00Z",
+      "detail": "Trading resumed after a further parameter change. The values are not published.",
+      "kind": "parameter",
+      "label": "Restarted, parameters changed"
+    },
+    {
+      "detail": "The book is brought flat once a week, around Friday 19:00 UTC, so that no position is carried across the weekend. It realises value that was already locked; it is not a trading decision.",
+      "kind": "policy",
+      "label": "Weekly flattening"
+    }
+  ],
+  "note": "operational log. Outages and maintenance are published because availability is a fact about the record; parameter VALUES are not, because they are the strategy",
+  "published_at": "2026-08-27T11:53:02+00:00"
+}
