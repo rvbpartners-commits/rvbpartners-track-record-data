@@ -5,6 +5,7 @@
       "account_ref": "sha256:54f7df38b17a2581",
       "annualised_gated": true,
       "book": "best_cagr",
+      "capital_at_risk": false,
       "categories": [
         {
           "category": "mean_reversion",
@@ -67,241 +68,10 @@
     },
     {
       "account_number": null,
-      "account_ref": "sha256:93f4f6ad17de9f95",
-      "annualised_gated": true,
-      "book": "best_sharpe",
-      "categories": [
-        {
-          "category": "mean_reversion",
-          "code": "MR",
-          "label": "Mean reversion",
-          "strategies": 5,
-          "weight": 0.580242
-        },
-        {
-          "category": "momentum",
-          "code": "MOM",
-          "label": "Momentum",
-          "strategies": 1,
-          "weight": 0.108989
-        },
-        {
-          "category": "seasonal",
-          "code": "SEA",
-          "label": "Seasonal",
-          "strategies": 2,
-          "weight": 0.310769
-        }
-      ],
-      "cumulative_return": 0.00465284999999982,
-      "inception": "2026-08-08",
-      "initial_capital": 1000000.0,
-      "label": "RVB-SR-STAB",
-      "last_session": "2026-08-26",
-      "latest_detail_session": "2026-08-25",
-      "live": {
-        "at": "2026-08-26T20:00:00+00:00",
-        "cumulative_return": 0.0047717499999999635,
-        "equity": 1004771.75,
-        "marked": false,
-        "session_date": "2026-08-26",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
-      "paths": {
-        "analytics": "books/best_sharpe/analytics.json",
-        "attributed": "books/best_sharpe/attributed.csv",
-        "benchmark": "books/best_sharpe/benchmark.csv",
-        "benchmark_intraday": "books/best_sharpe/benchmark_intraday.csv",
-        "detail": "books/best_sharpe/detail/",
-        "intraday": "books/best_sharpe/intraday.csv",
-        "meta": "books/best_sharpe/meta.json",
-        "metrics": "books/best_sharpe/metrics.json",
-        "nav": "books/best_sharpe/nav.csv",
-        "snapshots": "books/best_sharpe/snapshots/"
-      },
-      "sessions": 13,
-      "tagline_en": "Selected for risk-adjusted return",
-      "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
-    },
-    {
-      "account_number": null,
-      "account_ref": "sha256:862dc86cb72b80a6",
-      "annualised_gated": true,
-      "book": "best_mdd",
-      "categories": [
-        {
-          "category": "mean_reversion",
-          "code": "MR",
-          "label": "Mean reversion",
-          "strategies": 6,
-          "weight": 0.737709
-        },
-        {
-          "category": "momentum",
-          "code": "MOM",
-          "label": "Momentum",
-          "strategies": 2,
-          "weight": 0.154156
-        },
-        {
-          "category": "seasonal",
-          "code": "SEA",
-          "label": "Seasonal",
-          "strategies": 1,
-          "weight": 0.108135
-        }
-      ],
-      "cumulative_return": 0.003259139999999938,
-      "inception": "2026-08-08",
-      "initial_capital": 1000000.0,
-      "label": "RVB-DD-DEF",
-      "last_session": "2026-08-26",
-      "latest_detail_session": "2026-08-25",
-      "live": {
-        "at": "2026-08-26T20:00:00+00:00",
-        "cumulative_return": 0.00247891999999994,
-        "equity": 1002478.92,
-        "marked": false,
-        "session_date": "2026-08-26",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
-      "paths": {
-        "analytics": "books/best_mdd/analytics.json",
-        "attributed": "books/best_mdd/attributed.csv",
-        "benchmark": "books/best_mdd/benchmark.csv",
-        "benchmark_intraday": "books/best_mdd/benchmark_intraday.csv",
-        "detail": "books/best_mdd/detail/",
-        "intraday": "books/best_mdd/intraday.csv",
-        "meta": "books/best_mdd/meta.json",
-        "metrics": "books/best_mdd/metrics.json",
-        "nav": "books/best_mdd/nav.csv",
-        "snapshots": "books/best_mdd/snapshots/"
-      },
-      "sessions": 13,
-      "tagline_en": "Selected to limit drawdown",
-      "tagline_fr": "Sélectionné pour limiter le drawdown"
-    },
-    {
-      "account_number": null,
-      "account_ref": "sha256:1211346e15573c00",
-      "annualised_gated": true,
-      "book": "best_composite",
-      "categories": [
-        {
-          "category": "mean_reversion",
-          "code": "MR",
-          "label": "Mean reversion",
-          "strategies": 2,
-          "weight": 0.110695
-        },
-        {
-          "category": "momentum",
-          "code": "MOM",
-          "label": "Momentum",
-          "strategies": 1,
-          "weight": 0.070626
-        },
-        {
-          "category": "seasonal",
-          "code": "SEA",
-          "label": "Seasonal",
-          "strategies": 2,
-          "weight": 0.81868
-        }
-      ],
-      "cumulative_return": 0.005395590000000672,
-      "inception": "2026-08-08",
-      "initial_capital": 1000000.0,
-      "label": "RVB-BLEND-CORE",
-      "last_session": "2026-08-26",
-      "latest_detail_session": "2026-08-25",
-      "live": {
-        "at": "2026-08-26T20:00:00+00:00",
-        "cumulative_return": 0.005683600000000011,
-        "equity": 1005683.6,
-        "marked": false,
-        "session_date": "2026-08-26",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
-      "paths": {
-        "analytics": "books/best_composite/analytics.json",
-        "attributed": "books/best_composite/attributed.csv",
-        "benchmark": "books/best_composite/benchmark.csv",
-        "benchmark_intraday": "books/best_composite/benchmark_intraday.csv",
-        "detail": "books/best_composite/detail/",
-        "intraday": "books/best_composite/intraday.csv",
-        "meta": "books/best_composite/meta.json",
-        "metrics": "books/best_composite/metrics.json",
-        "nav": "books/best_composite/nav.csv",
-        "snapshots": "books/best_composite/snapshots/"
-      },
-      "sessions": 13,
-      "tagline_en": "Balanced across all three objectives",
-      "tagline_fr": "Équilibré sur les trois objectifs"
-    },
-    {
-      "account_number": null,
-      "account_ref": "sha256:22b1e1442449e5de",
-      "annualised_gated": true,
-      "book": "best_composite_100k",
-      "categories": [
-        {
-          "category": "mean_reversion",
-          "code": "MR",
-          "label": "Mean reversion",
-          "strategies": 2,
-          "weight": 0.110695
-        },
-        {
-          "category": "momentum",
-          "code": "MOM",
-          "label": "Momentum",
-          "strategies": 1,
-          "weight": 0.070626
-        },
-        {
-          "category": "seasonal",
-          "code": "SEA",
-          "label": "Seasonal",
-          "strategies": 2,
-          "weight": 0.81868
-        }
-      ],
-      "cumulative_return": 0.00041899999999972515,
-      "inception": "2026-08-13",
-      "initial_capital": 100000.0,
-      "label": "RVB-BLEND-100K",
-      "last_session": "2026-08-26",
-      "latest_detail_session": "2026-08-25",
-      "live": {
-        "at": "2026-08-26T20:00:00+00:00",
-        "cumulative_return": 0.0004669999999999952,
-        "equity": 100046.7,
-        "marked": false,
-        "session_date": "2026-08-26",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
-      "paths": {
-        "analytics": "books/best_composite_100k/analytics.json",
-        "attributed": "books/best_composite_100k/attributed.csv",
-        "benchmark": "books/best_composite_100k/benchmark.csv",
-        "benchmark_intraday": "books/best_composite_100k/benchmark_intraday.csv",
-        "detail": "books/best_composite_100k/detail/",
-        "intraday": "books/best_composite_100k/intraday.csv",
-        "meta": "books/best_composite_100k/meta.json",
-        "metrics": "books/best_composite_100k/metrics.json",
-        "nav": "books/best_composite_100k/nav.csv",
-        "snapshots": "books/best_composite_100k/snapshots/"
-      },
-      "sessions": 10,
-      "tagline_en": "Balanced across all three objectives, at $100k",
-      "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
-    },
-    {
-      "account_number": null,
       "account_ref": "sha256:5f78e28e5b52f09d",
       "annualised_gated": true,
       "book": "best_cagr_100k",
+      "capital_at_risk": false,
       "categories": [
         {
           "category": "mean_reversion",
@@ -361,6 +131,242 @@
       "sessions": 10,
       "tagline_en": "Selected for compound growth, at $100k",
       "tagline_fr": "Sélectionné pour la croissance composée, à 100 k$"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:1211346e15573c00",
+      "annualised_gated": true,
+      "book": "best_composite",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 2,
+          "weight": 0.110695
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.070626
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.81868
+        }
+      ],
+      "cumulative_return": 0.005395590000000672,
+      "inception": "2026-08-08",
+      "initial_capital": 1000000.0,
+      "label": "RVB-BLEND-CORE",
+      "last_session": "2026-08-26",
+      "latest_detail_session": "2026-08-25",
+      "live": {
+        "at": "2026-08-26T20:00:00+00:00",
+        "cumulative_return": 0.005683600000000011,
+        "equity": 1005683.6,
+        "marked": false,
+        "session_date": "2026-08-26",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_composite/analytics.json",
+        "attributed": "books/best_composite/attributed.csv",
+        "benchmark": "books/best_composite/benchmark.csv",
+        "benchmark_intraday": "books/best_composite/benchmark_intraday.csv",
+        "detail": "books/best_composite/detail/",
+        "intraday": "books/best_composite/intraday.csv",
+        "meta": "books/best_composite/meta.json",
+        "metrics": "books/best_composite/metrics.json",
+        "nav": "books/best_composite/nav.csv",
+        "snapshots": "books/best_composite/snapshots/"
+      },
+      "sessions": 13,
+      "tagline_en": "Balanced across all three objectives",
+      "tagline_fr": "Équilibré sur les trois objectifs"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:22b1e1442449e5de",
+      "annualised_gated": true,
+      "book": "best_composite_100k",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 2,
+          "weight": 0.110695
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.070626
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.81868
+        }
+      ],
+      "cumulative_return": 0.00041899999999972515,
+      "inception": "2026-08-13",
+      "initial_capital": 100000.0,
+      "label": "RVB-BLEND-100K",
+      "last_session": "2026-08-26",
+      "latest_detail_session": "2026-08-25",
+      "live": {
+        "at": "2026-08-26T20:00:00+00:00",
+        "cumulative_return": 0.0004669999999999952,
+        "equity": 100046.7,
+        "marked": false,
+        "session_date": "2026-08-26",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_composite_100k/analytics.json",
+        "attributed": "books/best_composite_100k/attributed.csv",
+        "benchmark": "books/best_composite_100k/benchmark.csv",
+        "benchmark_intraday": "books/best_composite_100k/benchmark_intraday.csv",
+        "detail": "books/best_composite_100k/detail/",
+        "intraday": "books/best_composite_100k/intraday.csv",
+        "meta": "books/best_composite_100k/meta.json",
+        "metrics": "books/best_composite_100k/metrics.json",
+        "nav": "books/best_composite_100k/nav.csv",
+        "snapshots": "books/best_composite_100k/snapshots/"
+      },
+      "sessions": 10,
+      "tagline_en": "Balanced across all three objectives, at $100k",
+      "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:862dc86cb72b80a6",
+      "annualised_gated": true,
+      "book": "best_mdd",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 6,
+          "weight": 0.737709
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 2,
+          "weight": 0.154156
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 1,
+          "weight": 0.108135
+        }
+      ],
+      "cumulative_return": 0.003259139999999938,
+      "inception": "2026-08-08",
+      "initial_capital": 1000000.0,
+      "label": "RVB-DD-DEF",
+      "last_session": "2026-08-26",
+      "latest_detail_session": "2026-08-25",
+      "live": {
+        "at": "2026-08-26T20:00:00+00:00",
+        "cumulative_return": 0.00247891999999994,
+        "equity": 1002478.92,
+        "marked": false,
+        "session_date": "2026-08-26",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_mdd/analytics.json",
+        "attributed": "books/best_mdd/attributed.csv",
+        "benchmark": "books/best_mdd/benchmark.csv",
+        "benchmark_intraday": "books/best_mdd/benchmark_intraday.csv",
+        "detail": "books/best_mdd/detail/",
+        "intraday": "books/best_mdd/intraday.csv",
+        "meta": "books/best_mdd/meta.json",
+        "metrics": "books/best_mdd/metrics.json",
+        "nav": "books/best_mdd/nav.csv",
+        "snapshots": "books/best_mdd/snapshots/"
+      },
+      "sessions": 13,
+      "tagline_en": "Selected to limit drawdown",
+      "tagline_fr": "Sélectionné pour limiter le drawdown"
+    },
+    {
+      "account_number": null,
+      "account_ref": "sha256:93f4f6ad17de9f95",
+      "annualised_gated": true,
+      "book": "best_sharpe",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 5,
+          "weight": 0.580242
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.108989
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.310769
+        }
+      ],
+      "cumulative_return": 0.00465284999999982,
+      "inception": "2026-08-08",
+      "initial_capital": 1000000.0,
+      "label": "RVB-SR-STAB",
+      "last_session": "2026-08-26",
+      "latest_detail_session": "2026-08-25",
+      "live": {
+        "at": "2026-08-26T20:00:00+00:00",
+        "cumulative_return": 0.0047717499999999635,
+        "equity": 1004771.75,
+        "marked": false,
+        "session_date": "2026-08-26",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_sharpe/analytics.json",
+        "attributed": "books/best_sharpe/attributed.csv",
+        "benchmark": "books/best_sharpe/benchmark.csv",
+        "benchmark_intraday": "books/best_sharpe/benchmark_intraday.csv",
+        "detail": "books/best_sharpe/detail/",
+        "intraday": "books/best_sharpe/intraday.csv",
+        "meta": "books/best_sharpe/meta.json",
+        "metrics": "books/best_sharpe/metrics.json",
+        "nav": "books/best_sharpe/nav.csv",
+        "snapshots": "books/best_sharpe/snapshots/"
+      },
+      "sessions": 13,
+      "tagline_en": "Selected for risk-adjusted return",
+      "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
     }
   ],
   "chain": {
@@ -427,7 +433,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-27T04:00:02+00:00",
-  "publisher": "RVB Partners live paper-trading desk",
+  "published_at": "2026-08-27T08:00:02+00:00",
+  "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

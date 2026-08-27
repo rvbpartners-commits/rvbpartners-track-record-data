@@ -7,3 +7,19 @@
 # Aucun octet publie ne change : les blobs stockes sont deja en LF, c-est le
 # checkout qui les abimait. Ni reecriture, ni restatement.
 * -text
+
+# Deux publishers ecrivent dans ce depot -- le desk actions, toutes les cinq
+# minutes, et le book en capital reel. Les deux AJOUTENT des lignes a ces
+# journaux, jamais n'en modifient : une fusion par union est donc exactement
+# juste, et elle supprime la seule course de push qui restait.
+#
+# L'ordre des lignes entre books n'a aucune importance : le script de
+# verification publie chaine PAR BOOK (`prev.get(e['book'])`), donc seule compte
+# la sequence propre a chaque book, que l'union preserve.
+#
+# `text eol=lf` plutot que `-text` sur ces deux-la : un fichier marque `-text`
+# est traite comme binaire, et git refuse alors de le fusionner. Les octets
+# restent en LF sur toute plateforme, et ces fichiers ne sont de toute facon pas
+# haches -- seuls les snapshots le sont.
+CHAIN.jsonl text eol=lf merge=union
+DETAIL_CHAIN.jsonl text eol=lf merge=union
