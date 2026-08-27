@@ -1,6 +1,6 @@
 {
   "account_kind": "real_capital",
-  "account_kind_label": "REAL CAPITAL — operator's own funds",
+  "account_kind_label": "Real capital (live test)",
   "account_number": null,
   "account_ref": "sha256:d1d2e72a37083261",
   "account_type": "live",
@@ -50,9 +50,9 @@
   "last_session": "2026-08-26",
   "latest_detail_session": null,
   "live": {
-    "at": "2026-08-27T11:53:02+00:00",
-    "cumulative_return": 0.006941457147509933,
-    "equity": 454.902969,
+    "at": "2026-08-27T15:52:48+00:00",
+    "cumulative_return": 0.006956768955282522,
+    "equity": 455.088376,
     "marked": false,
     "session_date": "2026-08-27",
     "source": "both venue accounts, read directly"
@@ -65,15 +65,15 @@
     "impact_usd": -0.107376,
     "note": "fee-calibration executions on other instruments, excluded from the return and treated as a capital adjustment; the instruments are not published"
   },
-  "published_at": "2026-08-27T11:53:02+00:00",
+  "published_at": "2026-08-27T15:52:48+00:00",
   "reconciliation": {
-    "marked_usd": 455.248447,
+    "marked_usd": 456.204655,
     "note": "the curve is reconstructed from realised profit and loss, so it is checked against what the two accounts actually report. The unrealised legs are added back before comparing, because while a position is open a realised series cannot equal a marked one — and in hedging mode that gap is structural: the closed leg realises while the opposite leg is still open. What is left is read drift: the two venues are queried one after the other while the account keeps trading. Published whether or not it is zero — a field that only appears when it is inconvenient is not a measurement",
-    "read_usd": 454.902969,
-    "realised_usd": 454.782927,
-    "residual_bps": 7.59,
+    "read_usd": 455.088376,
+    "realised_usd": 455.051226,
+    "residual_bps": 24.53,
     "unrealised_venue_a_usd": 0,
-    "unrealised_venue_b_usd": 0.46552
+    "unrealised_venue_b_usd": 1.153429
   },
   "risk_free_annual": 0.038669999999999996,
   "risk_free_source": "FRED DGS3MO",
@@ -81,16 +81,21 @@
     "annualised_withheld": true,
     "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
     "fees_total_usd": 0.126686,
-    "funding_share_of_net": 0.13215715918292226,
+    "funding_share_of_net": 0.1314693079348268,
     "funding_total_usd": 0.421044,
     "hit_rate": 1.0,
     "median_holding_seconds": 4259.347,
-    "net_mean_usd": 0.637187,
-    "net_total_usd": 3.185934,
+    "net_mean_usd": 0.640521,
+    "net_total_usd": 3.202603,
     "round_trips": 5,
     "round_trips_needed_for_annualising": 30,
     "unit_note": "the unit of account is the round trip, not the session: this book executed on 3 of its 17 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
     "winners": 5
   },
-  "sessions": 15
+  "session_close": {
+    "label": "21:00 UTC",
+    "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed and the book was economically flat at that close"
+  },
+  "sessions": 15,
+  "slug": "rvb-maker-01"
 }

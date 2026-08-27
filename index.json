@@ -388,7 +388,7 @@
     },
     {
       "account_kind": "real_capital",
-      "account_kind_label": "REAL CAPITAL — operator's own funds",
+      "account_kind_label": "Real capital (live test)",
       "account_number": null,
       "account_ref": "sha256:d1d2e72a37083261",
       "annualised_gated": true,
@@ -402,9 +402,9 @@
       "last_session": "2026-08-26",
       "latest_detail_session": null,
       "live": {
-        "at": "2026-08-27T11:53:02+00:00",
-        "cumulative_return": 0.006941457147509933,
-        "equity": 454.902969,
+        "at": "2026-08-27T15:52:48+00:00",
+        "cumulative_return": 0.006956768955282522,
+        "equity": 455.088376,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "both venue accounts, read directly"
@@ -414,6 +414,7 @@
         "daily": "books/maker_01/daily.csv",
         "events": "books/maker_01/events.json",
         "meta": "books/maker_01/meta.json",
+        "methodology": "books/maker_01/METHODOLOGY.md",
         "metrics": "books/maker_01/metrics.json",
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
@@ -422,18 +423,23 @@
         "annualised_withheld": true,
         "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
         "fees_total_usd": 0.126686,
-        "funding_share_of_net": 0.13215715918292226,
+        "funding_share_of_net": 0.1314693079348268,
         "funding_total_usd": 0.421044,
         "hit_rate": 1.0,
         "median_holding_seconds": 4259.347,
-        "net_mean_usd": 0.637187,
-        "net_total_usd": 3.185934,
+        "net_mean_usd": 0.640521,
+        "net_total_usd": 3.202603,
         "round_trips": 5,
         "round_trips_needed_for_annualising": 30,
         "unit_note": "the unit of account is the round trip, not the session: this book executed on 3 of its 17 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
         "winners": 5
       },
+      "session_close": {
+        "label": "21:00 UTC",
+        "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed and the book was economically flat at that close"
+      },
       "sessions": 15,
+      "slug": "rvb-maker-01",
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
@@ -502,7 +508,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-27T15:50:03+00:00",
+  "published_at": "2026-08-27T15:52:48+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

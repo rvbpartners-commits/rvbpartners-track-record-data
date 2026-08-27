@@ -12,9 +12,19 @@ module, hash-chained write-once snapshots, no figure computed in a browser.
 
 The **broker's own trading day** (UTC+3). Its midnight falls at 21:00 UTC, which
 is the session close used throughout. The calendar is every *calendar* day, not
-only the days the broker quotes: the other venue trades 24/7, so Saturday
-funding is a fact about Saturday. A day on which nothing traded is a **zero**,
-never a missing row.
+only the days the broker quotes.
+
+**A weekend is not a flat weekend — only the broker leg is flat.** The other
+venue trades 24/7, and funding accrues there whether or not the broker is open.
+Saturday 22 and Sunday 23 August each carry their own funding (-0.0395 and
+-0.0326 USD); they are separate rows with their real values, not a pair of
+zeros and not a lump attached to the Monday. A calendar restricted to the days
+the broker quotes did exactly that, and the sum still looked complete.
+
+Nothing is interpolated on a day the broker does not quote: its conversion rate
+is the last rate actually observed, carried forward, and the leg it converts is
+zero anyway. A day on which nothing traded at all is a **zero**, never a missing
+row.
 
 Annualisation, where it is ever released, uses **259 periods a
 year** — measured on this broker's calendar, not the equity desk's 252.
