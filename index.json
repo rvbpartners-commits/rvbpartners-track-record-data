@@ -369,40 +369,59 @@
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
     },
     {
+      "account_kind": "real_capital",
+      "account_kind_label": "REAL CAPITAL — operator's own funds",
       "account_number": null,
       "account_ref": "sha256:d1d2e72a37083261",
       "annualised_gated": true,
       "book": "maker_01",
       "capital_at_risk": true,
       "categories": [],
-      "cumulative_return": 0.004197264121946542,
+      "cumulative_return": 0.005974390520339323,
       "inception": "2026-08-12",
-      "initial_capital": 449.567698,
+      "initial_capital": 449.411898,
       "label": "RVB-MAKER-01",
       "last_session": "2026-08-26",
       "latest_detail_session": null,
       "live": {
-        "at": "2026-08-27T10:39:54+00:00",
-        "cumulative_return": 0.0050610689164356515,
-        "equity": 454.956758,
+        "at": "2026-08-27T11:43:06+00:00",
+        "cumulative_return": 0.00694279381491536,
+        "equity": 454.973743,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "both venue accounts, read directly"
       },
       "paths": {
         "benchmark": "books/maker_01/benchmark.csv",
+        "daily": "books/maker_01/daily.csv",
+        "events": "books/maker_01/events.json",
         "meta": "books/maker_01/meta.json",
         "metrics": "books/maker_01/metrics.json",
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
-      "sessions": 10,
+      "round_trips": {
+        "annualised_withheld": true,
+        "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
+        "fees_total_usd": 0.126686,
+        "funding_share_of_net": 0.13213618534390645,
+        "funding_total_usd": 0.421044,
+        "hit_rate": 1.0,
+        "median_holding_seconds": 4259.347,
+        "net_mean_usd": 0.637288,
+        "net_total_usd": 3.18644,
+        "round_trips": 5,
+        "round_trips_needed_for_annualising": 30,
+        "unit_note": "the unit of account is the round trip, not the session: this book executed on 3 of its 17 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
+        "winners": 5
+      },
+      "sessions": 15,
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
   ],
   "chain": {
-    "entries": 88,
+    "entries": 87,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -465,7 +484,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-27T10:39:54+00:00",
+  "published_at": "2026-08-27T11:45:02+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
