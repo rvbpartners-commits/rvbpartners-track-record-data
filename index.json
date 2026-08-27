@@ -1,6 +1,8 @@
 {
   "books": [
     {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
       "account_number": null,
       "account_ref": "sha256:54f7df38b17a2581",
       "annualised_gated": true,
@@ -43,9 +45,9 @@
       "last_session": "2026-08-26",
       "latest_detail_session": "2026-08-25",
       "live": {
-        "at": "2026-08-27T15:45:00+00:00",
-        "cumulative_return": 0.01148627999999996,
-        "equity": 1011486.28,
+        "at": "2026-08-27T15:50:00+00:00",
+        "cumulative_return": 0.011385160000000116,
+        "equity": 1011385.16,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -63,10 +65,13 @@
         "snapshots": "books/best_cagr/snapshots/"
       },
       "sessions": 13,
+      "slug": "rvb-growth-agg",
       "tagline_en": "Selected for compound growth",
       "tagline_fr": "Sélectionné pour la croissance composée"
     },
     {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
       "account_number": null,
       "account_ref": "sha256:5f78e28e5b52f09d",
       "annualised_gated": true,
@@ -109,9 +114,9 @@
       "last_session": "2026-08-26",
       "latest_detail_session": "2026-08-25",
       "live": {
-        "at": "2026-08-27T15:45:00+00:00",
-        "cumulative_return": 0.008266600000000013,
-        "equity": 100826.66,
+        "at": "2026-08-27T15:50:00+00:00",
+        "cumulative_return": 0.00815980000000005,
+        "equity": 100815.98,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -129,10 +134,13 @@
         "snapshots": "books/best_cagr_100k/snapshots/"
       },
       "sessions": 10,
+      "slug": "rvb-growth-100k",
       "tagline_en": "Selected for compound growth, at $100k",
       "tagline_fr": "Sélectionné pour la croissance composée, à 100 k$"
     },
     {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
       "account_number": null,
       "account_ref": "sha256:1211346e15573c00",
       "annualised_gated": true,
@@ -168,9 +176,9 @@
       "last_session": "2026-08-26",
       "latest_detail_session": "2026-08-25",
       "live": {
-        "at": "2026-08-27T15:45:00+00:00",
-        "cumulative_return": 0.00602074000000008,
-        "equity": 1006020.74,
+        "at": "2026-08-27T15:50:00+00:00",
+        "cumulative_return": 0.005971830000000011,
+        "equity": 1005971.83,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -188,10 +196,13 @@
         "snapshots": "books/best_composite/snapshots/"
       },
       "sessions": 13,
+      "slug": "rvb-blend-core",
       "tagline_en": "Balanced across all three objectives",
       "tagline_fr": "Équilibré sur les trois objectifs"
     },
     {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
       "account_number": null,
       "account_ref": "sha256:22b1e1442449e5de",
       "annualised_gated": true,
@@ -227,9 +238,9 @@
       "last_session": "2026-08-26",
       "latest_detail_session": "2026-08-25",
       "live": {
-        "at": "2026-08-27T15:45:00+00:00",
-        "cumulative_return": 0.0006871999999999989,
-        "equity": 100068.72,
+        "at": "2026-08-27T15:50:00+00:00",
+        "cumulative_return": 0.0006401000000000323,
+        "equity": 100064.01,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -247,10 +258,13 @@
         "snapshots": "books/best_composite_100k/snapshots/"
       },
       "sessions": 10,
+      "slug": "rvb-blend-100k",
       "tagline_en": "Balanced across all three objectives, at $100k",
       "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
     },
     {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
       "account_number": null,
       "account_ref": "sha256:862dc86cb72b80a6",
       "annualised_gated": true,
@@ -286,9 +300,9 @@
       "last_session": "2026-08-26",
       "latest_detail_session": "2026-08-25",
       "live": {
-        "at": "2026-08-27T15:45:00+00:00",
-        "cumulative_return": 0.003952549999999944,
-        "equity": 1003952.55,
+        "at": "2026-08-27T15:50:00+00:00",
+        "cumulative_return": 0.0039770500000000375,
+        "equity": 1003977.05,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -306,10 +320,13 @@
         "snapshots": "books/best_mdd/snapshots/"
       },
       "sessions": 13,
+      "slug": "rvb-dd-def",
       "tagline_en": "Selected to limit drawdown",
       "tagline_fr": "Sélectionné pour limiter le drawdown"
     },
     {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
       "account_number": null,
       "account_ref": "sha256:93f4f6ad17de9f95",
       "annualised_gated": true,
@@ -345,9 +362,9 @@
       "last_session": "2026-08-26",
       "latest_detail_session": "2026-08-25",
       "live": {
-        "at": "2026-08-27T15:45:00+00:00",
-        "cumulative_return": 0.0055838800000000965,
-        "equity": 1005583.88,
+        "at": "2026-08-27T15:50:00+00:00",
+        "cumulative_return": 0.005561869999999969,
+        "equity": 1005561.87,
         "marked": false,
         "session_date": "2026-08-27",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -365,6 +382,7 @@
         "snapshots": "books/best_sharpe/snapshots/"
       },
       "sessions": 13,
+      "slug": "rvb-sr-stab",
       "tagline_en": "Selected for risk-adjusted return",
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
     },
@@ -484,7 +502,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-27T15:45:02+00:00",
+  "published_at": "2026-08-27T15:50:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
