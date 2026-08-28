@@ -17,7 +17,7 @@ pipeline and pushed unedited. Nothing in this repository is written by hand.
 | `index.json` | Entry point: the books, their inception dates, where everything else lives |
 | `CHAIN.jsonl` | Append-only hash chain over every snapshot ever published |
 | `books/<book>/meta.json` | Book identity, inception, account reference, disclosure settings |
-| `books/<book>/nav.csv` | `date,equity,cash,daily_return` — the whole equity curve |
+| `books/<book>/nav.csv` | `date,equity,cash,flow,adj_factor,equity_adj,daily_return` — the whole equity curve, raw and adjusted for declared capital events |
 | `books/<book>/metrics.json` | Computed metrics and, until there is enough history, what is withheld |
 | `books/<book>/analytics.json` | Tear-sheet series: rolling Sharpe, drawdown path, monthly returns, distribution |
 | `books/<book>/benchmark.csv` | SPY total return and the risk-free (cash) line, on our dates |
