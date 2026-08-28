@@ -395,16 +395,32 @@
       "book": "maker_01",
       "capital_at_risk": true,
       "categories": [],
-      "cumulative_return": 0.006953447539305824,
+      "cumulative_return": 0.006901584131804306,
+      "exposure": {
+        "carried_past_close": [
+          {
+            "net_volume": -1.0,
+            "session": "2026-08-27",
+            "tickets": 1
+          }
+        ],
+        "median_holding_seconds": 5575.0689999999995,
+        "note": "this book holds a position for minutes, not months, and is flat most of the time. A holdings table would be empty on almost every session -- which would read as 'nothing to show' rather than as the answer to a question that does not apply. The instrument, the venues and the size are not published: they are the strategy",
+        "sessions_checked": 16,
+        "sessions_flat_at_close": 15,
+        "sessions_published": 16,
+        "sessions_traded": 3,
+        "structure": "one instrument, two venues, offsetting"
+      },
       "inception": "2026-08-12",
       "initial_capital": 449.411898,
       "label": "RVB-MAKER-01",
       "last_session": "2026-08-27",
       "latest_detail_session": null,
       "live": {
-        "at": "2026-08-28T06:08:30+00:00",
-        "cumulative_return": 0.007410526811744145,
-        "equity": 455.122277,
+        "at": "2026-08-28T08:47:42+00:00",
+        "cumulative_return": 0.007333174585629765,
+        "equity": 455.063679,
         "marked": false,
         "session_date": "2026-08-28",
         "source": "both venue accounts, read directly"
@@ -424,12 +440,12 @@
         "annualised_withheld": true,
         "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
         "fees_total_usd": 0.151506,
-        "funding_share_of_net": 0.10633935016129073,
+        "funding_share_of_net": 0.10739227933045356,
         "funding_total_usd": 0.383602,
         "hit_rate": 1.0,
         "median_holding_seconds": 5575.0689999999995,
-        "net_mean_usd": 0.601223,
-        "net_total_usd": 3.607338,
+        "net_mean_usd": 0.595328,
+        "net_total_usd": 3.57197,
         "round_trips": 6,
         "round_trips_needed_for_annualising": 30,
         "unit_note": "the unit of account is the round trip, not the session: this book executed on 3 of its 17 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
@@ -509,7 +525,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-28T06:08:30+00:00",
+  "published_at": "2026-08-28T08:47:42+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

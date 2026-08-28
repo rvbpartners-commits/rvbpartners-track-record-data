@@ -26,6 +26,22 @@
   "desk_manifest_hash": null,
   "detail_lag_days": 0,
   "detail_sessions": [],
+  "exposure": {
+    "carried_past_close": [
+      {
+        "net_volume": -1.0,
+        "session": "2026-08-27",
+        "tickets": 1
+      }
+    ],
+    "median_holding_seconds": 5575.0689999999995,
+    "note": "this book holds a position for minutes, not months, and is flat most of the time. A holdings table would be empty on almost every session -- which would read as 'nothing to show' rather than as the answer to a question that does not apply. The instrument, the venues and the size are not published: they are the strategy",
+    "sessions_checked": 16,
+    "sessions_flat_at_close": 15,
+    "sessions_published": 16,
+    "sessions_traded": 3,
+    "structure": "one instrument, two venues, offsetting"
+  },
   "fx": {
     "basis": "flow conversion",
     "note": "the broker leg is in a foreign currency. Each session's leg is converted once, at that session's close rate, and never revalued -- so no exchange-rate movement enters the curve. A live dashboard that revalues the whole leg at the current rate will differ by a few cents; each snapshot publishes that gap as fx.delta_bps",
@@ -43,9 +59,9 @@
   "last_session": "2026-08-27",
   "latest_detail_session": null,
   "live": {
-    "at": "2026-08-28T06:08:30+00:00",
-    "cumulative_return": 0.007410526811744145,
-    "equity": 455.122277,
+    "at": "2026-08-28T08:47:42+00:00",
+    "cumulative_return": 0.007333174585629765,
+    "equity": 455.063679,
     "marked": false,
     "session_date": "2026-08-28",
     "source": "both venue accounts, read directly"
@@ -53,8 +69,8 @@
   "min_sessions_for_annualised": 60,
   "open_at_close": {
     "note": "sessions the book carried an open, unmatched position past the close. It is disclosed, never marked and never estimated: a locked pair is realised the day it locks, and an unmatched remainder carries the only market risk in the book and none of the published profit. Its result appears on the day it locks -- which is why a session is published whether or not the book was flat. Refusing would drop the session entirely, and a missing session is selection, which is what the chain exists to prevent",
-    "sessions_checked": 25,
-    "sessions_flat": 24,
+    "sessions_checked": 16,
+    "sessions_flat": 15,
     "sessions_with_open_exposure": [
       {
         "net_volume": -1.0,
@@ -70,13 +86,13 @@
     "impact_usd": -0.107376,
     "note": "fee-calibration executions on other instruments, excluded from the return and treated as a capital adjustment; the instruments are not published"
   },
-  "published_at": "2026-08-28T06:08:30+00:00",
+  "published_at": "2026-08-28T08:47:42+00:00",
   "reconciliation": {
-    "marked_usd": 455.123255,
+    "marked_usd": 455.053014,
     "note": "the curve is reconstructed from realised profit and loss, so it is checked against what the two accounts actually report. The unrealised legs are added back before comparing, because while a position is open a realised series cannot equal a marked one — and in hedging mode that gap is structural: the closed leg realises while the opposite leg is still open. What is left is read drift: the two venues are queried one after the other while the account keeps trading. Published whether or not it is zero — a field that only appears when it is inconvenient is not a measurement",
-    "read_usd": 455.122277,
-    "realised_usd": 455.123255,
-    "residual_bps": 0.02,
+    "read_usd": 455.063679,
+    "realised_usd": 455.053014,
+    "residual_bps": -0.23,
     "unrealised_venue_a_usd": 0,
     "unrealised_venue_b_usd": 0.0
   },
@@ -86,12 +102,12 @@
     "annualised_withheld": true,
     "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
     "fees_total_usd": 0.151506,
-    "funding_share_of_net": 0.10633935016129073,
+    "funding_share_of_net": 0.10739227933045356,
     "funding_total_usd": 0.383602,
     "hit_rate": 1.0,
     "median_holding_seconds": 5575.0689999999995,
-    "net_mean_usd": 0.601223,
-    "net_total_usd": 3.607338,
+    "net_mean_usd": 0.595328,
+    "net_total_usd": 3.57197,
     "round_trips": 6,
     "round_trips_needed_for_annualising": 30,
     "unit_note": "the unit of account is the round trip, not the session: this book executed on 3 of its 17 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
