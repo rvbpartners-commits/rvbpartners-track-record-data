@@ -34,6 +34,12 @@ Sharpe, CAGR, Calmar, volatility and maximum drawdown are suppressed until a boo
 
 NAV, returns and metrics are published with no delay. Order, fill and position detail is published as soon as the cycle that produced it has ACTUALLY EXECUTED — there is no additional waiting period. What is never published is the pending order plan: the desk computes its orders after the close for the next open, and that plan stays private until it has been sent. The execution test, not a delay, is what prevents publishing orders before they exist at the broker. The consequence is deliberate: current holdings are public.
 
+## External capital movements are excluded from the return
+
+*IMPORTANT*
+
+A capital movement that is not a trade does not belong in a performance figure. When money or assets enter or leave an account by an act that is not the manager's, the return is measured over the capital actually managed and the movement is kept in the balance. This is the standard time-weighted treatment of a deposit, a withdrawal, or a broker adjustment. Nothing is hidden and nothing is rewritten: the raw broker equity is published unchanged in nav.csv beside the flow, the multiplier and the adjusted index, so both curves can be drawn from the same file. Every declared event is published with its evidence inside the write-once, hash-chained, timestamp-anchored snapshot for the session it hit. A book with no declared event is unaffected: its multiplier is exactly 1.0 and its adjusted series is its raw series.
+
 ## Holdings are shown by strategy category, not by strategy
 
 *NOTE*
@@ -44,4 +50,4 @@ Positions and attribution are grouped by the STYLE of the strategy that holds th
 
 *NOTE*
 
-Returns are time-weighted, which with no external cash flows reduces to simple compounding of daily NAV. The presentation is informed by GIPS practice but makes NO claim of GIPS compliance: that requires third-party verification, which has not been performed.
+Returns are time-weighted: an external capital flow is excluded from the return and kept in the balance, so performance measures the capital actually managed. With no flow this reduces to simple compounding of daily NAV, which is the case for every book except where a capital event is declared beside the curve. The presentation is informed by GIPS practice but makes NO claim of GIPS compliance: that requires third-party verification, which has not been performed.

@@ -116,10 +116,60 @@ appears twice, with two timestamps, and only the newest entry matches the file
 on disk. What this forbids is the quiet substitution: publishing one set of fills
 and later serving another with nothing to show for it.
 
+## 7. Capital events, if a book has one
+
+A capital movement that is not a trade is excluded from the return and kept in
+the balance (Methodology, section 2). Because that is an adjustment we make to
+our own performance figure, it is the one thing in this repository that most
+deserves checking, so it is published to be checked.
+
+`nav.csv` carries both series and the bridge between them:
+
+| column | what it is |
+|---|---|
+| `equity` | exactly what the broker reported. Never rewritten. |
+| `flow` | the declared external movement on that date, signed. Zero almost everywhere. |
+| `adj_factor` | the multiplier that removes flows from the return. |
+| `equity_adj` | `equity x adj_factor` — the track-record index, and what the charts draw. |
+
+Three checks, all of which a reader can run against files in this repository:
+
+```python
+import pandas as pd
+
+nav = pd.read_csv("books/best_cagr/nav.csv")
+
+# 1. The adjustment cannot reach backwards. Before the first declared flow,
+#    the adjusted index IS the raw equity, to the cent.
+flagged = nav.index[nav["flow"] != 0]
+before = nav.iloc[:flagged.min()] if len(flagged) else nav
+assert (before["adj_factor"] == 1.0).all()
+assert (before["equity_adj"] - before["equity"]).abs().max() < 0.01
+
+# 2. The factor is what it claims to be:
+#    k_t = k_{t-1} * E_{t-1} / (E_{t-1} + F_t)
+k = 1.0
+for i in range(1, len(nav)):
+    f = nav["flow"].iloc[i]
+    if f:
+        k *= nav["equity"].iloc[i - 1] / (nav["equity"].iloc[i - 1] + f)
+    assert abs(nav["adj_factor"].iloc[i] - k) < 1e-12
+
+# 3. daily_return is the pct_change of the adjusted index, not the raw one.
+assert (nav["equity_adj"].pct_change() - nav["daily_return"]).abs().max() < 1e-12
+```
+
+The event itself, with its evidence, is inside the write-once snapshot for the
+session it hit — `books/<book>/snapshots/<date>.json`, key `capital_event` — so
+it is hash-chained and Bitcoin-anchored like every other claim here, and it
+carries a `derivation` field stating how the amount was obtained from published
+data rather than merely asserting it.
+
 ## What this does and does not prove
 
 **It proves:** no published number has been edited after the fact; no session has
-been quietly dropped; each record existed when it claims to (`desk publish
+been quietly dropped; every adjustment to a return is declared, evidenced,
+dated and unable to reach backwards; each record existed when it claims to (`desk publish
 --verify` opens every proof, checks it commits to that exact file, and reports
 the Bitcoin block it is anchored in); the orders, fills and intraday curve match
 the digests recorded for them, and any correction to them is visible; the metrics

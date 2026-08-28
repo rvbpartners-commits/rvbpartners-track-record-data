@@ -19,11 +19,41 @@ reconstructed, or derived from our own fill records.
 
 ## 2. Returns
 
-Daily return is `NAV_t / NAV_{t-1} − 1`. Returns are **time-weighted**. These
-accounts have a single opening deposit and no subsequent external cash flows, so
-the time-weighted return reduces exactly to compounding those daily returns —
-there is nothing for a money-weighted variant to disagree about. The day that
-stops being true, this document changes.
+Daily return is `NAV_t / (NAV_{t-1} + F_t) − 1`, where `F_t` is any **external
+capital movement** on that session. Returns are **time-weighted**: money or
+assets entering or leaving an account by an act that is not a trade are excluded
+from the return and kept in the balance, so performance measures the capital
+actually managed. With no flow this reduces exactly to compounding
+`NAV_t / NAV_{t-1} − 1`, which is the case for every session of every book
+except where a capital event is declared.
+
+**Declared capital events.** An earlier version of this document said these
+accounts had a single opening deposit and no subsequent external flows. That
+stopped being true on 28 August 2026, when the broker removed a position from
+one paper account overnight with no sale, no journal entry, no corporate action
+and no cash credit; equity fell by exactly the position's market value. That is
+an outflow, not a trading loss, and it is treated as one.
+
+Four things make this an adjustment rather than an edit, and each is checkable:
+
+- **The raw series is never rewritten.** `nav.csv` publishes `equity` exactly as
+  the broker reported it, discontinuity included, beside `flow`, `adj_factor`
+  and `equity_adj`. Both curves come out of the same file.
+- **An event changes its own session and every one after it, and nothing
+  before.** For every row published before an event, `adj_factor` is exactly
+  `1.0` and `equity_adj` is exactly `equity`. Adjusting the past is not
+  something this mechanism can express.
+- **Every event is published with its evidence**, inside the write-once,
+  hash-chained, timestamp-anchored snapshot for the session it hit
+  (`capital_event`). It carries the same weight as the numbers it corrects.
+- **The amount is reproducible from published files.** It is stated as a
+  derivation, not asserted: for the 28 August event, 71.236611 shares (the net
+  of six fills published under `detail/`) at the desk's own 422.62 mark for the
+  previous session.
+
+A book with no declared event is unaffected in every respect: its multiplier is
+`1.0`, its adjusted series is its raw series, and its published metrics are
+byte-for-byte what they were.
 
 **The curve starts at funded capital, not at the first mark.** The desk's first
 equity snapshot is taken after the first trading day's close, so it already
@@ -118,6 +148,13 @@ interpolated across it and no value is carried forward to hide it.
 
 **A symbol the loader cannot price is frozen, not liquidated.** It keeps its last
 known state rather than being marked to a guess.
+
+**The broker's books are not infallible, and we do not paper over it when they
+are wrong.** On 28 August 2026 a position vanished from one paper account with
+no transaction behind it. The desk's own broker-versus-shadow reconciliation
+raised it within hours; it is declared as a capital event, published with its
+evidence, and excluded from the return. It is disclosed here because a record
+that only reports the broker's good days is not a record.
 
 ## 7. Publication timing
 
