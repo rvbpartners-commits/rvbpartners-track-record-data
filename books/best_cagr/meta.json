@@ -13,6 +13,45 @@
   "account_ref": "sha256:54f7df38b17a2581",
   "account_type": "alpaca_paper",
   "book": "best_cagr",
+  "capital_events": {
+    "convention": "time-weighted return; external flows are excluded from the return and kept in the balance. A flow is applied at the START of its session: r_t = E_t / (E_t-1 + F_t) - 1",
+    "cumulative_flow_usd": -30106.02,
+    "events": [
+      {
+        "amount_usd": -30106.02,
+        "date": "2026-08-28",
+        "derivation": "71.236611 GLD x 422.62 (the desk's 2026-08-27 mark) = 30106.02, removed from the account",
+        "evidence": {
+          "asset_status_at_broker": "GLD remained tradable, fractionable and active; no asset-level event explains the removal",
+          "broker_activity_log": "no FILL, JNL, corporate action, split or fee for GLD after 2026-08-27T13:33:33Z",
+          "broker_equity_after_et0400": 982069.99,
+          "broker_equity_before_et2000": 1011547.14,
+          "broker_equity_step": -29477.15,
+          "broker_position_endpoint": "GET /v2/positions/GLD answered 404 'position does not exist' while the account's own order history still listed all six fills as filled",
+          "cash_credited_usd": 0.0,
+          "desk_detection": "the desk's own broker-vs-shadow reconciliation raised the discrepancy at 2026-08-28T03:37 ET and every 15 minutes after it",
+          "mark_date": "2026-08-27",
+          "mark_price": 422.62,
+          "mark_source": "the desk's own after-close mark for GLD on the last session that contained the position",
+          "orders_sent_in_window": 0,
+          "qty": 71.236611,
+          "qty_source": "net of the six GLD fills published under books/best_cagr/detail/ (+72.177851, -0.321873, -1.234323, -0.506521, -0.112455, +1.233932)",
+          "residual_check": "equity fell 31075.18 from the broker's prior close while the 15 surviving positions accounted for -968.20 of it; the 30106.98 remainder is the vanished position, matching the declared 30106.02 to within fees and the valuation-basis difference above",
+          "same_day_trading_pnl_usd": -968.2,
+          "step_vs_declared_note": "the broker's own hourly series steps by 29477.15 while the declared flow is 30106.02; the two differ because they value the same position on different bases (Alpaca's 04:00 valuation against the desk's 16:20 mark). The declared amount is the one a reader can reproduce from published files.",
+          "symbol": "GLD",
+          "unaffected_books": "best_cagr_100k holds the same strategies and weights at one tenth the capital and still held its 7.100702 GLD; no other published book was affected",
+          "window_et": "2026-08-27T20:00 ET to 2026-08-28T04:00 ET, market closed throughout"
+        },
+        "kind": "broker_adjustment",
+        "reason_en": "A 71.236611-share GLD position disappeared from the broker's books overnight with no sale, no journal entry, no corporate action and no cash credit. Assets left the account by an act that was not a trade, so the amount is treated as an external withdrawal and excluded from the return.",
+        "reason_fr": "Une position de 71,236611 parts de GLD a disparu des livres du courtier pendant la nuit, sans vente, sans ecriture de journal, sans operation sur titre et sans credit en especes. Des actifs ont quitte le compte par un acte qui n'etait pas une transaction : le montant est donc traite comme un retrait externe et exclu du rendement."
+      }
+    ],
+    "live_factor": 1.0306843537907515,
+    "live_factor_note": "multiply a raw intraday equity reading by this to place it on the adjusted index; it is 1.0 for every book with no declared flow",
+    "raw_series_preserved": "nav.csv keeps `equity` exactly as the broker reported it; `equity_adj` is the adjusted index and `adj_factor` is the multiplier between them"
+  },
   "categories": [
     {
       "category": "mean_reversion",
@@ -65,22 +104,23 @@
   "inception_anchored_to_funded_capital": true,
   "inception_note": "Curve starts at the broker's equity on the last day before the first trade, so the first session's P&L is inside the record.",
   "initial_capital": 1000000.0,
-  "intraday_points": 1088,
+  "intraday_points": 1089,
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
   "last_session": "2026-08-27",
   "latest_detail_session": "2026-08-26",
   "live": {
-    "at": "2026-08-28T18:30:00+00:00",
-    "cumulative_return": -0.019288719999999926,
-    "equity": 980711.28,
+    "adj_factor": 1.0306843537907515,
+    "at": "2026-08-28T18:35:00+00:00",
+    "cumulative_return": 0.010851059680252684,
+    "equity": 980757.16,
     "marked": false,
     "session_date": "2026-08-28",
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-28T18:30:03+00:00",
+  "published_at": "2026-08-28T18:35:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"

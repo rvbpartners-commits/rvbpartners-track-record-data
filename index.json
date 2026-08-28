@@ -45,9 +45,10 @@
       "last_session": "2026-08-27",
       "latest_detail_session": "2026-08-26",
       "live": {
-        "at": "2026-08-28T18:30:00+00:00",
-        "cumulative_return": -0.019288719999999926,
-        "equity": 980711.28,
+        "adj_factor": 1.0306843537907515,
+        "at": "2026-08-28T18:35:00+00:00",
+        "cumulative_return": 0.010851059680252684,
+        "equity": 980757.16,
         "marked": false,
         "session_date": "2026-08-28",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -114,9 +115,10 @@
       "last_session": "2026-08-27",
       "latest_detail_session": "2026-08-26",
       "live": {
-        "at": "2026-08-28T18:30:00+00:00",
-        "cumulative_return": 0.007663600000000104,
-        "equity": 100766.36,
+        "adj_factor": 1.0,
+        "at": "2026-08-28T18:35:00+00:00",
+        "cumulative_return": 0.007760400000000001,
+        "equity": 100776.04,
         "marked": false,
         "session_date": "2026-08-28",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -176,9 +178,10 @@
       "last_session": "2026-08-27",
       "latest_detail_session": "2026-08-26",
       "live": {
-        "at": "2026-08-28T18:30:00+00:00",
-        "cumulative_return": 0.0052088000000001244,
-        "equity": 1005208.8,
+        "adj_factor": 1.0,
+        "at": "2026-08-28T18:35:00+00:00",
+        "cumulative_return": 0.005209530000000129,
+        "equity": 1005209.53,
         "marked": false,
         "session_date": "2026-08-28",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -238,9 +241,10 @@
       "last_session": "2026-08-27",
       "latest_detail_session": "2026-08-26",
       "live": {
-        "at": "2026-08-28T18:30:00+00:00",
-        "cumulative_return": 0.0003599000000000796,
-        "equity": 100035.99,
+        "adj_factor": 1.0,
+        "at": "2026-08-28T18:35:00+00:00",
+        "cumulative_return": 0.00038490000000002134,
+        "equity": 100038.49,
         "marked": false,
         "session_date": "2026-08-28",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -300,9 +304,10 @@
       "last_session": "2026-08-27",
       "latest_detail_session": "2026-08-26",
       "live": {
-        "at": "2026-08-28T18:30:00+00:00",
-        "cumulative_return": 0.0003859299999999788,
-        "equity": 1000385.93,
+        "adj_factor": 1.0,
+        "at": "2026-08-28T18:35:00+00:00",
+        "cumulative_return": 0.0005554100000000339,
+        "equity": 1000555.41,
         "marked": false,
         "session_date": "2026-08-28",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -362,9 +367,10 @@
       "last_session": "2026-08-27",
       "latest_detail_session": "2026-08-26",
       "live": {
-        "at": "2026-08-28T18:30:00+00:00",
-        "cumulative_return": 0.004634170000000104,
-        "equity": 1004634.17,
+        "adj_factor": 1.0,
+        "at": "2026-08-28T18:35:00+00:00",
+        "cumulative_return": 0.004662849999999885,
+        "equity": 1004662.85,
         "marked": false,
         "session_date": "2026-08-28",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -508,6 +514,14 @@
       "title_fr": "Tout est publié dès que c'est réel"
     },
     {
+      "body_en": "A capital movement that is not a trade does not belong in a performance figure. When money or assets enter or leave an account by an act that is not the manager's, the return is measured over the capital actually managed and the movement is kept in the balance. This is the standard time-weighted treatment of a deposit, a withdrawal, or a broker adjustment. Nothing is hidden and nothing is rewritten: the raw broker equity is published unchanged in nav.csv beside the flow, the multiplier and the adjusted index, so both curves can be drawn from the same file. Every declared event is published with its evidence inside the write-once, hash-chained, timestamp-anchored snapshot for the session it hit. A book with no declared event is unaffected: its multiplier is exactly 1.0 and its adjusted series is its raw series.",
+      "body_fr": "Un mouvement de capital qui n'est pas une transaction n'a pas sa place dans une mesure de performance. Lorsque des fonds ou des actifs entrent ou sortent d'un compte par un acte qui n'est pas celui du gerant, le rendement est mesure sur le capital reellement gere et le mouvement est conserve au bilan. C'est le traitement standard, pondere par le temps, d'un depot, d'un retrait ou d'un ajustement du courtier. Rien n'est masque et rien n'est reecrit : l'equity brute du courtier est publiee telle quelle dans nav.csv, a cote du flux, du multiplicateur et de l'indice ajuste, de sorte que les deux courbes se tracent depuis le meme fichier. Chaque evenement declare est publie avec ses preuves a l'interieur du snapshot de la seance concernee, ecrit une seule fois, chaine par hash et horodate. Un portefeuille sans evenement declare n'est pas concerne : son multiplicateur vaut exactement 1,0 et sa serie ajustee est sa serie brute.",
+      "id": "capital_events",
+      "severity": "important",
+      "title_en": "External capital movements are excluded from the return",
+      "title_fr": "Les mouvements de capital externes sont exclus du rendement"
+    },
+    {
       "body_en": "Positions and attribution are grouped by the STYLE of the strategy that holds them — mean reversion, momentum, trend following, seasonal — and never by the individual strategy. The category answers what kind of risk is being taken; the identity of each strategy, and its logic, are not published. Per-position profit and loss is reported at the category level for the same reason: a per-symbol P&L line under a named style is the trade record itself.",
       "body_fr": "Les positions et l'attribution sont regroupées par STYLE de stratégie — retour à la moyenne, momentum, suivi de tendance, saisonnalité — et jamais par stratégie individuelle. La catégorie indique le type de risque pris ; l'identité de chaque stratégie et sa logique ne sont pas publiées. Le résultat par position est agrégé au niveau de la catégorie pour la même raison : une ligne de P&L par titre sous un style nommé constitue le journal de trading lui-même.",
       "id": "strategy_identity",
@@ -516,8 +530,8 @@
       "title_fr": "Les positions sont présentées par catégorie de stratégie"
     },
     {
-      "body_en": "Returns are time-weighted, which with no external cash flows reduces to simple compounding of daily NAV. The presentation is informed by GIPS practice but makes NO claim of GIPS compliance: that requires third-party verification, which has not been performed.",
-      "body_fr": "Les rendements sont pondérés par le temps ; en l'absence de flux externes, cela revient à la capitalisation simple de la VL quotidienne. La présentation s'inspire des pratiques GIPS mais ne revendique AUCUNE conformité GIPS : celle-ci exige une vérification par un tiers, qui n'a pas été réalisée.",
+      "body_en": "Returns are time-weighted: an external capital flow is excluded from the return and kept in the balance, so performance measures the capital actually managed. With no flow this reduces to simple compounding of daily NAV, which is the case for every book except where a capital event is declared beside the curve. The presentation is informed by GIPS practice but makes NO claim of GIPS compliance: that requires third-party verification, which has not been performed.",
+      "body_fr": "Les rendements sont pondérés par le temps : un flux de capital externe est exclu du rendement et conservé au bilan, de sorte que la performance mesure le capital réellement géré. En l'absence de flux, cela revient à la capitalisation simple de la VL quotidienne, ce qui est le cas de tous les portefeuilles sauf là où un événement de capital est déclaré à côté de la courbe. La présentation s'inspire des pratiques GIPS mais ne revendique AUCUNE conformité GIPS : celle-ci exige une vérification par un tiers, qui n'a pas été réalisée.",
       "id": "not_gips",
       "severity": "note",
       "title_en": "GIPS-informed, not GIPS-compliant",
@@ -525,7 +539,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-28T18:30:03+00:00",
+  "published_at": "2026-08-28T18:35:02+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
