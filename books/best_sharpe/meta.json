@@ -68,14 +68,14 @@
   "live": {
     "adj_factor": 1.0,
     "at": "2026-08-28T20:00:00+00:00",
-    "cumulative_return": 0.004491770000000006,
-    "equity": 1004491.77,
+    "cumulative_return": 0.0044837900000000985,
+    "equity": 1004483.79,
     "marked": false,
     "session_date": "2026-08-28",
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-28T20:00:02+00:00",
+  "published_at": "2026-08-28T20:05:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
