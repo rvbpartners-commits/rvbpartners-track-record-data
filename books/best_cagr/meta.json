@@ -15,7 +15,7 @@
   "book": "best_cagr",
   "capital_events": {
     "convention": "time-weighted return; external flows are excluded from the return and kept in the balance. A flow is applied at the START of its session: r_t = E_t / (E_t-1 + F_t) - 1",
-    "cumulative_flow_usd": -30106.02,
+    "cumulative_flow_usd": -981.64,
     "events": [
       {
         "amount_usd": -30106.02,
@@ -46,9 +46,34 @@
         "kind": "broker_adjustment",
         "reason_en": "A 71.236611-share GLD position disappeared from the broker's books overnight with no sale, no journal entry, no corporate action and no cash credit. Assets left the account by an act that was not a trade, so the amount is treated as an external withdrawal and excluded from the return.",
         "reason_fr": "Une position de 71,236611 parts de GLD a disparu des livres du courtier pendant la nuit, sans vente, sans ecriture de journal, sans operation sur titre et sans credit en especes. Des actifs ont quitte le compte par un acte qui n'etait pas une transaction : le montant est donc traite comme un retrait externe et exclu du rendement."
+      },
+      {
+        "amount_usd": 29124.38,
+        "date": "2026-08-31",
+        "derivation": "71.236611 GLD x 408.84 (the 2026-08-28 close, the last session the account was marked WITHOUT the position) = 29124.38, returned to the account",
+        "evidence": {
+          "broker_equity_after_et0400": 1010826.4,
+          "broker_equity_before_et2000": 980778.15,
+          "broker_equity_step": 30048.25,
+          "broker_restated_its_own_history": "Alpaca's /v2/account now reports last_equity 1009765.12 for the 2026-08-28 close, against the 980657.27 it reported at the time and the 980623.81 the desk marked. The broker's books now behave as though the position was never missing. The published 2026-08-28 snapshot is NOT amended: it recorded what the broker reported when it was written, it is hash-chained and anchored, and a record that can be rewritten when the broker changes its mind three days later is not a record.",
+          "net_of_the_two_events": "-30106.02 + 29124.38 = -981.64, which is exactly 71.236611 x (422.62 - 408.84): GLD's 2026-08-28 move on those shares. The account did not participate in it because it did not hold them, and the difference stays out of the return for that reason.",
+          "not_included_here": "the desk's own re-entry of 71.301749 GLD at 407.059219, executed at the 2026-08-31 open, is a TRADE and is inside the return like any other. Only the broker's movement is a flow.",
+          "orders_sent_in_window": 0,
+          "price": 408.84,
+          "price_date": "2026-08-28",
+          "price_source": "GLD daily close from the same feed the desk marks from; Alpaca's own lastday_price for the position is 408.89, which would give 29127.94, a difference of 3.56",
+          "qty": 71.236611,
+          "qty_source": "identical to the quantity removed on 2026-08-28; the broker's position went from 71.301749 (the desk's own re-entry, bought at the 2026-08-31 open) to 142.53836, and the difference is the restored holding to the last decimal",
+          "step_vs_declared_note": "the broker's hourly series steps by 30048.25 while the declared flow is 29124.38. The step values the restored shares at about 421.81, a price GLD had not traded at since 2026-08-27: Alpaca's 04:00 valuation used a stale price and re-marked to the real one during the session. The declared amount is taken at the 2026-08-28 close instead, which is the basis of the NAV it is added to, and is reproducible from public market data.",
+          "symbol": "GLD",
+          "window_et": "2026-08-28T20:00 ET to 2026-08-31T04:00 ET, market closed throughout"
+        },
+        "kind": "broker_adjustment",
+        "reason_en": "The position removed on 2026-08-28 was put back by the broker over the weekend, in the identical quantity and again with no transaction of any kind. It is excluded from the return for the same reason its removal was: the account neither earned nor lost it. Excluding the loss and keeping the recovery would be the cherry-picking this record exists to make impossible.",
+        "reason_fr": "La position retiree le 28/08/2026 a ete remise par le courtier pendant le week-end, dans une quantite identique et de nouveau sans aucune transaction. Elle est exclue du rendement pour la meme raison que son retrait l'avait ete : le compte ne l'a ni gagnee ni perdue. Exclure la perte et garder la reprise serait exactement le tri selectif que ce registre existe pour rendre impossible."
       }
     ],
-    "live_factor": 1.0306843537907515,
+    "live_factor": 1.0009561076030993,
     "live_factor_note": "multiply a raw intraday equity reading by this to place it on the adjusted index; it is 1.0 for every book with no declared flow",
     "raw_series_preserved": "nav.csv keeps `equity` exactly as the broker reported it; `equity_adj` is the adjusted index and `adj_factor` is the multiplier between them"
   },
@@ -105,23 +130,23 @@
   "inception_anchored_to_funded_capital": true,
   "inception_note": "Curve starts at the broker's equity on the last day before the first trade, so the first session's P&L is inside the record.",
   "initial_capital": 1000000.0,
-  "intraday_points": 1127,
+  "intraday_points": 1128,
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
   "last_session": "2026-08-28",
   "latest_detail_session": "2026-08-27",
   "live": {
-    "adj_factor": 1.0306843537907515,
-    "at": "2026-08-31T15:10:00+00:00",
-    "cumulative_return": 0.04200208223601343,
-    "equity": 1010980.79,
+    "adj_factor": 1.0009561076030993,
+    "at": "2026-08-31T15:15:00+00:00",
+    "cumulative_return": 0.011803649113293568,
+    "equity": 1010837.18,
     "marked": false,
     "session_date": "2026-08-31",
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-31T15:10:02+00:00",
+  "published_at": "2026-08-31T15:15:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
