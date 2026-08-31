@@ -34,6 +34,16 @@ one paper account overnight with no sale, no journal entry, no corporate action
 and no cash credit; equity fell by exactly the position's market value. That is
 an outflow, not a trading loss, and it is treated as one.
 
+Over the following weekend the same broker put the position back, in the
+identical quantity and again with no transaction, which on the raw equity is a
++3% jump in a single step outside any session. **The reversal is declared
+exactly like the removal.** Excluding a loss and keeping the recovery would be
+the cherry-picking this record exists to make impossible, so both directions are
+flows and both are published with their evidence. What is left in the return is
+only what the account genuinely did or did not participate in: the two
+declarations net to -981.64, which is the position's move on the one session it
+was not in the account.
+
 Four things make this an adjustment rather than an edit, and each is checkable:
 
 - **The raw series is never rewritten.** `nav.csv` publishes `equity` exactly as
@@ -151,10 +161,19 @@ known state rather than being marked to a guess.
 
 **The broker's books are not infallible, and we do not paper over it when they
 are wrong.** On 28 August 2026 a position vanished from one paper account with
-no transaction behind it. The desk's own broker-versus-shadow reconciliation
-raised it within hours; it is declared as a capital event, published with its
-evidence, and excluded from the return. It is disclosed here because a record
-that only reports the broker's good days is not a record.
+no transaction behind it, and over the following weekend it came back the same
+way. The desk's own broker-versus-shadow reconciliation raised both within
+hours; both are declared as capital events, published with their evidence, and
+excluded from the return. It is disclosed here because a record that only
+reports the broker's good days is not a record.
+
+**A broker may restate its own history; this record does not restate itself.**
+After putting the position back, Alpaca also revised its own figure for the 28
+August close, so its books now behave as though nothing had been missing. The
+snapshot published for that session is not amended. It recorded what the broker
+reported when it was written, it is hash-chained and timestamp-anchored, and a
+record that can be rewritten because the broker changed its mind three days
+later is not evidence of anything. Corrections go forward, as declared events.
 
 ## 7. Publication timing
 
