@@ -37,9 +37,9 @@
       "weight": 0.81868
     }
   ],
-  "chain_head": "fb0c3918ddb052a25aa1914901fea4cf51facaba0ad7912d172885bbf1c5c70c",
+  "chain_head": "f101391acbfb1175572e652d12ec6cf674fcad02185d9fe88b95053165b057c4",
   "currency": "USD",
-  "desk_manifest_hash": "feea797ab9d011132e3e8abca4d531abfdef9824ecc7d4c050f492ef90957812",
+  "desk_manifest_hash": "6800a10e3e03df9de29c1995b81ddc28d973354af637097e8a4161354ff952a1",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-14",
@@ -51,7 +51,8 @@
     "2026-08-24",
     "2026-08-25",
     "2026-08-26",
-    "2026-08-27"
+    "2026-08-27",
+    "2026-08-28"
   ],
   "inception": "2026-08-13",
   "inception_anchored_to_funded_capital": true,
@@ -63,8 +64,8 @@
   "intraday_sessions_rejected": [
     "2026-08-14 (max deviation 100.0% from published NAV)"
   ],
-  "last_session": "2026-08-28",
-  "latest_detail_session": "2026-08-27",
+  "last_session": "2026-08-31",
+  "latest_detail_session": "2026-08-28",
   "live": {
     "adj_factor": 1.0,
     "at": "2026-08-31T20:00:00+00:00",
@@ -75,10 +76,10 @@
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-08-31T21:50:02+00:00",
+  "published_at": "2026-08-31T22:05:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 12
+  "sessions": 13
 }
