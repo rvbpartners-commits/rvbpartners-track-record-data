@@ -47,8 +47,8 @@
       "live": {
         "adj_factor": 1.0009561076030993,
         "at": "2026-09-01T20:00:00+00:00",
-        "cumulative_return": 0.01375458263393936,
-        "equity": 1012786.25,
+        "cumulative_return": 0.01376225996728464,
+        "equity": 1012793.92,
         "marked": false,
         "session_date": "2026-09-01",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -180,8 +180,8 @@
       "live": {
         "adj_factor": 1.0,
         "at": "2026-09-01T20:00:00+00:00",
-        "cumulative_return": 0.006992699999999852,
-        "equity": 1006992.7,
+        "cumulative_return": 0.006993589999999994,
+        "equity": 1006993.59,
         "marked": false,
         "session_date": "2026-09-01",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -306,8 +306,8 @@
       "live": {
         "adj_factor": 1.0,
         "at": "2026-09-01T20:00:00+00:00",
-        "cumulative_return": -0.00529915000000003,
-        "equity": 994700.85,
+        "cumulative_return": -0.005301239999999985,
+        "equity": 994698.76,
         "marked": false,
         "session_date": "2026-09-01",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -369,8 +369,8 @@
       "live": {
         "adj_factor": 1.0,
         "at": "2026-09-01T20:00:00+00:00",
-        "cumulative_return": 0.0020099300000000486,
-        "equity": 1002009.93,
+        "cumulative_return": 0.0020117800000001296,
+        "equity": 1002011.78,
         "marked": false,
         "session_date": "2026-09-01",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -539,7 +539,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-01T20:00:02+00:00",
+  "published_at": "2026-09-01T20:05:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
