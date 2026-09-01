@@ -297,12 +297,12 @@
           "weight": 0.108135
         }
       ],
-      "cumulative_return": 0.0011673599999999507,
+      "cumulative_return": -0.0053277099999999855,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-DD-DEF",
-      "last_session": "2026-08-31",
-      "latest_detail_session": "2026-08-28",
+      "last_session": "2026-09-01",
+      "latest_detail_session": "2026-08-31",
       "live": {
         "adj_factor": 1.0,
         "at": "2026-09-01T20:00:00+00:00",
@@ -324,7 +324,7 @@
         "nav": "books/best_mdd/nav.csv",
         "snapshots": "books/best_mdd/snapshots/"
       },
-      "sessions": 16,
+      "sessions": 17,
       "slug": "rvb-dd-def",
       "tagline_en": "Selected to limit drawdown",
       "tagline_fr": "Sélectionné pour limiter le drawdown"
@@ -468,7 +468,7 @@
     }
   ],
   "chain": {
-    "entries": 108,
+    "entries": 109,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -539,7 +539,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-01T21:05:02+00:00",
+  "published_at": "2026-09-01T21:25:02+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
