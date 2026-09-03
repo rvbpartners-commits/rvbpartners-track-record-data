@@ -46,11 +46,11 @@
       "latest_detail_session": "2026-09-01",
       "live": {
         "adj_factor": 1.0009561076030993,
-        "at": "2026-09-02T20:00:00+00:00",
-        "cumulative_return": 0.01460270275347253,
-        "equity": 1013633.56,
+        "at": "2026-09-03T13:30:00+00:00",
+        "cumulative_return": 0.01172379283502889,
+        "equity": 1010757.4,
         "marked": false,
-        "session_date": "2026-09-02",
+        "session_date": "2026-09-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
       },
       "paths": {
@@ -116,11 +116,11 @@
       "latest_detail_session": "2026-09-01",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-09-02T20:00:00+00:00",
-        "cumulative_return": 0.011555800000000005,
-        "equity": 101155.58,
+        "at": "2026-09-03T13:30:00+00:00",
+        "cumulative_return": 0.008578399999999986,
+        "equity": 100857.84,
         "marked": false,
-        "session_date": "2026-09-02",
+        "session_date": "2026-09-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
       },
       "paths": {
@@ -179,11 +179,11 @@
       "latest_detail_session": "2026-09-01",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-09-02T20:00:00+00:00",
-        "cumulative_return": 0.006517300000000059,
-        "equity": 1006517.3,
+        "at": "2026-09-03T13:30:00+00:00",
+        "cumulative_return": 0.0050005099999999025,
+        "equity": 1005000.51,
         "marked": false,
-        "session_date": "2026-09-02",
+        "session_date": "2026-09-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
       },
       "paths": {
@@ -242,11 +242,11 @@
       "latest_detail_session": "2026-09-01",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-09-02T20:00:00+00:00",
-        "cumulative_return": 0.0008832999999999203,
-        "equity": 100088.33,
+        "at": "2026-09-03T13:30:00+00:00",
+        "cumulative_return": -0.00039250000000001783,
+        "equity": 99960.75,
         "marked": false,
-        "session_date": "2026-09-02",
+        "session_date": "2026-09-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
       },
       "paths": {
@@ -303,15 +303,7 @@
       "label": "RVB-DD-DEF",
       "last_session": "2026-09-02",
       "latest_detail_session": "2026-09-01",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-09-02T20:00:00+00:00",
-        "cumulative_return": -0.002394920000000078,
-        "equity": 997605.08,
-        "marked": false,
-        "session_date": "2026-09-02",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_mdd/analytics.json",
         "attributed": "books/best_mdd/attributed.csv",
@@ -368,11 +360,11 @@
       "latest_detail_session": "2026-09-01",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-09-02T20:00:00+00:00",
-        "cumulative_return": 0.003690839999999973,
-        "equity": 1003690.84,
+        "at": "2026-09-03T13:30:00+00:00",
+        "cumulative_return": 0.006188239999999956,
+        "equity": 1006188.24,
         "marked": false,
-        "session_date": "2026-09-02",
+        "session_date": "2026-09-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
       },
       "paths": {
@@ -539,7 +531,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-03T04:00:02+00:00",
+  "published_at": "2026-09-03T13:30:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
