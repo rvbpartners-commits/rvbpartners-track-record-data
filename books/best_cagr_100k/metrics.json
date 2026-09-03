@@ -1,12 +1,12 @@
 {
   "annualised_basis": 252,
-  "as_of": "2026-09-02",
+  "as_of": "2026-09-03",
   "book": "best_cagr_100k",
   "computed_by": "rvb.metrics.compute_core_metrics",
   "insufficient_history": {
-    "have": 14,
-    "label_en": "insufficient history — 14/60",
-    "label_fr": "historique insuffisant — 14/60",
+    "have": 15,
+    "label_en": "insufficient history — 15/60",
+    "label_fr": "historique insuffisant — 15/60",
     "need": 60,
     "suppressed": [
       "sharpe",
@@ -26,7 +26,7 @@
       "win_rate"
     ]
   },
-  "published_at": "2026-09-03T22:05:03+00:00",
+  "published_at": "2026-09-03T22:20:02+00:00",
   "risk_free_annual": 0.038764705882352944,
   "risk_free_source": "FRED DGS3MO",
   "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
@@ -35,13 +35,13 @@
     "cagr": null,
     "calmar": null,
     "calmar_gross": null,
-    "cumulative_return": 0.00987830000000045,
+    "cumulative_return": 0.012724300000000355,
     "ev_excess_annual": null,
     "kurtosis": null,
     "max_drawdown": null,
-    "n_obs": 14,
+    "n_obs": 15,
     "negative_days": 4,
-    "positive_days": 10,
+    "positive_days": 11,
     "sharpe": null,
     "sharpe_autocorr_adj": null,
     "sharpe_gross": null,
