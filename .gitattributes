@@ -8,18 +8,35 @@
 # checkout qui les abimait. Ni reecriture, ni restatement.
 * -text
 
-# Deux publishers ecrivent dans ce depot -- le desk actions, toutes les cinq
-# minutes, et le book en capital reel. Les deux AJOUTENT des lignes a ces
-# journaux, jamais n'en modifient : une fusion par union est donc exactement
-# juste, et elle supprime la seule course de push qui restait.
+# CHAIN.jsonl : fusion par union, et c'est JUSTE.
 #
-# L'ordre des lignes entre books n'a aucune importance : le script de
-# verification publie chaine PAR BOOK (`prev.get(e['book'])`), donc seule compte
-# la sequence propre a chaque book, que l'union preserve.
+# Deux publishers ecrivent dans ce depot -- le desk actions toutes les cinq
+# minutes, et le book en capital reel. Les deux AJOUTENT des lignes, jamais
+# n'en modifient. Ce journal est chaine PAR BOOK (`repo.chain_head(repo, book)`
+# lit le dernier `hash` du book concerne), donc l'ordre des lignes ENTRE books
+# n'a aucune importance : seule compte la sequence propre a chaque book, que
+# l'union preserve. La fusion supprime la derniere course de push qui restait.
 #
-# `text eol=lf` plutot que `-text` sur ces deux-la : un fichier marque `-text`
-# est traite comme binaire, et git refuse alors de le fusionner. Les octets
-# restent en LF sur toute plateforme, et ces fichiers ne sont de toute facon pas
-# haches -- seuls les snapshots le sont.
+# `text eol=lf` plutot que `-text` : un fichier marque `-text` est traite comme
+# binaire et git refuse alors de le fusionner. Les octets restent en LF partout,
+# et ce fichier n'est de toute facon pas hache -- seuls les snapshots le sont.
 CHAIN.jsonl text eol=lf merge=union
-DETAIL_CHAIN.jsonl text eol=lf merge=union
+
+# DETAIL_CHAIN.jsonl : PAS d'union. Le meme raisonnement y est FAUX.
+#
+# Ce journal-ci n'est pas chaine par book, il l'est GLOBALEMENT : chaque entree
+# porte le `hash` de la precedente quel que soit son book
+# (`repo.detail_chain_head` lit la derniere ligne du fichier, pas la derniere du
+# book), et le script de verification publie en section 6 de VERIFY.md valide
+# une chaine unique du debut a la fin. Une fusion par union entrelace les
+# ajouts de deux publishers dans un ordre que ni l'un ni l'autre n'a produit :
+# les `prev_hash` cessent de se suivre et la chaine casse -- de facon
+# irrecuperable, puisque personne ne sait quel ordre etait le vrai.
+#
+# Le commentaire d'origine invoquait ici le chainage par book. Il decrivait
+# CHAIN.jsonl et a ete applique aux deux.
+#
+# Le cout, assume : une course de push sur ce fichier fait echouer la
+# publication, qui se rejoue. Un echec rejouable coute une minute ; une chaine
+# de preuves cassee ne se repare pas.
+DETAIL_CHAIN.jsonl text eol=lf

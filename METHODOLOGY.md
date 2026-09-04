@@ -6,16 +6,25 @@ below — check it.
 
 ## 1. Where the numbers come from
 
-The desk runs four Alpaca paper accounts on a fixed daily cycle: after the close
+The desk runs six Alpaca paper accounts, one per book — two of the six are
+deliberate $100,000 copies of $1,000,000 siblings — on a fixed daily cycle:
+after the close
 it computes signals and nets them into an order plan (`stage`); at the next open
 it submits that plan (`execute`); after that close it sweeps late fills, marks
 positions and snapshots account equity (`mark`); then it archives everything to
 parquet with an internal hash chain (`export`). The publisher reads that archive
 — never the live database — and writes this repository.
 
-**Book equity is read from the broker.** Each session's NAV is Alpaca's
-`/v2/account` equity, taken at the desk's after-close mark. It is not modelled,
-reconstructed, or derived from our own fill records.
+**One book in this record is not that.** `maker_01` trades REAL capital across
+two venues and is produced by its own collector rather than by the paper desk.
+Where a convention below differs for it, the difference is stated; where this
+document says "the desk", it means the six paper accounts.
+
+**Book equity is read from the broker** — for the paper books. Each session's
+NAV is Alpaca's `/v2/account` equity, taken at the desk's after-close mark; for
+those six books it is not modelled, reconstructed, or derived from our own fill
+records. `maker_01`'s NAV is reconstructed from two venues by its collector, and
+its own methodology note states how.
 
 ## 2. Returns
 
@@ -110,9 +119,11 @@ These are not equally hard numbers and are never presented as though they were.
 - **Per-category is an attributed model.** The broker nets our orders, so a
   single net fill is attributed back to the strategies whose write-ahead intents
   contributed to it, pro-rata by requested size; internal opposite intents cross
-  at the fill price. The attribution is internally consistent and sums to the
-  book, but a different rule would give different numbers from the same fills.
-  Anything sourced this way is labelled *attributed*.
+  at the fill price. The attribution is internally consistent and **approximately**
+  sums to the book — it does not close exactly, and the residual is published as
+  its own column in `attributed.csv` so you can size the gap rather than take
+  this sentence on trust. A different rule would give different numbers from the
+  same fills. Anything sourced this way is labelled *attributed*.
 
 ### Strategy identity is not published
 
@@ -138,7 +149,22 @@ Two consequences worth stating rather than leaving to be noticed:
 ## 5. The benchmark
 
 SPY total return (split- and dividend-adjusted), on the same dates, plus a cash
-line accrued at the risk-free rate on trading days.
+line accrued at the risk-free rate on trading days. `benchmark.csv` and
+`benchmark_intraday.csv` publish both the raw level (`spy_close`) and the
+rebased series (`spy_cum`).
+
+**`spy_cum` is measured from each book's own first benchmarked session**, so it
+answers "what would the index have done over THIS book's life?" — which means
+two books that opened on different dates legitimately quote the same index
+differently on the same day. That is arithmetic, not disagreement: the $100k
+twins opened five days after their $1M siblings, and SPY rose in between.
+`spy_close` is the observed level, carries no base, and is the column to use to
+compare books with each other or to rebase against any other anchor.
+
+**The cash line accrues at the rate that had printed by each date**, not at a
+mean over the whole window. A window mean would let early sessions earn
+interest at a rate set partly by prints that had not happened yet, and would
+silently rewrite the published line every time FRED updates.
 
 **These books are not SPY-like.** They carry shorts and multi-asset legs. The
 benchmark is context for the question "versus just holding the index?", not a
