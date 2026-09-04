@@ -70,18 +70,10 @@
   "intraday_sessions_rejected": [],
   "last_session": "2026-09-03",
   "latest_detail_session": "2026-09-02",
-  "live": {
-    "adj_factor": 1.0,
-    "at": "2026-09-04T17:55:00+00:00",
-    "cumulative_return": 0.002278250000000037,
-    "equity": 1002278.25,
-    "marked": false,
-    "session_date": "2026-09-04",
-    "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-  },
+  "live": null,
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": null,
-  "published_at": "2026-09-04T17:55:03+00:00",
+  "published_at": "2026-09-04T18:00:03+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
