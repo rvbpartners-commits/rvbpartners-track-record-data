@@ -38,12 +38,12 @@
           "weight": 0.3239
         }
       ],
-      "cumulative_return": 0.013673174873708005,
+      "cumulative_return": 0.008877363942276784,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-GROWTH-AGG",
-      "last_session": "2026-09-03",
-      "latest_detail_session": "2026-09-02",
+      "last_session": "2026-09-04",
+      "latest_detail_session": "2026-09-03",
       "live": {
         "adj_factor": 1.0009561076030993,
         "at": "2026-09-04T20:00:00+00:00",
@@ -65,8 +65,8 @@
         "nav": "books/best_cagr/nav.csv",
         "snapshots": "books/best_cagr/snapshots/"
       },
-      "record_last_session": "2026-09-03",
-      "sessions": 19,
+      "record_last_session": "2026-09-04",
+      "sessions": 20,
       "slug": "rvb-growth-agg",
       "stale": false,
       "stale_since": null,
@@ -138,11 +138,11 @@
         "nav": "books/best_cagr_100k/nav.csv",
         "snapshots": "books/best_cagr_100k/snapshots/"
       },
-      "record_last_session": "2026-09-03",
+      "record_last_session": "2026-09-04",
       "sessions": 16,
       "slug": "rvb-growth-100k",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-03",
       "tagline_en": "Selected for compound growth, at $100k",
       "tagline_fr": "Sélectionné pour la croissance composée, à 100 k$"
     },
@@ -204,11 +204,11 @@
         "nav": "books/best_composite/nav.csv",
         "snapshots": "books/best_composite/snapshots/"
       },
-      "record_last_session": "2026-09-03",
+      "record_last_session": "2026-09-04",
       "sessions": 19,
       "slug": "rvb-blend-core",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-03",
       "tagline_en": "Balanced across all three objectives",
       "tagline_fr": "Équilibré sur les trois objectifs"
     },
@@ -270,11 +270,11 @@
         "nav": "books/best_composite_100k/nav.csv",
         "snapshots": "books/best_composite_100k/snapshots/"
       },
-      "record_last_session": "2026-09-03",
+      "record_last_session": "2026-09-04",
       "sessions": 16,
       "slug": "rvb-blend-100k",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-03",
       "tagline_en": "Balanced across all three objectives, at $100k",
       "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
     },
@@ -336,11 +336,11 @@
         "nav": "books/best_mdd/nav.csv",
         "snapshots": "books/best_mdd/snapshots/"
       },
-      "record_last_session": "2026-09-03",
+      "record_last_session": "2026-09-04",
       "sessions": 19,
       "slug": "rvb-dd-def",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-03",
       "tagline_en": "Selected to limit drawdown",
       "tagline_fr": "Sélectionné pour limiter le drawdown"
     },
@@ -402,11 +402,11 @@
         "nav": "books/best_sharpe/nav.csv",
         "snapshots": "books/best_sharpe/snapshots/"
       },
-      "record_last_session": "2026-09-03",
+      "record_last_session": "2026-09-04",
       "sessions": 19,
       "slug": "rvb-sr-stab",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-03",
       "tagline_en": "Selected for risk-adjusted return",
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
     },
@@ -460,7 +460,7 @@
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
-      "record_last_session": "2026-09-03",
+      "record_last_session": "2026-09-04",
       "round_trips": {
         "annualised_withheld": true,
         "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
@@ -489,7 +489,7 @@
     }
   ],
   "chain": {
-    "entries": 124,
+    "entries": 125,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -577,7 +577,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-04T20:05:02+00:00",
+  "published_at": "2026-09-04T20:45:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
