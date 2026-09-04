@@ -63,7 +63,7 @@
   "inception_anchored_to_funded_capital": true,
   "inception_note": "Curve starts at the broker's equity on the last day before the first trade, so the first session's P&L is inside the record.",
   "initial_capital": 1000000.0,
-  "intraday_points": 1422,
+  "intraday_points": 1423,
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [
@@ -73,11 +73,11 @@
   "latest_detail_session": "2026-09-02",
   "live": {
     "adj_factor": 1.0,
-    "at": "2026-09-03T20:00:00+00:00",
-    "cumulative_return": 0.002398490000000031,
-    "equity": 1002398.49,
+    "at": "2026-09-04T13:30:00+00:00",
+    "cumulative_return": 0.0004149599999998532,
+    "equity": 1000414.96,
     "marked": false,
-    "session_date": "2026-09-03",
+    "session_date": "2026-09-04",
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
   },
   "min_sessions_for_annualised": 60,
@@ -87,7 +87,7 @@
     "note": "The source portfolio contained member(s) this book cannot trade (no venue); surviving weights were renormalised pro-rata. The source dossier's metrics include the dropped leg(s); this record measures the book as traded.",
     "source_portfolio_differs": true
   },
-  "published_at": "2026-09-04T09:45:02+00:00",
+  "published_at": "2026-09-04T13:30:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
