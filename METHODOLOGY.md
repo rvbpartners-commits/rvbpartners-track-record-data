@@ -55,9 +55,14 @@ was not in the account.
 
 Four things make this an adjustment rather than an edit, and each is checkable:
 
-- **The raw series is never rewritten.** `nav.csv` publishes `equity` exactly as
-  the broker reported it, discontinuity included, beside `flow`, `adj_factor`
-  and `equity_adj`. Both curves come out of the same file.
+- **The raw series is never rewritten.** On the paper books `nav.csv` publishes
+  `equity` exactly as the broker reported it, discontinuity included, beside
+  `flow`, `adj_factor` and `equity_adj`. Both curves come out of the same file.
+  `maker_01` carries none of those three: its collector removes flows by
+  **unitisation** instead — a deposit buys units at the day's price, so it moves
+  the balance and never the price. There `equity` is a balance, `daily_return`
+  is already the unit return, and rebasing the balance will not reproduce the
+  headline.
 - **An event changes its own session and every one after it, and nothing
   before.** For every row published before an event, `adj_factor` is exactly
   `1.0` and `equity_adj` is exactly `equity`. Adjusting the past is not
@@ -177,6 +182,10 @@ published NAV) and its `/v2/account/portfolio/history` daily series do not share
 a timing basis; on 2026-08-12 they differed by about 17 basis points for
 `best_cagr`. Both are broker figures. Every snapshot publishes ours, theirs, and
 the difference in basis points (`broker_cross_check`). Neither is adjusted to
+**That figure is an illustration, not a bound.** It is the smallest of the
+four books' disagreements that day, and larger ones occur; the point is that
+both numbers and their difference are published per session, so you can size
+the spread yourself rather than trust one example.
 match the other.
 
 **Gaps are gaps.** If the box was down, the series has a hole. Nothing is

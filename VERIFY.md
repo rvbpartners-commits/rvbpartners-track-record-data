@@ -88,10 +88,23 @@ it cannot show a record was written on the day it describes.
 That distinction is not academic here. Where a book's chain was rebuilt, its
 proofs were all created in the **same batch on the day of the rebuild** — so
 sixteen records covering sessions from 12 to 27 August share one anchoring
-date, and none of them corroborates its own session. Each entry in
-`CHAIN.jsonl` therefore publishes `proof_created_at` and
-`session_to_proof_days`, so the lag is a number you can read rather than
-something you would have to notice.
+date, and none of them corroborates its own session.
+
+The lag is not hidden: every `CHAIN.jsonl` entry already carries `session_date`
+(the day it describes) and `ts` (the moment it was appended), so measure it
+yourself for every record ever published:
+
+```python
+import datetime, json
+for e in (json.loads(l) for l in open("CHAIN.jsonl", encoding="utf-8") if l.strip()):
+    session = datetime.date.fromisoformat(e["session_date"])
+    appended = datetime.datetime.fromisoformat(e["ts"]).date()
+    print(e["book"], e["session_date"], (appended - session).days, "days to chain")
+```
+
+A record chained the day after its session is routine. A run of records sharing
+one `ts` is a rebuild, and you should read them as one act rather than as
+independent daily evidence.
 
 Read together with section 2, this still forbids the thing that matters: the
 chain makes a session impossible to drop later without breaking every record
@@ -142,7 +155,7 @@ to find.
 
 ## 5. Against the broker
 
-Each snapshot's `broker_cross_check` carries Alpaca's own daily equity for the
+Each **paper-account** snapshot's `broker_cross_check` carries Alpaca's own daily equity for the
 same date and the difference from our published NAV in basis points. The two
 endpoints have different timing bases and are expected to differ slightly; both
 are broker figures and neither is adjusted to match the other.
@@ -243,10 +256,15 @@ our own performance figure, it is the one thing in this repository that most
 deserves checking, so it is published to be checked.
 
 **Only a book that can take a capital movement carries these columns.** The
-paper books do; `maker_01`, whose funding is handled by its own collector, has
-a `nav.csv` of `date,equity,cash,daily_return` and no `flow`/`adj_factor`/
-`equity_adj`. Check for the columns before running the script below — on a book
-without them, `equity` IS the index and there is no adjustment to audit:
+paper books do; `maker_01` has a `nav.csv` of `date,equity,cash,daily_return`
+and no `flow`/`adj_factor`/`equity_adj` — but that is **not** because it takes
+no deposits. It does. Its collector removes them by **unitisation**: a deposit
+buys units at the day's price, so it moves the balance and never the price, and
+`daily_return` is already the unit return. The flow adjustment the paper books
+apply after the fact is done at source there instead.
+
+So on that book `equity` is a BALANCE, not the index, and rebasing it will not
+reproduce the headline. Check for the columns before running the script below:
 
 ```python
 import pandas as pd
@@ -300,7 +318,7 @@ data rather than merely asserting it.
 
 **It proves:** no published number has been edited after the fact; no session has
 been quietly dropped; every adjustment to a return is declared, evidenced,
-dated and unable to reach backwards; each record existed when it claims to (`desk publish
+dated and unable to reach backwards; each record existed **no later than** the block its proof is anchored in (`.ots`) — section 3 shows how to measure the lag between a session and its proof, and why a batch of records sharing one anchor is one act rather than daily evidence;
 --verify` opens every proof, checks it commits to that exact file, and reports
 the Bitcoin block it is anchored in); the orders, fills and intraday curve match
 the digests recorded for them, and any correction to them is visible; the metrics

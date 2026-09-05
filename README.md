@@ -18,7 +18,7 @@ pipeline and pushed unedited. Nothing in this repository is written by hand.
 | Path | What it is |
 |---|---|
 | `index.json` | Entry point: the books, their inception dates, where everything else lives |
-| `CHAIN.jsonl` | Append-only hash chain over every snapshot ever published |
+| `CHAIN.jsonl` | Append-only hash chain over every snapshot in the CURRENT chains. Where a book's chain was restarted, its earlier records are kept verbatim under `books/<book>/superseded/` with their own `CHAIN.jsonl` |
 | `books/<book>/meta.json` | Book identity, inception, account reference, disclosure settings |
 | `books/<book>/nav.csv` | `date,equity,cash,flow,adj_factor,equity_adj,daily_return` — the whole equity curve, raw and adjusted for declared capital events |
 | `books/<book>/metrics.json` | Computed metrics and, until there is enough history, what is withheld |
@@ -28,8 +28,16 @@ pipeline and pushed unedited. Nothing in this repository is written by hand.
 | `books/<book>/benchmark_intraday.csv` | `timestamp,spy_close,spy_cum,cash_cum` — the benchmark on the same instants, same convention as above |
 | `books/<book>/attributed.csv` | Per-CATEGORY contribution to the book return — **an attributed model, not broker figures** |
 | `books/<book>/snapshots/<date>.json` | One immutable, hash-chained record per session |
+| `DETAIL_CHAIN.jsonl` | Append-only chain over the CORRECTABLE artefacts — execution detail and the 5-minute series. Separate from `CHAIN.jsonl` because those files legitimately gain new versions; every version appends its own entry |
 | `books/<book>/snapshots/<date>.json.ots` | OpenTimestamps proof for that record |
 | `books/<book>/detail/<date>.json` | Order / fill / position detail, grouped by strategy category, published once the cycle has executed |
+
+**The table above describes the paper books.** `maker_01` publishes a different
+set: it has no `attributed.csv` and no `detail/` — its composition *is* the
+strategy — and its `nav.csv` carries `date,equity,cash,daily_return` only,
+because its collector removes capital flows by unitisation rather than by the
+`flow`/`adj_factor`/`equity_adj` columns. It adds `daily.csv` and its own
+`METHODOLOGY.md`. Read that book's own note before comparing it with the others.
 
 Seven books are published. Six run on Alpaca **paper** accounts, one account
 each; one trades **real capital** — the operator's own money, no third-party
