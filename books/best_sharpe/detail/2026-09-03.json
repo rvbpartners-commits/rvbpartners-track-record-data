@@ -4,14 +4,14 @@
     {
       "category": "mean_reversion",
       "code": "MR",
-      "cost_basis": 68662.89,
+      "cost_basis": -23925.26,
       "label": "Mean reversion",
-      "market_value": 99270.09,
-      "n_long": 10,
-      "n_positions": 26,
-      "n_short": 16,
-      "open_pnl": 30607.2,
-      "open_pnl_pct": 0.054883563930130434,
+      "market_value": -24370.43,
+      "n_long": 11,
+      "n_positions": 23,
+      "n_short": 12,
+      "open_pnl": -445.16,
+      "open_pnl_pct": -0.001191850662678908,
       "partial": false,
       "positions": [
         {
@@ -50,13 +50,6 @@
           "symbol": "HPE"
         },
         {
-          "avg_price": 437.25647,
-          "cost_basis": -1.4577547043188588e-07,
-          "mark": 523.65,
-          "qty": -3.33386651618639e-10,
-          "symbol": "DELL"
-        },
-        {
           "avg_price": 462.40084633006535,
           "cost_basis": 30680.49717115942,
           "mark": 467.44,
@@ -83,13 +76,6 @@
           "mark": 154.24,
           "qty": -56.13227513227513,
           "symbol": "GLW"
-        },
-        {
-          "avg_price": 437.25647,
-          "cost_basis": 153622.77312666667,
-          "mark": 523.65,
-          "qty": 351.33333333333337,
-          "symbol": "DELL"
         },
         {
           "avg_price": 861.3499999999999,
@@ -121,16 +107,16 @@
         },
         {
           "avg_price": 61.717328,
-          "cost_basis": -1866.4895748765969,
+          "cost_basis": 1759.6294847119061,
           "mark": 63.52,
-          "qty": -30.242553191489378,
+          "qty": 28.511109306480442,
           "symbol": "LYB"
         },
         {
           "avg_price": 61.717328,
-          "cost_basis": -14303.450361123405,
+          "cost_basis": 13484.550531288098,
           "mark": 63.52,
-          "qty": -231.75744680851065,
+          "qty": 218.4888906935196,
           "symbol": "LYB"
         },
         {
@@ -160,13 +146,6 @@
           "mark": 156.25,
           "qty": 396.1363636363636,
           "symbol": "FTNT"
-        },
-        {
-          "avg_price": 141.05,
-          "cost_basis": -29620.500000000004,
-          "mark": 133.35,
-          "qty": -210.0,
-          "symbol": "CF"
         },
         {
           "avg_price": 201.927532,
@@ -209,7 +188,7 @@
       "n_positions": 12,
       "n_short": 0,
       "open_pnl": -143.72,
-      "open_pnl_pct": -0.000917204743418092,
+      "open_pnl_pct": -0.0009171913743420331,
       "partial": false,
       "positions": [
         {
@@ -509,15 +488,15 @@
       "symbol": "LYB"
     }
   ],
-  "positions_as_of": "2026-09-04",
+  "positions_as_of": "2026-09-06",
   "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
   "reconciliation": {
     "account_invested": 132249.81,
     "as_of_nav_session": "2026-09-04",
     "comparable": true,
     "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
-    "positions_market_value": 255819.85,
-    "unreconciled_usd": 123570.04
+    "positions_market_value": 132179.33,
+    "unreconciled_usd": -70.48
   },
   "released_under_lag_days": 0,
   "session_date": "2026-09-03"

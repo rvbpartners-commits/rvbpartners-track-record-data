@@ -4,14 +4,14 @@
     {
       "category": "mean_reversion",
       "code": "MR",
-      "cost_basis": -88863.99,
+      "cost_basis": 22554.99,
       "label": "Mean reversion",
-      "market_value": -87484.42,
-      "n_long": 30,
-      "n_positions": 48,
-      "n_short": 18,
-      "open_pnl": 1379.57,
-      "open_pnl_pct": 0.004720601710316801,
+      "market_value": 22655.92,
+      "n_long": 32,
+      "n_positions": 47,
+      "n_short": 15,
+      "open_pnl": 100.93,
+      "open_pnl_pct": 0.000548066193931609,
       "partial": false,
       "positions": [
         {
@@ -191,16 +191,16 @@
         },
         {
           "avg_price": 61.735923,
-          "cost_basis": -2652.327522989276,
+          "cost_basis": 79.1302133930501,
           "mark": 63.52,
-          "qty": -42.96246648793566,
+          "qty": 1.2817531438389622,
           "symbol": "LYB"
         },
         {
           "avg_price": 61.735923,
-          "cost_basis": -53218.682792010724,
+          "cost_basis": 1587.7397076069503,
           "mark": 63.52,
-          "qty": -862.0375335120643,
+          "qty": 25.718246856161045,
           "symbol": "LYB"
         },
         {
@@ -302,13 +302,6 @@
           "symbol": "FTNT"
         },
         {
-          "avg_price": 141.05,
-          "cost_basis": -53881.100000000006,
-          "mark": 133.35,
-          "qty": -382.0,
-          "symbol": "CF"
-        },
-        {
           "avg_price": 201.92,
           "cost_basis": 116.42234234234233,
           "mark": 213.045,
@@ -363,7 +356,7 @@
       "n_positions": 14,
       "n_short": 0,
       "open_pnl": -1367.09,
-      "open_pnl_pct": -0.004639744500860678,
+      "open_pnl_pct": -0.004639747040697461,
       "partial": false,
       "positions": [
         {
@@ -885,15 +878,15 @@
       "symbol": "LYB"
     }
   ],
-  "positions_as_of": "2026-09-04",
+  "positions_as_of": "2026-09-06",
   "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
   "reconciliation": {
     "account_invested": 315260.24,
     "as_of_nav_session": "2026-09-04",
     "comparable": true,
     "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
-    "positions_market_value": 205796.18,
-    "unreconciled_usd": -109464.06
+    "positions_market_value": 315936.52,
+    "unreconciled_usd": 676.28
   },
   "released_under_lag_days": 0,
   "session_date": "2026-09-03"
