@@ -44,9 +44,9 @@
       "weight": 0.3239
     }
   ],
-  "chain_head": "025f1c6f4a71df48e851dbb71199ef7361073542a6e6d8b5460bbc8ebd38c3f7",
+  "chain_head": "040e3cb7eedb1f9422888fcca6124b95346276f2a86a05fe334dfd45d85ffdbb",
   "currency": "USD",
-  "desk_manifest_hash": "e93a1f28723f20668a889ef34881e66de06d2d8ff594627a10b3e356fb7e54bc",
+  "desk_manifest_hash": "d570504c5d9ae236060806b66e9c29a20fa7cc8684afd7feac01950644c6b707",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-14",
@@ -75,7 +75,7 @@
   "intraday_sessions_rejected": [
     "2026-08-14 (max deviation 100.1% from published NAV)"
   ],
-  "last_session": "2026-09-04",
+  "last_session": "2026-09-07",
   "latest_detail_session": "2026-09-03",
   "live": {
     "adj_factor": 1.0,
@@ -88,10 +88,10 @@
   },
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": null,
-  "published_at": "2026-09-07T22:10:03+00:00",
+  "published_at": "2026-09-07T22:20:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 17
+  "sessions": 18
 }
