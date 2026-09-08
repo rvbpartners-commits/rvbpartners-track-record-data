@@ -37,9 +37,9 @@
       "weight": 0.108135
     }
   ],
-  "chain_head": "62cf05a3e9eef8edfb790456cc035f68d3156666533c9beffd486855141ee84a",
+  "chain_head": "e5d2c96fd3adf593d2dcd67eb8721b1f9df19b39ef76477a19ac7b48c07312de",
   "currency": "USD",
-  "desk_manifest_hash": "e75ff0a3a4588897e1486162a4af51ff86b413b80321c84073b49f412606af3c",
+  "desk_manifest_hash": "add8c5e95ebf612f889de1a9731656269f5baf96049175b20b12a262c509254d",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-11",
@@ -58,7 +58,8 @@
     "2026-08-31",
     "2026-09-01",
     "2026-09-02",
-    "2026-09-03"
+    "2026-09-03",
+    "2026-09-07"
   ],
   "inception": "2026-08-08",
   "inception_anchored_to_funded_capital": true,
@@ -70,8 +71,8 @@
   "intraday_sessions_rejected": [
     "2026-08-11 (max deviation 100.2% from published NAV)"
   ],
-  "last_session": "2026-09-07",
-  "latest_detail_session": "2026-09-03",
+  "last_session": "2026-09-08",
+  "latest_detail_session": "2026-09-07",
   "live": {
     "adj_factor": 1.0,
     "at": "2026-09-08T20:00:00+00:00",
@@ -88,10 +89,10 @@
     "note": "The source portfolio contained member(s) this book cannot trade (no venue); surviving weights were renormalised pro-rata. The source dossier's metrics include the dropped leg(s); this record measures the book as traded.",
     "source_portfolio_differs": true
   },
-  "published_at": "2026-09-08T21:10:02+00:00",
+  "published_at": "2026-09-08T21:25:02+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 21
+  "sessions": 22
 }
