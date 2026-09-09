@@ -1,0 +1,300 @@
+{
+  "book": "best_composite_100k",
+  "categories": [
+    {
+      "category": "mean_reversion",
+      "code": "MR",
+      "cost_basis": 5047.0,
+      "label": "Mean reversion",
+      "market_value": 5082.86,
+      "n_long": 3,
+      "n_positions": 3,
+      "n_short": 0,
+      "open_pnl": 35.86,
+      "open_pnl_pct": 0.007105211016445399,
+      "partial": false,
+      "positions": [
+        {
+          "avg_price": 266.685,
+          "cost_basis": 1600.1100000000001,
+          "mark": 272.59,
+          "qty": 6.0,
+          "symbol": "EXPE"
+        },
+        {
+          "avg_price": 215.66,
+          "cost_basis": 1725.28,
+          "mark": 215.59,
+          "qty": 8.0,
+          "symbol": "PAYC"
+        },
+        {
+          "avg_price": 52.17,
+          "cost_basis": 1721.6100000000001,
+          "mark": 52.2,
+          "qty": 33.0,
+          "symbol": "PYPL"
+        }
+      ],
+      "unmarked": 0
+    },
+    {
+      "category": "momentum",
+      "code": "MOM",
+      "cost_basis": 7034.23,
+      "label": "Momentum",
+      "market_value": 7172.78,
+      "n_long": 7,
+      "n_positions": 7,
+      "n_short": 0,
+      "open_pnl": 138.55,
+      "open_pnl_pct": 0.019696804348420686,
+      "partial": false,
+      "positions": [
+        {
+          "avg_price": 41.539027160437136,
+          "cost_basis": 986.5337009664861,
+          "mark": 44.86,
+          "qty": 23.749562000000008,
+          "symbol": "APA"
+        },
+        {
+          "avg_price": 22.6972322293732,
+          "cost_basis": 722.102910539972,
+          "mark": 22.05,
+          "qty": 31.81458,
+          "symbol": "HST"
+        },
+        {
+          "avg_price": 33.868799338746186,
+          "cost_basis": 779.5291965564862,
+          "mark": 34.115,
+          "qty": 23.016144999999998,
+          "symbol": "BEN"
+        },
+        {
+          "avg_price": 20.86296221911565,
+          "cost_basis": 880.7927893221711,
+          "mark": 20.39,
+          "qty": 42.218011999999995,
+          "symbol": "DOC"
+        },
+        {
+          "avg_price": 56.35215440896065,
+          "cost_basis": 1210.4858645944287,
+          "mark": 58.895,
+          "qty": 21.480738000000002,
+          "symbol": "HPE"
+        },
+        {
+          "avg_price": 16.252322271898937,
+          "cost_basis": 1220.8762693251422,
+          "mark": 16.51,
+          "qty": 75.12011199999998,
+          "symbol": "VTRS"
+        },
+        {
+          "avg_price": 31.87304840605178,
+          "cost_basis": 1233.9081437758414,
+          "mark": 32.405,
+          "qty": 38.713214,
+          "symbol": "HPQ"
+        }
+      ],
+      "unmarked": 0
+    }
+  ],
+  "fills": [
+    {
+      "price": 34.902,
+      "qty": 0.735757,
+      "symbol": "BEN",
+      "ts": "2026-09-09T09:31:08.732123-04:00"
+    },
+    {
+      "price": 21.97,
+      "qty": 2.004836,
+      "symbol": "HST",
+      "ts": "2026-09-09T09:31:21.272793-04:00"
+    },
+    {
+      "price": 20.45,
+      "qty": -1.62389,
+      "symbol": "DOC",
+      "ts": "2026-09-09T09:31:30.069597-04:00"
+    },
+    {
+      "price": 44.5,
+      "qty": 1.524881,
+      "symbol": "APA",
+      "ts": "2026-09-09T09:31:35.793457-04:00"
+    },
+    {
+      "price": 197.115,
+      "qty": -8.0,
+      "symbol": "DASH",
+      "ts": "2026-09-09T09:32:09.329595-04:00"
+    },
+    {
+      "price": 31.3049,
+      "qty": -2.390445,
+      "symbol": "HPQ",
+      "ts": "2026-09-09T09:32:18.532218-04:00"
+    },
+    {
+      "price": 16.705399,
+      "qty": -4.794235,
+      "symbol": "VTRS",
+      "ts": "2026-09-09T09:32:21.818694-04:00"
+    },
+    {
+      "price": 57.22,
+      "qty": 0.64076,
+      "symbol": "HPE",
+      "ts": "2026-09-09T09:32:36.542896-04:00"
+    },
+    {
+      "price": 266.685,
+      "qty": 6.0,
+      "symbol": "EXPE",
+      "ts": "2026-09-09T09:46:07.875941-04:00"
+    },
+    {
+      "price": 215.66,
+      "qty": 8.0,
+      "symbol": "PAYC",
+      "ts": "2026-09-09T10:01:07.835905-04:00"
+    },
+    {
+      "price": 52.17,
+      "qty": 33.0,
+      "symbol": "PYPL",
+      "ts": "2026-09-09T17:58:03.470841-04:00"
+    }
+  ],
+  "note": "Released only after the cycle executed. Quantities are as the desk recorded them. Holdings are grouped by strategy CATEGORY; individual strategy identities are not published. The grouping is the attributed model, not a broker statement.",
+  "orders": [
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 44.5,
+      "filled_qty": 1.524881,
+      "qty": 1.524881,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:06.946165149Z",
+      "symbol": "APA"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 34.902,
+      "filled_qty": 0.735757,
+      "qty": 0.735757,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.120516759Z",
+      "symbol": "BEN"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 197.115,
+      "filled_qty": 8.0,
+      "qty": 8.0,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.229216479Z",
+      "symbol": "DASH"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 20.45,
+      "filled_qty": 1.62389,
+      "qty": 1.62389,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.34727597Z",
+      "symbol": "DOC"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 57.22,
+      "filled_qty": 0.64076,
+      "qty": 0.64076,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.455506738Z",
+      "symbol": "HPE"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 31.3049,
+      "filled_qty": 2.390445,
+      "qty": 2.390445,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.65810661Z",
+      "symbol": "HPQ"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 21.97,
+      "filled_qty": 2.004836,
+      "qty": 2.004836,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.752053922Z",
+      "symbol": "HST"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 16.705399,
+      "filled_qty": 4.794235,
+      "qty": 4.794235,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.841593312Z",
+      "symbol": "VTRS"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 266.685,
+      "filled_qty": 6.0,
+      "qty": 6.0,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:07.934119432Z",
+      "symbol": "EXPE"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 52.17,
+      "filled_qty": 33.0,
+      "qty": 33.0,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:08.225254608Z",
+      "symbol": "PYPL"
+    },
+    {
+      "cycle_ts": "2026-09-08",
+      "filled_avg_price": 215.66,
+      "filled_qty": 8.0,
+      "qty": 8.0,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-09-09T13:31:08.408857585Z",
+      "symbol": "PAYC"
+    }
+  ],
+  "positions_as_of": "2026-09-09",
+  "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
+  "reconciliation": {
+    "account_invested": 12248.03,
+    "as_of_nav_session": "2026-09-09",
+    "comparable": true,
+    "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
+    "positions_market_value": 12255.64,
+    "unreconciled_usd": 7.61
+  },
+  "released_under_lag_days": 0,
+  "session_date": "2026-09-08"
+}
