@@ -69,20 +69,10 @@
   "intraday_points": 1659,
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
-  "intraday_sessions_rejected": [
-    "2026-08-11 (max deviation 100.2% from published NAV)"
-  ],
+  "intraday_sessions_rejected": [],
   "last_session": "2026-09-09",
   "latest_detail_session": "2026-09-08",
-  "live": {
-    "adj_factor": 1.0,
-    "at": "2026-09-09T20:00:00+00:00",
-    "cumulative_return": -0.0015779399999998889,
-    "equity": 998422.06,
-    "marked": false,
-    "session_date": "2026-09-09",
-    "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-  },
+  "live": null,
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": {
     "dropped_count": 1,
@@ -90,7 +80,7 @@
     "note": "The source portfolio contained member(s) this book cannot trade (no venue); surviving weights were renormalised pro-rata. The source dossier's metrics include the dropped leg(s); this record measures the book as traded.",
     "source_portfolio_differs": true
   },
-  "published_at": "2026-09-10T13:10:03+00:00",
+  "published_at": "2026-09-10T13:30:03+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
