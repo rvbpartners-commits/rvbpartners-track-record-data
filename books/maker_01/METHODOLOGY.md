@@ -30,7 +30,7 @@ said which was wrong.
 
 ## The opening capital, and why it is frozen
 
-The record is anchored to **0.00 USD**, the equity read on
+The record is anchored to **1,796.40 USD**, the equity read on
 both venue accounts on the inception session (2026-09-10). It is written once,
 to `inception.json`, and never recomputed: it divides every return this book
 publishes, so a value free to move would silently restate the whole record.

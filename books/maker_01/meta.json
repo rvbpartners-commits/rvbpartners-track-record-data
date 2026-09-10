@@ -22,7 +22,7 @@
   },
   "chain_head": "0000000000000000000000000000000000000000000000000000000000000000",
   "chain_restarted": {
-    "at": "2026-09-10T13:10:33+00:00",
+    "at": "2026-09-10T13:18:15+00:00",
     "inception": "2026-09-10",
     "note": "the current chain has no closed session yet. The previous chain is archived under superseded/ and is no longer presented; this book's index entry is withdrawn until its first closed session publishes, rather than left advertising a record that has been retired"
   },
@@ -43,12 +43,12 @@
   "inception": "2026-09-10",
   "inception_anchored_to_funded_capital": true,
   "inception_note": "anchored to the equity read on both venue accounts on the inception session itself, and frozen in inception.json. It is never recomputed: it divides every return this book publishes",
-  "initial_capital": 0.0,
+  "initial_capital": 1796.398333,
   "last_session": null,
   "latest_detail_session": null,
   "live": null,
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-10T13:10:33+00:00",
+  "published_at": "2026-09-10T13:18:15+00:00",
   "reconciliation": {
     "curve_usd": null,
     "note": "the curve compounds realised profit and loss from a frozen opening capital, so it is checked against what the two accounts actually report. The two are not expected to be equal: the accounts are read hours after the last published session closed, so the reading already carries part of the session in progress, and the curve carries no unrealised profit and loss at all. Published whether or not it is zero -- a field that only appears when it is inconvenient is not a measurement",
