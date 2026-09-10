@@ -4,119 +4,76 @@
   "account_number": null,
   "account_ref": "sha256:d1d2e72a37083261",
   "account_type": "live",
-  "active_sessions": 3,
-  "active_sessions_note": "sessions on which the book actually executed. Counted from executions, never from non-zero returns: funding accrues while a position is held without any order being placed",
+  "annualised_basis": 259,
+  "annualised_gate": {
+    "note": "nothing annualised is published below the session threshold: a ratio from a handful of sessions has the shape of a statistic and none of its content",
+    "sessions": {
+      "have": 0,
+      "met": false,
+      "need": 60
+    }
+  },
   "book": "maker_01",
   "capital_at_risk": true,
   "categories": [],
-  "chain_head": "ce6f5dc2624ad61ffe54df0effb6cb113ef0ff54f9dad56df2883a46bf930349",
-  "convention": {
-    "calendar": "the broker's own day (UTC+3), whose midnight is 21:00 UTC -- the session close used throughout. EVERY day is a row, including weekends: the derivatives venue trades 24/7, so Saturday funding is a fact about Saturday. A day with no trade is a zero, never a missing row",
-    "measured": "counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 USD where the pair makes it +0.18; the book's sign inverted, from -1.80 to +3.19",
-    "out_of_scope": "fee-calibration executions on other instruments are inside the return, not treated as a capital adjustment. They are real money lost on the account inside the book's window, and excluding them would FLATTER the curve by 3.5% of its result",
-    "pnl": "combined across both venues on a single calendar: derivatives realised (fills - fees + funding), plus broker deals, plus the profit of opposite ticket PAIRS locked that day",
-    "schema_label_of_2026_08_27": "the 2026-08-27 record is labelled schema maker/3 and carries the maker/4 field set. The correction that added them landed between the run that wrote that record and the schema bump that named the new shape. It is not rewritten: a write-once record is not rewritten because its label is inconvenient. It is stated here instead, and its hash verifies as published",
-    "superseded_chain": "this book's chain was restarted at this convention. The previous chain -- one leg, and the wrong sign -- is kept verbatim under books/maker_01/superseded/, never rewritten and never presented",
-    "superseded_snapshots": "sessions published before this correction carry the previous convention and are left untouched -- a chained, timestamped record is not rewritten. They are why snapshots exist for dates before this book's inception",
-    "version": "maker/4",
-    "why_locked_pairs": "the broker account is in hedging mode: an opposing order opens a second ticket rather than closing the first. A matched buy+sell pair has a combined profit that does not depend on the market price -- it cancels between the legs -- so the pair is economically realised the moment the second ticket opens, even though the broker still shows it as floating",
-    "window": "performance is measured from the operator-declared start of the bot. Earlier executions were manual fee calibration: they moved money, so they are inside the opening capital, and they are inside no performance figure"
+  "chain_divergence": {
+    "note": "sessions where the record recomputed from today's data differs from the write-once snapshot already published for that session. The snapshot is never rewritten: it is the evidence, and its hash verifies",
+    "sessions": []
   },
-  "currency": "USD",
-  "desk_manifest_hash": null,
+  "chain_head": "0000000000000000000000000000000000000000000000000000000000000000",
+  "chain_restarted": {
+    "at": "2026-09-10T13:09:42+00:00",
+    "inception": "2026-09-10",
+    "note": "the current chain has no closed session yet. The previous chain is archived under superseded/ and is no longer presented; this book's index entry is withdrawn until its first closed session publishes, rather than left advertising a record that has been retired"
+  },
+  "convention": {
+    "calendar": "the broker's own day, whose midnight is 21:00 UTC. EVERY day is a row, weekends included: the derivatives venue trades 24/7, so Saturday funding is a fact about Saturday. A day with no trade is a zero, never a missing row",
+    "flows": "capital movements are unitised: a deposit buys units at the day's price, so it moves equity and never the price. The transfers of 2026-09-09 tripled this account's capital; counted as performance they would read +250 % in one day",
+    "not_published_per_session": "execution counts, open-position residuals and out-of-scope calibration impact were published by chain maker/3-5, which did its own matching against the venues. That matching no longer exists. Those fields are ABSENT rather than zeroed: a flat value is not a measurement of nothing",
+    "pnl": "both legs on a single calendar: derivatives realised (fills net of fees, plus funding) plus broker deals (net of swap and commission), converted by the source export at the rate it records for the run",
+    "scope_change": "this chain publishes a MULTI-INSTRUMENT portfolio on the same two venues. Earlier chains published a single instrument. The composition itself is not published, then or now: it is the strategy",
+    "source": "the trading system's own machine export, produced daily on the trading box from the broker's deal registry and the derivatives venue's API. ONE source of truth: the publisher recomputes no profit and loss, no matching and no fill",
+    "superseded_chains": "kept verbatim under books/maker_01/superseded/, each with its own genesis, CHAIN.jsonl, snapshots and derived files, and its own note saying why it was retired. Never rewritten, never presented",
+    "version": "maker/6"
+  },
+  "cross_check_against_source_curve_usd": 2.2737367544323206e-13,
+  "cross_check_note": "difference between this book's curve and the curve the source export publishes for itself, on the last session, when the export states an opening capital and the two are therefore comparable. The export is stateless and only states one on the inception session; null on every later run means not comparable, never agreed",
   "detail_lag_days": 0,
   "detail_sessions": [],
-  "exposure": {
-    "carried_past_close": [
-      {
-        "net_volume": -1.0,
-        "session": "2026-08-27",
-        "tickets": 1
-      }
-    ],
-    "median_holding_seconds": 5575.0689999999995,
-    "note": "this book holds a position for minutes, not months, and is flat most of the time. A holdings table would be empty on almost every session -- which would read as 'nothing to show' rather than as the answer to a question that does not apply. The instrument, the venues and the size are not published: they are the strategy",
-    "sessions_checked": 16,
-    "sessions_flat_at_close": 15,
-    "sessions_published": 16,
-    "sessions_traded": 3,
-    "structure": "one instrument, two venues, offsetting"
-  },
-  "fx": {
-    "basis": "flow conversion",
-    "note": "the broker leg is in a foreign currency. Each session's leg is converted once, at that session's close rate, and never revalued -- so no exchange-rate movement enters the curve. A live dashboard that revalues the whole leg at the current rate will differ by a few cents; each snapshot publishes that gap as fx.delta_bps",
-    "quote_currency": "EUR"
-  },
-  "hedged_since": "2026-08-13",
-  "inception": "2026-08-12",
+  "inception": "2026-09-10",
   "inception_anchored_to_funded_capital": true,
-  "inception_note": "anchored to the equity held the session before the first execution, so that session's profit and loss sits inside the curve rather than behind its starting point",
-  "initial_capital": 449.411898,
-  "initial_capital_note": "the book's size at the inception close, once the capital was fully paid in. It is the denominator of the percentage axis on the cumulative curve",
-  "intraday_points": 0,
-  "intraday_resolution": "per closed round trip",
-  "intraday_sessions_rejected": [],
-  "last_session": "2026-08-27",
+  "inception_note": "anchored to the equity read on both venue accounts on the inception session itself, and frozen in inception.json. It is never recomputed: it divides every return this book publishes",
+  "initial_capital": 0.0,
+  "last_session": null,
   "latest_detail_session": null,
-  "live": {
-    "at": "2026-08-28T08:47:42+00:00",
-    "cumulative_return": 0.007333174585629765,
-    "equity": 455.063679,
-    "marked": false,
-    "session_date": "2026-08-28",
-    "source": "both venue accounts, read directly"
-  },
+  "live": null,
   "min_sessions_for_annualised": 60,
-  "open_at_close": {
-    "note": "sessions the book carried an open, unmatched position past the close. It is disclosed, never marked and never estimated: a locked pair is realised the day it locks, and an unmatched remainder carries the only market risk in the book and none of the published profit. Its result appears on the day it locks -- which is why a session is published whether or not the book was flat. Refusing would drop the session entirely, and a missing session is selection, which is what the chain exists to prevent",
-    "sessions_checked": 16,
-    "sessions_flat": 15,
-    "sessions_with_open_exposure": [
-      {
-        "net_volume": -1.0,
-        "session": "2026-08-27",
-        "tickets": 1
-      }
-    ]
-  },
-  "opening_capital": 213.115013,
-  "opening_capital_note": "the equity at the OPEN of the inception session -- a different number, because the deposit that funds the broker leg lands intraday. It is the denominator of the first day's return, and it is never published as a curve point: nothing before inception is",
-  "out_of_scope_total": {
-    "executions": 28,
-    "impact_usd": -0.107376,
-    "note": "fee-calibration executions on other instruments, excluded from the return and treated as a capital adjustment; the instruments are not published"
-  },
-  "published_at": "2026-08-28T08:47:42+00:00",
+  "published_at": "2026-09-10T13:09:42+00:00",
   "reconciliation": {
-    "marked_usd": 455.053014,
-    "note": "the curve is reconstructed from realised profit and loss, so it is checked against what the two accounts actually report. The unrealised legs are added back before comparing, because while a position is open a realised series cannot equal a marked one — and in hedging mode that gap is structural: the closed leg realises while the opposite leg is still open. What is left is read drift: the two venues are queried one after the other while the account keeps trading. Published whether or not it is zero — a field that only appears when it is inconvenient is not a measurement",
-    "read_usd": 455.063679,
-    "realised_usd": 455.053014,
-    "residual_bps": -0.23,
-    "unrealised_venue_a_usd": 0,
-    "unrealised_venue_b_usd": 0.0
+    "curve_usd": null,
+    "note": "the curve compounds realised profit and loss from a frozen opening capital, so it is checked against what the two accounts actually report. The two are not expected to be equal: the accounts are read hours after the last published session closed, so the reading already carries part of the session in progress, and the curve carries no unrealised profit and loss at all. Published whether or not it is zero -- a field that only appears when it is inconvenient is not a measurement",
+    "read_usd": 1796.398333,
+    "residual_bps": 0.5312
   },
-  "risk_free_annual": 0.038654545454545455,
+  "risk_free_annual": 0.03828125111071619,
   "risk_free_source": "FRED DGS3MO",
-  "round_trips": {
-    "annualised_withheld": true,
-    "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
-    "fees_total_usd": 0.151506,
-    "funding_share_of_net": 0.10739227933045356,
-    "funding_total_usd": 0.383602,
-    "hit_rate": 1.0,
-    "median_holding_seconds": 5575.0689999999995,
-    "net_mean_usd": 0.595328,
-    "net_total_usd": 3.57197,
-    "round_trips": 6,
-    "round_trips_needed_for_annualising": 30,
-    "unit_note": "the unit of account is the round trip, not the session: this book executed on 3 of its 17 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
-    "winners": 6
-  },
   "session_close": {
     "label": "21:00 UTC",
-    "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed and the book was economically flat at that close"
+    "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
   },
-  "sessions": 16,
-  "slug": "rvb-maker-01"
+  "sessions": 0,
+  "sessions_with_movement": 0,
+  "sessions_with_movement_note": "sessions on which the book's profit and loss moved. NOT the count of sessions traded, which earlier chains of this book published: the source export reports execution counts over its whole window, not per session, and funding accrues while a position is held without any order being placed. The field is named for what it measures rather than reusing a name it would not earn",
+  "slug": "rvb-maker-01",
+  "source_export": {
+    "fx_rate_used": 1.163735,
+    "generated_at": "2026-09-10T08:20:10+00:00",
+    "portfolio": "arb-hl-mt5-3-actifs",
+    "quote_currency": "EUR",
+    "window_executions": {
+      "note": "over the export's whole window, not per session",
+      "venue_a_fills": 11,
+      "venue_b_deals": 7
+    }
+  }
 }

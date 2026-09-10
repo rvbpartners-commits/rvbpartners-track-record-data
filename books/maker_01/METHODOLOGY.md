@@ -1,143 +1,102 @@
 # RVB-MAKER-01 — methodology
 
-This book is not one of the desk's paper portfolios. It trades **real capital**
-— the operator's own — across two venues, and it needs a handful of conventions
-the equity books do not. Each one is stated here, with the measurement that
-forced it.
+Delta-hedged liquidity provision across two venues. Real capital.
 
-The general methodology in the repository root still applies: one metrics
-module, hash-chained write-once snapshots, no figure computed in a browser.
+This book trades **real capital**, which belongs to the operator. No
+third-party money is managed. Read this page before comparing it with the paper
+books published beside it: it is measured differently, because it is a
+different kind of thing.
 
-## 1. What a session is
+## Where the numbers come from
 
-The **broker's own trading day** (UTC+3). Its midnight falls at 21:00 UTC, which
-is the session close used throughout. The calendar is every *calendar* day, not
-only the days the broker quotes.
+**One source of truth.** Every profit-and-loss figure on this page is taken
+from the trading system's own machine export, produced on the trading box once
+a day. That export reads the broker's deal registry and the derivatives venue's
+API directly, and reports, per broker session:
 
-**A weekend is not a flat weekend — only the broker leg is flat.** The other
-venue trades 24/7, and funding accrues there whether or not the broker is open.
-Saturday 22 and Sunday 23 August each carry their own funding (-0.0395 and
--0.0326 USD); they are separate rows with their real values, not a pair of
-zeros and not a lump attached to the Monday. A calendar restricted to the days
-the broker quotes did exactly that, and the sum still looked complete.
+* the realised profit and loss of the derivatives leg (fills net of fees, plus
+  funding),
+* the realised profit and loss of the broker leg (deals net of swap and
+  commission),
+* the capital movements on each account.
 
-Nothing is interpolated on a day the broker does not quote: its conversion rate
-is the last rate actually observed, carried forward, and the leg it converts is
-zero anyway. A day on which nothing traded at all is a **zero**, never a missing
-row.
+The publisher **recomputes none of it**. It compounds those per-session figures
+from this book's frozen opening capital, unitises the capital movements out of
+the return, and reconciles the result against the equity actually read on both
+accounts. Earlier chains of this book did their own matching and their own
+profit-and-loss reconstruction; two independent measurements of one account are
+two public numbers free to disagree, and nothing in the repository would have
+said which was wrong.
 
-Annualisation, where it is ever released, uses **259 periods a
-year** — measured on this broker's calendar, not the equity desk's 252.
+## The opening capital, and why it is frozen
 
-## 2. Both legs, and why one leg inverts the sign
+The record is anchored to **0.00 USD**, the equity read on
+both venue accounts on the inception session (2026-09-10). It is written once,
+to `inception.json`, and never recomputed: it divides every return this book
+publishes, so a value free to move would silently restate the whole record.
 
-The hedge account runs in **hedging** mode. An opposing order there does not
-close the existing ticket, it opens a second one. So the account reports no
-realised profit at all while a matched pair is open — even though the pair's
-value is already fixed. For a matched buy and sell of equal size:
+## Capital movements never become performance
 
-    profit_buy  = (P_market - P_buy_entry)  x V
-    profit_sell = (P_sell_entry - P_market) x V
-    ---------------------------------------------
-    sum         = (P_sell_entry - P_buy_entry) x V
+The account has received deposits, and will receive more. A deposit is a
+**flow**: it buys units at that day's unit price, so it moves equity and never
+moves the price.
 
-The market price cancels between the legs. **The pair is economically realised
-the moment the second ticket opens**, and its value cannot move afterwards.
+    units_after = units_before x (equity_before + flow) / equity_before
+    unit_price  = equity / units
 
-The record therefore counts a locked pair on the day it locked, and the broker
-leg passes **entirely** through that pairing — matched first-in-first-out, with
-an exact pro-rata split when the sizes differ, because floating profit is linear
-in size. A settled ticket is **not** counted again: it already lives in the pair
-it belonged to.
+This is not a fine point. The transfers of 2026-09-09 tripled the capital of
+this account. Counted as performance they would read as +250 % in one day.
 
-Both mistakes were made and both are measured. Counting the derivatives leg
-alone, the round trip of 26–27 August reads **-4.50 USD** where the pair makes it
-**+0.18**, and the book as a whole read **-1.80 USD** where it is **+3.19** —
-the sign, not the size. Adding the settled deals *on top of* their pair
-double-counted **+0.85** on 13 August and **-1.58** on 25 August.
+## The session, and the calendar
 
-The unpaired tail is excluded. It is the hedge of a position still open on the
-other venue, and it is the only part that still carries market risk.
+A session is the **broker's own trading day**: its midnight falls at 21:00 UTC.
+Every day is a row, weekends included — the derivatives venue trades 24/7, so
+Saturday funding is a fact about Saturday. A day with no trade is a zero, never
+a missing row.
 
-## 3. Foreign exchange — a conversion of FLOWS
+Only **closed** sessions are published. The source export is produced hours
+before the session it last touches has closed, so its final row is always a
+session still in progress; publishing it would fix a half-measured day into a
+write-once record forever.
 
-The broker leg is denominated in EUR and is about half this
-book. **Each session's leg is converted once, at that session's closing rate,
-and never revalued.** No exchange-rate movement therefore enters the curve.
+## What is NOT published, and why
 
-The alternative — revaluing the whole EUR balance at the
-current rate, which is what a live dashboard does because it is simpler to
-display — injects about **18 bp a day** of variation that is not trading
-(daily standard deviation 34.6 bp on roughly half the book), against a measured
-**14.9 bp** a day of actual profit and loss. The noise would exceed the signal.
+* **The strategy.** The instruments, the venues, the sizes, the thresholds. The
+  composition of this book *is* the strategy.
+* **Per-session execution counts.** The source export reports its execution
+  counts over its whole window, not per session. What is published instead is
+  the number of sessions on which the book's profit and loss **moved**, under a
+  name that says exactly that. It is not the same measurement: funding accrues
+  while a position is held without any order being placed.
+* **Open positions.** Profit and loss is realised. A position carried past the
+  close is not marked and not estimated; it enters the record on the day it
+  closes.
 
-This is the **only** deliberate difference between this published curve and the
-operator's local view, and it is worth a few cents a day. Every snapshot
-publishes the gap as `fx.delta_bps`, together with both legs in their own
-currency, so a reader can reconvert at any rate they like and reproduce either
-number.
+## Annualisation is withheld
 
-## 4. What is inside the record, and what is not
+Nothing annualised — Sharpe, Sortino, Calmar, CAGR, volatility, drawdown,
+value-at-risk — is published below **60 sessions**. This
+book publishes **0**. Annualising a handful of sessions produces a
+number with the shape of a statistic and none of its content.
 
-* **Inception is 2026-08-12** — the first session inside the operator's
-  declared start of automated trading. Executions before it were manual fee
-  calibration and are in **no** performance figure. They moved money, so they
-  sit inside the opening capital.
-* **Nothing before inception is published.** The equity at the *open* of the
-  inception session (213.12 USD) is the denominator of
-  that first day's return; it is a starting capital, not a point on the curve.
-* **Calibration on other instruments is inside the return.** It is real money
-  lost on this account inside the window. Treating it as a capital adjustment
-  would flatter the curve by about 3.5% of its result. The instruments are not
-  published; the impact is, per session and in total.
-* **Deposits buy units.** The account was funded three times. A curve derived
-  from `NAV_t / NAV_(t-1) - 1` would have printed **+598%** on one of those days.
-  Flows change the number of units, never the unit price.
+Where it is ever released, annualisation uses **259 periods a
+year**, measured on this broker's own calendar (400 daily bars over 564
+calendar days), not the 252 the equity books use.
 
-## 5. The unit of account is the round trip
+Sharpe, Sortino and Calmar are quoted **excess of the risk-free rate**, which
+is published beside them with its source. Interest on cash is not alpha.
 
-This book does not trade every day. Counting it in sessions gives a denominator
-that measures the calendar rather than the strategy. Annualised statistics stay
-withheld until **30 round trips** — a stricter bar than the desk's 60 sessions,
-because sessions accumulate by the passage of time and round trips do not.
+## Verifying it
 
-## 6. Open positions are disclosed, never marked
+Every session has an immutable snapshot under `snapshots/`, hashed, carrying
+the hash of the previous session, recorded in the repository-level
+`CHAIN.jsonl` and timestamped by OpenTimestamps. The last session published is
+**— (no closed session yet)**. See `VERIFY.md` at the root of this repository.
 
-Every closed session is published, **whether or not the book was flat at that
-close**. The value is what this record measures and nothing else: closed deals,
-plus the profit of the opposite ticket pairs locked on that broker day.
+## Earlier chains
 
-An unmatched remainder is not in that number — not marked, not estimated. Its
-value is not determined yet, and it will appear on the day it locks. It carries
-the only market risk the book holds, and none of the published profit. Each
-snapshot states it: `nav.unmatched.tickets` and `nav.unmatched.net_volume`.
-
-This was once a refusal to publish, and that was wrong twice over. It defended a
-claim this curve does not make — a mark-to-market equivalence that only held
-under the earlier one-leg convention. And it would have gone off constantly: the
-strategy opens its positions in the evening by construction (26 August, entered
-22:31 UTC, held until 00:26), so a flatness requirement would have switched the
-record off every other night.
-
-What the record still refuses: a session whose value cannot be established. A
-locked pair must attach to **exactly one** round trip. Zero would drop the
-amount from the total; two would count it twice; neither is visible in a total.
-Both refuse to publish.
-
-The reconstructed equity is reconciled against what the two accounts actually
-report, with the unmatched unrealised leg added back. The residual is published
-whether or not it is zero — a field that only appears when it is inconvenient is
-not a measurement.
-
-## 7. What is deliberately not published
-
-The traded instrument, the venues, the thresholds, the grid, the position size
-and the entry and exit logic. The operational log publishes **outages and the
-dates of parameter changes** — availability is a fact about a track record that
-a reader is owed — but never a parameter's value, which is the strategy itself.
-
----
-
-*Chain restarted at schema `maker/3` on the convention above. The previous
-one-leg chain is kept verbatim under `books/maker_01/superseded/`: it verifies
-as it always did, and it is wrong about the world, which no hash can detect.*
+This book has restarted its chain before. Each earlier chain is kept **verbatim**
+under `superseded/`, with its own genesis, its own `CHAIN.jsonl`, its own
+snapshots and its own derived files, and its own note saying why it was
+retired. Nothing is deleted: a chained, timestamped record that can be edited
+is not a record. They are simply no longer presented.
