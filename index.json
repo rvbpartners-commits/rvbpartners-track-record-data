@@ -351,12 +351,12 @@
           "weight": 0.310769
         }
       ],
-      "cumulative_return": 0.0024654700000001917,
+      "cumulative_return": 0.0010189300000003065,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-SR-STAB",
-      "last_session": "2026-09-09",
-      "latest_detail_session": "2026-09-08",
+      "last_session": "2026-09-10",
+      "latest_detail_session": "2026-09-09",
       "live": null,
       "paths": {
         "analytics": "books/best_sharpe/analytics.json",
@@ -371,16 +371,16 @@
         "snapshots": "books/best_sharpe/snapshots/"
       },
       "record_last_session": "2026-09-10",
-      "sessions": 23,
+      "sessions": 24,
       "slug": "rvb-sr-stab",
-      "stale": true,
-      "stale_since": "2026-09-09",
+      "stale": false,
+      "stale_since": null,
       "tagline_en": "Selected for risk-adjusted return",
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
     }
   ],
   "chain": {
-    "entries": 133,
+    "entries": 134,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -459,7 +459,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-10T20:50:02+00:00",
+  "published_at": "2026-09-10T21:05:02+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
