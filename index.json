@@ -103,12 +103,12 @@
           "weight": 0.3239
         }
       ],
-      "cumulative_return": 0.013369700000000595,
+      "cumulative_return": 0.015244800000000724,
       "inception": "2026-08-13",
       "initial_capital": 100000.0,
       "label": "RVB-GROWTH-100K",
-      "last_session": "2026-09-09",
-      "latest_detail_session": "2026-09-08",
+      "last_session": "2026-09-10",
+      "latest_detail_session": "2026-09-09",
       "live": {
         "adj_factor": 1.0,
         "at": "2026-09-10T20:00:00+00:00",
@@ -131,10 +131,10 @@
         "snapshots": "books/best_cagr_100k/snapshots/"
       },
       "record_last_session": "2026-09-10",
-      "sessions": 20,
+      "sessions": 21,
       "slug": "rvb-growth-100k",
-      "stale": true,
-      "stale_since": "2026-09-09",
+      "stale": false,
+      "stale_since": null,
       "tagline_en": "Selected for compound growth, at $100k",
       "tagline_fr": "Sélectionné pour la croissance composée, à 100 k$"
     },
@@ -380,7 +380,7 @@
     }
   ],
   "chain": {
-    "entries": 137,
+    "entries": 138,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -459,7 +459,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-10T22:10:02+00:00",
+  "published_at": "2026-09-10T22:20:02+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
