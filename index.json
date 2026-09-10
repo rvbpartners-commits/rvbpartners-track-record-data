@@ -409,83 +409,6 @@
       "stale_since": null,
       "tagline_en": "Selected for risk-adjusted return",
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
-    },
-    {
-      "account_kind": "real_capital",
-      "account_kind_label": "Real capital (live test)",
-      "account_number": null,
-      "account_ref": "sha256:d1d2e72a37083261",
-      "annualised_gated": true,
-      "book": "maker_01",
-      "capital_at_risk": true,
-      "categories": [],
-      "cumulative_return": 0.006901584131804306,
-      "exposure": {
-        "carried_past_close": [
-          {
-            "net_volume": -1.0,
-            "session": "2026-08-27",
-            "tickets": 1
-          }
-        ],
-        "median_holding_seconds": 5575.0689999999995,
-        "note": "this book holds a position for minutes, not months, and is flat most of the time. A holdings table would be empty on almost every session -- which would read as 'nothing to show' rather than as the answer to a question that does not apply. The instrument, the venues and the size are not published: they are the strategy",
-        "sessions_checked": 16,
-        "sessions_flat_at_close": 15,
-        "sessions_published": 16,
-        "sessions_traded": 3,
-        "structure": "one instrument, two venues, offsetting"
-      },
-      "inception": "2026-08-12",
-      "initial_capital": 449.411898,
-      "label": "RVB-MAKER-01",
-      "last_session": "2026-08-27",
-      "latest_detail_session": null,
-      "live": {
-        "at": "2026-08-28T08:47:42+00:00",
-        "cumulative_return": 0.007333174585629765,
-        "equity": 455.063679,
-        "marked": false,
-        "session_date": "2026-08-28",
-        "source": "both venue accounts, read directly"
-      },
-      "paths": {
-        "analytics": "books/maker_01/analytics.json",
-        "benchmark": "books/maker_01/benchmark.csv",
-        "daily": "books/maker_01/daily.csv",
-        "events": "books/maker_01/events.json",
-        "meta": "books/maker_01/meta.json",
-        "methodology": "books/maker_01/METHODOLOGY.md",
-        "metrics": "books/maker_01/metrics.json",
-        "nav": "books/maker_01/nav.csv",
-        "snapshots": "books/maker_01/snapshots/"
-      },
-      "record_last_session": "2026-09-09",
-      "round_trips": {
-        "annualised_withheld": true,
-        "combined_note": "each round trip is the SUM of both legs. The broker account is in hedging mode, so its half only appears when a ticket is settled -- or never, while the ticket stays locked against an opposite one. Counted on the derivatives leg alone, the 2026-08-26/27 round trip reads -4.50 where it is +0.20",
-        "fees_total_usd": 0.151506,
-        "funding_share_of_net": 0.10739227933045356,
-        "funding_total_usd": 0.383602,
-        "hit_rate": 1.0,
-        "median_holding_seconds": 5575.0689999999995,
-        "net_mean_usd": 0.595328,
-        "net_total_usd": 3.57197,
-        "round_trips": 6,
-        "round_trips_needed_for_annualising": 30,
-        "unit_note": "the unit of account is the round trip, not the session: this book executed on 3 of its 17 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
-        "winners": 6
-      },
-      "session_close": {
-        "label": "21:00 UTC",
-        "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed and the book was economically flat at that close"
-      },
-      "sessions": 16,
-      "slug": "rvb-maker-01",
-      "stale": true,
-      "stale_since": "2026-08-27",
-      "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
-      "tagline_fr": null
     }
   ],
   "chain": {
@@ -502,15 +425,6 @@
       "severity": "critical",
       "title_en": "Paper accounts — no capital at risk",
       "title_fr": "Comptes papier — aucun capital engagé"
-    },
-    {
-      "applies_to": "real_capital",
-      "body_en": "One book in this record is not a paper account. It trades REAL capital, and the fills behind it were executed by its venues rather than simulated. That capital belongs to the operator: no third-party money is managed, no fund exists, and nothing here is an offer, a solicitation, or an investment service. The amount is small and it is published — a percentage return on a few hundred dollars does not transpose to a larger account, because costs do not scale with size, and the record states the capital beside the return for exactly that reason.",
-      "body_fr": "Un portefeuille de ce relevé n'est pas un compte papier. Il engage du capital RÉEL, et les exécutions correspondantes ont été réalisées par ses places de marché plutôt que simulées. Ce capital appartient à l'opérateur : aucun fonds de tiers n'est géré, aucun fonds d'investissement n'existe, et rien ici ne constitue une offre, une sollicitation ou un service d'investissement. Le montant est faible et il est publié : un rendement en pourcentage sur quelques centaines de dollars ne se transpose pas à un compte plus important, car les coûts ne sont pas proportionnels à la taille — et c'est précisément pourquoi le capital est publié à côté du rendement.",
-      "id": "real_capital_account",
-      "severity": "critical",
-      "title_en": "Real capital — the operator's own money, no third-party funds",
-      "title_fr": "Capital réel — l'argent de l'opérateur, aucun fonds de tiers"
     },
     {
       "applies_to": "all",
@@ -577,7 +491,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-10T04:00:03+00:00",
+  "published_at": "2026-09-10T13:05:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
