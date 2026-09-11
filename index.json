@@ -405,6 +405,7 @@
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
+      "record_last_session": "2026-09-10",
       "session_close": {
         "label": "21:00 UTC",
         "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
@@ -412,6 +413,8 @@
       "sessions": 1,
       "sessions_with_movement": 1,
       "slug": "rvb-maker-01",
+      "stale": false,
+      "stale_since": null,
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
@@ -430,6 +433,15 @@
       "severity": "critical",
       "title_en": "Paper accounts — no capital at risk",
       "title_fr": "Comptes papier — aucun capital engagé"
+    },
+    {
+      "applies_to": "real_capital",
+      "body_en": "One book in this record is not a paper account. It trades REAL capital, and the fills behind it were executed by its venues rather than simulated. That capital belongs to the operator: no third-party money is managed, no fund exists, and nothing here is an offer, a solicitation, or an investment service. The amount is small and it is published — a percentage return on a few hundred dollars does not transpose to a larger account, because costs do not scale with size, and the record states the capital beside the return for exactly that reason.",
+      "body_fr": "Un portefeuille de ce relevé n'est pas un compte papier. Il engage du capital RÉEL, et les exécutions correspondantes ont été réalisées par ses places de marché plutôt que simulées. Ce capital appartient à l'opérateur : aucun fonds de tiers n'est géré, aucun fonds d'investissement n'existe, et rien ici ne constitue une offre, une sollicitation ou un service d'investissement. Le montant est faible et il est publié : un rendement en pourcentage sur quelques centaines de dollars ne se transpose pas à un compte plus important, car les coûts ne sont pas proportionnels à la taille — et c'est précisément pourquoi le capital est publié à côté du rendement.",
+      "id": "real_capital_account",
+      "severity": "critical",
+      "title_en": "Real capital — the operator's own money, no third-party funds",
+      "title_fr": "Capital réel — l'argent de l'opérateur, aucun fonds de tiers"
     },
     {
       "applies_to": "all",
@@ -493,15 +505,6 @@
       "severity": "note",
       "title_en": "GIPS-informed, not GIPS-compliant",
       "title_fr": "Inspiré des normes GIPS, sans conformité GIPS"
-    },
-    {
-      "applies_to": "real_capital",
-      "body_en": "One book in this record is not a paper account. It trades REAL capital, and the fills behind it were executed by its venues rather than simulated. That capital belongs to the operator: no third-party money is managed, no fund exists, and nothing here is an offer, a solicitation, or an investment service. The amount is small and it is published — a percentage return on a few hundred dollars does not transpose to a larger account, because costs do not scale with size, and the record states the capital beside the return for exactly that reason.",
-      "body_fr": "Un portefeuille de ce relevé n'est pas un compte papier. Il engage du capital RÉEL, et les exécutions correspondantes ont été réalisées par ses places de marché plutôt que simulées. Ce capital appartient à l'opérateur : aucun fonds de tiers n'est géré, aucun fonds d'investissement n'existe, et rien ici ne constitue une offre, une sollicitation ou un service d'investissement. Le montant est faible et il est publié : un rendement en pourcentage sur quelques centaines de dollars ne se transpose pas à un compte plus important, car les coûts ne sont pas proportionnels à la taille — et c'est précisément pourquoi le capital est publié à côté du rendement.",
-      "id": "real_capital_account",
-      "severity": "critical",
-      "title_en": "Real capital — the operator's own money, no third-party funds",
-      "title_fr": "Capital réel — l'argent de l'opérateur, aucun fonds de tiers"
     }
   ],
   "min_sessions_for_annualised": 60,
