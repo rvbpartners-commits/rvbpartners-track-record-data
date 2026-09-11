@@ -1,13 +1,13 @@
 {
   "annualised_basis": 259,
   "annualised_basis_note": "measured: 400 daily bars over 564 calendar days on the broker's own calendar",
-  "as_of": null,
+  "as_of": "2026-09-10",
   "book": "maker_01",
   "computed_by": "rvb.metrics.compute_core_metrics",
   "insufficient_history": {
-    "have": 0,
-    "label_en": "insufficient history — 0/60",
-    "label_fr": "historique insuffisant — 0/60",
+    "have": 1,
+    "label_en": "insufficient history — 1/60",
+    "label_fr": "historique insuffisant — 1/60",
     "need": 60,
     "suppressed": [
       "sharpe",
@@ -27,22 +27,22 @@
       "win_rate"
     ]
   },
-  "published_at": "2026-09-10T13:18:15+00:00",
+  "published_at": "2026-09-11T08:40:03+00:00",
   "risk_free_annual": 0.03828125111071619,
   "risk_free_source": "FRED DGS3MO",
   "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
   "values": {
-    "best_day": null,
+    "best_day": 0.00048598171206704066,
     "cagr": null,
     "calmar": null,
     "calmar_gross": null,
-    "cumulative_return": null,
+    "cumulative_return": 0.00048598171206704066,
     "ev_excess_annual": null,
     "kurtosis": null,
     "max_drawdown": null,
-    "n_obs": 0,
-    "negative_days": null,
-    "positive_days": null,
+    "n_obs": 1,
+    "negative_days": 0,
+    "positive_days": 1,
     "sharpe": null,
     "sharpe_autocorr_adj": null,
     "sharpe_gross": null,
@@ -52,6 +52,6 @@
     "var_normal_95": null,
     "volatility": null,
     "win_rate": null,
-    "worst_day": null
+    "worst_day": 0.00048598171206704066
   }
 }

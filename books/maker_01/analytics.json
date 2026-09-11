@@ -1,9 +1,50 @@
 {
-  "as_of": null,
+  "as_of": "2026-09-10",
   "book": "maker_01",
-  "distribution": {},
-  "monthly": [],
-  "note": "no closed session under the current chain yet: there is nothing to draw. This is an empty record, not a flat one",
-  "published_at": "2026-09-10T13:18:15+00:00",
-  "series": {}
+  "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
+  "daily_returns": [
+    {
+      "date": "2026-09-10",
+      "return": 0.00048598171206704066
+    }
+  ],
+  "distribution": {
+    "bins": [],
+    "note": "not enough sessions to bin"
+  },
+  "drawdown": [
+    {
+      "date": "2026-09-10",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-09-10",
+      "drawdown": 0.0
+    }
+  ],
+  "drawdown_consistent_with_metrics": true,
+  "drawdown_episodes": [],
+  "gated": true,
+  "min_sessions_for_annualised": 60,
+  "monthly_returns": [
+    {
+      "month": 9,
+      "partial": true,
+      "partial_reason": "record begins mid-month",
+      "return": 0.00048598171206704066,
+      "sessions": 1,
+      "sessions_possible": 22,
+      "year": 2026
+    }
+  ],
+  "published_at": "2026-09-11T08:40:03+00:00",
+  "quantiles": [],
+  "risk_free_annual": 0.03828125111071619,
+  "risk_free_source": "FRED DGS3MO",
+  "rolling_sharpe": {},
+  "rolling_sortino": {},
+  "rolling_volatility": {},
+  "sessions": 1,
+  "summary": {},
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 1."
 }

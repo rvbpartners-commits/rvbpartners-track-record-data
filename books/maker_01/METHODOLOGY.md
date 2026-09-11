@@ -28,6 +28,26 @@ profit-and-loss reconstruction; two independent measurements of one account are
 two public numbers free to disagree, and nothing in the repository would have
 said which was wrong.
 
+## The accounts are shared; the record is not
+
+Both venue accounts carry this strategy **and** whatever the operator does by
+hand on the same venues. A record that adds the two together stops measuring the
+strategy — and the difference is not academic: on the inception session itself,
+manual purchases on unrelated instruments came to **-17.79 USD** against a
+strategy day of **+3.10**.
+
+So the export separates them at the source, by the identity of what was traded,
+and anything outside the strategy's own instruments is treated as a **capital
+movement**: it is unitised exactly like a transfer, moving equity and units
+while leaving the unit price — the number this record reports — untouched. It is
+not deleted. Deleting it would break the reconciliation below by its own size,
+because the equity actually read on the accounts contains it.
+
+One limit, stated rather than glossed: the derivatives venue carries no order
+tag, so a trade placed **by hand on one of the strategy's own instruments**
+would still be counted as the strategy's. Closing that needs a tag set when the
+order is sent, and there is none today.
+
 ## The opening capital, and why it is frozen
 
 The record is anchored to **1,796.40 USD**, the equity read on
@@ -76,7 +96,7 @@ write-once record forever.
 
 Nothing annualised — Sharpe, Sortino, Calmar, CAGR, volatility, drawdown,
 value-at-risk — is published below **60 sessions**. This
-book publishes **0**. Annualising a handful of sessions produces a
+book publishes **1**. Annualising a handful of sessions produces a
 number with the shape of a statistic and none of its content.
 
 Where it is ever released, annualisation uses **259 periods a
@@ -91,7 +111,7 @@ is published beside them with its source. Interest on cash is not alpha.
 Every session has an immutable snapshot under `snapshots/`, hashed, carrying
 the hash of the previous session, recorded in the repository-level
 `CHAIN.jsonl` and timestamped by OpenTimestamps. The last session published is
-**— (no closed session yet)**. See `VERIFY.md` at the root of this repository.
+**2026-09-10**. See `VERIFY.md` at the root of this repository.
 
 ## Earlier chains
 
