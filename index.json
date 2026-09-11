@@ -405,7 +405,6 @@
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
-      "record_last_session": "2026-09-10",
       "session_close": {
         "label": "21:00 UTC",
         "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
@@ -413,8 +412,6 @@
       "sessions": 1,
       "sessions_with_movement": 1,
       "slug": "rvb-maker-01",
-      "stale": false,
-      "stale_since": null,
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
@@ -508,7 +505,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-11T15:35:02+00:00",
+  "published_at": "2026-09-11T15:38:01+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
