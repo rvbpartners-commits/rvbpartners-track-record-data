@@ -111,9 +111,9 @@
       "latest_detail_session": "2026-09-09",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-09-11T14:30:00+00:00",
-        "cumulative_return": 0.02228960000000013,
-        "equity": 102228.96,
+        "at": "2026-09-11T14:35:00+00:00",
+        "cumulative_return": 0.022249299999999916,
+        "equity": 102224.93,
         "marked": false,
         "session_date": "2026-09-11",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -235,9 +235,9 @@
       "latest_detail_session": "2026-09-09",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-09-11T14:30:00+00:00",
-        "cumulative_return": 0.002759600000000084,
-        "equity": 100275.96,
+        "at": "2026-09-11T14:35:00+00:00",
+        "cumulative_return": 0.0027173000000000336,
+        "equity": 100271.73,
         "marked": false,
         "session_date": "2026-09-11",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -508,7 +508,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-11T14:30:03+00:00",
+  "published_at": "2026-09-11T14:35:02+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
