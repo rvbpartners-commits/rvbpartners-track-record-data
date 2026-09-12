@@ -63,15 +63,43 @@
   "latest_detail_session": null,
   "live": null,
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-12T10:40:03+00:00",
+  "published_at": "2026-09-12T10:54:28+00:00",
   "reconciliation": {
     "curve_usd": 1784.165731,
     "note": "the curve compounds realised profit and loss from a frozen opening capital, so it is checked against what the two accounts actually report. The two are not expected to be equal: the accounts are read hours after the last published session closed, so the reading already carries part of the session in progress, and the curve carries no unrealised profit and loss at all. Published whether or not it is zero -- a field that only appears when it is inconvenient is not a measurement",
-    "read_usd": 1780.793364,
-    "residual_bps": 18.9114
+    "read_usd": 1780.740324,
+    "residual_bps": 19.2098
   },
   "risk_free_annual": 0.04,
   "risk_free_source": "FRED DGS3MO",
+  "round_trips": {
+    "annualised_withheld": true,
+    "best_usd": 3.373081,
+    "combined_note": "each round trip is the SUM of both legs, from the position's opening to its close. Counted on the broker leg alone the 2026-09-11 15:10 rotation reads -5.80; on the derivatives leg, +7.39. It is worth +0.66 USD. The source export pairs the legs by the broker's own position identifier and matches the derivatives leg by instrument, never by time alone: two instruments were open simultaneously at 12:30:16 that day, and a time window would have given each the other's fills",
+    "cross_check": {
+      "agree": true,
+      "closed_positions": 12,
+      "closing_realisation_clusters": 13,
+      "note": "two independent constructions of the same count: realisations that carried a close, and positions brought back to flat. They are built from different facts, so their agreement is evidence rather than arithmetic. They differ by the positions this book was already holding when the record opened: those realise a close inside it, so the first construction counts them, while the second cannot describe them -- their holding time would start at their own close. Their profit stays in the day's total and shows up in the residual outside rotations",
+      "opened_before_the_record": 1
+    },
+    "fees_total_usd": 0.734178,
+    "funding_share_of_net": 0.33425839716000855,
+    "funding_total_usd": 1.837391,
+    "hit_rate": 0.6666666666666666,
+    "holding_seconds_longest": 111600.0,
+    "holding_seconds_shortest": 21.0,
+    "median_holding_seconds": 10135.5,
+    "net_mean_usd": 0.458076,
+    "net_median_usd": 0.338942,
+    "net_total_usd": 5.496918,
+    "round_trips": 12,
+    "round_trips_needed_for_annualising": 30,
+    "sample_note": "these describe 12 round trips and nothing more. A hit rate on that many observations carries a standard error near 14 points, so it is published as a description of what happened, never as an estimate of what will. Annualised ratios stay withheld under the same bar (12 of 30)",
+    "unit_note": "the unit of account is the round trip, not the session: this book executed on 2 of its 2 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
+    "winners": 8,
+    "worst_usd": -2.135628
+  },
   "session_close": {
     "label": "21:00 UTC",
     "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
@@ -82,7 +110,7 @@
   "slug": "rvb-maker-01",
   "source_export": {
     "fx_rate_used": 1.1598199999999999,
-    "generated_at": "2026-09-12T10:02:25+00:00",
+    "generated_at": "2026-09-12T10:52:51+00:00",
     "portfolio": "arb-hl-mt5-3-actifs",
     "quote_currency": "EUR",
     "window_executions": {
