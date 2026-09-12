@@ -13,7 +13,7 @@
         "unit": "marked sessions"
       },
       {
-        "have": 17,
+        "have": 13,
         "met": false,
         "need": 30,
         "unit": "round trips"
@@ -23,7 +23,7 @@
     "label_en": "insufficient history — 2/60",
     "label_fr": "historique insuffisant — 2/60",
     "need": 60,
-    "note": "two bars govern this book and BOTH must be met: the desk-wide session count, and the round trips this strategy actually produced. The one shown is whichever is further from being met; every bar is listed under `gates`. A round trip is counted as a CLOSING execution on the derivatives leg, read off the fill's own direction field -- not inferred by pairing the two legs",
+    "note": "two bars govern this book and BOTH must be met: the desk-wide session count, and the round trips this strategy actually produced. The one shown is whichever is further from being met; every bar is listed under `gates`. A round trip is one REALISATION carrying a closing execution, with BOTH legs in it -- they settle seconds apart and the source export groups them. It is not a count of closing fills: a rotation sometimes closes in several, and counting those overstated this bar by 17 to 3",
     "suppressed": [
       "sharpe",
       "sharpe_gross",
@@ -43,7 +43,7 @@
     ],
     "unit": "marked sessions"
   },
-  "published_at": "2026-09-12T10:12:28+00:00",
+  "published_at": "2026-09-12T10:22:39+00:00",
   "risk_free_annual": 0.04,
   "risk_free_source": "FRED DGS3MO",
   "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",

@@ -423,12 +423,13 @@
       "executions": {
         "annualised_withheld": true,
         "broker_deals": 29,
-        "counted_as": "a CLOSING execution on the derivatives leg, read off the fill's own direction field. Not inferred by pairing the two legs, and not a count of orders: an opening fill is not a round trip",
+        "closing_fills": 17,
+        "counted_as": "one ROUND TRIP -- a realisation carrying a closing execution, with BOTH legs in it. The source export groups them: they settle 0 to 2 seconds apart, and counted on the derivatives leg alone the same rotation reads -5.80 against +7.39 when it is worth +0.67. Closing FILLS are published beside it because a rotation sometimes closes in several of them -- 17 fills for 13 round trips here -- and the bar counts rotations",
         "derivatives_fills": 38,
         "fees_usd": 0.750226,
         "funding_usd": 1.837063,
-        "not_published": "profit per round trip, hit rate and holding time are NOT published. All three require matching the two legs, and the derivatives leg alone inverts the sign -- one round trip read -4.50 USD on that leg and +3.19 USD counted as a pair. A count is defensible on one leg; an attribution of profit is not",
-        "round_trips": 17,
+        "not_published": "profit per round trip, hit rate and holding time are not published YET, and no longer for want of matching: the export now pairs the two legs, and that pairing is what draws the intraday curve. They are withheld under the SAME round-trip bar as the annualised ratios -- a hit rate on thirteen observations has the shape of a statistic and none of its content",
+        "round_trips": 13,
         "round_trips_needed_for_annualising": 30,
         "sessions_published": 2,
         "sessions_with_execution": 2,
@@ -453,7 +454,6 @@
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
-      "record_last_session": "2026-09-11",
       "session_close": {
         "label": "21:00 UTC",
         "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
@@ -461,8 +461,6 @@
       "sessions": 2,
       "sessions_with_movement": 2,
       "slug": "rvb-maker-01",
-      "stale": false,
-      "stale_since": null,
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
@@ -556,7 +554,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-12T10:15:02+00:00",
+  "published_at": "2026-09-12T10:22:39+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
