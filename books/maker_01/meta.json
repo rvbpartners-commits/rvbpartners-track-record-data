@@ -4,11 +4,11 @@
   "account_number": null,
   "account_ref": "sha256:d1d2e72a37083261",
   "account_type": "live",
-  "annualised_basis": 259,
+  "annualised_basis": 365,
   "annualised_gate": {
     "note": "nothing annualised is published below the session threshold: a ratio from a handful of sessions has the shape of a statistic and none of its content",
     "sessions": {
-      "have": 1,
+      "have": 2,
       "met": false,
       "need": 60
     }
@@ -20,7 +20,7 @@
     "note": "sessions where the record recomputed from today's data differs from the write-once snapshot already published for that session. The snapshot is never rewritten: it is the evidence, and its hash verifies",
     "sessions": []
   },
-  "chain_head": "67a57c236bf35e5ba9bd8d81500c2b05796e7f6569e42ad7d02ef1c1f15387fc",
+  "chain_head": "72e6aba472cf637935e602218d336c7ade64d0896bd86457526738e4970e0cf9",
   "convention": {
     "calendar": "the broker's own day, whose midnight is 21:00 UTC. EVERY day is a row, weekends included: the derivatives venue trades 24/7, so Saturday funding is a fact about Saturday. A day with no trade is a zero, never a missing row",
     "flows": "capital movements are unitised: a deposit buys units at the day's price, so it moves equity and never the price. The transfers of 2026-09-09 tripled this account's capital; counted as performance they would read +250 % in one day",
@@ -30,46 +30,60 @@
     "scope_change": "this chain publishes a MULTI-INSTRUMENT portfolio on the same two venues. Earlier chains published a single instrument. The composition itself is not published, then or now: it is the strategy",
     "source": "the trading system's own machine export, produced daily on the trading box from the broker's deal registry and the derivatives venue's API. ONE source of truth: the publisher recomputes no profit and loss, no matching and no fill",
     "superseded_chains": "kept verbatim under books/maker_01/superseded/, each with its own genesis, CHAIN.jsonl, snapshots and derived files, and its own note saying why it was retired. Never rewritten, never presented",
-    "version": "maker/6"
+    "version": "maker/7"
   },
   "cross_check_against_source_curve_usd": null,
   "cross_check_note": "difference between this book's curve and the curve the source export publishes for itself, on the last session, when the export states an opening capital and the two are therefore comparable. The export is stateless and only states one on the inception session; null on every later run means not comparable, never agreed",
   "detail_lag_days": 0,
   "detail_sessions": [],
+  "executions": {
+    "annualised_withheld": true,
+    "broker_deals": 29,
+    "counted_as": "a CLOSING execution on the derivatives leg, read off the fill's own direction field. Not inferred by pairing the two legs, and not a count of orders: an opening fill is not a round trip",
+    "derivatives_fills": 38,
+    "fees_usd": 0.750226,
+    "funding_usd": 1.837063,
+    "not_published": "profit per round trip, hit rate and holding time are NOT published. All three require matching the two legs, and the derivatives leg alone inverts the sign -- one round trip read -4.50 USD on that leg and +3.19 USD counted as a pair. A count is defensible on one leg; an attribution of profit is not",
+    "round_trips": 17,
+    "round_trips_needed_for_annualising": 30,
+    "sessions_published": 2,
+    "sessions_with_execution": 2,
+    "unit_note": "the unit of account is the round trip, not the session: a book that is flat most of the time would cross a session-based bar by the calendar alone, without having produced anything more to measure"
+  },
   "inception": "2026-09-10",
   "inception_anchored_to_funded_capital": true,
   "inception_note": "anchored to the equity read on both venue accounts on the inception session itself, and frozen in inception.json. It is never recomputed: it divides every return this book publishes",
   "initial_capital": 1796.398333,
-  "last_session": "2026-09-10",
+  "last_session": "2026-09-11",
   "latest_detail_session": null,
   "live": null,
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-11T16:43:43+00:00",
+  "published_at": "2026-09-12T08:40:03+00:00",
   "reconciliation": {
-    "curve_usd": 1779.468334,
+    "curve_usd": 1784.165731,
     "note": "the curve compounds realised profit and loss from a frozen opening capital, so it is checked against what the two accounts actually report. The two are not expected to be equal: the accounts are read hours after the last published session closed, so the reading already carries part of the session in progress, and the curve carries no unrealised profit and loss at all. Published whether or not it is zero -- a field that only appears when it is inconvenient is not a measurement",
-    "read_usd": 1780.294649,
-    "residual_bps": 8.4772
+    "read_usd": 1780.78758,
+    "residual_bps": 18.929
   },
-  "risk_free_annual": 0.03828125111071619,
+  "risk_free_annual": 0.04,
   "risk_free_source": "FRED DGS3MO",
   "session_close": {
     "label": "21:00 UTC",
     "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
   },
-  "sessions": 1,
-  "sessions_with_movement": 1,
+  "sessions": 2,
+  "sessions_with_movement": 2,
   "sessions_with_movement_note": "sessions on which the book's profit and loss moved. NOT the count of sessions traded, which earlier chains of this book published: the source export reports execution counts over its whole window, not per session, and funding accrues while a position is held without any order being placed. The field is named for what it measures rather than reusing a name it would not earn",
   "slug": "rvb-maker-01",
   "source_export": {
-    "fx_rate_used": 1.1602999999999999,
-    "generated_at": "2026-09-11T08:20:06+00:00",
+    "fx_rate_used": 1.1598199999999999,
+    "generated_at": "2026-09-12T08:20:06+00:00",
     "portfolio": "arb-hl-mt5-3-actifs",
     "quote_currency": "EUR",
     "window_executions": {
       "note": "over the export's whole window, not per session",
-      "venue_a_fills": 136,
-      "venue_b_deals": 21
+      "venue_a_fills": 145,
+      "venue_b_deals": 30
     }
   }
 }
