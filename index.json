@@ -443,15 +443,16 @@
       "paths": {
         "analytics": "books/maker_01/analytics.json",
         "benchmark": "books/maker_01/benchmark.csv",
+        "benchmark_intraday": "books/maker_01/benchmark_intraday.csv",
         "daily": "books/maker_01/daily.csv",
         "events": "books/maker_01/events.json",
+        "intraday": "books/maker_01/intraday.csv",
         "meta": "books/maker_01/meta.json",
         "methodology": "books/maker_01/METHODOLOGY.md",
         "metrics": "books/maker_01/metrics.json",
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
-      "record_last_session": "2026-09-11",
       "session_close": {
         "label": "21:00 UTC",
         "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
@@ -459,8 +460,6 @@
       "sessions": 2,
       "sessions_with_movement": 2,
       "slug": "rvb-maker-01",
-      "stale": false,
-      "stale_since": null,
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
@@ -554,7 +553,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-12T09:40:03+00:00",
+  "published_at": "2026-09-12T10:12:28+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

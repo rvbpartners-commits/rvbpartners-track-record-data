@@ -54,16 +54,20 @@
   "inception_anchored_to_funded_capital": true,
   "inception_note": "anchored to the equity read on both venue accounts on the inception session itself, and frozen in inception.json. It is never recomputed: it divides every return this book publishes",
   "initial_capital": 1796.398333,
+  "intraday_note": "this book is flat most of the time, so its curve is not sampled on a clock: each point is one ROUND TRIP, both legs together. Counted on one leg the same rotation reads -5.80 and +7.39; it is worth +0.67, and a series that separates them draws a swing of 0.7 % of the book that never happened. Funding and dividend adjustments are profit and loss without being executions -- 46 events a day, the smallest 0.000139 USD -- so they settle at the session close instead of burying the round trips under noise. The closing point of each session is the published mark itself",
+  "intraday_points": 30,
+  "intraday_resolution": "per round trip, plus one point at each session close",
+  "intraday_sessions_rejected": [],
   "last_session": "2026-09-11",
   "latest_detail_session": null,
   "live": null,
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-12T09:40:03+00:00",
+  "published_at": "2026-09-12T10:12:28+00:00",
   "reconciliation": {
     "curve_usd": 1784.165731,
     "note": "the curve compounds realised profit and loss from a frozen opening capital, so it is checked against what the two accounts actually report. The two are not expected to be equal: the accounts are read hours after the last published session closed, so the reading already carries part of the session in progress, and the curve carries no unrealised profit and loss at all. Published whether or not it is zero -- a field that only appears when it is inconvenient is not a measurement",
-    "read_usd": 1780.78758,
-    "residual_bps": 18.929
+    "read_usd": 1780.793364,
+    "residual_bps": 18.9114
   },
   "risk_free_annual": 0.04,
   "risk_free_source": "FRED DGS3MO",
@@ -77,7 +81,7 @@
   "slug": "rvb-maker-01",
   "source_export": {
     "fx_rate_used": 1.1598199999999999,
-    "generated_at": "2026-09-12T08:20:06+00:00",
+    "generated_at": "2026-09-12T10:02:25+00:00",
     "portfolio": "arb-hl-mt5-3-actifs",
     "quote_currency": "EUR",
     "window_executions": {
