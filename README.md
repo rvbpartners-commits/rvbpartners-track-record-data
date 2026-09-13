@@ -40,8 +40,8 @@ because its collector removes capital flows by unitisation rather than by the
 `METHODOLOGY.md`. Read that book's own note before comparing it with the others.
 
 Seven books are published. Six run on Alpaca **paper** accounts, one account
-each; one trades **real capital** — the operator's own money, no third-party
-funds. Every book states its kind and its capital beside its return.
+each; one trades **real capital** — the firm's own capital; no third-party money
+is managed. Every book states its kind and its capital beside its return.
 
 | Book | Kind | Selected for |
 |---|---|---|
@@ -71,8 +71,8 @@ clone plus the verifier reproduces every published number from `nav.csv`.
 - **Strategy identity or logic.** Holdings, P&L and attribution are grouped by
   strategy CATEGORY — mean reversion, momentum, trend following, seasonal. No
   strategy is named anywhere in this repository, and P&L is reported per category
-  rather than per symbol. The metric calculation code is open (see
-  METHODOLOGY.md); the strategies are not.
+  rather than per symbol. Metric definitions and conventions are set
+  out in METHODOLOGY.md; the strategies are not published.
 - **Anything forward-looking.** The desk builds its order plan after the close
   for the next open. That plan is never published — detail is released only once
   its cycle has actually executed, which is a stricter test than any delay.

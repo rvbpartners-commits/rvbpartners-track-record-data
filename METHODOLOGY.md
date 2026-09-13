@@ -1,8 +1,8 @@
 # Methodology
 
-How every published number is produced. If something here is unclear or looks
-wrong, the raw inputs are in this repository and the calculation code is named
-below — check it.
+How every published number is produced. The raw inputs are in this repository,
+and every figure is published with the convention and the risk-free rate it used,
+so any of it can be recomputed independently.
 
 ## 1. Where the numbers come from
 
@@ -108,13 +108,11 @@ exactly. If FRED is unreachable the payload says `risk_free_source: unavailable`
 and the ratio is explicitly gross, rather than quietly pretending the rate was
 zero.
 
-**Annualised statistics are withheld until 60 sessions.** Sharpe, CAGR, Calmar,
-volatility, maximum drawdown, VaR, skew, kurtosis and win rate are suppressed
-below that threshold and the payload carries an `insufficient_history` block with
-`have` and `need`. On a handful of sessions these are not imprecise estimates,
-they are meaningless ones. Cumulative return, the equity curve, and the best and
-worst day are published from day one, because those are statements of what
-happened rather than estimates of anything.
+**Annualised statistics are published from 60 sessions.** Sharpe, CAGR, Calmar,
+volatility, maximum drawdown, VaR, skew, kurtosis and win rate are published once
+a book reaches that threshold; until then the payload carries an
+`insufficient_history` block with `have` and `need`. Cumulative return, the equity
+curve, and the best and worst day are published from the first session.
 
 ## 4. Book-level versus per-category
 
@@ -225,7 +223,6 @@ date-based delay would never have added a guarantee here, only a wait: it is the
 execution check, not the calendar, that prevents publishing orders before they
 exist at the broker.
 
-The consequence is deliberate and is the operator's decision: **current holdings
-are public.** Anyone can see what the portfolios hold, more or less as they hold
+As a result, **current holdings are public.** Anyone can see what the portfolios hold, more or less as they hold
 it. What they cannot see is what is about to be traded, or which strategy holds
 what.
