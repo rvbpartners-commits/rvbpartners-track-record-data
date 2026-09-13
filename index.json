@@ -65,11 +65,11 @@
         "nav": "books/best_cagr/nav.csv",
         "snapshots": "books/best_cagr/snapshots/"
       },
-      "record_last_session": "2026-09-11",
+      "record_last_session": "2026-09-12",
       "sessions": 25,
       "slug": "rvb-growth-agg",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-11",
       "tagline_en": "Selected for compound growth",
       "tagline_fr": "Sélectionné pour la croissance composée"
     },
@@ -138,11 +138,11 @@
         "nav": "books/best_cagr_100k/nav.csv",
         "snapshots": "books/best_cagr_100k/snapshots/"
       },
-      "record_last_session": "2026-09-11",
+      "record_last_session": "2026-09-12",
       "sessions": 22,
       "slug": "rvb-growth-100k",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-11",
       "tagline_en": "Selected for compound growth, at $100k",
       "tagline_fr": "Sélectionné pour la croissance composée, à 100 k$"
     },
@@ -204,11 +204,11 @@
         "nav": "books/best_composite/nav.csv",
         "snapshots": "books/best_composite/snapshots/"
       },
-      "record_last_session": "2026-09-11",
+      "record_last_session": "2026-09-12",
       "sessions": 25,
       "slug": "rvb-blend-core",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-11",
       "tagline_en": "Balanced across all three objectives",
       "tagline_fr": "Équilibré sur les trois objectifs"
     },
@@ -270,11 +270,11 @@
         "nav": "books/best_composite_100k/nav.csv",
         "snapshots": "books/best_composite_100k/snapshots/"
       },
-      "record_last_session": "2026-09-11",
+      "record_last_session": "2026-09-12",
       "sessions": 22,
       "slug": "rvb-blend-100k",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-11",
       "tagline_en": "Balanced across all three objectives, at $100k",
       "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
     },
@@ -336,11 +336,11 @@
         "nav": "books/best_mdd/nav.csv",
         "snapshots": "books/best_mdd/snapshots/"
       },
-      "record_last_session": "2026-09-11",
+      "record_last_session": "2026-09-12",
       "sessions": 25,
       "slug": "rvb-dd-def",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-11",
       "tagline_en": "Selected to limit drawdown",
       "tagline_fr": "Sélectionné pour limiter le drawdown"
     },
@@ -402,11 +402,11 @@
         "nav": "books/best_sharpe/nav.csv",
         "snapshots": "books/best_sharpe/snapshots/"
       },
-      "record_last_session": "2026-09-11",
+      "record_last_session": "2026-09-12",
       "sessions": 25,
       "slug": "rvb-sr-stab",
-      "stale": false,
-      "stale_since": null,
+      "stale": true,
+      "stale_since": "2026-09-11",
       "tagline_en": "Selected for risk-adjusted return",
       "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
     },
@@ -454,6 +454,7 @@
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
+      "record_last_session": "2026-09-12",
       "session_close": {
         "label": "21:00 UTC",
         "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
@@ -461,6 +462,8 @@
       "sessions": 3,
       "sessions_with_movement": 3,
       "slug": "rvb-maker-01",
+      "stale": false,
+      "stale_since": null,
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
