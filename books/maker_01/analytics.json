@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-12",
   "book": "maker_01",
   "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
   "daily_returns": [
@@ -10,23 +10,27 @@
     {
       "date": "2026-09-11",
       "return": 0.002639050954969413
+    },
+    {
+      "date": "2026-09-12",
+      "return": 9.670626276658822e-06
     }
   ],
   "distribution": {
     "bins": [
       {
-        "count": 1,
-        "from": 0.00048670475104906075,
-        "to": 0.001204153485689178
+        "count": 2,
+        "from": 9.670626276658822e-06,
+        "to": 0.0008861307358409102
       },
       {
         "count": 0,
-        "from": 0.001204153485689178,
-        "to": 0.0019216022203292955
+        "from": 0.0008861307358409102,
+        "to": 0.0017625908454051615
       },
       {
         "count": 1,
-        "from": 0.0019216022203292955,
+        "from": 0.0017625908454051615,
         "to": 0.002639050954969413
       }
     ]
@@ -43,6 +47,10 @@
     {
       "date": "2026-09-11",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-09-12",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -54,20 +62,20 @@
       "month": 9,
       "partial": true,
       "partial_reason": "record begins mid-month",
-      "return": 0.00312704014465659,
-      "sessions": 2,
+      "return": 0.003136741011369848,
+      "sessions": 3,
       "sessions_possible": 22,
       "year": 2026
     }
   ],
-  "published_at": "2026-09-12T11:40:03+00:00",
+  "published_at": "2026-09-13T08:40:03+00:00",
   "quantiles": [],
   "risk_free_annual": 0.04,
   "risk_free_source": "FRED DGS3MO",
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 2,
+  "sessions": 3,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 2."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 3."
 }
