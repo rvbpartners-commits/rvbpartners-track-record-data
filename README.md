@@ -34,10 +34,12 @@ pipeline and pushed unedited. Nothing in this repository is written by hand.
 
 **The table above describes the paper books.** `maker_01` publishes a different
 set: it has no `attributed.csv` and no `detail/` — its composition *is* the
-strategy — and its `nav.csv` carries `date,equity,cash,daily_return` only,
-because its collector removes capital flows by unitisation rather than by the
-`flow`/`adj_factor`/`equity_adj` columns. It adds `daily.csv` and its own
-`METHODOLOGY.md`. Read that book's own note before comparing it with the others.
+strategy. Its `nav.csv` carries the same columns as the paper books, filled by
+its collector's unitisation: `equity_adj` is the unit value, which moves only
+with profit and loss, `adj_factor` is `equity_adj / equity`, and `flow` is the
+capital movement on that date. `cash` is left empty, because its cash sits on
+two venues in two currencies. It adds `daily.csv` and its own `METHODOLOGY.md`.
+Read that book's own note before comparing it with the others.
 
 Seven books are published. Six run on Alpaca **paper** accounts, one account
 each; one trades **real capital** — the firm's own capital; no third-party money

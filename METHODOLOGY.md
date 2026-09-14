@@ -58,11 +58,11 @@ Four things make this an adjustment rather than an edit, and each is checkable:
 - **The raw series is never rewritten.** On the paper books `nav.csv` publishes
   `equity` exactly as the broker reported it, discontinuity included, beside
   `flow`, `adj_factor` and `equity_adj`. Both curves come out of the same file.
-  `maker_01` carries none of those three: its collector removes flows by
-  **unitisation** instead — a deposit buys units at the day's price, so it moves
-  the balance and never the price. There `equity` is a balance, `daily_return`
-  is already the unit return, and rebasing the balance will not reproduce the
-  headline.
+  `maker_01` carries the same three columns, filled by its collector's
+  **unitisation**: a deposit buys units at the day's price, so it moves the
+  balance and never the unit value. There `equity_adj` is the unit value,
+  `adj_factor` is `equity_adj / equity`, and `daily_return` is the change in
+  `equity_adj`.
 - **An event changes its own session and every one after it, and nothing
   before.** For every row published before an event, `adj_factor` is exactly
   `1.0` and `equity_adj` is exactly `equity`. Adjusting the past is not

@@ -255,31 +255,23 @@ the balance (Methodology, section 2). Because that is an adjustment we make to
 our own performance figure, it is the one thing in this repository that most
 deserves checking, so it is published to be checked.
 
-**Only a book that can take a capital movement carries these columns.** The
-paper books do; `maker_01` has a `nav.csv` of `date,equity,cash,daily_return`
-and no `flow`/`adj_factor`/`equity_adj` — but that is **not** because it takes
-no deposits. It does. Its collector removes them by **unitisation**: a deposit
-buys units at the day's price, so it moves the balance and never the price, and
-`daily_return` is already the unit return. The flow adjustment the paper books
-apply after the fact is done at source there instead.
+**Every book carries these columns, filled in one of two ways.** The paper books
+adjust after the fact, as described below. `maker_01`'s collector removes
+movements at source by **unitisation**: a deposit buys units at the day's price,
+so it moves `equity` and never the unit value. On that book `equity_adj` is the
+unit value and `adj_factor` is `equity_adj / equity`, so check 2 below, which
+reproduces the paper books' factor, does not apply to it. Checks 1 and 3 do;
+its values are published to six decimals, so run check 3 on it with a tolerance
+of `1e-9`.
 
-So on that book `equity` is a BALANCE, not the index, and rebasing it will not
-reproduce the headline. Check for the columns before running the script below:
-
-```python
-import pandas as pd
-nav = pd.read_csv("books/<book>/nav.csv")
-adjusted = {"flow", "adj_factor", "equity_adj"} <= set(nav.columns)
-```
-
-For an adjusted book, `nav.csv` carries both series and the bridge between them:
+`nav.csv` carries both series and the bridge between them:
 
 | column | what it is |
 |---|---|
 | `equity` | exactly what the broker reported. Never rewritten. |
 | `flow` | the declared external movement on that date, signed. Zero almost everywhere. |
 | `adj_factor` | the multiplier that removes flows from the return. |
-| `equity_adj` | `equity x adj_factor` — the track-record index, and what the charts draw. |
+| `equity_adj` | `equity x adj_factor` — the track-record index, and what the charts draw. On `maker_01`, the unit value. |
 
 Three checks, all of which a reader can run against files in this repository:
 
@@ -295,7 +287,7 @@ before = nav.iloc[:flagged.min()] if len(flagged) else nav
 assert (before["adj_factor"] == 1.0).all()
 assert (before["equity_adj"] - before["equity"]).abs().max() < 0.01
 
-# 2. The factor is what it claims to be:
+# 2. The factor is what it claims to be (paper books):
 #    k_t = k_{t-1} * E_{t-1} / (E_{t-1} + F_t)
 k = 1.0
 for i in range(1, len(nav)):
@@ -322,7 +314,8 @@ dated and unable to reach backwards; each record existed **no later than** the b
 --verify` opens every proof, checks it commits to that exact file, and reports
 the Bitcoin block it is anchored in); the orders, fills and intraday curve match
 the digests recorded for them, and any correction to them is visible; the metrics
-follow from the equity curve by open code.
+follow from the equity curve under the conventions METHODOLOGY.md states, so they
+can be recomputed independently.
 
 **It does not prove:** that the trading itself was skilful, that the paper fills
 would have happened in a real market, or that we are not running other,
@@ -333,6 +326,5 @@ signatures required) are used together rather than relying on any one of them.
 Every publish commit is signed; `git log --show-signature` checks that against
 the key, and GitHub shows it as Verified.
 
-**And it says nothing about the results being good.** These are paper accounts
-with a short history. The point of this repository is that the record is
-checkable, not that it is impressive.
+**Nor does it say anything about whether the results are good.** The record is
+published so that it can be checked.

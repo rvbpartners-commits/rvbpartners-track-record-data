@@ -12,6 +12,10 @@
   "account_number": null,
   "account_ref": "sha256:54f7df38b17a2581",
   "account_type": "alpaca_paper",
+  "benchmark_intraday_anchor": {
+    "as_of": "2026-08-07",
+    "spy_close": 773.16
+  },
   "book": "best_cagr",
   "capital_events": {
     "convention": "time-weighted return; external flows are excluded from the return and kept in the balance. A flow is applied at the START of its session: r_t = E_t / (E_t-1 + F_t) - 1",
@@ -156,7 +160,7 @@
   },
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": null,
-  "published_at": "2026-09-13T17:40:03+00:00",
+  "published_at": "2026-09-14T04:50:01+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"

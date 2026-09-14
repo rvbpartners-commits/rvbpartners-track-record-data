@@ -12,6 +12,10 @@
   "account_number": null,
   "account_ref": "sha256:5f78e28e5b52f09d",
   "account_type": "alpaca_paper",
+  "benchmark_intraday_anchor": {
+    "as_of": "2026-08-13",
+    "spy_close": 777.84
+  },
   "book": "best_cagr_100k",
   "capital_events": null,
   "categories": [
@@ -90,7 +94,7 @@
   },
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": null,
-  "published_at": "2026-09-13T17:40:03+00:00",
+  "published_at": "2026-09-14T04:50:01+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
