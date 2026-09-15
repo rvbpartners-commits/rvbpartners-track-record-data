@@ -96,7 +96,7 @@ write-once record forever.
 
 Nothing annualised — Sharpe, Sortino, Calmar, CAGR, volatility, drawdown,
 value-at-risk — is published below **60 sessions**. This
-book publishes **4**. Annualising a handful of sessions produces a
+book publishes **5**. Annualising a handful of sessions produces a
 number with the shape of a statistic and none of its content.
 
 Where it is ever released, annualisation uses **365 periods a
@@ -111,7 +111,7 @@ is published beside them with its source. Interest on cash is not alpha.
 Every session has an immutable snapshot under `snapshots/`, hashed, carrying
 the hash of the previous session, recorded in the repository-level
 `CHAIN.jsonl` and timestamped by OpenTimestamps. The last session published is
-**2026-09-13**. See `VERIFY.md` at the root of this repository.
+**2026-09-14**. See `VERIFY.md` at the root of this repository.
 
 ## Earlier chains
 
