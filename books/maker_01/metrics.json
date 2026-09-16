@@ -1,27 +1,27 @@
 {
   "annualised_basis": 365,
   "annualised_basis_note": "one observation per calendar day, weekends included: the derivatives venue trades 24/7 and this record publishes a row for every day, so a year of this series is 365 observations. NOT a market calendar -- the broker leg is shut at weekends and those rows are structural zeros, which the annualisation absorbs. Earlier chains of this book used 259, the broker's own trading calendar, which understated every annualised ratio by about 16%",
-  "as_of": "2026-09-14",
+  "as_of": "2026-09-15",
   "book": "maker_01",
   "computed_by": "rvb.metrics.compute_core_metrics",
   "insufficient_history": {
     "gates": [
       {
-        "have": 5,
+        "have": 6,
         "met": false,
         "need": 60,
         "unit": "marked sessions"
       },
       {
-        "have": 14,
+        "have": 18,
         "met": false,
         "need": 30,
         "unit": "round trips"
       }
     ],
-    "have": 5,
-    "label_en": "insufficient history — 5/60",
-    "label_fr": "historique insuffisant — 5/60",
+    "have": 6,
+    "label_en": "insufficient history — 6/60",
+    "label_fr": "historique insuffisant — 6/60",
     "need": 60,
     "note": "two bars govern this book and BOTH must be met: the desk-wide session count, and the round trips this strategy actually produced. The one shown is whichever is further from being met; every bar is listed under `gates`. A round trip is one REALISATION carrying a closing execution, with BOTH legs in it -- they settle seconds apart and the source export groups them. It is not a count of closing fills: a rotation sometimes closes in several, and counting those overstated this bar by 17 to 3",
     "suppressed": [
@@ -43,8 +43,8 @@
     ],
     "unit": "marked sessions"
   },
-  "published_at": "2026-09-15T11:42:03+00:00",
-  "risk_free_annual": 0.04035,
+  "published_at": "2026-09-16T08:42:03+00:00",
+  "risk_free_annual": 0.0406,
   "risk_free_source": "FRED DGS3MO",
   "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
   "values": {
@@ -52,13 +52,13 @@
     "cagr": null,
     "calmar": null,
     "calmar_gross": null,
-    "cumulative_return": 0.003163479397731095,
+    "cumulative_return": 0.0048071100527431465,
     "ev_excess_annual": null,
     "kurtosis": null,
     "max_drawdown": null,
-    "n_obs": 5,
+    "n_obs": 6,
     "negative_days": 1,
-    "positive_days": 4,
+    "positive_days": 5,
     "sharpe": null,
     "sharpe_autocorr_adj": null,
     "sharpe_gross": null,
