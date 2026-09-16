@@ -4,113 +4,120 @@
     {
       "category": "mean_reversion",
       "code": "MR",
-      "cost_basis": -12704.91,
+      "cost_basis": -11890.39,
       "label": "Mean reversion",
-      "market_value": -12863.73,
-      "n_long": 6,
-      "n_positions": 14,
+      "market_value": -11159.66,
+      "n_long": 7,
+      "n_positions": 15,
       "n_short": 8,
-      "open_pnl": -158.82,
-      "open_pnl_pct": -0.005870392599829517,
+      "open_pnl": 730.73,
+      "open_pnl_pct": 0.026220193019991928,
       "partial": false,
       "positions": [
         {
           "avg_price": 51.180824,
           "cost_basis": 47.5857239129821,
-          "mark": 62.08,
+          "mark": 56.71,
           "qty": 0.929756893186833,
           "symbol": "HPE"
         },
         {
           "avg_price": 212.42,
           "cost_basis": 212.42,
-          "mark": 221.165,
+          "mark": 230.85,
           "qty": 1.0,
           "symbol": "DDOG"
         },
         {
           "avg_price": 55.50484701743865,
           "cost_basis": -13.253415788411246,
-          "mark": 62.08,
+          "mark": 56.71,
           "qty": -0.23877943099721102,
           "symbol": "HPE"
         },
         {
           "avg_price": 196.634375,
           "cost_basis": -6095.665625000001,
-          "mark": 202.0,
+          "mark": 196.77,
           "qty": -31.0,
           "symbol": "DASH"
         },
         {
           "avg_price": 31.316158,
           "cost_basis": -80.28175452425299,
-          "mark": 35.475,
+          "mark": 32.7,
           "qty": -2.5635888835486456,
           "symbol": "HPQ"
         },
         {
           "avg_price": 31.316158,
           "cost_basis": -401.4087726212649,
-          "mark": 35.475,
+          "mark": 32.7,
           "qty": -12.817944417743227,
           "symbol": "HPQ"
         },
         {
           "avg_price": 214.817667,
           "cost_basis": -207.88806483871065,
-          "mark": 218.8,
+          "mark": 227.645,
           "qty": -0.9677419354838754,
           "symbol": "PAYC"
         },
         {
           "avg_price": 215.66,
           "cost_basis": 208.70322580645163,
-          "mark": 218.8,
+          "mark": 227.645,
           "qty": 0.967741935483871,
           "symbol": "PAYC"
         },
         {
           "avg_price": 277.0428,
           "cost_basis": 277.0428,
-          "mark": 280.87,
+          "mark": 287.015,
           "qty": 1.0,
           "symbol": "EXPE"
         },
         {
           "avg_price": 277.98,
           "cost_basis": -11.119200000000001,
-          "mark": 280.87,
+          "mark": 287.015,
           "qty": -0.04,
           "symbol": "EXPE"
         },
         {
           "avg_price": 257.16,
           "cost_basis": 6181.73076923077,
-          "mark": 259.66,
+          "mark": 276.31,
           "qty": 24.03846153846154,
           "symbol": "FDS"
         },
         {
           "avg_price": 257.16,
           "cost_basis": 247.2692307692308,
-          "mark": 259.66,
+          "mark": 276.31,
           "qty": 0.9615384615384616,
           "symbol": "FDS"
         },
         {
           "avg_price": 201.75129,
           "cost_basis": -6254.28999,
-          "mark": 202.0,
+          "mark": 196.77,
           "qty": -31.0,
           "symbol": "DASH"
         },
         {
           "avg_price": 53.667323,
           "cost_basis": -6815.750021000001,
-          "mark": 53.695,
+          "mark": 52.73,
           "qty": -127.0,
           "symbol": "PYPL"
+        },
+        {
+          "avg_price": 116.36,
+          "cost_basis": 814.52,
+          "mark": 112.35,
+          "qty": 7.0,
+          "symbol": "DLTR"
         }
       ],
       "unmarked": 0
@@ -120,60 +127,60 @@
       "code": "MOM",
       "cost_basis": 20277.82,
       "label": "Momentum",
-      "market_value": 21236.06,
+      "market_value": 20561.31,
       "n_long": 7,
       "n_positions": 7,
       "n_short": 0,
-      "open_pnl": 958.24,
-      "open_pnl_pct": 0.04725557908590126,
+      "open_pnl": 283.49,
+      "open_pnl_pct": 0.013980450886396514,
       "partial": false,
       "positions": [
         {
           "avg_price": 56.02376965425475,
           "cost_basis": 3110.2082311181757,
-          "mark": 62.08,
+          "mark": 56.71,
           "qty": 55.515868537810356,
           "symbol": "HPE"
         },
         {
           "avg_price": 22.665269814454255,
           "cost_basis": 2333.1622174070967,
-          "mark": 22.235,
+          "mark": 21.77,
           "qty": 102.93997100000001,
           "symbol": "HST"
         },
         {
           "avg_price": 41.66575756542064,
           "cost_basis": 2829.0724810669167,
-          "mark": 44.735,
+          "mark": 44.79,
           "qty": 67.89922099999997,
           "symbol": "APA"
         },
         {
           "avg_price": 33.82239999581373,
           "cost_basis": 2054.792074972874,
-          "mark": 33.65,
+          "mark": 32.725,
           "qty": 60.752403,
           "symbol": "BEN"
         },
         {
           "avg_price": 20.86025552841267,
           "cost_basis": 2415.3750688594127,
-          "mark": 20.3,
+          "mark": 20.34,
           "qty": 115.78837399999996,
           "symbol": "DOC"
         },
         {
           "avg_price": 16.27449410452032,
           "cost_basis": 3180.8029208130056,
-          "mark": 16.515,
+          "mark": 17.015,
           "qty": 195.44711500000005,
           "symbol": "VTRS"
         },
         {
           "avg_price": 31.91143950386597,
           "cost_basis": 4354.404324604596,
-          "mark": 35.475,
+          "mark": 32.7,
           "qty": 136.4527703012919,
           "symbol": "HPQ"
         }
@@ -185,12 +192,12 @@
       "code": "TF",
       "cost_basis": 8449.98,
       "label": "Trend following",
-      "market_value": 8908.93,
+      "market_value": 8921.41,
       "n_long": 3,
       "n_positions": 3,
       "n_short": 0,
-      "open_pnl": 458.95,
-      "open_pnl_pct": 0.054313749250240816,
+      "open_pnl": 471.44,
+      "open_pnl_pct": 0.05579140811271296,
       "partial": false,
       "positions": [
         {
@@ -203,14 +210,14 @@
         {
           "avg_price": 28.556325924671622,
           "cost_basis": 2939.8208676293307,
-          "mark": 28.94,
+          "mark": 28.815,
           "qty": 102.94814799999999,
           "symbol": "DBA"
         },
         {
           "avg_price": 142.10929840043875,
           "cost_basis": 2709.033392358621,
-          "mark": 154.88,
+          "mark": 156.21,
           "qty": 19.063027,
           "symbol": "USO"
         }
@@ -326,6 +333,12 @@
       "qty": -127.0,
       "symbol": "PYPL",
       "ts": "2026-09-11T09:46:14.340373-04:00"
+    },
+    {
+      "price": 116.36,
+      "qty": 7.0,
+      "symbol": "DLTR",
+      "ts": "2026-09-14T01:50:03.657720-04:00"
     }
   ],
   "note": "Released only after the cycle executed. Quantities are as the desk recorded them. Holdings are grouped by strategy CATEGORY; individual strategy identities are not published. The grouping is the attributed model, not a broker statement.",
@@ -601,15 +614,15 @@
       "symbol": "FDS"
     }
   ],
-  "positions_as_of": "2026-09-11",
+  "positions_as_of": "2026-09-16",
   "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
   "reconciliation": {
-    "account_invested": 24061.53,
-    "as_of_nav_session": "2026-09-11",
+    "account_invested": 24215.49,
+    "as_of_nav_session": "2026-09-16",
     "comparable": true,
     "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
-    "positions_market_value": 17281.26,
-    "unreconciled_usd": -6780.27
+    "positions_market_value": 18323.06,
+    "unreconciled_usd": -5892.43
   },
   "released_under_lag_days": 0,
   "session_date": "2026-09-10"
