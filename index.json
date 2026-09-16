@@ -177,11 +177,11 @@
           "weight": 0.81868
         }
       ],
-      "cumulative_return": 0.00768825000000084,
+      "cumulative_return": 0.004970550000000795,
       "inception": "2026-08-08",
       "initial_capital": 1000000.0,
       "label": "RVB-BLEND-CORE",
-      "last_session": "2026-09-15",
+      "last_session": "2026-09-16",
       "latest_detail_session": "2026-09-10",
       "live": {
         "adj_factor": 1.0,
@@ -205,10 +205,10 @@
         "snapshots": "books/best_composite/snapshots/"
       },
       "record_last_session": "2026-09-16",
-      "sessions": 27,
+      "sessions": 28,
       "slug": "rvb-blend-core",
-      "stale": true,
-      "stale_since": "2026-09-15",
+      "stale": false,
+      "stale_since": null,
       "tagline_en": "Balanced across all three objectives",
       "tagline_fr": "Équilibré sur les trois objectifs"
     },
@@ -469,7 +469,7 @@
     }
   ],
   "chain": {
-    "entries": 165,
+    "entries": 166,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -557,7 +557,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-16T21:30:03+00:00",
+  "published_at": "2026-09-16T21:50:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

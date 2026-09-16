@@ -6,25 +6,25 @@
       "code": "MR",
       "cost_basis": -481.54,
       "label": "Mean reversion",
-      "market_value": 811.06,
+      "market_value": 1124.53,
       "n_long": 1,
       "n_positions": 2,
       "n_short": 1,
-      "open_pnl": 1292.6,
-      "open_pnl_pct": 0.03645433508365032,
+      "open_pnl": 1606.07,
+      "open_pnl_pct": 0.045294920218853174,
       "partial": false,
       "positions": [
         {
           "avg_price": 257.180294,
           "cost_basis": 17488.259992,
-          "mark": 277.07,
+          "mark": 276.31,
           "qty": 68.0,
           "symbol": "FDS"
         },
         {
           "avg_price": 53.641194,
           "cost_basis": -17969.79999,
-          "mark": 53.82,
+          "mark": 52.73,
           "qty": -335.0,
           "symbol": "PYPL"
         }
@@ -36,60 +36,60 @@
       "code": "MOM",
       "cost_basis": 69937.34,
       "label": "Momentum",
-      "market_value": 72122.52,
+      "market_value": 71249.36,
       "n_long": 7,
       "n_positions": 7,
       "n_short": 0,
-      "open_pnl": 2185.18,
-      "open_pnl_pct": 0.031244827374362075,
+      "open_pnl": 1312.03,
+      "open_pnl_pct": 0.018760051129752743,
       "partial": false,
       "positions": [
         {
           "avg_price": 41.821795476061,
           "cost_basis": 10067.137512912388,
-          "mark": 47.41,
+          "mark": 44.79,
           "qty": 240.715096,
           "symbol": "APA"
         },
         {
           "avg_price": 33.88091306195803,
           "cost_basis": 7297.214270874228,
-          "mark": 33.3,
+          "mark": 32.725,
           "qty": 215.37832399999996,
           "symbol": "BEN"
         },
         {
           "avg_price": 20.83482628708198,
           "cost_basis": 8552.505677195586,
-          "mark": 20.14,
+          "mark": 20.34,
           "qty": 410.49085600000006,
           "symbol": "DOC"
         },
         {
           "avg_price": 53.08368259924936,
           "cost_basis": 10577.640334531841,
-          "mark": 55.88,
+          "mark": 56.71,
           "qty": 199.263499,
           "symbol": "HPE"
         },
         {
           "avg_price": 16.493394639833078,
           "cost_basis": 11428.200443056767,
-          "mark": 16.66,
+          "mark": 17.015,
           "qty": 692.895592,
           "symbol": "VTRS"
         },
         {
           "avg_price": 22.753139244370274,
           "cost_basis": 8303.551819013124,
-          "mark": 22.13,
+          "mark": 21.77,
           "qty": 364.940931,
           "symbol": "HST"
         },
         {
           "avg_price": 31.944224452401325,
           "cost_basis": 13711.086251498957,
-          "mark": 33.82,
+          "mark": 32.7,
           "qty": 429.219569,
           "symbol": "HPQ"
         }
@@ -282,15 +282,15 @@
       "symbol": "EL"
     }
   ],
-  "positions_as_of": "2026-09-15",
+  "positions_as_of": "2026-09-16",
   "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
   "reconciliation": {
-    "account_invested": 75049.0,
-    "as_of_nav_session": "2026-09-15",
+    "account_invested": 72331.3,
+    "as_of_nav_session": "2026-09-16",
     "comparable": true,
     "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
-    "positions_market_value": 72933.58,
-    "unreconciled_usd": -2115.42
+    "positions_market_value": 72373.89,
+    "unreconciled_usd": 42.59
   },
   "released_under_lag_days": 0,
   "session_date": "2026-09-10"
