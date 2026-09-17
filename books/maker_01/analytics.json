@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-15",
+  "as_of": "2026-09-16",
   "book": "maker_01",
   "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
   "daily_returns": [
@@ -26,23 +26,27 @@
     {
       "date": "2026-09-15",
       "return": 0.0016384474602273436
+    },
+    {
+      "date": "2026-09-16",
+      "return": -0.000684426782246228
     }
   ],
   "distribution": {
     "bins": [
       {
         "count": 4,
-        "from": -0.0002400084540655767,
-        "to": 0.0007196780156127532
+        "from": -0.000684426782246228,
+        "to": 0.00042339913015898567
       },
       {
         "count": 1,
-        "from": 0.0007196780156127532,
-        "to": 0.0016793644852910832
+        "from": 0.00042339913015898567,
+        "to": 0.0015312250425641993
       },
       {
-        "count": 1,
-        "from": 0.0016793644852910832,
+        "count": 2,
+        "from": 0.0015312250425641993,
         "to": 0.002639050954969413
       }
     ]
@@ -75,10 +79,22 @@
     {
       "date": "2026-09-15",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-09-16",
+      "drawdown": -0.000684426782246228
     }
   ],
   "drawdown_consistent_with_metrics": true,
   "drawdown_episodes": [
+    {
+      "depth": -0.000684426782246228,
+      "ongoing": true,
+      "recovered": null,
+      "sessions": 1,
+      "start": "2026-09-16",
+      "trough": "2026-09-16"
+    },
     {
       "depth": -0.0002400084540655767,
       "ongoing": false,
@@ -95,30 +111,30 @@
       "month": 9,
       "partial": true,
       "partial_reason": "record begins mid-month",
-      "return": 0.0048071100527431465,
-      "sessions": 6,
+      "return": 0.00411939315563159,
+      "sessions": 7,
       "sessions_possible": 22,
       "year": 2026
     }
   ],
-  "published_at": "2026-09-16T11:42:03+00:00",
+  "published_at": "2026-09-17T08:42:03+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
       "max": 0.002639050954969413,
-      "median": 0.00037671599956878854,
-      "min": -0.0002400084540655767,
-      "n": 6,
-      "q25": 7.39347817296232e-05,
-      "q75": 0.0013505117829327729
+      "median": 0.00026672724808851633,
+      "min": -0.000684426782246228,
+      "n": 7,
+      "q25": -0.00011516891389445894,
+      "q75": 0.0010625761056382022
     }
   ],
-  "risk_free_annual": 0.0406,
+  "risk_free_annual": 0.040725,
   "risk_free_source": "FRED DGS3MO",
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 6,
+  "sessions": 7,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 6."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 7."
 }
