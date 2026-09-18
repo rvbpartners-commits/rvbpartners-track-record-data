@@ -14,7 +14,7 @@
   "account_type": "alpaca_paper",
   "benchmark_intraday_anchor": {
     "as_of": "2026-08-07",
-    "spy_close": 773.16
+    "spy_close": 771.25
   },
   "book": "best_composite",
   "capital_events": null,
@@ -95,7 +95,7 @@
     "note": "The source portfolio contained member(s) this book cannot trade (no venue); surviving weights were renormalised pro-rata. The source dossier's metrics include the dropped leg(s); this record measures the book as traded.",
     "source_portfolio_differs": true
   },
-  "published_at": "2026-09-18T20:05:03+00:00",
+  "published_at": "2026-09-18T20:45:03+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"

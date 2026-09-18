@@ -14,7 +14,7 @@
   "account_type": "alpaca_paper",
   "benchmark_intraday_anchor": {
     "as_of": "2026-08-07",
-    "spy_close": 773.16
+    "spy_close": 771.25
   },
   "book": "best_cagr",
   "capital_events": {
@@ -111,7 +111,7 @@
       "weight": 0.3239
     }
   ],
-  "chain_head": "f750569dce6d6fc6bb477892cdc9be78e74d2e3b8fc66e119d3650d79e2b2287",
+  "chain_head": "ebc7bc3277cca66556946780203f0ab4f4e9e162120dc97c9d08fb0ac08f57b7",
   "currency": "USD",
   "desk_manifest_hash": "5f126ed5ee3eaf5f201bcbe0d1c161f5528f3bf0201b742f26e768db0b818f96",
   "detail_lag_days": 0,
@@ -147,7 +147,7 @@
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-09-17",
+  "last_session": "2026-09-18",
   "latest_detail_session": "2026-09-10",
   "live": {
     "adj_factor": 1.0009561076030993,
@@ -160,10 +160,10 @@
   },
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": null,
-  "published_at": "2026-09-18T20:05:03+00:00",
+  "published_at": "2026-09-18T20:45:03+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 29
+  "sessions": 30
 }
