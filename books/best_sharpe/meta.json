@@ -41,9 +41,9 @@
       "weight": 0.310769
     }
   ],
-  "chain_head": "8efe168bef3a2267c62796fbb2b881c82c9b817529309283ba5fd448ffed8b45",
+  "chain_head": "8987613a41510502f80bc4ad9dd5fef930424461e5ca86b825238067fd0ebe87",
   "currency": "USD",
-  "desk_manifest_hash": "e6f78d53a2fd7e17db0938bfcef2bc12ed26e01e4f18cc63f1318c6e3e6272e9",
+  "desk_manifest_hash": "abaae0ae910a90029445da30596c80c26d25473b4b949790c0863f5ed5f6797f",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-08-11",
@@ -77,7 +77,7 @@
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-09-17",
+  "last_session": "2026-09-18",
   "latest_detail_session": "2026-09-10",
   "live": {
     "adj_factor": 1.0,
@@ -90,10 +90,10 @@
   },
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": null,
-  "published_at": "2026-09-18T20:50:03+00:00",
+  "published_at": "2026-09-18T21:05:03+00:00",
   "session_close": {
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 29
+  "sessions": 30
 }
