@@ -8,7 +8,7 @@
   "annualised_gate": {
     "note": "nothing annualised is published below the session threshold: a ratio from a handful of sessions has the shape of a statistic and none of its content",
     "sessions": {
-      "have": 9,
+      "have": 12,
       "met": false,
       "need": 60
     }
@@ -20,7 +20,7 @@
     "note": "sessions where the record recomputed from today's data differs from the write-once snapshot already published for that session. The snapshot is never rewritten: it is the evidence, and its hash verifies",
     "sessions": []
   },
-  "chain_head": "49df1c2c610b9073b85cf914a6677101934c632c10423c865f27df0967e8783d",
+  "chain_head": "bcb1a59fded532f649751765dcef27cbf5cddaa0529b0509bc0e7074bb86b0d1",
   "convention": {
     "calendar": "the broker's own day, whose midnight is 21:00 UTC. EVERY day is a row, weekends included: the derivatives venue trades 24/7, so Saturday funding is a fact about Saturday. A day with no trade is a zero, never a missing row",
     "flows": "capital movements are unitised: a deposit buys units at the day's price, so it moves equity and never the price. The transfers of 2026-09-09 tripled this account's capital; counted as performance they would read +250 % in one day",
@@ -38,17 +38,17 @@
   "detail_sessions": [],
   "executions": {
     "annualised_withheld": false,
-    "broker_deals": 71,
-    "closing_fills": 115,
+    "broker_deals": 86,
+    "closing_fills": 122,
     "counted_as": "one ROUND TRIP -- a realisation carrying a closing execution, with BOTH legs in it. The source export groups them: they settle 0 to 2 seconds apart, and counted on the derivatives leg alone the same rotation reads -5.80 against +7.39 when it is worth +0.67. Closing FILLS are published beside it because a rotation sometimes closes in several of them -- 17 fills for 13 round trips here -- and the bar counts rotations",
-    "derivatives_fills": 242,
-    "fees_usd": 2.997765,
-    "funding_usd": 3.477373,
+    "derivatives_fills": 253,
+    "fees_usd": 3.301325,
+    "funding_usd": 5.081827,
     "not_published": "profit per round trip, hit rate and holding time are not published YET, and no longer for want of matching: the export now pairs the two legs, and that pairing is what draws the intraday curve. They are withheld under the SAME round-trip bar as the annualised ratios -- a hit rate on thirteen observations has the shape of a statistic and none of its content",
-    "round_trips": 75,
+    "round_trips": 77,
     "round_trips_needed_for_annualising": 30,
-    "sessions_published": 9,
-    "sessions_with_execution": 8,
+    "sessions_published": 12,
+    "sessions_with_execution": 9,
     "unit_note": "the unit of account is the round trip, not the session: a book that is flat most of the time would cross a session-based bar by the calendar alone, without having produced anything more to measure"
   },
   "inception": "2026-09-10",
@@ -56,68 +56,68 @@
   "inception_note": "anchored to the equity read on both venue accounts on the inception session itself, and frozen in inception.json. It is never recomputed: it divides every return this book publishes",
   "initial_capital": 1796.398333,
   "intraday_note": "this book is flat most of the time, so its curve is not sampled on a clock: each point is one ROUND TRIP, both legs together. Counted on one leg the same rotation reads -5.80 and +7.39; it is worth +0.67, and a series that separates them draws a swing of 0.7 % of the book that never happened. Funding and dividend adjustments are profit and loss without being executions -- 46 events a day, the smallest 0.000139 USD -- so they settle at the session close instead of burying the round trips under noise. The closing point of each session is the published mark itself",
-  "intraday_points": 151,
+  "intraday_points": 165,
   "intraday_resolution": "per round trip, plus one point at each session close",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-09-18",
+  "last_session": "2026-09-21",
   "latest_detail_session": null,
   "live": null,
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-09-19T11:42:03+00:00",
+  "published_at": "2026-09-22T18:03:14+00:00",
   "reconciliation": {
-    "curve_usd": 1792.898641,
+    "curve_usd": 1796.906663,
     "note": "the curve compounds realised profit and loss from a frozen opening capital, so it is checked against what the two accounts actually report. The two are not expected to be equal: the accounts are read hours after the last published session closed, so the reading already carries part of the session in progress, and the curve carries no unrealised profit and loss at all. The reading also converts the whole broker balance at the day's exchange rate, while the curve converts each session at its frozen rate, so the residual moves with the exchange rate. Published whether or not it is zero -- a field that only appears when it is inconvenient is not a measurement",
-    "read_usd": 1781.35201,
-    "residual_bps": 63.9813
+    "read_usd": 1784.495119,
+    "residual_bps": 79.2441
   },
-  "risk_free_annual": 0.04091666666666667,
+  "risk_free_annual": 0.040985714285714285,
   "risk_free_source": "FRED DGS3MO",
   "round_trips": {
-    "annualised_withheld": true,
-    "best_usd": 3.373081,
+    "annualised_withheld": false,
+    "best_usd": 5.799928,
     "combined_note": "each round trip is the SUM of both legs, from the position's opening to its close. Counted on the broker leg alone the 2026-09-11 15:10 rotation reads -5.80; on the derivatives leg, +7.39. It is worth +0.66 USD. The source export pairs the legs by the broker's own position identifier and matches the derivatives leg by instrument, never by time alone: two instruments were open simultaneously at 12:30:16 that day, and a time window would have given each the other's fills",
     "cross_check": {
       "agree": false,
-      "closed_positions": 28,
-      "closing_realisation_clusters": 75,
+      "closed_positions": 35,
+      "closing_realisation_clusters": 77,
       "note": "two independent constructions of the same count: realisations that carried a close, and positions brought back to flat. They are built from different facts, so their agreement is evidence rather than arithmetic. They differ by the positions this book was already holding when the record opened: those realise a close inside it, so the first construction counts them, while the second cannot describe them -- their holding time would start at their own close. Their profit stays in the day's total and shows up in the residual outside rotations",
       "opened_before_the_record": 1
     },
-    "fees_total_usd": 2.32568,
-    "funding_share_of_net": 0.2296344895468131,
-    "funding_total_usd": 2.969444,
-    "hit_rate": 0.75,
+    "fees_total_usd": 2.716733,
+    "funding_share_of_net": 0.1653743302762114,
+    "funding_total_usd": 3.503863,
+    "hit_rate": 0.7428571428571429,
     "holding_seconds_longest": 218842.0,
     "holding_seconds_shortest": 21.0,
-    "median_holding_seconds": 7467.5,
-    "net_mean_usd": 0.461828,
-    "net_median_usd": 0.407641,
-    "net_total_usd": 12.931176,
-    "round_trips": 28,
+    "median_holding_seconds": 8612.0,
+    "net_mean_usd": 0.605356,
+    "net_median_usd": 0.388676,
+    "net_total_usd": 21.187466,
+    "round_trips": 35,
     "round_trips_needed_for_annualising": 30,
-    "sample_note": "these describe 28 round trips and nothing more. A hit rate on that many observations carries a standard error near 14 points, so it is published as a description of what happened, never as an estimate of what will. Annualised ratios stay withheld under the same bar (28 of 30)",
-    "unit_note": "the unit of account is the round trip, not the session: this book executed on 8 of its 9 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
-    "winners": 21,
+    "sample_note": "these describe 35 round trips and nothing more. A hit rate on that many observations carries a standard error near 14 points, so it is published as a description of what happened, never as an estimate of what will. Annualised ratios stay withheld under the same bar (35 of 30)",
+    "unit_note": "the unit of account is the round trip, not the session: this book executed on 9 of its 12 published sessions, so a session-based denominator would measure the calendar rather than the strategy",
+    "winners": 26,
     "worst_usd": -2.348093
   },
   "session_close": {
     "label": "21:00 UTC",
     "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
   },
-  "sessions": 9,
-  "sessions_with_movement": 9,
+  "sessions": 12,
+  "sessions_with_movement": 11,
   "sessions_with_movement_note": "sessions on which the book's profit and loss moved. NOT the count of sessions traded, which earlier chains of this book published: the source export reports execution counts over its whole window, not per session, and funding accrues while a position is held without any order being placed. The field is named for what it measures rather than reusing a name it would not earn",
   "slug": "rvb-maker-01",
   "source_export": {
     "fx_rate_note": "the source export's rate on this run. It converts only sessions published for the first time by this run and the session in progress; published sessions keep the rate frozen in fx_rates.json",
-    "fx_rate_used": 1.14859,
-    "generated_at": "2026-09-19T08:20:07+00:00",
+    "fx_rate_used": 1.14397,
+    "generated_at": "2026-09-22T08:20:07+00:00",
     "portfolio": "arb-hl-mt5-3-actifs",
     "quote_currency": "EUR",
     "window_executions": {
       "note": "over the export's whole window, not per session",
-      "venue_a_fills": 349,
-      "venue_b_deals": 84
+      "venue_a_fills": 371,
+      "venue_b_deals": 95
     }
   }
 }

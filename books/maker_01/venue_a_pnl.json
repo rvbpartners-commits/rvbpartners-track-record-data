@@ -1,0 +1,67 @@
+{
+  "book": "maker_01",
+  "currency": "USD",
+  "note": "write-once per session. The derivatives venue pays funding hourly, and its API compacts those hourly events into one calendar-day row stamped 00:00:00 UTC once they age. This book's session closes at 21:00 UTC, so a calendar-day aggregate cannot be split at the boundary and the 21:00-24:00 slice silently migrates to the previous session -- measured 2026-09-20, 0.366514 USD moved from 2026-09-11 into 2026-09-10 with the code untouched. The realised P&L of the derivatives leg is therefore frozen here the first time a session is published, and never re-read, so a published record never changes value when the venue re-buckets its own history",
+  "sessions": {
+    "2026-09-10": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 3.973973,
+      "source": "seeded from books/maker_01/snapshots/2026-09-10.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-11": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 2.364873,
+      "source": "seeded from books/maker_01/snapshots/2026-09-11.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-12": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.017254,
+      "source": "seeded from books/maker_01/snapshots/2026-09-12.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-13": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": -0.428219,
+      "source": "seeded from books/maker_01/snapshots/2026-09-13.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-14": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.475776,
+      "source": "seeded from books/maker_01/snapshots/2026-09-14.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-15": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": -3.335296,
+      "source": "seeded from books/maker_01/snapshots/2026-09-15.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-16": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 16.819134,
+      "source": "seeded from books/maker_01/snapshots/2026-09-16.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-17": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 13.658919,
+      "source": "seeded from books/maker_01/snapshots/2026-09-17.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-18": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 8.793218,
+      "source": "seeded from books/maker_01/snapshots/2026-09-18.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-19": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-22T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-20": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-22T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-21": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 8.869894,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-22T08:20:07+00:00, the run that first published this session"
+    }
+  }
+}
