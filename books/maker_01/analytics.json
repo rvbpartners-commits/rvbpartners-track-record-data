@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-21",
+  "as_of": "2026-09-22",
   "book": "maker_01",
   "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
   "daily_returns": [
@@ -50,6 +50,10 @@
     {
       "date": "2026-09-21",
       "return": 0.002318637943883761
+    },
+    {
+      "date": "2026-09-22",
+      "return": 0.001650281598404968
     }
   ],
   "distribution": {
@@ -65,7 +69,7 @@
         "to": 0.0009473907917790421
       },
       {
-        "count": 1,
+        "count": 2,
         "from": 0.0009473907917790421,
         "to": 0.0017632995787916772
       },
@@ -138,6 +142,10 @@
     {
       "date": "2026-09-21",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-09-22",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -174,30 +182,30 @@
       "month": 9,
       "partial": true,
       "partial_reason": "record begins mid-month",
-      "return": 0.010290485324539578,
-      "sessions": 12,
+      "return": 0.011957749121514372,
+      "sessions": 13,
       "sessions_possible": 22,
       "year": 2026
     }
   ],
-  "published_at": "2026-09-22T18:03:14+00:00",
+  "published_at": "2026-09-23T08:42:03+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
       "max": 0.004211025939829582,
-      "median": 0.00013819893718258758,
+      "median": 0.00026672724808851633,
       "min": -0.000684426782246228,
-      "n": 12,
-      "q25": -0.00012221254608035803,
-      "q75": 0.001808495081141448
+      "n": 13,
+      "q25": -8.294724341861848e-05,
+      "q75": 0.001650281598404968
     }
   ],
-  "risk_free_annual": 0.040985714285714285,
+  "risk_free_annual": 0.041075,
   "risk_free_source": "FRED DGS3MO",
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 12,
+  "sessions": 13,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 12."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 13."
 }
