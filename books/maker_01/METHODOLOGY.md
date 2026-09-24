@@ -55,6 +55,30 @@ both venue accounts on the inception session (2026-09-10). It is written once,
 to `inception.json`, and never recomputed: it divides every return this book
 publishes, so a value free to move would silently restate the whole record.
 
+## The realised profit of the derivatives leg is frozen per session
+
+The derivatives venue pays funding hourly, and its API compacts those hourly
+events into one calendar-day row once they are about ten days old. This book's
+session closes at 21:00 UTC, so a calendar-day aggregate cannot be split at
+that boundary: the 21:00-24:00 slice, which belongs to the next session, falls
+back onto the previous one. The past then changes value on its own, with no
+fill moved and the total carry conserved. Measured on 2026-09-20: 0.366514 USD
+left the 2026-09-11 session for 2026-09-10 between two exports of identical
+code.
+
+So the realised profit and loss of the derivatives leg is frozen the first time
+a session is published (`venue_a_pnl.json`, write-once per session), beside the
+exchange rate (`fx_rates.json`). A published record is always recomputed from
+those frozen figures, never from a later export.
+
+The source export is stateless and re-renders its whole history every night.
+When it comes to disagree with a frozen figure, the record is neither stopped
+nor restated: the disagreement is published in `meta.json` under
+`source_divergence`, session by session with its delta, and the published
+record keeps the figure it was built from. A published attribution is what was
+measured then; a re-bucketing that leaves the total unchanged is a fact about
+the venue's API, not about the session.
+
 ## Capital movements never become performance
 
 The account has received deposits, and will receive more. A deposit is a
@@ -66,6 +90,31 @@ moves the price.
 
 This is not a fine point. The transfers of 2026-09-09 tripled the capital of
 this account. Counted as performance they would read as +250 % in one day.
+
+## The reconciliation residual, in two parts
+
+Every run compares the curve with the equity actually read on both accounts
+and publishes the difference in basis points, whether or not it is zero. The
+two are not expected to be equal: the accounts are read hours after the last
+published session closed, and the reading converts the whole broker-currency
+balance at the day's rate while the curve carries that balance at frozen
+rates. So the residual is published in two parts. **Translation** is what the
+broker-currency balance is worth at the day's rate against the frozen rates.
+**Unexplained** is everything the rate does not account for -- the session in
+progress at the time of reading, the floating value of open positions, and any
+real error. A run warns when the total exceeds 60 bp and refuses to publish
+when the unexplained part exceeds 100 bp.
+
+The export reads one combined equity and never the balance of each leg, so the
+broker-currency balance is **derived**: the balance read on each account on the
+inception session, frozen once, carried forward with the flows and realised
+profit the export reports in that currency for every session. The derivation
+tracks the real balance to about 11 EUR -- the account carries the floating
+value of open positions, the curve books closed deals -- which moves the split
+by about one basis point against a threshold of one hundred. It breaks if
+broker deals land in the out-of-perimeter column, a single USD figure carrying
+both legs: on such a day no split is published, and the refusal applies to the
+whole residual, as it did before the split existed.
 
 ## The session, and the calendar
 
@@ -96,7 +145,7 @@ write-once record forever.
 
 Nothing annualised — Sharpe, Sortino, Calmar, CAGR, volatility, drawdown,
 value-at-risk — is published below **60 sessions**. This
-book publishes **13**. Annualising a handful of sessions produces a
+book publishes **14**. Annualising a handful of sessions produces a
 number with the shape of a statistic and none of its content.
 
 Where it is ever released, annualisation uses **365 periods a
@@ -111,7 +160,7 @@ is published beside them with its source. Interest on cash is not alpha.
 Every session has an immutable snapshot under `snapshots/`, hashed, carrying
 the hash of the previous session, recorded in the repository-level
 `CHAIN.jsonl` and timestamped by OpenTimestamps. The last session published is
-**2026-09-22**. See `VERIFY.md` at the root of this repository.
+**2026-09-23**. See `VERIFY.md` at the root of this repository.
 
 ## Earlier chains
 
