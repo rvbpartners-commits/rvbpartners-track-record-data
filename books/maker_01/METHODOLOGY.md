@@ -55,7 +55,7 @@ both venue accounts on the inception session (2026-09-10). It is written once,
 to `inception.json`, and never recomputed: it divides every return this book
 publishes, so a value free to move would silently restate the whole record.
 
-## The realised profit of the derivatives leg is frozen per session
+## The realised profit of each leg is frozen per session
 
 The derivatives venue pays funding hourly, and its API compacts those hourly
 events into one calendar-day row once they are about ten days old. This book's
@@ -66,10 +66,20 @@ fill moved and the total carry conserved. Measured on 2026-09-20: 0.366514 USD
 left the 2026-09-11 session for 2026-09-10 between two exports of identical
 code.
 
-So the realised profit and loss of the derivatives leg is frozen the first time
-a session is published (`venue_a_pnl.json`, write-once per session), beside the
-exchange rate (`fx_rates.json`). A published record is always recomputed from
-those frozen figures, never from a later export.
+The broker leg does the same thing for its own reason: when the broker
+consolidates its history it re-buckets a deal across that same 21:00 UTC
+boundary. Measured on 2026-09-25: 0.13 EUR left the 2026-09-19 session for
+2026-09-18, with the total in the account currency identical to nine decimals.
+An identical total is still a changed record, because the two sessions convert
+at their own frozen rates (1.14397 and 1.14859) and the move therefore leaves a
+permanent 0.000601 USD in the past. Freezing the rate cannot prevent that: no
+rate moved, an amount moved between two rates.
+
+So the realised profit and loss of BOTH legs is frozen the first time a session
+is published -- `venue_a_pnl.json` for the derivatives leg, `venue_b_pnl.json`
+for the broker leg, write-once per session -- beside the exchange rate
+(`fx_rates.json`). A published record is always recomputed from those frozen
+figures, never from a later export.
 
 The source export is stateless and re-renders its whole history every night.
 When it comes to disagree with a frozen figure, the record is neither stopped
@@ -145,7 +155,7 @@ write-once record forever.
 
 Nothing annualised — Sharpe, Sortino, Calmar, CAGR, volatility, drawdown,
 value-at-risk — is published below **60 sessions**. This
-book publishes **14**. Annualising a handful of sessions produces a
+book publishes **18**. Annualising a handful of sessions produces a
 number with the shape of a statistic and none of its content.
 
 Where it is ever released, annualisation uses **365 periods a
@@ -160,7 +170,7 @@ is published beside them with its source. Interest on cash is not alpha.
 Every session has an immutable snapshot under `snapshots/`, hashed, carrying
 the hash of the previous session, recorded in the repository-level
 `CHAIN.jsonl` and timestamped by OpenTimestamps. The last session published is
-**2026-09-23**. See `VERIFY.md` at the root of this repository.
+**2026-09-27**. See `VERIFY.md` at the root of this repository.
 
 ## Earlier chains
 

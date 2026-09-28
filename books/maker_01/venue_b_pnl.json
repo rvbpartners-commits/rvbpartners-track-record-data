@@ -1,0 +1,97 @@
+{
+  "book": "maker_01",
+  "currency": "EUR",
+  "note": "write-once per session, in the account currency. The broker leg reports its realised P&L per deal, and the broker re-buckets a deal across the 21:00 UTC session boundary when it consolidates its own history -- measured 2026-09-25, -0.13 EUR left 2026-09-19 for 2026-09-18 with the quote-currency total identical to nine decimals. FREEZING THE RATE CANNOT PREVENT THIS: no rate moved, an amount moved between two sessions whose rates differ (1.14397 and 1.14859), and an identical total therefore became a permanent 0.000601 USD difference that restated six published records. The realised P&L of the broker leg is frozen here the first time a session is published, and never re-read",
+  "sessions": {
+    "2026-09-10": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -2.68,
+      "source": "seeded from books/maker_01/snapshots/2026-09-10.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-11": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 2.01,
+      "source": "seeded from books/maker_01/snapshots/2026-09-11.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-12": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 0.0,
+      "source": "seeded from books/maker_01/snapshots/2026-09-12.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-13": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 0.0,
+      "source": "seeded from books/maker_01/snapshots/2026-09-13.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-14": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 0.0,
+      "source": "seeded from books/maker_01/snapshots/2026-09-14.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-15": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 5.42,
+      "source": "seeded from books/maker_01/snapshots/2026-09-15.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-16": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -15.73,
+      "source": "seeded from books/maker_01/snapshots/2026-09-16.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-17": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -12.37,
+      "source": "seeded from books/maker_01/snapshots/2026-09-17.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-18": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -1.11,
+      "source": "seeded from books/maker_01/snapshots/2026-09-18.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-19": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -0.13,
+      "source": "seeded from books/maker_01/snapshots/2026-09-19.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-20": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 0.0,
+      "source": "seeded from books/maker_01/snapshots/2026-09-20.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-21": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -4.12,
+      "source": "seeded from books/maker_01/snapshots/2026-09-21.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-22": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -3.24,
+      "source": "seeded from books/maker_01/snapshots/2026-09-22.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-23": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": -1.39,
+      "source": "seeded from books/maker_01/snapshots/2026-09-23.json: the realised P&L of the broker leg this session was PUBLISHED with, in the account currency, read back from its own write-once record. The broker has since re-bucketed a deal across the 21:00 UTC session boundary, so today's export no longer attributes the same amount to this session"
+    },
+    "2026-09-24": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 37.92,
+      "source": "pnl_mt5_eur of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-25": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 0.7,
+      "source": "pnl_mt5_eur of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-26": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 0.0,
+      "source": "pnl_mt5_eur of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-27": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_b_quote": 0.0,
+      "source": "pnl_mt5_eur of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    }
+  }
+}
