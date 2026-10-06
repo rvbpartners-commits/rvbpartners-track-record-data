@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-27",
+  "as_of": "2026-10-05",
   "book": "maker_01",
   "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
   "daily_returns": [
@@ -74,53 +74,105 @@
     {
       "date": "2026-09-27",
       "return": 0.0
+    },
+    {
+      "date": "2026-09-28",
+      "return": 0.00038831865096811136
+    },
+    {
+      "date": "2026-09-29",
+      "return": 0.00017223202963601025
+    },
+    {
+      "date": "2026-09-30",
+      "return": 0.0007043326859492716
+    },
+    {
+      "date": "2026-10-01",
+      "return": 0.0002882839909981172
+    },
+    {
+      "date": "2026-10-02",
+      "return": 0.001821025885881955
+    },
+    {
+      "date": "2026-10-03",
+      "return": 0.0
+    },
+    {
+      "date": "2026-10-04",
+      "return": 0.0
+    },
+    {
+      "date": "2026-10-05",
+      "return": 1.8570357265712545e-05
     }
   ],
   "distribution": {
     "bins": [
       {
-        "count": 3,
-        "from": -0.000684426782246228,
-        "to": -0.0001404875909044713
-      },
-      {
-        "count": 7,
-        "from": -0.0001404875909044713,
-        "to": 0.0004034516004372854
-      },
-      {
         "count": 2,
-        "from": 0.0004034516004372854,
-        "to": 0.0009473907917790421
+        "from": -0.000684426782246228,
+        "to": -0.0003078534959327041
+      },
+      {
+        "count": 10,
+        "from": -0.0003078534959327041,
+        "to": 6.871979038081978e-05
+      },
+      {
+        "count": 4,
+        "from": 6.871979038081978e-05,
+        "to": 0.0004452930766943436
+      },
+      {
+        "count": 3,
+        "from": 0.0004452930766943436,
+        "to": 0.0008218663630078676
       },
       {
         "count": 0,
-        "from": 0.0009473907917790421,
-        "to": 0.0014913299831207988
+        "from": 0.0008218663630078676,
+        "to": 0.0011984396493213915
       },
       {
-        "count": 2,
-        "from": 0.0014913299831207988,
-        "to": 0.0020352691744625557
+        "count": 0,
+        "from": 0.0011984396493213915,
+        "to": 0.0015750129356349152
       },
       {
-        "count": 1,
-        "from": 0.0020352691744625557,
-        "to": 0.002579208365804312
-      },
-      {
-        "count": 1,
-        "from": 0.002579208365804312,
-        "to": 0.0031231475571460686
+        "count": 3,
+        "from": 0.0015750129356349152,
+        "to": 0.0019515862219484392
       },
       {
         "count": 1,
-        "from": 0.0031231475571460686,
-        "to": 0.0036670867484878255
+        "from": 0.0019515862219484392,
+        "to": 0.002328159508261963
       },
       {
         "count": 1,
-        "from": 0.0036670867484878255,
+        "from": 0.002328159508261963,
+        "to": 0.002704732794575487
+      },
+      {
+        "count": 0,
+        "from": 0.002704732794575487,
+        "to": 0.003081306080889011
+      },
+      {
+        "count": 0,
+        "from": 0.003081306080889011,
+        "to": 0.0034578793672025345
+      },
+      {
+        "count": 1,
+        "from": 0.0034578793672025345,
+        "to": 0.0038344526535160585
+      },
+      {
+        "count": 1,
+        "from": 0.0038344526535160585,
         "to": 0.004211025939829582
       }
     ]
@@ -201,6 +253,38 @@
     {
       "date": "2026-09-27",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-09-28",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-09-29",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-09-30",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-01",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-02",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-03",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-04",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-05",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -237,30 +321,39 @@
       "month": 9,
       "partial": true,
       "partial_reason": "record begins mid-month",
-      "return": 0.016177026795282545,
-      "sessions": 18,
+      "return": 0.01746284142574761,
+      "sessions": 21,
+      "sessions_possible": 22,
+      "year": 2026
+    },
+    {
+      "month": 10,
+      "partial": true,
+      "partial_reason": "record ends mid-month",
+      "return": 0.0021284443871427694,
+      "sessions": 5,
       "sessions_possible": 22,
       "year": 2026
     }
   ],
-  "published_at": "2026-09-28T10:00:30+00:00",
+  "published_at": "2026-10-06T18:10:42+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
       "max": 0.004211025939829582,
-      "median": 0.0001549934235467454,
+      "median": 0.0002194796388622633,
       "min": -0.000684426782246228,
-      "n": 18,
+      "n": 26,
       "q25": 0.0,
-      "q75": 0.0016473230638605618
+      "q75": 0.0014049187666578256
     }
   ],
-  "risk_free_annual": 0.041318181818181816,
+  "risk_free_annual": 0.04163529411764706,
   "risk_free_source": "FRED DGS3MO",
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 18,
+  "sessions": 26,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 18."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 26."
 }
