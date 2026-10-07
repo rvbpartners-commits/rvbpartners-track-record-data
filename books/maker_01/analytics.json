@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-05",
+  "as_of": "2026-10-06",
   "book": "maker_01",
   "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
   "daily_returns": [
@@ -106,6 +106,10 @@
     {
       "date": "2026-10-05",
       "return": 1.8570357265712545e-05
+    },
+    {
+      "date": "2026-10-06",
+      "return": 0.00012534496457261568
     }
   ],
   "distribution": {
@@ -121,7 +125,7 @@
         "to": 6.871979038081978e-05
       },
       {
-        "count": 4,
+        "count": 5,
         "from": 6.871979038081978e-05,
         "to": 0.0004452930766943436
       },
@@ -285,6 +289,10 @@
     {
       "date": "2026-10-05",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-06",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -330,22 +338,22 @@
       "month": 10,
       "partial": true,
       "partial_reason": "record ends mid-month",
-      "return": 0.0021284443871427694,
-      "sessions": 5,
+      "return": 0.002254056141501648,
+      "sessions": 6,
       "sessions_possible": 22,
       "year": 2026
     }
   ],
-  "published_at": "2026-10-06T18:10:42+00:00",
+  "published_at": "2026-10-07T04:16:00+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
       "max": 0.004211025939829582,
-      "median": 0.0002194796388622633,
+      "median": 0.00017223202963601025,
       "min": -0.000684426782246228,
-      "n": 26,
+      "n": 27,
       "q25": 0.0,
-      "q75": 0.0014049187666578256
+      "q75": 0.0011713900730883076
     }
   ],
   "risk_free_annual": 0.04163529411764706,
@@ -353,7 +361,7 @@
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 26,
+  "sessions": 27,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 26."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 27."
 }
