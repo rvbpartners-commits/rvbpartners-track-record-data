@@ -63,10 +63,10 @@
   "latest_detail_session": null,
   "live": null,
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-10-09T10:44:28+00:00",
+  "published_at": "2026-10-09T11:42:03+00:00",
   "publisher": {
     "code": "TraderWeb/collecteur",
-    "commit": "27dc050e5418c4743755f3558707332fb4ae9192",
+    "commit": "857f325dca0a3e2af2dd71b75d9ab4b815837287",
     "note": "the commit of the publisher's own code this run executed. The scheduled task runs a working tree, so the publisher refuses to run when any tracked file of its package differs from that commit, and names it here: every published record can be traced to versioned code"
   },
   "reconciliation": {
