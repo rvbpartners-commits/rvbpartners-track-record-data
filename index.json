@@ -419,26 +419,26 @@
       "book": "maker_01",
       "capital_at_risk": true,
       "categories": [],
-      "cumulative_return": 0.018260562013309167,
+      "cumulative_return": 0.018108929606484914,
       "executions": {
         "annualised_withheld": false,
-        "broker_deals": 176,
-        "closing_fills": 223,
+        "broker_deals": 178,
+        "closing_fills": 234,
         "counted_as": "one ROUND TRIP -- a realisation carrying a closing execution, with BOTH legs in it. The source export groups them: they settle 0 to 2 seconds apart, and counted on the derivatives leg alone the same rotation reads -5.80 against +7.39 when it is worth +0.67. Closing FILLS are published beside it because a rotation sometimes closes in several of them -- 17 fills for 13 round trips here -- and the bar counts rotations",
-        "derivatives_fills": 425,
-        "fees_usd": 6.835079,
-        "funding_usd": 8.960972,
+        "derivatives_fills": 440,
+        "fees_usd": 7.071252,
+        "funding_usd": 8.738899,
         "not_published": "profit per round trip, hit rate and holding time are not published YET, and no longer for want of matching: the export now pairs the two legs, and that pairing is what draws the intraday curve. They are withheld under the SAME round-trip bar as the annualised ratios -- a hit rate on thirteen observations has the shape of a statistic and none of its content",
-        "round_trips": 154,
+        "round_trips": 165,
         "round_trips_needed_for_annualising": 30,
-        "sessions_published": 29,
-        "sessions_with_execution": 22,
+        "sessions_published": 30,
+        "sessions_with_execution": 23,
         "unit_note": "the unit of account is the round trip, not the session: a book that is flat most of the time would cross a session-based bar by the calendar alone, without having produced anything more to measure"
       },
       "inception": "2026-09-10",
       "initial_capital": 1796.398333,
       "label": "RVB-MAKER-01",
-      "last_session": "2026-10-08",
+      "last_session": "2026-10-09",
       "latest_detail_session": null,
       "live": null,
       "paths": {
@@ -458,15 +458,15 @@
         "label": "21:00 UTC",
         "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
       },
-      "sessions": 29,
-      "sessions_with_movement": 24,
+      "sessions": 30,
+      "sessions_with_movement": 25,
       "slug": "rvb-maker-01",
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
   ],
   "chain": {
-    "entries": 209,
+    "entries": 210,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -554,7 +554,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-10-09T11:42:03+00:00",
+  "published_at": "2026-10-10T08:42:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
