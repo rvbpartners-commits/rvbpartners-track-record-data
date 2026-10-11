@@ -422,7 +422,7 @@
       "cumulative_return": 0.018108929606484914,
       "executions": {
         "annualised_withheld": false,
-        "broker_deals": 178,
+        "broker_deals": 182,
         "closing_fills": 234,
         "counted_as": "one ROUND TRIP -- a realisation carrying a closing execution, with BOTH legs in it. The source export groups them: they settle 0 to 2 seconds apart, and counted on the derivatives leg alone the same rotation reads -5.80 against +7.39 when it is worth +0.67. Closing FILLS are published beside it because a rotation sometimes closes in several of them -- 17 fills for 13 round trips here -- and the bar counts rotations",
         "derivatives_fills": 440,
@@ -554,7 +554,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-10-10T11:42:03+00:00",
+  "published_at": "2026-10-11T08:42:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
