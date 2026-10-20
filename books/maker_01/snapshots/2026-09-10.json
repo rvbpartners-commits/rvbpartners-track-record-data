@@ -1,0 +1,110 @@
+{
+  "book": "maker_01",
+  "cumulative_return": 0.00048598171206704066,
+  "daily_return": 0.00048598171206704066,
+  "disclosure": {
+    "account_type": "live",
+    "annualised_metrics_gated_at_sessions": 60,
+    "book_returns": "taken from the trading system's own machine export -- realised profit and loss per venue leg and treasury movements, per broker session -- then compounded from this book's frozen opening capital and reconciled against the equity read on both accounts. The publisher recomputes no profit and loss of its own",
+    "capital_at_risk": true,
+    "execution_counts": "not published per session: the source export reports execution counts over its whole window, not per session. The count of sessions on which the book's profit and loss MOVED is published instead, under a name that says so -- it is not the same thing, because funding accrues while a position is held without any order being placed",
+    "fills": "executed by the venues; not simulated",
+    "fx_convention": "the broker leg is quoted in a foreign currency and converted by the source export at the rate it records for the run. The rate used is published in every snapshot",
+    "gips": "GIPS-informed, NOT GIPS-compliant (no third-party verification)",
+    "not_investment_advice": true,
+    "notice": "This book trades REAL capital, which belongs to the operator. No third-party money is managed. Past performance is not indicative of future results. Nothing here is investment advice, an offer, or a solicitation.",
+    "return_convention": "time-weighted, via unitisation: a deposit buys units at the day's price, so it moves equity and never the price",
+    "strategy_identity": "not published",
+    "venues": "published under neutral labels"
+  },
+  "flows": {
+    "note": "moves equity, never the unit price",
+    "session_usd": -17.794368,
+    "venue_a_usd": 0.0,
+    "venue_b_quote": 0.0
+  },
+  "fx": {
+    "basis": "source export rate",
+    "basis_note": "the rate the source export used to convert the broker leg for this run. Published so a reader can reconvert that leg at any rate they choose",
+    "quote_currency": "EUR",
+    "rate": 1.1602999999999999
+  },
+  "hash": "67a57c236bf35e5ba9bd8d81500c2b05796e7f6569e42ad7d02ef1c1f15387fc",
+  "inception": "2026-09-10",
+  "initial_capital_usd": 1796.398333,
+  "metrics": {
+    "annualised_basis": 259,
+    "annualised_basis_note": "measured: 400 daily bars over 564 calendar days on the broker's own calendar",
+    "computed_by": "rvb.metrics.compute_core_metrics",
+    "insufficient_history": {
+      "have": 1,
+      "label_en": "insufficient history — 1/60",
+      "label_fr": "historique insuffisant — 1/60",
+      "need": 60,
+      "suppressed": [
+        "sharpe",
+        "sharpe_gross",
+        "sharpe_autocorr_adj",
+        "sortino",
+        "sortino_gross",
+        "calmar",
+        "calmar_gross",
+        "cagr",
+        "volatility",
+        "max_drawdown",
+        "var_normal_95",
+        "skew",
+        "kurtosis",
+        "ev_excess_annual",
+        "win_rate"
+      ]
+    },
+    "risk_free_annual": 0.03828125111071619,
+    "risk_free_source": "FRED DGS3MO",
+    "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
+    "values": {
+      "best_day": 0.00048598171206704066,
+      "cagr": null,
+      "calmar": null,
+      "calmar_gross": null,
+      "cumulative_return": 0.00048598171206704066,
+      "ev_excess_annual": null,
+      "kurtosis": null,
+      "max_drawdown": null,
+      "n_obs": 1,
+      "negative_days": 0,
+      "positive_days": 1,
+      "sharpe": null,
+      "sharpe_autocorr_adj": null,
+      "sharpe_gross": null,
+      "skew": null,
+      "sortino": null,
+      "sortino_gross": null,
+      "var_normal_95": null,
+      "volatility": null,
+      "win_rate": null,
+      "worst_day": 0.00048598171206704066
+    }
+  },
+  "nav": {
+    "basis": "realised, per broker session, from the source export",
+    "basis_note": "realised profit and loss booked by each venue on that broker day -- derivatives fills net of fees plus funding, and broker deals net of swap and commission. Open positions carried past the close are NOT in this number: not marked, not estimated. They appear on the day they close",
+    "equity_usd": 1779.468334,
+    "source": "the trading system's machine export (one source of truth; the publisher recomputes no profit and loss)",
+    "unit_price": 1797.2713497374,
+    "unit_price_indexed": 1.0004859817,
+    "units": 0.99009442
+  },
+  "pnl": {
+    "cumulative_usd": 0.864369,
+    "session_usd": 0.864369,
+    "venue_a_usd": 3.973973,
+    "venue_b_quote": -2.68
+  },
+  "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "published_at": "2026-09-11T08:40:03+00:00",
+  "schema": "rvb.track-record.snapshot/maker/6",
+  "session_date": "2026-09-10",
+  "sessions": 1,
+  "sessions_with_movement": 1
+}

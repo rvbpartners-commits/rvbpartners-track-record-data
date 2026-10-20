@@ -1,0 +1,8 @@
+# This repository is a published record. Nothing is generated here by hand and
+# nothing local belongs in it.
+.DS_Store
+Thumbs.db
+*.tmp
+# `ots upgrade` writes a .bak of the superseded, still-pending proof.
+# The confirmed proof replaces it; the backup evidences nothing.
+*.ots.bak

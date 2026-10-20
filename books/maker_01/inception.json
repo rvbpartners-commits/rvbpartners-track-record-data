@@ -1,0 +1,10 @@
+{
+  "book": "maker_01",
+  "capital_usd": 1796.398333,
+  "currency": "USD",
+  "export_generated_at": "2026-09-10T08:20:10+00:00",
+  "frozen_at": "2026-09-10T13:03:17+00:00",
+  "inception": "2026-09-10",
+  "note": "write-once. This number divides every return this book publishes, so it is frozen at inception and never recomputed. The producing export is stateless and only states an opening capital on the inception session; every later session extends the curve from that anchor using the export's own per-session flows and realised P&L, and is reconciled against the equity read on both accounts",
+  "source": "equity read on BOTH venue accounts by the trading system's machine export on the inception session itself"
+}

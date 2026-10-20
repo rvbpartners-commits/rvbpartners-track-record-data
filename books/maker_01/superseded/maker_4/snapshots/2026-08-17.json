@@ -1,0 +1,125 @@
+{
+  "active_sessions": 1,
+  "book": "maker_01",
+  "cumulative_return": 0.004729318883296196,
+  "daily_return": 0.0,
+  "disclosure": {
+    "account_type": "live",
+    "annualised_metrics_gated_at_sessions": 60,
+    "book_returns": "reconstructed from realised P&L and treasury movements, then reconciled against the equity read on both accounts; neither venue serves a usable equity history",
+    "capital_at_risk": true,
+    "fills": "executed by the venues; not simulated",
+    "fx_convention": "the published curve is converted at the inception rate; the spot rate, the spot-converted NAV and the difference in basis points are published in every snapshot",
+    "gips": "GIPS-informed, NOT GIPS-compliant (no third-party verification)",
+    "hedged_since": "2026-08-13",
+    "hedging_notice": "before that date the second leg was not funded, so what executed was not this strategy; nothing has been removed from the record",
+    "not_investment_advice": true,
+    "notice": "This book trades REAL capital, which belongs to the operator. No third-party money is managed. Past performance is not indicative of future results. Nothing here is investment advice, an offer, or a solicitation.",
+    "out_of_scope_executions": "fee-calibration executions on other instruments are excluded from the return and treated as a capital adjustment; their aggregate is published, their instruments are not",
+    "return_convention": "time-weighted, via unitisation: a deposit buys units at the day's price, so it moves equity and never the price",
+    "strategy_identity": "not published",
+    "venues": "published under neutral labels"
+  },
+  "executions": {
+    "venue_a": 0,
+    "venue_b": 0
+  },
+  "flows": {
+    "note": "moves equity, never the unit price",
+    "session_usd": 0.0
+  },
+  "fx": {
+    "basis": "flow conversion",
+    "basis_note": "each session's broker leg is converted once, at that session's close rate, and never revalued. No exchange-rate movement therefore enters the curve",
+    "delta_bps": 24.84,
+    "delta_note": "gap against the other convention -- revaluing the whole broker leg at this session's rate, as a live dashboard does. It is the only difference between this curve and the operator's local view",
+    "nav_if_whole_leg_at_session_rate_usd": 452.57296,
+    "quote_currency": "EUR",
+    "session_close_rate": 1.15792,
+    "venue_a_usd": 214.215128,
+    "venue_b_quote": 205.85
+  },
+  "hash": "b44914e98fbd2fdeca4b68d202482eab37af02dd25c5db7631ed1876e7306721",
+  "inception": "2026-08-12",
+  "initial_capital_usd": 449.411898,
+  "metrics": {
+    "annualised_basis": 259,
+    "annualised_basis_note": "measured: 400 daily bars over 564 calendar days on the broker's own calendar",
+    "computed_by": "rvb.metrics.compute_core_metrics",
+    "insufficient_history": {
+      "have": 6,
+      "label_en": "insufficient history — 6/60",
+      "label_fr": "historique insuffisant — 6/60",
+      "need": 60,
+      "suppressed": [
+        "sharpe",
+        "sharpe_gross",
+        "sharpe_autocorr_adj",
+        "sortino",
+        "sortino_gross",
+        "calmar",
+        "calmar_gross",
+        "cagr",
+        "volatility",
+        "max_drawdown",
+        "var_normal_95",
+        "skew",
+        "kurtosis",
+        "ev_excess_annual",
+        "win_rate"
+      ]
+    },
+    "risk_free_annual": 0.038669999999999996,
+    "risk_free_source": "FRED DGS3MO",
+    "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
+    "values": {
+      "best_day": 0.004538253235120138,
+      "cagr": null,
+      "calmar": null,
+      "calmar_gross": null,
+      "cumulative_return": 0.004729318883296196,
+      "ev_excess_annual": null,
+      "kurtosis": null,
+      "max_drawdown": null,
+      "n_obs": 6,
+      "negative_days": 0,
+      "positive_days": 2,
+      "sharpe": null,
+      "sharpe_autocorr_adj": null,
+      "sharpe_gross": null,
+      "skew": null,
+      "sortino": null,
+      "sortino_gross": null,
+      "var_normal_95": null,
+      "volatility": null,
+      "win_rate": null,
+      "worst_day": 0.0
+    }
+  },
+  "nav": {
+    "basis": "mark-to-market, verified flat at the session close",
+    "equity_usd": 451.451443,
+    "flat_at_close": true,
+    "source": "reconstructed from realised P&L and treasury movements",
+    "unit_price": 1.0047293189,
+    "units": 449.32643501
+  },
+  "out_of_scope": {
+    "executions": 0,
+    "impact_usd": 0.0,
+    "note": "fee calibration on other instruments; instruments not published"
+  },
+  "pnl": {
+    "broker_leg_quote": 0.0,
+    "carry_quote": 0.0,
+    "cumulative_usd": 2.08008,
+    "locked_pairs_quote": 0.0,
+    "session_usd": 0.0,
+    "settled_deals_quote_not_summed": 0.0
+  },
+  "prev_hash": "c15d5fa9d2dcfeaf62a2256beeb0a4233b1055ead50125843d8f39b0c1e7f1b4",
+  "published_at": "2026-08-27T11:43:06+00:00",
+  "schema": "rvb.track-record.snapshot/maker/3",
+  "session_date": "2026-08-17",
+  "sessions": 6
+}

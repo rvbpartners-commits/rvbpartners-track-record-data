@@ -1,0 +1,126 @@
+{
+  "book": "maker_01",
+  "cumulative_return": 0.0048071100527431465,
+  "daily_return": 0.0016384474602273436,
+  "disclosure": {
+    "account_type": "live",
+    "annualised_metrics_gated_at_sessions": 60,
+    "book_returns": "taken from the trading system's own machine export -- realised profit and loss per venue leg and treasury movements, per broker session -- then compounded from this book's frozen opening capital and reconciled against the equity read on both accounts. The publisher recomputes no profit and loss of its own",
+    "capital_at_risk": true,
+    "execution_counts": "not published per session: the source export reports execution counts over its whole window, not per session. The count of sessions on which the book's profit and loss MOVED is published instead, under a name that says so -- it is not the same thing, because funding accrues while a position is held without any order being placed",
+    "fills": "executed by the venues; not simulated",
+    "fx_convention": "the broker leg is quoted in a foreign currency and converted by the source export at the rate it records for the run. The rate used is published in every snapshot",
+    "gips": "GIPS-informed, NOT GIPS-compliant (no third-party verification)",
+    "not_investment_advice": true,
+    "notice": "This book trades REAL capital, which belongs to the operator. No third-party money is managed. Past performance is not indicative of future results. Nothing here is investment advice, an offer, or a solicitation.",
+    "return_convention": "time-weighted, via unitisation: a deposit buys units at the day's price, so it moves equity and never the price",
+    "strategy_identity": "not published",
+    "venues": "published under neutral labels"
+  },
+  "flows": {
+    "note": "moves equity, never the unit price",
+    "session_usd": 0.0,
+    "venue_a_usd": 0.0,
+    "venue_b_quote": 0.0
+  },
+  "fx": {
+    "basis": "source export rate",
+    "basis_note": "the rate the source export used to convert the broker leg for this run. Published so a reader can reconvert that leg at any rate they choose",
+    "quote_currency": "EUR",
+    "rate": 1.154735
+  },
+  "hash": "f436da1724fdc8f156429447cce3a85e97251e74d6eed8f9740b0fd451b3a946",
+  "inception": "2026-09-10",
+  "initial_capital_usd": 1796.398333,
+  "metrics": {
+    "annualised_basis": 365,
+    "annualised_basis_note": "one observation per calendar day, weekends included: the derivatives venue trades 24/7 and this record publishes a row for every day, so a year of this series is 365 observations. NOT a market calendar -- the broker leg is shut at weekends and those rows are structural zeros, which the annualisation absorbs. Earlier chains of this book used 259, the broker's own trading calendar, which understated every annualised ratio by about 16%",
+    "computed_by": "rvb.metrics.compute_core_metrics",
+    "insufficient_history": {
+      "gates": [
+        {
+          "have": 6,
+          "met": false,
+          "need": 60,
+          "unit": "marked sessions"
+        },
+        {
+          "have": 18,
+          "met": false,
+          "need": 30,
+          "unit": "round trips"
+        }
+      ],
+      "have": 6,
+      "label_en": "insufficient history — 6/60",
+      "label_fr": "historique insuffisant — 6/60",
+      "need": 60,
+      "note": "two bars govern this book and BOTH must be met: the desk-wide session count, and the round trips this strategy actually produced. The one shown is whichever is further from being met; every bar is listed under `gates`. A round trip is one REALISATION carrying a closing execution, with BOTH legs in it -- they settle seconds apart and the source export groups them. It is not a count of closing fills: a rotation sometimes closes in several, and counting those overstated this bar by 17 to 3",
+      "suppressed": [
+        "sharpe",
+        "sharpe_gross",
+        "sharpe_autocorr_adj",
+        "sortino",
+        "sortino_gross",
+        "calmar",
+        "calmar_gross",
+        "cagr",
+        "volatility",
+        "max_drawdown",
+        "var_normal_95",
+        "skew",
+        "kurtosis",
+        "ev_excess_annual",
+        "win_rate"
+      ],
+      "unit": "marked sessions"
+    },
+    "risk_free_annual": 0.0406,
+    "risk_free_source": "FRED DGS3MO",
+    "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
+    "values": {
+      "best_day": 0.002639050954969191,
+      "cagr": null,
+      "calmar": null,
+      "calmar_gross": null,
+      "cumulative_return": 0.0048071100527431465,
+      "ev_excess_annual": null,
+      "kurtosis": null,
+      "max_drawdown": null,
+      "n_obs": 6,
+      "negative_days": 1,
+      "positive_days": 5,
+      "sharpe": null,
+      "sharpe_autocorr_adj": null,
+      "sharpe_gross": null,
+      "skew": null,
+      "sortino": null,
+      "sortino_gross": null,
+      "var_normal_95": null,
+      "volatility": null,
+      "win_rate": null,
+      "worst_day": -0.00024000845406535465
+    }
+  },
+  "nav": {
+    "basis": "realised, per broker session, from the source export",
+    "basis_note": "realised profit and loss booked by each venue on that broker day -- derivatives fills net of fees plus funding, and broker deals net of swap and commission. Open positions carried past the close are NOT in this number: not marked, not estimated. They appear on the day they close",
+    "equity_usd": 1787.15391,
+    "source": "the trading system's machine export (one source of truth; the publisher recomputes no profit and loss)",
+    "unit_price": 1805.0338174853,
+    "unit_price_indexed": 1.0048071101,
+    "units": 0.99009442
+  },
+  "pnl": {
+    "cumulative_usd": 8.549945,
+    "session_usd": 2.923368,
+    "venue_a_usd": -3.335296,
+    "venue_b_quote": 5.42
+  },
+  "prev_hash": "0108590b4d3d10521822ef8c55c834ce63c925e51d986e3d4f21b9aad6d72c3e",
+  "published_at": "2026-09-16T08:42:03+00:00",
+  "schema": "rvb.track-record.snapshot/maker/8",
+  "session_date": "2026-09-15",
+  "sessions": 6,
+  "sessions_with_movement": 6
+}

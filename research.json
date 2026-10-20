@@ -1,0 +1,71 @@
+{
+  "catalogue": {
+    "by_tier": {
+      "Baseline": {
+        "unfiled": 739
+      },
+      "Optimized": {
+        "conditional": 4,
+        "promote": 5,
+        "reject": 64
+      },
+      "Research": {
+        "unfiled": 92
+      },
+      "production": {
+        "conditional": 25,
+        "promote": 8,
+        "reject": 704
+      }
+    },
+    "presented_folders": 42
+  },
+  "deflation": {
+    "alpha": 0.05,
+    "clear_nominal_bar": 284,
+    "demoted_by_book_level": 271,
+    "expected_false_positives_at_alpha": 10300.0,
+    "gross_sharpe_fallback_rows": 224,
+    "note": "Every headline Sharpe is re-derived against the whole book's effective N, not its own grid. At this alpha, chance alone would clear the nominal bar for far more strategies than did.",
+    "survive_book_level": 13
+  },
+  "gate_debt": {
+    "audit": {
+      "count": 219,
+      "generated": "2026-07-12"
+    },
+    "causality": {
+      "certified": 618,
+      "generated": "2026-07-26",
+      "inconclusive": 182,
+      "leaks": 10,
+      "n_folders": 810,
+      "note": "A leak is a strategy proven to read the future; an inconclusive is one the detector could not test — and 'could not check it' is not 'it is fine'."
+    },
+    "integrity": {
+      "count": 199,
+      "generated": "2026-07-12"
+    },
+    "optimize_gate": {
+      "count": 0,
+      "generated": "2026-07-04"
+    },
+    "promotion_gate": {
+      "count": 1,
+      "generated": "2026-07-12"
+    }
+  },
+  "generated_at": "2026-09-02T09:10:17+00:00",
+  "note": "Aggregate research statistics for the whole strategy book. No strategy is named here: the public record groups everything by category, and this document keeps that rule.",
+  "schema": "rvb.research-summary/1",
+  "search": {
+    "effective_independent_strategies": 517.0,
+    "effective_independent_trials": 206004.6,
+    "idea_families": 319,
+    "ledger_entries": 6762,
+    "note": "A sweep of 40 country ETFs is 40 trials but nowhere near 40 independent ideas. Families cluster the book by correlation AND by shared code, and the effective figures are what the deflation actually uses.",
+    "recorded_trials": 528527,
+    "strategies_researched": 829
+  },
+  "source": "Strategy List/RESEARCH_SUMMARY.json (committed, regenerated deliberately)"
+}

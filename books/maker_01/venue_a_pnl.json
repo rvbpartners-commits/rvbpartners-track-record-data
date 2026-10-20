@@ -1,0 +1,192 @@
+{
+  "book": "maker_01",
+  "currency": "USD",
+  "note": "write-once per session. The derivatives venue pays funding hourly, and its API compacts those hourly events into one calendar-day row stamped 00:00:00 UTC once they age. This book's session closes at 21:00 UTC, so a calendar-day aggregate cannot be split at the boundary and the 21:00-24:00 slice silently migrates to the previous session -- measured 2026-09-20, 0.366514 USD moved from 2026-09-11 into 2026-09-10 with the code untouched. The realised P&L of the derivatives leg is therefore frozen here the first time a session is published, and never re-read, so a published record never changes value when the venue re-buckets its own history",
+  "sessions": {
+    "2026-09-10": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 3.973973,
+      "source": "seeded from books/maker_01/snapshots/2026-09-10.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-11": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 2.364873,
+      "source": "seeded from books/maker_01/snapshots/2026-09-11.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-12": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.017254,
+      "source": "seeded from books/maker_01/snapshots/2026-09-12.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-13": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": -0.428219,
+      "source": "seeded from books/maker_01/snapshots/2026-09-13.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-14": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.475776,
+      "source": "seeded from books/maker_01/snapshots/2026-09-14.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-15": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": -3.335296,
+      "source": "seeded from books/maker_01/snapshots/2026-09-15.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-16": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 16.819134,
+      "source": "seeded from books/maker_01/snapshots/2026-09-16.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-17": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 13.658919,
+      "source": "seeded from books/maker_01/snapshots/2026-09-17.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-18": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 8.793218,
+      "source": "seeded from books/maker_01/snapshots/2026-09-18.json: the realised P&L of the derivatives leg this session was PUBLISHED with, read back from its own write-once record. The venue's API has since compacted the hourly funding of this session into a calendar-day aggregate, which no longer splits at the 21:00 UTC session boundary"
+    },
+    "2026-09-19": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-22T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-20": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-22T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-21": {
+      "frozen_at": "2026-09-22T18:03:14+00:00",
+      "pnl_a_usd": 8.869894,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-22T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-22": {
+      "frozen_at": "2026-09-23T08:42:03+00:00",
+      "pnl_a_usd": 6.662874,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-23T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-23": {
+      "frozen_at": "2026-09-24T08:42:03+00:00",
+      "pnl_a_usd": 2.712292,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-24T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-24": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_a_usd": -36.858137,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-25": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_a_usd": -0.718455,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-26": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-27": {
+      "frozen_at": "2026-09-28T10:00:30+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-09-28T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-09-28": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": 7.325856,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-09-29": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": 3.387648,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-09-30": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": -4.609319,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-01": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": 4.148066,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-02": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": -2.889766,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-03": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-04": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-05": {
+      "frozen_at": "2026-10-06T18:10:42+00:00",
+      "pnl_a_usd": 0.033677,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-06": {
+      "frozen_at": "2026-10-07T04:16:00+00:00",
+      "pnl_a_usd": 2.573789,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-06T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-07": {
+      "frozen_at": "2026-10-09T10:44:28+00:00",
+      "pnl_a_usd": -18.933181,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-09T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-10-08": {
+      "frozen_at": "2026-10-09T10:44:28+00:00",
+      "pnl_a_usd": -3.196512,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-09T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-10-09": {
+      "frozen_at": "2026-10-10T08:42:03+00:00",
+      "pnl_a_usd": -2.789986,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-10T08:20:36+00:00, the run that first published this session"
+    },
+    "2026-10-10": {
+      "frozen_at": "2026-10-12T08:42:02+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-12T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-10-11": {
+      "frozen_at": "2026-10-12T08:42:02+00:00",
+      "pnl_a_usd": 0.0,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-12T08:20:07+00:00, the run that first published this session"
+    },
+    "2026-10-12": {
+      "frozen_at": "2026-10-13T08:42:03+00:00",
+      "pnl_a_usd": -3.226067,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-13T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-13": {
+      "frozen_at": "2026-10-14T08:42:02+00:00",
+      "pnl_a_usd": -6.942234,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-14T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-14": {
+      "frozen_at": "2026-10-15T08:42:02+00:00",
+      "pnl_a_usd": 0.064618,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-15T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-15": {
+      "frozen_at": "2026-10-17T08:42:03+00:00",
+      "pnl_a_usd": 0.058059,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-17T08:20:06+00:00, the run that first published this session"
+    },
+    "2026-10-16": {
+      "frozen_at": "2026-10-17T08:42:03+00:00",
+      "pnl_a_usd": -0.244536,
+      "source": "pnl_hl_usd of the source export generated at 2026-10-17T08:20:06+00:00, the run that first published this session"
+    }
+  }
+}

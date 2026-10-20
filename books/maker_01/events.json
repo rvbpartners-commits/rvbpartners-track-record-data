@@ -1,0 +1,12 @@
+{
+  "book": "maker_01",
+  "events": [
+    {
+      "detail": "The book is brought flat once a week, around Friday 19:00 UTC, so that no position is carried across the weekend. It realises value that was already locked; it is not a trading decision.",
+      "kind": "policy",
+      "label": "Weekly flattening"
+    }
+  ],
+  "note": "operational log. Outages and maintenance are published because availability is a fact about the record; parameter VALUES are not, because they are the strategy",
+  "published_at": "2026-10-20T11:42:03+00:00"
+}
