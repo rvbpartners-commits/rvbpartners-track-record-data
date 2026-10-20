@@ -1,0 +1,142 @@
+{
+  "books": [
+    {
+      "account_kind": "real_capital",
+      "account_kind_label": "Real capital (live test)",
+      "account_number": null,
+      "account_ref": "sha256:d1d2e72a37083261",
+      "annualised_gated": true,
+      "book": "maker_01",
+      "capital_at_risk": true,
+      "categories": [],
+      "closed_on": "2026-10-16",
+      "cumulative_return": 0.015140312266656242,
+      "executions": {
+        "annualised_withheld": false,
+        "broker_deals": 189,
+        "closing_fills": 256,
+        "counted_as": "one ROUND TRIP -- a realisation carrying a closing execution, with BOTH legs in it. The source export groups them: they settle 0 to 2 seconds apart, and counted on the derivatives leg alone the same rotation reads -5.80 against +7.39 when it is worth +0.67. Closing FILLS are published beside it because a rotation sometimes closes in several of them -- 17 fills for 13 round trips here -- and the bar counts rotations",
+        "derivatives_fills": 465,
+        "fees_usd": 7.382881,
+        "funding_usd": 8.954968,
+        "not_published": "profit per round trip, hit rate and holding time are not published YET, and no longer for want of matching: the export now pairs the two legs, and that pairing is what draws the intraday curve. They are withheld under the SAME round-trip bar as the annualised ratios -- a hit rate on thirteen observations has the shape of a statistic and none of its content",
+        "round_trips": 172,
+        "round_trips_needed_for_annualising": 30,
+        "sessions_published": 37,
+        "sessions_with_execution": 26,
+        "unit_note": "the unit of account is the round trip, not the session: a book that is flat most of the time would cross a session-based bar by the calendar alone, without having produced anything more to measure"
+      },
+      "inception": "2026-09-10",
+      "initial_capital": 1796.398333,
+      "label": "RVB-MAKER-01",
+      "last_session": "2026-10-16",
+      "latest_detail_session": null,
+      "live": null,
+      "paths": {
+        "analytics": "books/maker_01/analytics.json",
+        "benchmark": "books/maker_01/benchmark.csv",
+        "benchmark_intraday": "books/maker_01/benchmark_intraday.csv",
+        "daily": "books/maker_01/daily.csv",
+        "events": "books/maker_01/events.json",
+        "intraday": "books/maker_01/intraday.csv",
+        "meta": "books/maker_01/meta.json",
+        "methodology": "books/maker_01/METHODOLOGY.md",
+        "metrics": "books/maker_01/metrics.json",
+        "nav": "books/maker_01/nav.csv",
+        "snapshots": "books/maker_01/snapshots/"
+      },
+      "session_close": {
+        "label": "21:00 UTC",
+        "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
+      },
+      "sessions": 37,
+      "sessions_with_movement": 30,
+      "slug": "rvb-maker-01",
+      "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
+      "tagline_fr": null
+    }
+  ],
+  "chain": {
+    "entries": 37,
+    "file": "CHAIN.jsonl"
+  },
+  "detail_lag_days": 0,
+  "disclosures": [
+    {
+      "applies_to": "real_capital",
+      "body_en": "One portfolio trades the firm's own capital, with fills executed on its venues. The firm manages no third-party money. The capital is published beside the return, since a return on a smaller account does not scale directly to a larger one: costs do not scale with size.",
+      "body_fr": "Un portefeuille engage le capital propre de la société, avec des exécutions réalisées sur ses places de marché. La société ne gère aucun capital de tiers. Le capital est publié à côté du rendement, car un rendement obtenu sur un compte plus petit ne se transpose pas directement à un compte plus important : les coûts ne sont pas proportionnels à la taille.",
+      "id": "real_capital_account",
+      "severity": "critical",
+      "title_en": "Real capital",
+      "title_fr": "Capital réel"
+    },
+    {
+      "applies_to": "all",
+      "body_en": "Nothing on this site is investment advice, an offer, or a solicitation to buy or sell any financial instrument. Past performance, simulated or otherwise, is not indicative of future results.",
+      "body_fr": "Rien sur ce site ne constitue un conseil en investissement, une offre ou une sollicitation d'achat ou de vente d'un instrument financier. Les performances passées, simulées ou non, ne préjugent pas des performances futures.",
+      "id": "not_advice",
+      "severity": "critical",
+      "title_en": "Past performance",
+      "title_fr": "Performances passées"
+    },
+    {
+      "applies_to": "all",
+      "body_en": "Account-level equity and returns are read from the broker's account. Per-strategy figures are modelled: the broker nets the desk's orders, so each net fill is attributed back to the strategies that contributed to it, pro-rata by requested size. A different attribution rule would give different per-strategy figures from the same fills.",
+      "body_fr": "L'équité et les rendements au niveau du compte sont lus sur le compte du courtier. Les chiffres par stratégie sont modélisés : le courtier nette les ordres du desk, et chaque exécution nette est réattribuée aux stratégies qui y ont contribué, au prorata des tailles demandées. Une autre règle d'attribution donnerait d'autres chiffres par stratégie à partir des mêmes exécutions.",
+      "id": "attributed_returns",
+      "severity": "important",
+      "title_en": "Per-strategy figures",
+      "title_fr": "Chiffres par stratégie"
+    },
+    {
+      "applies_to": "all",
+      "body_en": "The Sharpe ratio, annual return, Calmar ratio, volatility and maximum drawdown are published once a portfolio has 60 marked sessions. Cumulative return and the equity curve are published from the first session.",
+      "body_fr": "Le ratio de Sharpe, le rendement annuel, le ratio de Calmar, la volatilité et le drawdown maximum sont publiés dès qu'un portefeuille compte 60 séances marquées. Le rendement cumulé et la courbe d'équité sont publiés dès la première séance.",
+      "id": "short_history",
+      "severity": "important",
+      "title_en": "Annualised statistics",
+      "title_fr": "Statistiques annualisées"
+    },
+    {
+      "applies_to": "all",
+      "body_en": "Net asset value, returns and metrics are published without delay. Order, fill and position detail is published once the cycle that produced it has executed. The order plan the desk prepares after the close is published only once it has been sent, so current holdings are public.",
+      "body_fr": "La valeur liquidative, les rendements et les métriques sont publiés sans délai. Le détail des ordres, exécutions et positions est publié dès que le cycle correspondant a été exécuté. Le plan d'ordres préparé par le desk après la clôture n'est publié qu'une fois envoyé ; les positions courantes sont donc publiques.",
+      "id": "detail_lag",
+      "severity": "note",
+      "title_en": "Publication timing",
+      "title_fr": "Calendrier de publication"
+    },
+    {
+      "applies_to": "all",
+      "body_en": "Deposits, withdrawals and broker adjustments are excluded from the return and kept in the balance, the standard time-weighted treatment. Raw broker equity is published unchanged in nav.csv beside the flow, the adjustment factor and the adjusted series, and each declared event is published with its evidence in the snapshot for the session it affected.",
+      "body_fr": "Les dépôts, retraits et ajustements du courtier sont exclus du rendement et conservés au bilan, selon le traitement standard pondéré par le temps. L'équité brute du courtier est publiée telle quelle dans nav.csv, à côté du flux, du facteur d'ajustement et de la série ajustée, et chaque événement déclaré est publié avec ses preuves dans le snapshot de la séance concernée.",
+      "id": "capital_events",
+      "severity": "important",
+      "title_en": "Capital movements",
+      "title_fr": "Mouvements de capital"
+    },
+    {
+      "applies_to": "all",
+      "body_en": "Positions and attribution are grouped by strategy category, such as mean reversion, momentum, trend following or seasonal, rather than by individual strategy. The identity and logic of each strategy are not published.",
+      "body_fr": "Les positions et l'attribution sont regroupées par catégorie de stratégie (retour à la moyenne, momentum, suivi de tendance, saisonnalité) plutôt que par stratégie individuelle. L'identité et la logique de chaque stratégie ne sont pas publiées.",
+      "id": "strategy_identity",
+      "severity": "note",
+      "title_en": "Strategy categories",
+      "title_fr": "Catégories de stratégies"
+    },
+    {
+      "applies_to": "all",
+      "body_en": "Returns are time-weighted. The presentation is informed by GIPS practice but is not GIPS-compliant; compliance requires third-party verification, which has not been performed.",
+      "body_fr": "Les rendements sont pondérés par le temps. La présentation s'inspire des pratiques GIPS sans être conforme aux normes GIPS ; la conformité exige une vérification par un tiers, qui n'a pas été réalisée.",
+      "id": "not_gips",
+      "severity": "note",
+      "title_en": "GIPS",
+      "title_fr": "GIPS"
+    }
+  ],
+  "min_sessions_for_annualised": 60,
+  "published_at": "2026-10-20T16:07:35+00:00",
+  "publisher": "RVB Partners live track record",
+  "schema": "rvb.track-record.index/1"
+}

@@ -21,6 +21,7 @@
     "sessions": []
   },
   "chain_head": "1ad8775c24385858ebf2e5b5482e03c97dd1483d703bd66fb43f3e5498c1c299",
+  "closed_on": "2026-10-16",
   "convention": {
     "calendar": "the broker's own day, whose midnight is 21:00 UTC. EVERY day is a row, weekends included: the derivatives venue trades 24/7, so Saturday funding is a fact about Saturday. A day with no trade is a zero, never a missing row",
     "flows": "capital movements are unitised: a deposit buys units at the day's price, so it moves equity and never the price. The transfers of 2026-09-09 tripled this account's capital; counted as performance they would read +250 % in one day",
@@ -63,10 +64,10 @@
   "latest_detail_session": null,
   "live": null,
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-10-20T11:42:03+00:00",
+  "published_at": "2026-10-20T16:07:35+00:00",
   "publisher": {
     "code": "TraderWeb/collecteur",
-    "commit": "ef0ba767ecac099cf057cfa436cb953c0608a3df",
+    "commit": "202aa326c0958358699ba650f2cb9607104fe867",
     "note": "the commit of the publisher's own code this run executed. The scheduled task runs a working tree, so the publisher refuses to run when any tracked file of its package differs from that commit, and names it here: every published record can be traced to versioned code"
   },
   "reconciliation": {
