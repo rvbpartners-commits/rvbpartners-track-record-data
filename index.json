@@ -1,6 +1,422 @@
 {
   "books": [
     {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
+      "account_number": null,
+      "account_ref": "sha256:2f0d9bdbab2f78cf",
+      "annualised_gated": true,
+      "book": "best_cagr",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 4,
+          "weight": 0.3901
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.1968
+        },
+        {
+          "category": "trend_following",
+          "code": "TF",
+          "label": "Trend following",
+          "strategies": 1,
+          "weight": 0.0892
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 1,
+          "weight": 0.3239
+        }
+      ],
+      "cumulative_return": 0.017709553836778857,
+      "inception": "2026-10-16",
+      "initial_capital": 980981.8,
+      "label": "RVB-GROWTH-AGG",
+      "last_session": "2026-10-23",
+      "latest_detail_session": "2026-10-22",
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-10-23T20:00:00+00:00",
+        "cumulative_return": 0.017709788295766637,
+        "equity": 998354.78,
+        "marked": false,
+        "session_date": "2026-10-23",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_cagr/analytics.json",
+        "attributed": "books/best_cagr/attributed.csv",
+        "benchmark": "books/best_cagr/benchmark.csv",
+        "benchmark_intraday": "books/best_cagr/benchmark_intraday.csv",
+        "detail": "books/best_cagr/detail/",
+        "intraday": "books/best_cagr/intraday.csv",
+        "meta": "books/best_cagr/meta.json",
+        "metrics": "books/best_cagr/metrics.json",
+        "nav": "books/best_cagr/nav.csv",
+        "snapshots": "books/best_cagr/snapshots/"
+      },
+      "record_last_session": "2026-10-23",
+      "record_start": "2026-10-19",
+      "sessions": 6,
+      "slug": "rvb-growth-agg",
+      "stale": false,
+      "stale_since": null,
+      "tagline_en": "Selected for compound growth",
+      "tagline_fr": "Sélectionné pour la croissance composée"
+    },
+    {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
+      "account_number": null,
+      "account_ref": "sha256:569245e9ced65e99",
+      "annualised_gated": true,
+      "book": "best_cagr_100k",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 4,
+          "weight": 0.3901
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.1968
+        },
+        {
+          "category": "trend_following",
+          "code": "TF",
+          "label": "Trend following",
+          "strategies": 1,
+          "weight": 0.0892
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 1,
+          "weight": 0.3239
+        }
+      ],
+      "cumulative_return": 0.017459230809943938,
+      "inception": "2026-10-16",
+      "initial_capital": 98058.73,
+      "label": "RVB-GROWTH-100K",
+      "last_session": "2026-10-23",
+      "latest_detail_session": "2026-10-22",
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-10-23T20:00:00+00:00",
+        "cumulative_return": 0.017786993570077847,
+        "equity": 99802.9,
+        "marked": false,
+        "session_date": "2026-10-23",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_cagr_100k/analytics.json",
+        "attributed": "books/best_cagr_100k/attributed.csv",
+        "benchmark": "books/best_cagr_100k/benchmark.csv",
+        "benchmark_intraday": "books/best_cagr_100k/benchmark_intraday.csv",
+        "detail": "books/best_cagr_100k/detail/",
+        "intraday": "books/best_cagr_100k/intraday.csv",
+        "meta": "books/best_cagr_100k/meta.json",
+        "metrics": "books/best_cagr_100k/metrics.json",
+        "nav": "books/best_cagr_100k/nav.csv",
+        "snapshots": "books/best_cagr_100k/snapshots/"
+      },
+      "record_last_session": "2026-10-23",
+      "record_start": "2026-10-19",
+      "sessions": 6,
+      "slug": "rvb-growth-100k",
+      "stale": false,
+      "stale_since": null,
+      "tagline_en": "Selected for compound growth, at $100k",
+      "tagline_fr": "Sélectionné pour la croissance composée, à 100 k$"
+    },
+    {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
+      "account_number": null,
+      "account_ref": "sha256:626cf6c1927be4f5",
+      "annualised_gated": true,
+      "book": "best_composite",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 2,
+          "weight": 0.110695
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.070626
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.81868
+        }
+      ],
+      "cumulative_return": 0.0024503886896525273,
+      "inception": "2026-10-16",
+      "initial_capital": 990826.48,
+      "label": "RVB-BLEND-CORE",
+      "last_session": "2026-10-23",
+      "latest_detail_session": "2026-10-22",
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-10-23T20:00:00+00:00",
+        "cumulative_return": 0.0026038262522012356,
+        "equity": 993406.42,
+        "marked": false,
+        "session_date": "2026-10-23",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_composite/analytics.json",
+        "attributed": "books/best_composite/attributed.csv",
+        "benchmark": "books/best_composite/benchmark.csv",
+        "benchmark_intraday": "books/best_composite/benchmark_intraday.csv",
+        "detail": "books/best_composite/detail/",
+        "intraday": "books/best_composite/intraday.csv",
+        "meta": "books/best_composite/meta.json",
+        "metrics": "books/best_composite/metrics.json",
+        "nav": "books/best_composite/nav.csv",
+        "snapshots": "books/best_composite/snapshots/"
+      },
+      "record_last_session": "2026-10-23",
+      "record_start": "2026-10-19",
+      "sessions": 6,
+      "slug": "rvb-blend-core",
+      "stale": false,
+      "stale_since": null,
+      "tagline_en": "Balanced across all three objectives",
+      "tagline_fr": "Équilibré sur les trois objectifs"
+    },
+    {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
+      "account_number": null,
+      "account_ref": "sha256:9d8eaad98f1e8aa4",
+      "annualised_gated": true,
+      "book": "best_composite_100k",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 2,
+          "weight": 0.110695
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.070626
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.81868
+        }
+      ],
+      "cumulative_return": 0.0023081226091850038,
+      "inception": "2026-10-16",
+      "initial_capital": 99071.86,
+      "label": "RVB-BLEND-100K",
+      "last_session": "2026-10-23",
+      "latest_detail_session": "2026-10-22",
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-10-23T20:00:00+00:00",
+        "cumulative_return": 0.0025383595301429196,
+        "equity": 99323.34,
+        "marked": false,
+        "session_date": "2026-10-23",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_composite_100k/analytics.json",
+        "attributed": "books/best_composite_100k/attributed.csv",
+        "benchmark": "books/best_composite_100k/benchmark.csv",
+        "benchmark_intraday": "books/best_composite_100k/benchmark_intraday.csv",
+        "detail": "books/best_composite_100k/detail/",
+        "intraday": "books/best_composite_100k/intraday.csv",
+        "meta": "books/best_composite_100k/meta.json",
+        "metrics": "books/best_composite_100k/metrics.json",
+        "nav": "books/best_composite_100k/nav.csv",
+        "snapshots": "books/best_composite_100k/snapshots/"
+      },
+      "record_last_session": "2026-10-23",
+      "record_start": "2026-10-19",
+      "sessions": 6,
+      "slug": "rvb-blend-100k",
+      "stale": false,
+      "stale_since": null,
+      "tagline_en": "Balanced across all three objectives, at $100k",
+      "tagline_fr": "Équilibré sur les trois objectifs, à 100 k$"
+    },
+    {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
+      "account_number": null,
+      "account_ref": "sha256:37076dc1c7f30c5b",
+      "annualised_gated": true,
+      "book": "best_mdd",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 6,
+          "weight": 0.737709
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 2,
+          "weight": 0.154156
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 1,
+          "weight": 0.108135
+        }
+      ],
+      "cumulative_return": 0.00359987140514173,
+      "inception": "2026-10-16",
+      "initial_capital": 996649.49,
+      "label": "RVB-DD-DEF",
+      "last_session": "2026-10-23",
+      "latest_detail_session": "2026-10-22",
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-10-23T20:00:00+00:00",
+        "cumulative_return": 0.003572951208754338,
+        "equity": 1000210.47,
+        "marked": false,
+        "session_date": "2026-10-23",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_mdd/analytics.json",
+        "attributed": "books/best_mdd/attributed.csv",
+        "benchmark": "books/best_mdd/benchmark.csv",
+        "benchmark_intraday": "books/best_mdd/benchmark_intraday.csv",
+        "detail": "books/best_mdd/detail/",
+        "intraday": "books/best_mdd/intraday.csv",
+        "meta": "books/best_mdd/meta.json",
+        "metrics": "books/best_mdd/metrics.json",
+        "nav": "books/best_mdd/nav.csv",
+        "snapshots": "books/best_mdd/snapshots/"
+      },
+      "record_last_session": "2026-10-23",
+      "record_start": "2026-10-19",
+      "sessions": 6,
+      "slug": "rvb-dd-def",
+      "stale": false,
+      "stale_since": null,
+      "tagline_en": "Selected to limit drawdown",
+      "tagline_fr": "Sélectionné pour limiter le drawdown"
+    },
+    {
+      "account_kind": "paper",
+      "account_kind_label": "Paper (broker-simulated)",
+      "account_number": null,
+      "account_ref": "sha256:8dd604d92e89ad51",
+      "annualised_gated": true,
+      "book": "best_sharpe",
+      "capital_at_risk": false,
+      "categories": [
+        {
+          "category": "mean_reversion",
+          "code": "MR",
+          "label": "Mean reversion",
+          "strategies": 5,
+          "weight": 0.580242
+        },
+        {
+          "category": "momentum",
+          "code": "MOM",
+          "label": "Momentum",
+          "strategies": 1,
+          "weight": 0.108989
+        },
+        {
+          "category": "seasonal",
+          "code": "SEA",
+          "label": "Seasonal",
+          "strategies": 2,
+          "weight": 0.310769
+        }
+      ],
+      "cumulative_return": 0.009198421903952259,
+      "inception": "2026-10-16",
+      "initial_capital": 988086.88,
+      "label": "RVB-SR-STAB",
+      "last_session": "2026-10-23",
+      "latest_detail_session": "2026-10-22",
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-10-23T20:00:00+00:00",
+        "cumulative_return": 0.009354339367404707,
+        "equity": 997329.78,
+        "marked": false,
+        "session_date": "2026-10-23",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
+      "paths": {
+        "analytics": "books/best_sharpe/analytics.json",
+        "attributed": "books/best_sharpe/attributed.csv",
+        "benchmark": "books/best_sharpe/benchmark.csv",
+        "benchmark_intraday": "books/best_sharpe/benchmark_intraday.csv",
+        "detail": "books/best_sharpe/detail/",
+        "intraday": "books/best_sharpe/intraday.csv",
+        "meta": "books/best_sharpe/meta.json",
+        "metrics": "books/best_sharpe/metrics.json",
+        "nav": "books/best_sharpe/nav.csv",
+        "snapshots": "books/best_sharpe/snapshots/"
+      },
+      "record_last_session": "2026-10-23",
+      "record_start": "2026-10-19",
+      "sessions": 6,
+      "slug": "rvb-sr-stab",
+      "stale": false,
+      "stale_since": null,
+      "tagline_en": "Selected for risk-adjusted return",
+      "tagline_fr": "Sélectionné pour le rendement ajusté du risque"
+    },
+    {
       "account_kind": "real_capital",
       "account_kind_label": "Real capital (live test)",
       "account_number": null,
@@ -45,6 +461,7 @@
         "nav": "books/maker_01/nav.csv",
         "snapshots": "books/maker_01/snapshots/"
       },
+      "record_last_session": "2026-10-23",
       "session_close": {
         "label": "21:00 UTC",
         "note": "the broker's own trading day: its midnight falls at 21:00 UTC, and a session joins the curve once it has closed. The source export is produced hours before that close, so its final row is always a session still in progress and is never published"
@@ -52,16 +469,27 @@
       "sessions": 37,
       "sessions_with_movement": 30,
       "slug": "rvb-maker-01",
+      "stale": true,
+      "stale_since": "2026-10-16",
       "tagline_en": "Delta-hedged liquidity provision across two venues. Real capital.",
       "tagline_fr": null
     }
   ],
   "chain": {
-    "entries": 37,
+    "entries": 73,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
   "disclosures": [
+    {
+      "applies_to": "paper",
+      "body_en": "The paper portfolios run on Alpaca paper accounts. No capital is invested in them: the desk sends real orders, and the broker fills them from its paper engine against its market data. They record how the strategies execute live; they are not a record of managing client money.",
+      "body_fr": "Les portefeuilles papier fonctionnent sur des comptes papier Alpaca. Aucun capital n'y est investi : le desk envoie de vrais ordres, que le courtier exécute avec son moteur papier à partir de ses données de marché. Ils mesurent l'exécution des stratégies en conditions réelles ; ils ne constituent pas un historique de gestion de capitaux de clients.",
+      "id": "paper_account",
+      "severity": "critical",
+      "title_en": "Paper accounts",
+      "title_fr": "Comptes papier"
+    },
     {
       "applies_to": "real_capital",
       "body_en": "One portfolio trades the firm's own capital, with fills executed on its venues. The firm manages no third-party money. The capital is published beside the return, since a return on a smaller account does not scale directly to a larger one: costs do not scale with size.",
@@ -136,7 +564,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-10-20T16:07:35+00:00",
+  "published_at": "2026-10-24T08:55:21+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

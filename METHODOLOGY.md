@@ -72,14 +72,16 @@ A book with no declared event is unaffected in every respect: its multiplier is
 `1.0`, its adjusted series is its raw series, and its published metrics are
 byte-for-byte what they were.
 
-**The curve starts at funded capital, not at the first mark.** The desk's first
-equity snapshot is taken after the first trading day's close, so it already
-contains that day's profit and loss. Starting the curve there would silently
-delete the first session. Instead each book's series is anchored to the broker's
-own equity on the last day *before* it traded — the account fully in cash. The
-inception date and initial capital in `meta.json` are those broker figures. When
-the broker's history does not reach back that far, `meta.json` says so
-(`inception_anchored_to_funded_capital: false`).
+**The paper books' record starts with the 2026-10-19 session.** It is measured
+from each account's value at the desk's after-close mark of 2026-10-16, the
+session before, so the first session's profit and loss is inside the record. The
+books already held positions at that close: `initial_capital` in `meta.json` is
+that value, not the capital the account was funded with, and `record_start` and
+`record_base_session` name the two dates. The accounts traded before 2026-10-19;
+that period is not published. A book first funded after that date starts at its
+funded capital instead: its curve is anchored to the broker's own equity on the
+last day before it traded, with the account fully in cash
+(`inception_anchored_to_funded_capital: true`).
 
 **This presentation is GIPS-informed and NOT GIPS-compliant.** GIPS compliance
 requires third-party verification, which has not been performed. No such claim is

@@ -7,7 +7,7 @@ pipeline and pushed unedited. Nothing in this repository is written by hand.
 > **One book trades real capital; the others are paper.** `maker_01` trades
 > **real capital**. Six books run on Alpaca PAPER accounts — no capital is at
 > risk and every fill is simulated by the broker's paper engine — and publish
-> here from their first marked session. Each
+> here from the 19 October 2026 session. Each
 > book states its kind beside its return, and every disclosure below records
 > which kind it applies to. Past performance is not indicative of future
 > results. Nothing here is investment advice, an offer, or a solicitation. The
@@ -43,7 +43,7 @@ two venues in two currencies. It adds `daily.csv` and its own `METHODOLOGY.md`.
 Read that book's own note before comparing it with the others.
 
 Seven books publish here. Six run on Alpaca **paper** accounts, one account
-each, and appear from their first marked session; one trades **real capital** —
+each, and appear from the 19 October 2026 session; one trades **real capital** —
 the firm's own capital; no third-party money is managed. Every book states its kind and its capital beside its return.
 
 | Book | Kind | Selected for |

@@ -1,0 +1,148 @@
+{
+  "as_of": "2026-10-23",
+  "benchmark_cum": [
+    {
+      "cash": 0.0,
+      "date": "2026-10-16",
+      "spy": 0.0
+    },
+    {
+      "cash": 0.000169246031745951,
+      "date": "2026-10-19",
+      "spy": 0.004277283237372753
+    },
+    {
+      "cash": 0.00033845455895153975,
+      "date": "2026-10-20",
+      "spy": 0.007539284848723016
+    },
+    {
+      "cash": 0.000507559392936674,
+      "date": "2026-10-21",
+      "spy": 0.012831849712118482
+    },
+    {
+      "cash": 0.0006763751922436168,
+      "date": "2026-10-22",
+      "spy": 0.0009104783614009015
+    },
+    {
+      "cash": 0.0008452194758672427,
+      "date": "2026-10-23",
+      "spy": -0.0045916930312379645
+    }
+  ],
+  "book": "best_composite_100k",
+  "computed_by": "rvb.metrics (compute_core_metrics / compute_sharpe / compute_equity_curve / compute_max_drawdown)",
+  "daily_returns": [
+    {
+      "date": "2026-10-19",
+      "return": 0.0012829071746509602
+    },
+    {
+      "date": "2026-10-20",
+      "return": 4.687549143644887e-05
+    },
+    {
+      "date": "2026-10-21",
+      "return": 0.0004252869426828454
+    },
+    {
+      "date": "2026-10-22",
+      "return": 0.0026645963859428523
+    },
+    {
+      "date": "2026-10-23",
+      "return": -0.0021075215869722497
+    }
+  ],
+  "distribution": {
+    "bins": [
+      {
+        "count": 1,
+        "from": -0.0021075215869722497,
+        "to": -0.0005168155960005489
+      },
+      {
+        "count": 2,
+        "from": -0.0005168155960005489,
+        "to": 0.0010738903949711518
+      },
+      {
+        "count": 2,
+        "from": 0.0010738903949711518,
+        "to": 0.0026645963859428523
+      }
+    ]
+  },
+  "drawdown": [
+    {
+      "date": "2026-10-16",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-19",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-20",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-21",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-22",
+      "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-23",
+      "drawdown": -0.0021075215869721386
+    }
+  ],
+  "drawdown_consistent_with_metrics": true,
+  "drawdown_episodes": [
+    {
+      "depth": -0.0021075215869721386,
+      "ongoing": true,
+      "recovered": null,
+      "sessions": 1,
+      "start": "2026-10-23",
+      "trough": "2026-10-23"
+    }
+  ],
+  "gated": true,
+  "min_sessions_for_annualised": 60,
+  "monthly_returns": [
+    {
+      "month": 10,
+      "partial": true,
+      "partial_reason": "record begins mid-month",
+      "return": 0.0023081226091850038,
+      "sessions": 5,
+      "sessions_possible": 22,
+      "year": 2026
+    }
+  ],
+  "published_at": "2026-10-24T08:55:21+00:00",
+  "quantiles": [
+    {
+      "horizon": "Daily",
+      "max": 0.0026645963859428523,
+      "median": 0.0004252869426828454,
+      "min": -0.0021075215869722497,
+      "n": 5,
+      "q25": 4.687549143644887e-05,
+      "q75": 0.0012829071746509602
+    }
+  ],
+  "risk_free_annual": 0.042519999999999995,
+  "risk_free_source": "FRED DGS3MO",
+  "rolling_sharpe": {},
+  "rolling_sortino": {},
+  "rolling_volatility": {},
+  "sessions": 5,
+  "summary": {},
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 5."
+}
