@@ -1,0 +1,483 @@
+{
+  "book": "best_composite",
+  "categories": [
+    {
+      "category": "mean_reversion",
+      "code": "MR",
+      "cost_basis": 14088.39,
+      "label": "Mean reversion",
+      "market_value": 13700.58,
+      "n_long": 2,
+      "n_positions": 3,
+      "n_short": 1,
+      "open_pnl": -387.81,
+      "open_pnl_pct": -0.007047502918047256,
+      "partial": false,
+      "positions": [
+        {
+          "avg_price": 32.7516959456,
+          "cost_basis": -20469.809965999997,
+          "mark": 33.7,
+          "qty": -625.0,
+          "symbol": "CSGP"
+        },
+        {
+          "avg_price": 89.1,
+          "cost_basis": 17285.399999999998,
+          "mark": 90.53,
+          "qty": 194.0,
+          "symbol": "INTC"
+        },
+        {
+          "avg_price": 78.871233,
+          "cost_basis": 17272.800027,
+          "mark": 78.54,
+          "qty": 219.0,
+          "symbol": "DXCM"
+        }
+      ],
+      "unmarked": 0
+    },
+    {
+      "category": "momentum",
+      "code": "MOM",
+      "cost_basis": 67881.64,
+      "label": "Momentum",
+      "market_value": 70947.25,
+      "n_long": 7,
+      "n_positions": 7,
+      "n_short": 0,
+      "open_pnl": 3065.61,
+      "open_pnl_pct": 0.04516103711314447,
+      "partial": false,
+      "positions": [
+        {
+          "avg_price": 31.373828292066435,
+          "cost_basis": 15191.846703365889,
+          "mark": 34.115,
+          "qty": 484.2203687079999,
+          "symbol": "HPQ"
+        },
+        {
+          "avg_price": 63.20464151745301,
+          "cost_basis": 11782.246846914837,
+          "mark": 58.715,
+          "qty": 186.41426585199991,
+          "symbol": "HPE"
+        },
+        {
+          "avg_price": 42.865104262858495,
+          "cost_basis": 7167.882568689704,
+          "mark": 51.66,
+          "qty": 167.21952954399995,
+          "symbol": "APA"
+        },
+        {
+          "avg_price": 72.56995693399007,
+          "cost_basis": 9509.341827929758,
+          "mark": 72.7,
+          "qty": 131.036895014,
+          "symbol": "TECH"
+        },
+        {
+          "avg_price": 23.213697246560592,
+          "cost_basis": 9771.078569969253,
+          "mark": 25.05,
+          "qty": 420.918669964,
+          "symbol": "HST"
+        },
+        {
+          "avg_price": 42.28862071716119,
+          "cost_basis": 6737.03478383129,
+          "mark": 45.2,
+          "qty": 159.310818598,
+          "symbol": "MTCH"
+        },
+        {
+          "avg_price": 18.655586595344488,
+          "cost_basis": 7722.2118783926435,
+          "mark": 18.295,
+          "qty": 413.9356239979999,
+          "symbol": "VTRS"
+        }
+      ],
+      "unmarked": 0
+    },
+    {
+      "category": "seasonal",
+      "code": "SEA",
+      "cost_basis": 433886.73,
+      "label": "Seasonal",
+      "market_value": 435507.03,
+      "n_long": 7,
+      "n_positions": 7,
+      "n_short": 0,
+      "open_pnl": 1620.3,
+      "open_pnl_pct": 0.0037343958467031834,
+      "partial": false,
+      "positions": [
+        {
+          "avg_price": 41.31408981100133,
+          "cost_basis": 1969.8196273649348,
+          "mark": 42.565,
+          "qty": 47.67912439500001,
+          "symbol": "XLU"
+        },
+        {
+          "avg_price": 81.22416948648805,
+          "cost_basis": 129767.61016367123,
+          "mark": 81.18,
+          "qty": 1597.647732,
+          "symbol": "MOO"
+        },
+        {
+          "avg_price": 519.5420982938947,
+          "cost_basis": 167388.276861461,
+          "mark": 523.05,
+          "qty": 322.18424149099997,
+          "symbol": "DIA"
+        },
+        {
+          "avg_price": 84.45967331405143,
+          "cost_basis": 1297.3960244063037,
+          "mark": 81.62,
+          "qty": 15.361130033999999,
+          "symbol": "GXC"
+        },
+        {
+          "avg_price": 87.75809118119669,
+          "cost_basis": 124363.60032276834,
+          "mark": 87.99,
+          "qty": 1417.118338023,
+          "symbol": "XLP"
+        },
+        {
+          "avg_price": 108.11314282993386,
+          "cost_basis": 5030.5385698941855,
+          "mark": 111.34,
+          "qty": 46.5303148,
+          "symbol": "IGV"
+        },
+        {
+          "avg_price": 164.30054734297937,
+          "cost_basis": 4069.48685866184,
+          "mark": 166.96,
+          "qty": 24.768553267,
+          "symbol": "XLI"
+        }
+      ],
+      "unmarked": 0
+    }
+  ],
+  "fills": [
+    {
+      "price": 51.856,
+      "qty": -0.366374322,
+      "symbol": "APA",
+      "ts": "2026-10-26T09:31:04.354360-04:00"
+    },
+    {
+      "price": 81.644,
+      "qty": 0.015782702,
+      "symbol": "GXC",
+      "ts": "2026-10-26T09:31:04.570157-04:00"
+    },
+    {
+      "price": 110.75399999999999,
+      "qty": 0.369000893,
+      "symbol": "IGV",
+      "ts": "2026-10-26T09:31:04.980509-04:00"
+    },
+    {
+      "price": 165.62,
+      "qty": 0.196422877,
+      "symbol": "XLI",
+      "ts": "2026-10-26T09:31:05.537926-04:00"
+    },
+    {
+      "price": 24.94,
+      "qty": 5.097766894,
+      "symbol": "HST",
+      "ts": "2026-10-26T09:32:46.569641-04:00"
+    },
+    {
+      "price": 18.18,
+      "qty": -71.658399071,
+      "symbol": "VTRS",
+      "ts": "2026-10-26T09:32:47.480506-04:00"
+    },
+    {
+      "price": 88.27,
+      "qty": 11.238220264,
+      "symbol": "XLP",
+      "ts": "2026-10-26T09:33:00.245667-04:00"
+    },
+    {
+      "price": 33.92,
+      "qty": -7.846923469,
+      "symbol": "HPQ",
+      "ts": "2026-10-26T09:33:10.706919-04:00"
+    },
+    {
+      "price": 72.6,
+      "qty": 6.0,
+      "symbol": "TECH",
+      "ts": "2026-10-26T09:33:11.440841-04:00"
+    },
+    {
+      "price": 42.67,
+      "qty": -13.0,
+      "symbol": "XLU",
+      "ts": "2026-10-26T09:33:11.784161-04:00"
+    },
+    {
+      "price": 45.31,
+      "qty": 2.0,
+      "symbol": "MTCH",
+      "ts": "2026-10-26T09:33:23.569068-04:00"
+    },
+    {
+      "price": 57.06,
+      "qty": 3.0,
+      "symbol": "HPE",
+      "ts": "2026-10-26T09:33:28.681228-04:00"
+    },
+    {
+      "price": 523.79,
+      "qty": 1.0,
+      "symbol": "DIA",
+      "ts": "2026-10-26T09:33:42.545432-04:00"
+    },
+    {
+      "price": 81.46,
+      "qty": 4.0,
+      "symbol": "MOO",
+      "ts": "2026-10-26T09:33:40.735794-04:00"
+    },
+    {
+      "price": 81.45999999999998,
+      "qty": 3.0,
+      "symbol": "MOO",
+      "ts": "2026-10-26T09:33:49.210542-04:00"
+    },
+    {
+      "price": 523.8300006635294,
+      "qty": 1.55502831,
+      "symbol": "DIA",
+      "ts": "2026-10-26T09:33:50.333506-04:00"
+    },
+    {
+      "price": 72.60000000000001,
+      "qty": 1.791282816,
+      "symbol": "TECH",
+      "ts": "2026-10-26T09:34:11.143966-04:00"
+    },
+    {
+      "price": 42.60999940000001,
+      "qty": -20.0,
+      "symbol": "XLU",
+      "ts": "2026-10-26T09:34:11.243896-04:00"
+    },
+    {
+      "price": 57.08000012279578,
+      "qty": 3.768137314,
+      "symbol": "HPE",
+      "ts": "2026-10-26T09:34:21.240444-04:00"
+    },
+    {
+      "price": 45.29999987898496,
+      "qty": 1.672382963,
+      "symbol": "MTCH",
+      "ts": "2026-10-26T09:34:18.876418-04:00"
+    },
+    {
+      "price": 42.64999974999999,
+      "qty": -20.0,
+      "symbol": "XLU",
+      "ts": "2026-10-26T09:34:28.645985-04:00"
+    },
+    {
+      "price": 81.46,
+      "qty": 5.669878477,
+      "symbol": "MOO",
+      "ts": "2026-10-26T09:34:39.633757-04:00"
+    },
+    {
+      "price": 42.62999671428569,
+      "qty": -7.0,
+      "symbol": "XLU",
+      "ts": "2026-10-26T09:34:59.441072-04:00"
+    },
+    {
+      "price": 42.613749678488624,
+      "qty": -2.660706872,
+      "symbol": "XLU",
+      "ts": "2026-10-26T09:35:22.958363-04:00"
+    }
+  ],
+  "note": "Released only after the cycle executed. Quantities are as the desk recorded them. Holdings are grouped by strategy CATEGORY; individual strategy identities are not published. The grouping is the attributed model, not a broker statement.",
+  "orders": [
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 51.856,
+      "filled_qty": 0.366374322,
+      "qty": 0.366374322,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:04.35180275Z",
+      "symbol": "APA"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 523.814345,
+      "filled_qty": 2.55502831,
+      "qty": 2.55502831,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:04.454328551Z",
+      "symbol": "DIA"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 81.644,
+      "filled_qty": 0.015782702,
+      "qty": 0.015782702,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:04.55973946Z",
+      "symbol": "GXC"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 57.071135,
+      "filled_qty": 6.768137314,
+      "qty": 6.768137314,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:04.657320253Z",
+      "symbol": "HPE"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 33.92,
+      "filled_qty": 7.846923469,
+      "qty": 7.846923469,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:04.765413485Z",
+      "symbol": "HPQ"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 24.94,
+      "filled_qty": 5.097766894,
+      "qty": 5.097766894,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:04.873806097Z",
+      "symbol": "HST"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 110.754,
+      "filled_qty": 0.369000893,
+      "qty": 0.369000893,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:04.972114862Z",
+      "symbol": "IGV"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 81.46,
+      "filled_qty": 12.669878477,
+      "qty": 12.669878477,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:05.066430809Z",
+      "symbol": "MOO"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 45.305446,
+      "filled_qty": 3.672382963,
+      "qty": 3.672382963,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:05.176914557Z",
+      "symbol": "MTCH"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 72.6,
+      "filled_qty": 7.791282816,
+      "qty": 7.791282816,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:05.273818575Z",
+      "symbol": "TECH"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 18.18,
+      "filled_qty": 71.658399071,
+      "qty": 71.658399071,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:05.443749926Z",
+      "symbol": "VTRS"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 165.62,
+      "filled_qty": 0.196422877,
+      "qty": 0.196422877,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:05.53467073Z",
+      "symbol": "XLI"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 88.27,
+      "filled_qty": 11.238220264,
+      "qty": 11.238220264,
+      "side": "buy",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:05.63014941Z",
+      "symbol": "XLP"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": 42.637608,
+      "filled_qty": 62.660706872,
+      "qty": 62.660706872,
+      "side": "sell",
+      "status": "filled",
+      "submitted_at": "2026-10-26T13:31:05.739935752Z",
+      "symbol": "XLU"
+    },
+    {
+      "cycle_ts": "2026-10-23",
+      "filled_avg_price": null,
+      "filled_qty": 0.0,
+      "qty": 234.0,
+      "side": "sell",
+      "status": "expired",
+      "submitted_at": "2026-10-26T13:33:09.099614864Z",
+      "symbol": "LEN"
+    }
+  ],
+  "positions_as_of": "2026-10-26",
+  "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
+  "reconciliation": {
+    "account_invested": 520499.37,
+    "as_of_nav_session": "2026-10-26",
+    "comparable": true,
+    "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
+    "positions_market_value": 520154.86,
+    "unreconciled_usd": -344.51
+  },
+  "released_under_lag_days": 0,
+  "session_date": "2026-10-23"
+}
