@@ -1,9 +1,9 @@
 # Disclosures
 
 The terms on which the books in this repository should be read. Each item
-states which books it applies to: some books trade on paper and one trades
-real capital, and an item true of one kind is not necessarily true of the
-other.
+states which books it applies to: six books trade on paper, and RVB-MAKER-01
+traded real capital until it closed on 16 October 2026. An item true of one
+kind is not necessarily true of the other.
 
 Each record also carries a disclosure block for its own book.
 
@@ -17,7 +17,7 @@ The paper portfolios run on Alpaca paper accounts. No capital is invested in the
 
 *Critical* · applies to the real-capital book
 
-One portfolio trades the firm's own capital, with fills executed on its venues. The firm manages no third-party money. The capital is published beside the return, since a return on a smaller account does not scale directly to a larger one: costs do not scale with size.
+One portfolio, RVB-MAKER-01, traded the firm's own capital, with fills executed on its venues, until it closed on 16 October 2026; its record ends at that session. The firm manages no third-party money. The capital is published beside the return, since a return on a smaller account does not scale directly to a larger one: costs do not scale with size.
 
 ## Past performance
 
@@ -29,7 +29,7 @@ Nothing on this site is investment advice, an offer, or a solicitation to buy or
 
 *Important* · applies to every book
 
-Account-level equity and returns are read from the broker's account. Per-strategy figures are modelled: the broker nets the desk's orders, so each net fill is attributed back to the strategies that contributed to it, pro-rata by requested size. A different attribution rule would give different per-strategy figures from the same fills.
+For the paper books, account-level equity and returns are read from the broker's account. Per-strategy figures are modelled: the broker nets the desk's orders, so each fill is attributed to the owners of the order it filled, shared among them in proportion to what each requested; a strategy that merely shares the symbol gets none. A different attribution rule would give different per-strategy figures from the same fills.
 
 ## Annualised statistics
 
@@ -53,7 +53,7 @@ Deposits, withdrawals and broker adjustments are excluded from the return and ke
 
 *Note* · applies to every book
 
-Positions and attribution are grouped by strategy category, such as mean reversion, momentum, trend following or seasonal, rather than by individual strategy. The identity and logic of each strategy are not published.
+Positions and attribution are grouped by strategy category, such as mean reversion, momentum, trend following or seasonal, rather than by individual strategy. Where a category holds a single strategy, its weight and attribution are that strategy's. The identity and logic of each strategy are not published.
 
 ## GIPS
 

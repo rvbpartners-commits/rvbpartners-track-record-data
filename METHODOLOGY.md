@@ -15,21 +15,24 @@ positions and snapshots account equity (`mark`); then it archives everything to
 parquet with an internal hash chain (`export`). The publisher reads that archive
 — never the live database — and writes this repository.
 
-**One book in this record is not that.** `maker_01` trades REAL capital across
-two venues and is produced by its own collector rather than by the paper desk.
-Where a convention below differs for it, the difference is stated; where this
-document says "the desk", it means the six paper accounts.
+**One book in this record is not that.** `maker_01` traded real capital across two
+venues until it closed on 16 October 2026, and its record, which ends at that
+session, was produced by its own collector rather than by the paper desk. Where a
+convention below differs for it, the difference is stated; where this document says
+"the desk", it means the six paper accounts.
 
 **Book equity is read from the broker** — for the paper books. Each session's
 NAV is Alpaca's `/v2/account` equity, taken at the desk's after-close mark; for
 those six books it is not modelled, reconstructed, or derived from our own fill
-records. `maker_01`'s NAV is reconstructed from two venues by its collector, and
-its own methodology note states how.
+records. `maker_01`'s NAV is compounded by its collector from the trading system's
+machine export, which reports each leg's realised profit and loss and the capital
+movements per broker session, and is reconciled against the equity read on both
+accounts; its own methodology note states how.
 
 ## 2. Returns
 
-Daily return is `NAV_t / (NAV_{t-1} + F_t) − 1`, where `F_t` is any **external
-capital movement** on that session. Returns are **time-weighted**: money or
+Daily return is `NAV_t / (NAV_{t-1} + F_t) − 1`, where `F_t` is any external
+capital movement on that session. Returns are time-weighted: money or
 assets entering or leaving an account by an act that is not a trade are excluded
 from the return and kept in the balance, so performance measures the capital
 actually managed. With no flow this reduces exactly to compounding
@@ -77,9 +80,12 @@ from each account's value at the desk's after-close mark of 2026-10-16, the
 session before, so the first session's profit and loss is inside the record. The
 books already held positions at that close: `initial_capital` in `meta.json` is
 that value, not the capital the account was funded with, and `record_start` and
-`record_base_session` name the two dates. The accounts traded before 2026-10-19;
-that period is not published. A book first funded after that date starts at its
-funded capital instead: its curve is anchored to the broker's own equity on the
+`record_base_session` name the two dates. Each paper book's chain opens with a
+base record dated 2026-10-16 — that close, with `sessions` 0 and no return — and
+`index.json` gives 2026-10-16 as the book's `inception` and 2026-10-19 as its
+`record_start`. The accounts traded before 2026-10-19; nothing from that period is
+published but the base close itself. A book first funded after that date starts at
+its funded capital instead: its curve is anchored to the broker's own equity on the
 last day before it traded, with the account fully in cash
 (`inception_anchored_to_funded_capital: true`).
 
@@ -89,11 +95,22 @@ made anywhere.
 
 ## 3. Metrics
 
-Every metric is computed by one function — `compute_core_metrics` in the firm's
-`rvb.metrics` module — and by nothing else. No metric is recomputed in the
+Every metric is computed by one function, `compute_core_metrics` in the firm's
+`rvb.metrics` module, which is not published. No metric is recomputed in the
 publisher, and none is computed in the browser: the site renders JSON that was
-calculated here. That is the only way "our calculation source is public" can be
-a fact rather than a claim.
+calculated here. The definitions are standard, the input is published in full,
+and each figure is published with its convention and its rate, so any of them can
+be recomputed independently. The conventions a reimplementation needs:
+
+- **Returns** are the daily change of `equity_adj` in `nav.csv`; the annualisation
+  basis is 252 sessions (`annualised_basis`).
+- **Sharpe** is the mean daily excess return (each return less
+  `risk_free_annual / 252`) over its sample standard deviation (one degree of
+  freedom), times √252. Sortino and Calmar are excess of the same rate; their
+  `_gross` twins use no rate.
+- **Maximum drawdown**, and the Calmar ratios that divide by it, are measured on the
+  equity path including the record's first value: a zero return is prepended for
+  the base, so the base close is the first high-water mark.
 
 **Sharpe, Sortino and Calmar are excess of the risk-free rate.** Interest on cash
 is not alpha. The rate is the 3-month Treasury constant-maturity yield (FRED
@@ -119,7 +136,7 @@ These are not equally hard numbers and are never presented as though they were.
   symbol, so per-category numbers come from our own order record: every order is
   written with its owners before it is submitted, and a fill goes to the owners of
   the order it filled, never to a strategy that merely shares the symbol. The
-  attribution is internally consistent and **approximately** sums to the book — it
+  attribution is internally consistent and approximately sums to the book — it
   does not close exactly, and the residual is published as its own column in
   `attributed.csv` so you can size the gap rather than take this sentence on
   trust. A different rule would give different numbers from the same fills.
@@ -127,43 +144,49 @@ These are not equally hard numbers and are never presented as though they were.
 
 ### Strategy identity is not published
 
-Holdings, P&L and attribution are grouped by the **category** of the strategy
+Holdings, P&L and attribution are grouped by the category of the strategy
 holding them — mean reversion, momentum, trend following, seasonal — and never by
 the individual strategy. The category answers what kind of risk is being taken.
 The identity of each strategy, and its logic, are not published.
 
-Two consequences worth stating rather than leaving to be noticed:
+What is published, and what follows from it:
 
-- **P&L is a category total, not a per-symbol line.** A per-symbol profit column
-  under a named style is the trade record itself: which names the strategy makes
-  money on, and when it gets out. The category total answers "which style is
-  working" and stops there.
+- **Each holding is published.** A position carries its symbol, quantity, average
+  price and the session's mark, so its open P&L is `quantity × (mark − average
+  price)`; the category totals are the sums of those rows. The book's orders and
+  fills are published per session, per symbol (a fill with its signed quantity,
+  price and time). What is not published is which strategy holds a position, beyond
+  its category.
 - **Attribution is weighted before it is aggregated.** Each strategy's return is
   measured against its own capital, so summing returns across a category would be
   arithmetic nonsense — a 2% move on a 0.7% sleeve and a 2% move on a 32% sleeve
   are not the same event. Each is weighted by its book weight first, which turns
   it into a *contribution*: additive, and summing to roughly the book's own daily
-  return. The individual weights are used for that calculation and are not
-  published; the per-category totals are.
+  return. Each category's weight and its contribution per session are published;
+  where a category holds a single strategy, they are that strategy's weight and
+  contribution.
 
 ## 5. The benchmark
 
 SPY total return (split- and dividend-adjusted), on the same dates, plus a cash
 line accrued at the risk-free rate on trading days. `benchmark.csv` and
-`benchmark_intraday.csv` publish both the raw level (`spy_close`) and the
-rebased series (`spy_cum`).
+`benchmark_intraday.csv` publish both SPY's level (`spy_close`) and the rebased
+series (`spy_cum`). The level is SPY's price as fetched, split- and
+dividend-adjusted, in both files, so each ex-dividend date rescales the levels
+before it; `meta.json`'s `benchmark_intraday_anchor` is the same kind of level.
 
 **`spy_cum` is measured from each book's own first benchmarked session**, so it
 answers "what would the index have done over this book's life?" Two books that
 opened on different dates therefore quote the same index differently on the same
-day, by exactly the index's move between their two opening dates. `spy_close` is
-the observed level, carries no base, and is the column to use to compare books
-with each other or to rebase against any other anchor.
+day, by exactly the index's move between their two opening dates. `spy_close`
+carries no base, and is the column to use to compare books with each other or to
+rebase against any other anchor.
 
-**The cash line accrues at the rate that had printed by each date**, not at a
-mean over the whole window. A window mean would let early sessions earn
-interest at a rate set partly by prints that had not happened yet, and would
-silently rewrite the published line every time FRED updates.
+**The cash line accrues at the rate that had printed by each date.** Each trading
+day accrues `rate / 252`, where the rate is the mean of the DGS3MO prints from the
+record's first date through that day. A mean over the whole window would let early
+sessions earn interest at a rate set partly by prints that had not happened yet,
+and would rewrite the published line every time FRED updates.
 
 **These books are not SPY-like.** They carry shorts and multi-asset legs. The
 benchmark is context for the question "versus just holding the index?", not a
@@ -171,12 +194,31 @@ like-for-like comparison, and it should not be read as one.
 
 ## 6. Known biases and limits
 
-**Two broker endpoints disagree slightly.** Alpaca's `/v2/account` equity (our
-published NAV) and its `/v2/account/portfolio/history` daily series do not share
-a timing basis, so their figures for the same session can differ by several
-basis points. Both are broker figures, and neither is adjusted to match the
-other. Every snapshot publishes ours, theirs, and the difference in basis points
-(`broker_cross_check`), so the spread can be sized session by session.
+**Two broker endpoints, compared in every record.** Each snapshot publishes our
+NAV — Alpaca's `/v2/account` equity at the desk's after-close mark — beside the
+broker's daily figure from `/v2/account/portfolio/history`, with the difference in
+basis points (`broker_cross_check`). Both are broker figures, and neither is
+adjusted to match the other.
+
+- **A record without `basis` in that block** — the first records, from each paper
+  book's base record of 16 October 2026 — compares the session's NAV with the
+  broker's figure for the previous session. The broker's timestamp for a session's
+  daily figure falls on the following day in UTC, and those records read it by that
+  UTC date. Their difference is therefore the session's own return compounded with
+  the previous session's own difference between the two figures, described below:
+  `best_mdd`'s 2026-10-21 record shows 44.80 basis points for a session that returned
+  5.64, the rest being its 2026-10-20 difference. The Monday records carry no figure:
+  Friday's is dated Saturday.
+- **A record with `basis`** names the session it compares (`session_date`, with that
+  session's NAV as `nav_equity`) and compares it with the broker's figure for the
+  same session, read by its New York date. A record compares its own session when
+  the broker had served that figure when the record was written, and otherwise the
+  session before it.
+
+The desk's mark is taken after the official close, so on days when extended-hours
+prices move, the two figures for one session differ by tens of basis points
+(`best_mdd`, 2026-10-20: 39.1). Records are never rewritten to the newer rule; each
+states the one it was written under.
 
 **Gaps are gaps.** If the box was down, the series has a hole. Nothing is
 interpolated across it and no value is carried forward to hide it.
@@ -201,7 +243,7 @@ go forward, as declared events.
 returns, metrics or benchmarks, nor on order, fill and position detail.
 
 What replaces a delay is a test, and it is a stricter one. A cycle's detail is
-released only once that cycle has **actually executed** — that is, once the desk
+released only once that cycle has actually executed — that is, once the desk
 has recorded that the orders went to the broker. The desk computes its order plan
 after the close for the next open, and a plan can also sit unexecuted for days if
 a stage failed; either way it fails the execution test and stays private. A
@@ -209,6 +251,6 @@ date-based delay would never have added a guarantee here, only a wait: it is the
 execution check, not the calendar, that prevents publishing orders before they
 exist at the broker.
 
-As a result, **current holdings are public.** Anyone can see what the portfolios hold, more or less as they hold
-it. What they cannot see is what is about to be traded, or which strategy holds
-what.
+As a result, current holdings are public: anyone can see what the portfolios hold.
+What they cannot see is what is about to be traded, or which strategy holds what
+beyond its category.

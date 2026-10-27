@@ -10,9 +10,10 @@
 
 # CHAIN.jsonl : fusion par union, et c'est JUSTE.
 #
-# Deux publishers ecrivent dans ce depot -- le desk actions toutes les cinq
-# minutes, et le book en capital reel. Les deux AJOUTENT des lignes, jamais
-# n'en modifient. Ce journal est chaine PAR BOOK (`repo.chain_head(repo, book)`
+# Deux publishers ont ecrit dans ce depot -- le desk, toutes les cinq minutes, et
+# celui du book en capital reel, clos le 2026-10-16 (sa tache est desactivee
+# depuis). Les deux AJOUTENT des lignes, jamais n'en modifient, et la regle vaut
+# pour tout ecrivain a venir. Ce journal est chaine PAR BOOK (`repo.chain_head(repo, book)`
 # lit le dernier `hash` du book concerne), donc l'ordre des lignes ENTRE books
 # n'a aucune importance : seule compte la sequence propre a chaque book, que
 # l'union preserve. La fusion supprime la derniere course de push qui restait.
@@ -37,6 +38,9 @@ CHAIN.jsonl text eol=lf merge=union
 # CHAIN.jsonl et a ete applique aux deux.
 #
 # Le cout, assume : une course de push sur ce fichier fait echouer la
-# publication, qui se rejoue. Un echec rejouable coute une minute ; une chaine
-# de preuves cassee ne se repare pas.
+# publication, qui se rejoue -- le rebase en conflit est AVORTE, le commit reste
+# local, le run est signale CRIT et le suivant reessaie
+# (`publisher.gitpub._onto_remote_tip`, depuis le 2026-10-25 : avant, le rebase
+# restait a moitie fait et le run se disait pousse). Un echec rejouable coute une
+# minute ; une chaine de preuves cassee ne se repare pas.
 DETAIL_CHAIN.jsonl text eol=lf

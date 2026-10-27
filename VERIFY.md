@@ -30,13 +30,14 @@ Change any published number and this fails.
 ## 2. The records are chained
 
 Each snapshot's `prev_hash` is the `hash` of that book's previous session. The
-first is 64 zeroes. `CHAIN.jsonl` records, append-only, one line per snapshot
-with its file path, its SHA-256 as bytes on disk, its `prev_hash` and its `hash`.
+first is 64 zeroes; for each paper book that first record is its base, dated
+2026-10-16. `CHAIN.jsonl` records, append-only, one line per snapshot with its
+file path, its SHA-256 as bytes on disk, its `prev_hash` and its `hash`.
 
 This is what a timestamp alone cannot give you. OpenTimestamps proves a file
 existed; it says nothing about whether the *series* is complete. Because each
-session commits to the one before it, **a day cannot be removed later without
-breaking every record after it** — so selective omission, the failure mode that
+session commits to the one before it, a day cannot be removed later without
+breaking every record after it — so selective omission, the failure mode that
 actually matters for a track record, leaves evidence.
 
 ```bash
@@ -68,8 +69,8 @@ ots --no-cache verify books/<book>/snapshots/<date>.json.ots
 
 Two practical notes:
 
-* The proof and the file it commits to must sit **side by side with matching
-  names** (`<name>.json` and `<name>.json.ots`), which is how they are published —
+* The proof and the file it commits to must sit side by side with matching
+  names (`<name>.json` and `<name>.json.ots`), which is how they are published —
   so run the command from inside a clone of this repository, not on a file you
   downloaded on its own.
 * Verification asks a Bitcoin block explorer for the block header. If yours is
@@ -81,12 +82,13 @@ Two practical notes:
 
 A fresh proof is a commitment to a calendar server and is *incomplete* until the
 aggregating Bitcoin transaction confirms — normally within a few hours. Run
-`ots upgrade <file>.ots` to complete it (the publisher does this automatically on
-each run). An incomplete proof means "not yet confirmed", not "invalid".
+`ots upgrade <file>.ots` to complete it (each book's publisher does this on its
+runs; every proof of the closed `maker_01` is complete). An incomplete proof means
+"not yet confirmed", not "invalid".
 
 ### What a timestamp does NOT prove
 
-A proof establishes that a file existed **no later than** its block. It says
+A proof establishes that a file existed no later than its block. It says
 nothing about how much earlier, so it bounds back-dating in one direction only:
 it cannot show a record was written on the day it describes. Records chained in
 one act share one anchoring date, and none of them corroborates its own session.
@@ -113,10 +115,13 @@ after it. What it does not do is date a record on its own.
 
 ## 4. The numbers follow from the inputs
 
-`books/<book>/nav.csv` is the whole equity curve. Every published metric is
-computed from it by `compute_core_metrics` in the firm's `rvb.metrics` module,
-with `risk_free_annual` set to the value echoed in `metrics.json`. Recompute and
-compare.
+`books/<book>/nav.csv` is the whole equity curve, and every published metric
+follows from it under the conventions METHODOLOGY section 3 states. The firm's
+metrics module is not published; recompute with your own implementation of those
+conventions, at the `risk_free_annual` echoed beside each figure, and compare. The
+one convention a textbook implementation does not share: the maximum drawdown and
+the Calmar ratios are measured with a zero return prepended, so the record's first
+value is the first high-water mark.
 
 **Use `equity_adj`, not `equity`.** The file carries both on purpose: `equity` is
 the broker's raw figure, never rewritten, and `equity_adj` is that figure with
@@ -137,6 +142,10 @@ print(nav["equity_adj"].iloc[-1] / nav["equity_adj"].iloc[0] - 1)
 
 # the raw broker equity, for comparison — differs whenever a flow was declared
 print(nav["equity"].iloc[-1] / nav["equity"].iloc[0] - 1)
+
+# the maximum drawdown, base included (published once a book has 60 sessions)
+path = nav["equity_adj"] / nav["equity_adj"].iloc[0]
+print((path / path.cummax() - 1).min())
 ```
 
 Every declared movement is published with its evidence inside the snapshot for
@@ -144,7 +153,7 @@ the session it hit; `meta.json` lists them under `capital_events`.
 
 ### What a passing chain does not cover
 
-The chain proves that the records **in it** are complete and unaltered. It cannot
+The chain proves that the records in it are complete and unaltered. It cannot
 show that a record was right about the world: a record written under a wrong
 accounting convention verifies exactly like a correct one. `maker_01`'s earlier
 chains are kept unedited under `books/maker_01/superseded/`, with a written
@@ -154,10 +163,36 @@ verify those archives.
 
 ## 5. Against the broker
 
-Each **paper-account** snapshot's `broker_cross_check` carries Alpaca's own daily equity for the
-same date and the difference from our published NAV in basis points. The two
-endpoints have different timing bases and are expected to differ slightly; both
-are broker figures and neither is adjusted to match the other.
+Each paper-account snapshot's `broker_cross_check` carries Alpaca's own daily
+portfolio-history equity beside our published NAV, and the difference in basis
+points; both are broker figures and neither is adjusted to match the other. What a
+record compares is stated in the record itself (METHODOLOGY section 6):
+
+- A record without `basis` in that block — the first records, from each paper
+  book's base record of 16 October 2026 — compares its session's NAV
+  (`nav.equity`) with the broker's figure for the previous session. The broker's
+  timestamp for a session's figure falls on the following day in UTC; those records
+  read it by that date. The 2026-10-21 record's figure is therefore the 2026-10-20
+  close, and the Monday records carry none.
+- A record with `basis` compares the session it names (`session_date`, whose
+  NAV it repeats as `nav_equity`) with the broker's figure for that same session:
+  its own session when the broker had served that figure when the record was
+  written, and otherwise the one before.
+
+Check either kind against the NAV the record names:
+
+```python
+import json, pathlib
+
+for path in sorted(pathlib.Path("books").glob("*/snapshots/*.json")):
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    check = rec.get("broker_cross_check") or {}
+    ours = check.get("nav_equity", (rec.get("nav") or {}).get("equity"))
+    theirs = check.get("portfolio_history_equity")
+    if ours is None or not theirs:
+        continue
+    assert abs(round((ours / theirs - 1) * 10_000, 2) - check["delta_bps"]) < 0.011, path
+```
 
 ## 6. The trades, and the intraday curve
 
@@ -168,7 +203,7 @@ is accumulated rather than derived, so neither can live in the write-once chain.
 `DETAIL_CHAIN.jsonl` is where they are recorded instead: append-only, each entry
 linked to the last, one entry per version of each artefact.
 
-Two kinds of artefact are recorded, and **both are checkable**. `detail` is the
+Two kinds of artefact are recorded, and both are checkable. `detail` is the
 order/fill file, hashed as its own bytes. `intraday` is one session's slice of
 the accumulated 5-minute curve, hashed as the CSV that slice serialises to:
 the session's rows sorted by `timestamp`, written with a header, no index, and
@@ -213,14 +248,18 @@ stops it, so the script cannot report success on entries it never checked.
 A correction appends; it never overwrites. So a session whose detail changed
 appears twice, with two timestamps, and only the newest entry matches the file
 on disk. What this forbids is the quiet substitution: publishing one set of fills
-and later serving another with nothing to show for it.
+and later serving another with nothing to show for it. The six `detail` entries of
+2026-10-24 09:50 UTC revise each paper book's 2026-10-22 file in one field only,
+`open_pnl_pct`, from its fifth to its eighth significant digit (by at most 2.6e-5 of
+its value): the ratio had been computed from the open P&L before it was rounded to
+cents, and is now computed from the published figure.
 
 ### A superseded chain
 
 `maker_01` keeps its earlier chains under `books/maker_01/superseded/`: one in
 that folder itself and any later one in a named subfolder, each with its own
 `CHAIN.jsonl` starting from 64 zeroes. Each `CHAIN.jsonl` records the paths the
-files had **when they were published**, i.e. `books/maker_01/snapshots/...`, and
+files had when they were published, i.e. `books/maker_01/snapshots/...`, and
 those paths are now occupied by the live chain. Verify each archive against
 itself:
 
@@ -257,7 +296,7 @@ deserves checking, so it is published to be checked.
 
 **Every book carries these columns, filled in one of two ways.** The paper books
 adjust after the fact, as described below. `maker_01`'s collector removes
-movements at source by **unitisation**: a deposit buys units at the day's price,
+movements at source by unitisation: a deposit buys units at the day's price,
 so it moves `equity` and never the unit value. On that book `equity_adj` is the
 unit value and `adj_factor` is `equity_adj / equity`, so check 2 below, which
 reproduces the paper books' factor, does not apply to it. Checks 1 and 3 do;
