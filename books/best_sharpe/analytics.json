@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-26",
+  "as_of": "2026-10-27",
   "benchmark_cum": [
     {
       "cash": 0.0,
@@ -35,6 +35,11 @@
       "cash": 0.0010135173111496254,
       "date": "2026-10-26",
       "spy": 0.0024759771266875674
+    },
+    {
+      "cash": 0.001182055301309104,
+      "date": "2026-10-27",
+      "spy": 0.008338409741463382
     }
   ],
   "book": "best_sharpe",
@@ -63,24 +68,28 @@
     {
       "date": "2026-10-26",
       "return": 0.0035222678707018673
+    },
+    {
+      "date": "2026-10-27",
+      "return": 0.004387131478057693
     }
   ],
   "distribution": {
     "bins": [
       {
-        "count": 1,
+        "count": 2,
         "from": -0.00037268161772230357,
-        "to": 0.0010993693803042308
-      },
-      {
-        "count": 3,
-        "from": 0.0010993693803042308,
-        "to": 0.002571420378330765
+        "to": 0.0012139227475376952
       },
       {
         "count": 2,
-        "from": 0.002571420378330765,
-        "to": 0.004043471376357299
+        "from": 0.0012139227475376952,
+        "to": 0.002800527112797694
+      },
+      {
+        "count": 3,
+        "from": 0.002800527112797694,
+        "to": 0.004387131478057693
       }
     ]
   },
@@ -112,6 +121,10 @@
     {
       "date": "2026-10-26",
       "drawdown": 0.0
+    },
+    {
+      "date": "2026-10-27",
+      "drawdown": 0.0
     }
   ],
   "drawdown_consistent_with_metrics": true,
@@ -132,22 +145,22 @@
       "month": 10,
       "partial": true,
       "partial_reason": "record begins mid-month",
-      "return": 0.012753089080587587,
-      "sessions": 6,
+      "return": 0.017196170037193204,
+      "sessions": 7,
       "sessions_possible": 22,
       "year": 2026
     }
   ],
-  "published_at": "2026-10-27T22:05:02+00:00",
+  "published_at": "2026-10-27T22:20:02+00:00",
   "quantiles": [
     {
       "horizon": "Daily",
-      "max": 0.004043471376357299,
-      "median": 0.002193250901444399,
+      "max": 0.004387131478057693,
+      "median": 0.002317468277688306,
       "min": -0.00037268161772230357,
-      "n": 6,
-      "q25": 0.0013518150045994104,
-      "q75": 0.003221067972448477
+      "n": 7,
+      "q25": 0.001590887844799771,
+      "q75": 0.0037828696235295833
     }
   ],
   "risk_free_annual": 0.04242857142857142,
@@ -155,7 +168,7 @@
   "rolling_sharpe": {},
   "rolling_sortino": {},
   "rolling_volatility": {},
-  "sessions": 6,
+  "sessions": 7,
   "summary": {},
-  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 6."
+  "withheld_note": "Rolling statistics and the annualised summary need at least 60 sessions; this book has 7."
 }
