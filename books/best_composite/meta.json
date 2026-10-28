@@ -58,7 +58,7 @@
   "inception_anchored_to_funded_capital": false,
   "inception_note": "The record starts with the 2026-10-19 session. Returns are measured from the account's value at the 2026-10-16 close, when the book already held positions; it is not the capital the account was funded with.",
   "initial_capital": 990826.48,
-  "intraday_points": 600,
+  "intraday_points": 601,
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
@@ -66,9 +66,9 @@
   "latest_detail_session": "2026-10-26",
   "live": {
     "adj_factor": 1.0,
-    "at": "2026-10-28T17:20:00+00:00",
-    "cumulative_return": 0.0005610669589695139,
-    "equity": 991382.4,
+    "at": "2026-10-28T17:25:00+00:00",
+    "cumulative_return": 0.0005423351220892325,
+    "equity": 991363.84,
     "marked": false,
     "session_date": "2026-10-28",
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -80,7 +80,7 @@
     "note": "The source portfolio contained member(s) this book cannot trade (no venue); surviving weights were renormalised pro-rata. The source dossier's metrics include the dropped leg(s); this record measures the book as traded.",
     "source_portfolio_differs": true
   },
-  "published_at": "2026-10-28T17:20:03+00:00",
+  "published_at": "2026-10-28T17:25:03+00:00",
   "record_base_session": "2026-10-16",
   "record_start": "2026-10-19",
   "record_start_anchored": true,
