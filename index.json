@@ -47,8 +47,8 @@
       "live": {
         "adj_factor": 1.0,
         "at": "2026-10-30T20:00:00+00:00",
-        "cumulative_return": 0.010483242400623594,
-        "equity": 991265.67,
+        "cumulative_return": 0.010832678037451693,
+        "equity": 991608.46,
         "marked": false,
         "session_date": "2026-10-30",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -322,8 +322,8 @@
       "live": {
         "adj_factor": 1.0,
         "at": "2026-10-30T20:00:00+00:00",
-        "cumulative_return": 0.012650495612053225,
-        "equity": 1009257.6,
+        "cumulative_return": 0.01272185470139564,
+        "equity": 1009328.72,
         "marked": false,
         "session_date": "2026-10-30",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -389,8 +389,8 @@
       "live": {
         "adj_factor": 1.0,
         "at": "2026-10-30T20:00:00+00:00",
-        "cumulative_return": 0.011632711892703096,
-        "equity": 999581.01,
+        "cumulative_return": 0.011675390326000512,
+        "equity": 999623.18,
         "marked": false,
         "session_date": "2026-10-30",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -564,7 +564,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-10-30T20:00:03+00:00",
+  "published_at": "2026-10-30T20:05:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }

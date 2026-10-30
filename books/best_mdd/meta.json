@@ -68,8 +68,8 @@
   "live": {
     "adj_factor": 1.0,
     "at": "2026-10-30T20:00:00+00:00",
-    "cumulative_return": 0.012650495612053225,
-    "equity": 1009257.6,
+    "cumulative_return": 0.01272185470139564,
+    "equity": 1009328.72,
     "marked": false,
     "session_date": "2026-10-30",
     "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -81,7 +81,7 @@
     "note": "The source portfolio contained member(s) this book cannot trade (no venue); surviving weights were renormalised pro-rata. The source dossier's metrics include the dropped leg(s); this record measures the book as traded.",
     "source_portfolio_differs": true
   },
-  "published_at": "2026-10-30T20:00:03+00:00",
+  "published_at": "2026-10-30T20:05:03+00:00",
   "record_base_session": "2026-10-16",
   "record_start": "2026-10-19",
   "record_start_anchored": true,
