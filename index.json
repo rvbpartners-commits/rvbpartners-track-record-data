@@ -47,8 +47,8 @@
       "live": {
         "adj_factor": 1.0,
         "at": "2026-11-03T21:00:00+00:00",
-        "cumulative_return": 0.002000067687290441,
-        "equity": 982943.83,
+        "cumulative_return": 0.001707758492563105,
+        "equity": 982657.08,
         "marked": false,
         "session_date": "2026-11-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -564,7 +564,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-03T21:00:03+00:00",
+  "published_at": "2026-11-03T21:05:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
