@@ -110,7 +110,15 @@
       "label": "RVB-GROWTH-100K",
       "last_session": "2026-11-02",
       "latest_detail_session": "2026-10-30",
-      "live": null,
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-11-03T20:05:00+00:00",
+        "cumulative_return": 0.0022330495204252454,
+        "equity": 98277.7,
+        "marked": false,
+        "session_date": "2026-11-03",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
       "paths": {
         "analytics": "books/best_cagr_100k/analytics.json",
         "attributed": "books/best_cagr_100k/attributed.csv",
@@ -171,9 +179,9 @@
       "latest_detail_session": "2026-10-30",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-03T20:00:00+00:00",
-        "cumulative_return": -2.4605721074433262e-05,
-        "equity": 990802.1,
+        "at": "2026-11-03T20:05:00+00:00",
+        "cumulative_return": 2.7552755756055092e-05,
+        "equity": 990853.78,
         "marked": false,
         "session_date": "2026-11-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -238,9 +246,9 @@
       "latest_detail_session": "2026-10-30",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-03T20:00:00+00:00",
-        "cumulative_return": -0.0004524998319401785,
-        "equity": 99027.03,
+        "at": "2026-11-03T20:05:00+00:00",
+        "cumulative_return": -0.00039900330931508243,
+        "equity": 99032.33,
         "marked": false,
         "session_date": "2026-11-03",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -532,7 +540,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-03T20:00:03+00:00",
+  "published_at": "2026-11-03T20:05:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
