@@ -1,0 +1,101 @@
+{
+  "account_number": null,
+  "account_ref": "sha256:626cf6c1927be4f5",
+  "attributed_category_contributions": {
+    "mean_reversion": 0.002384454497264956,
+    "momentum": 0.0006414040434421477
+  },
+  "book": "best_composite",
+  "broker_cross_check": {
+    "basis": "same_session_new_york_date",
+    "delta_bps": 1.05,
+    "nav_equity": 990256.99,
+    "note": "the desk's after-close mark of session_date (nav_equity) against Alpaca's daily portfolio-history figure for the same session, dated by its America/New_York date; both are broker figures and neither is adjusted to match the other",
+    "portfolio_history_equity": 990152.68,
+    "session_date": "2026-11-02"
+  },
+  "capital_event": null,
+  "cumulative_return": 0.0034453560425635743,
+  "daily_return": 0.0040224306,
+  "desk_manifest_hash": "114eae8b802565e75c8eb62a4cfa29d4c0e3a1bdb03e00474cffab721fb2b1a7",
+  "disclosure": {
+    "account_type": "alpaca_paper",
+    "annualised_metrics_gated_at_sessions": 60,
+    "book_returns": "exact — read from the broker account endpoint",
+    "capital_at_risk": false,
+    "detail_lag_days": 0,
+    "detail_release_rule": "published once the cycle has executed; the pending order plan is never published",
+    "fills": "simulated by the broker's paper engine",
+    "gips": "GIPS-informed, NOT GIPS-compliant (no third-party verification)",
+    "market_data_feed": "IEX (free tier, ~2-3% of consolidated volume)",
+    "not_investment_advice": true,
+    "notice": "Alpaca PAPER account. No capital at risk; fills are simulated. Past performance is not indicative of future results. Not investment advice, an offer, or a solicitation.",
+    "strategy_identity": "not published; holdings are grouped by category",
+    "strategy_returns": "attributed model — pro-rata over write-ahead intents, aggregated to strategy category"
+  },
+  "hash": "d04972cbb1292169b0644c25f4770ac7bead1d3346e1d85c081f44977448f3d3",
+  "metrics": {
+    "annualised_basis": 252,
+    "computed_by": "rvb.metrics.compute_core_metrics",
+    "insufficient_history": {
+      "have": 12,
+      "label_en": "insufficient history — 12/60",
+      "label_fr": "historique insuffisant — 12/60",
+      "need": 60,
+      "suppressed": [
+        "sharpe",
+        "sharpe_gross",
+        "sharpe_autocorr_adj",
+        "sortino",
+        "sortino_gross",
+        "calmar",
+        "calmar_gross",
+        "cagr",
+        "volatility",
+        "max_drawdown",
+        "var_normal_95",
+        "skew",
+        "kurtosis",
+        "ev_excess_annual",
+        "win_rate"
+      ]
+    },
+    "risk_free_annual": 0.04220833333333333,
+    "risk_free_source": "FRED DGS3MO",
+    "sharpe_convention": "excess of risk_free_annual (see risk_free_source)",
+    "values": {
+      "best_day": 0.004022430581378744,
+      "cagr": null,
+      "calmar": null,
+      "calmar_gross": null,
+      "cumulative_return": 0.0034453560425635743,
+      "ev_excess_annual": null,
+      "kurtosis": null,
+      "max_drawdown": null,
+      "n_obs": 12,
+      "negative_days": 6,
+      "positive_days": 6,
+      "sharpe": null,
+      "sharpe_autocorr_adj": null,
+      "sharpe_gross": null,
+      "skew": null,
+      "sortino": null,
+      "sortino_gross": null,
+      "var_normal_95": null,
+      "volatility": null,
+      "win_rate": null,
+      "worst_day": -0.0020588242458303707
+    }
+  },
+  "nav": {
+    "cash": 118324.67,
+    "equity": 994240.23,
+    "source": "alpaca /v2/account equity, read at the desk's after-close mark"
+  },
+  "prev_hash": "4d49d0a58bb177c3a7a91a8ae1cfa128f2afe9df26419f3cc7ad2cc4b52cc130",
+  "published_at": "2026-11-04T00:05:03+00:00",
+  "return_basis": "time-weighted; no external flow on this session",
+  "schema": "rvb.track-record.snapshot/5",
+  "session_date": "2026-11-03",
+  "sessions": 12
+}
