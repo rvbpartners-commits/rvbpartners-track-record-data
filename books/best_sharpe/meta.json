@@ -41,9 +41,9 @@
       "weight": 0.310769
     }
   ],
-  "chain_head": "93e96deee8cd6dd9e603bc9c659860a1662e66e44e8a73956356bc65551333ef",
+  "chain_head": "c094cc2d545a798a8711a660bf31a5c23dd07470217ec4b06f523a815158db4b",
   "currency": "USD",
-  "desk_manifest_hash": "3dd22fedaae81958fba67d8926ec1b3a7b408652ee23c8ff05f84fbe8a9d4cd1",
+  "desk_manifest_hash": "b1f30d020f2676306e5e0440068f397e18de5cd6551dc95f2d5f84954cf64220",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-10-16",
@@ -57,7 +57,8 @@
     "2026-10-29",
     "2026-10-30",
     "2026-11-02",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-05"
   ],
   "inception": "2026-10-16",
   "inception_anchored_to_funded_capital": false,
@@ -67,8 +68,8 @@
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-11-05",
-  "latest_detail_session": "2026-11-03",
+  "last_session": "2026-11-06",
+  "latest_detail_session": "2026-11-05",
   "live": {
     "adj_factor": 1.0,
     "at": "2026-11-06T21:00:00+00:00",
@@ -80,7 +81,7 @@
   },
   "min_sessions_for_annualised": 60,
   "portfolio_derivation": null,
-  "published_at": "2026-11-06T23:05:03+00:00",
+  "published_at": "2026-11-06T23:20:03+00:00",
   "record_base_session": "2026-10-16",
   "record_start": "2026-10-19",
   "record_start_anchored": true,
@@ -88,5 +89,5 @@
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 15
+  "sessions": 16
 }
