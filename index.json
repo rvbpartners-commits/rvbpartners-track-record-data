@@ -110,15 +110,7 @@
       "label": "RVB-GROWTH-100K",
       "last_session": "2026-11-05",
       "latest_detail_session": "2026-11-03",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-06T15:10:00+00:00",
-        "cumulative_return": -0.02036758991269827,
-        "equity": 96061.51,
-        "marked": false,
-        "session_date": "2026-11-06",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_cagr_100k/analytics.json",
         "attributed": "books/best_cagr_100k/attributed.csv",
@@ -179,9 +171,9 @@
       "latest_detail_session": "2026-11-03",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-06T15:10:00+00:00",
-        "cumulative_return": -0.004294969993131392,
-        "equity": 986570.91,
+        "at": "2026-11-06T15:15:00+00:00",
+        "cumulative_return": -0.0035766504746622685,
+        "equity": 987282.64,
         "marked": false,
         "session_date": "2026-11-06",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -246,9 +238,9 @@
       "latest_detail_session": "2026-11-03",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-06T15:10:00+00:00",
-        "cumulative_return": -0.004171719396405815,
-        "equity": 98658.56,
+        "at": "2026-11-06T15:15:00+00:00",
+        "cumulative_return": -0.003446185425407311,
+        "equity": 98730.44,
         "marked": false,
         "session_date": "2026-11-06",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -540,7 +532,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-06T15:10:03+00:00",
+  "published_at": "2026-11-06T15:15:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
