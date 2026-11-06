@@ -6,39 +6,39 @@
       "code": "MR",
       "cost_basis": -890.47,
       "label": "Mean reversion",
-      "market_value": -1270.36,
+      "market_value": -1463.19,
       "n_long": 2,
       "n_positions": 4,
       "n_short": 2,
-      "open_pnl": -379.89,
-      "open_pnl_pct": -0.052944349302217204,
+      "open_pnl": -572.72,
+      "open_pnl_pct": -0.07981859941658333,
       "partial": false,
       "positions": [
         {
           "avg_price": 194.14,
           "cost_basis": 1553.12,
-          "mark": 187.68,
+          "mark": 169.53,
           "qty": 8.0,
           "symbol": "NTAP"
         },
         {
           "avg_price": 227.04,
           "cost_basis": 1589.28,
-          "mark": 188.75,
+          "mark": 174.63,
           "qty": 7.0,
           "symbol": "DDOG"
         },
         {
           "avg_price": 34.222203,
           "cost_basis": -2019.109977,
-          "mark": 35.19,
+          "mark": 35.385,
           "qty": -59.0,
           "symbol": "CMG"
         },
         {
           "avg_price": 71.92,
           "cost_basis": -2013.76,
-          "mark": 72.03,
+          "mark": 69.79,
           "qty": -28.0,
           "symbol": "PNR"
         }
@@ -50,60 +50,60 @@
       "code": "MOM",
       "cost_basis": 6857.61,
       "label": "Momentum",
-      "market_value": 7254.38,
+      "market_value": 7085.97,
       "n_long": 7,
       "n_positions": 7,
       "n_short": 0,
-      "open_pnl": 396.77,
-      "open_pnl_pct": 0.05785837044418959,
+      "open_pnl": 228.36,
+      "open_pnl_pct": 0.033300243150024285,
       "partial": false,
       "positions": [
         {
           "avg_price": 72.64031976058173,
           "cost_basis": 1784.8182224825532,
-          "mark": 72.74,
+          "mark": 72.675,
           "qty": 24.570627282,
           "symbol": "TECH"
         },
         {
           "avg_price": 23.47794821684388,
           "cost_basis": 835.7386451350013,
-          "mark": 26.11,
+          "mark": 24.635,
           "qty": 35.596749657000004,
           "symbol": "HST"
         },
         {
           "avg_price": 18.737722099501024,
           "cost_basis": 1242.736062214716,
-          "mark": 19.245,
+          "mark": 18.98,
           "qty": 66.322686163,
           "symbol": "VTRS"
         },
         {
           "avg_price": 24.037173,
           "cost_basis": 723.1617788481002,
-          "mark": 26.5,
+          "mark": 25.63,
           "qty": 30.085142660000002,
           "symbol": "BAX"
         },
         {
           "avg_price": 31.980466379098118,
           "cost_basis": 795.6092462655902,
-          "mark": 33.88,
+          "mark": 32.24,
           "qty": 24.8779751,
           "symbol": "BEN"
         },
         {
           "avg_price": 29.479999999999997,
           "cost_basis": 653.6700420038799,
-          "mark": 30.89,
+          "mark": 30.6,
           "qty": 22.173339280999997,
           "symbol": "GEN"
         },
         {
           "avg_price": 66.759946,
           "cost_basis": 821.8735878113979,
-          "mark": 76.05,
+          "mark": 74.155,
           "qty": 12.310878559,
           "symbol": "CNC"
         }
@@ -115,72 +115,72 @@
       "code": "SEA",
       "cost_basis": 43486.24,
       "label": "Seasonal",
-      "market_value": 44760.21,
+      "market_value": 43984.5,
       "n_long": 8,
       "n_positions": 8,
       "n_short": 0,
-      "open_pnl": 1403.28,
-      "open_pnl_pct": 0.03236575952748786,
-      "partial": true,
+      "open_pnl": 498.26,
+      "open_pnl_pct": 0.01145787649325076,
+      "partial": false,
       "positions": [
         {
           "avg_price": 81.244128031207,
           "cost_basis": 13015.897994258139,
-          "mark": 83.61,
+          "mark": 82.55,
           "qty": 160.20724586099996,
           "symbol": "MOO"
         },
         {
           "avg_price": 519.567419729224,
           "cost_basis": 16830.328800796753,
-          "mark": 533.04,
+          "mark": 514.56,
           "qty": 32.39296415,
           "symbol": "DIA"
         },
         {
           "avg_price": 108.06540384740329,
           "cost_basis": 502.98838733618413,
-          "mark": 103.58,
+          "mark": 98.935,
           "qty": 4.6544811699999995,
           "symbol": "IGV"
         },
         {
           "avg_price": 87.81544058152674,
           "cost_basis": 12489.1275493799,
-          "mark": 91.96,
+          "mark": 91.29,
           "qty": 142.22017753,
           "symbol": "XLP"
         },
         {
           "avg_price": 84.6,
           "cost_basis": 129.31195369859998,
-          "mark": null,
+          "mark": 84.99,
           "qty": 1.528510091,
           "symbol": "GXC"
         },
         {
           "avg_price": 164.2377085938378,
           "cost_basis": 406.91988026556277,
-          "mark": 169.43,
+          "mark": 162.49,
           "qty": 2.4776276029999997,
           "symbol": "XLI"
         },
         {
           "avg_price": 51.536,
           "cost_basis": 38.74576769056,
-          "mark": 53.88,
+          "mark": 52.35,
           "qty": 0.75181946,
           "symbol": "XLB"
         },
         {
           "avg_price": 178.334,
           "cost_basis": 72.922540068274,
-          "mark": 189.68,
+          "mark": 184.99,
           "qty": 0.408909911,
           "symbol": "XLV"
         }
       ],
-      "unmarked": 1
+      "unmarked": 0
     }
   ],
   "fills": [
@@ -546,11 +546,15 @@
       "symbol": "PNR"
     }
   ],
-  "positions_as_of": "2026-11-04",
+  "positions_as_of": "2026-11-05",
   "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
   "reconciliation": {
-    "comparable": false,
-    "note": "some categories hold unmarked positions; no total to compare"
+    "account_invested": 49459.06,
+    "as_of_nav_session": "2026-11-05",
+    "comparable": true,
+    "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
+    "positions_market_value": 49607.28,
+    "unreconciled_usd": 148.22
   },
   "released_under_lag_days": 0,
   "session_date": "2026-11-03"
