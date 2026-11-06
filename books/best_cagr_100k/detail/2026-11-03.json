@@ -6,60 +6,60 @@
       "code": "MR",
       "cost_basis": 5272.66,
       "label": "Mean reversion",
-      "market_value": 3819.49,
+      "market_value": 2898.88,
       "n_long": 5,
       "n_positions": 7,
       "n_short": 2,
-      "open_pnl": -1453.17,
-      "open_pnl_pct": -0.06807890062132131,
+      "open_pnl": -2373.78,
+      "open_pnl_pct": -0.11120813994018602,
       "partial": false,
       "positions": [
         {
           "avg_price": 128.575,
           "cost_basis": 257.15,
-          "mark": 129.38,
+          "mark": 122.48,
           "qty": 2.0,
           "symbol": "FTNT"
         },
         {
           "avg_price": 242.56,
           "cost_basis": 242.56,
-          "mark": 188.75,
+          "mark": 174.63,
           "qty": 1.0,
           "symbol": "DDOG"
         },
         {
           "avg_price": 194.14,
           "cost_basis": 6406.62,
-          "mark": 187.68,
+          "mark": 169.53,
           "qty": 33.0,
           "symbol": "NTAP"
         },
         {
           "avg_price": 227.04,
           "cost_basis": 6357.12,
-          "mark": 188.75,
+          "mark": 174.63,
           "qty": 28.0,
           "symbol": "DDOG"
         },
         {
           "avg_price": 34.26358927350427,
           "cost_basis": -4008.839945,
-          "mark": 35.19,
+          "mark": 35.385,
           "qty": -117.0,
           "symbol": "CMG"
         },
         {
           "avg_price": 45.57,
           "cost_basis": 45.57,
-          "mark": 44.45,
+          "mark": 43.45,
           "qty": 1.0,
           "symbol": "APA"
         },
         {
           "avg_price": 71.92,
           "cost_basis": -4027.52,
-          "mark": 72.03,
+          "mark": 69.79,
           "qty": -56.0,
           "symbol": "PNR"
         }
@@ -71,60 +71,60 @@
       "code": "MOM",
       "cost_basis": 18931.47,
       "label": "Momentum",
-      "market_value": 20028.37,
+      "market_value": 19563.42,
       "n_long": 7,
       "n_positions": 7,
       "n_short": 0,
-      "open_pnl": 1096.91,
-      "open_pnl_pct": 0.057941096739444975,
+      "open_pnl": 631.95,
+      "open_pnl_pct": 0.03338093014421625,
       "partial": false,
       "positions": [
         {
           "avg_price": 72.63703695172137,
           "cost_basis": 4927.446835539324,
-          "mark": 72.74,
+          "mark": 72.675,
           "qty": 67.83656165400001,
           "symbol": "TECH"
         },
         {
           "avg_price": 23.519952842189664,
           "cost_basis": 2311.4167894814545,
-          "mark": 26.11,
+          "mark": 24.635,
           "qty": 98.274720404,
           "symbol": "HST"
         },
         {
           "avg_price": 18.756357467043895,
           "cost_basis": 3434.45785783865,
-          "mark": 19.245,
+          "mark": 18.98,
           "qty": 183.108999915,
           "symbol": "VTRS"
         },
         {
           "avg_price": 66.735586,
           "cost_basis": 2268.266656811338,
-          "mark": 76.05,
+          "mark": 74.155,
           "qty": 33.988862506,
           "symbol": "CNC"
         },
         {
           "avg_price": 29.420089,
           "cost_basis": 1801.0371359898559,
-          "mark": 30.89,
+          "mark": 30.6,
           "qty": 61.217936356,
           "symbol": "GEN"
         },
         {
           "avg_price": 23.97,
           "cost_basis": 1990.98364470267,
-          "mark": 26.5,
+          "mark": 25.63,
           "qty": 83.061478711,
           "symbol": "BAX"
         },
         {
           "avg_price": 31.999056049241553,
           "cost_basis": 2197.8587550362445,
-          "mark": 33.88,
+          "mark": 32.24,
           "qty": 68.68511219999999,
           "symbol": "BEN"
         }
@@ -136,25 +136,25 @@
       "code": "TF",
       "cost_basis": 8657.86,
       "label": "Trend following",
-      "market_value": 8269.83,
+      "market_value": 8374.93,
       "n_long": 2,
       "n_positions": 2,
       "n_short": 0,
-      "open_pnl": -388.03,
-      "open_pnl_pct": -0.04481824851476086,
+      "open_pnl": -282.93,
+      "open_pnl_pct": -0.032678986295599025,
       "partial": false,
       "positions": [
         {
           "avg_price": 152.58961015852103,
           "cost_basis": 4237.055811685398,
-          "mark": 145.37,
+          "mark": 148.18,
           "qty": 27.76765605,
           "symbol": "USO"
         },
         {
           "avg_price": 32.66065742093,
           "cost_basis": 4420.801486602432,
-          "mark": 31.275,
+          "mark": 31.475,
           "qty": 135.35555728799997,
           "symbol": "DBC"
         }
@@ -166,72 +166,72 @@
       "code": "SEA",
       "cost_basis": 31639.7,
       "label": "Seasonal",
-      "market_value": 32556.53,
+      "market_value": 31993.23,
       "n_long": 8,
       "n_positions": 8,
       "n_short": 0,
-      "open_pnl": 1011.84,
-      "open_pnl_pct": 0.032076396950943435,
-      "partial": true,
+      "open_pnl": 353.53,
+      "open_pnl_pct": 0.011173621545782848,
+      "partial": false,
       "positions": [
         {
           "avg_price": 81.25432111154365,
           "cost_basis": 9468.79704865704,
-          "mark": 83.61,
+          "mark": 82.55,
           "qty": 116.53284304300003,
           "symbol": "MOO"
         },
         {
           "avg_price": 519.6929382615646,
           "cost_basis": 12245.138269942827,
-          "mark": 533.04,
+          "mark": 514.56,
           "qty": 23.562256418,
           "symbol": "DIA"
         },
         {
           "avg_price": 107.95128556533547,
           "cost_basis": 365.48140337513166,
-          "mark": 103.58,
+          "mark": 98.935,
           "qty": 3.3856141820000003,
           "symbol": "IGV"
         },
         {
           "avg_price": 87.86063204671356,
           "cost_basis": 9089.117694503471,
-          "mark": 91.96,
+          "mark": 91.29,
           "qty": 103.44926371200002,
           "symbol": "XLP"
         },
         {
           "avg_price": 84.65354109307768,
           "cost_basis": 95.00693277988806,
-          "mark": null,
+          "mark": 84.99,
           "qty": 1.1223031140000002,
           "symbol": "GXC"
         },
         {
           "avg_price": 164.44144080512504,
           "cost_basis": 296.35584120189026,
-          "mark": 169.43,
+          "mark": 162.49,
           "qty": 1.802196817,
           "symbol": "XLI"
         },
         {
           "avg_price": 51.536,
           "cost_basis": 27.68829036872,
-          "mark": 53.88,
+          "mark": 52.35,
           "qty": 0.537261145,
           "symbol": "XLB"
         },
         {
           "avg_price": 178.334,
           "cost_basis": 52.111510110321994,
-          "mark": 189.68,
+          "mark": 184.99,
           "qty": 0.292212983,
           "symbol": "XLV"
         }
       ],
-      "unmarked": 1
+      "unmarked": 0
     }
   ],
   "fills": [
@@ -707,11 +707,15 @@
       "symbol": "CMG"
     }
   ],
-  "positions_as_of": "2026-11-04",
+  "positions_as_of": "2026-11-05",
   "positions_note": "Read at publication time, NOT at the close of session_date: these are the positions standing after any later session's open. The session key is the last cycle cleared for release under the detail lag; it is not the date these holdings were held on.",
   "reconciliation": {
-    "comparable": false,
-    "note": "some categories hold unmarked positions; no total to compare"
+    "account_invested": 62780.66,
+    "as_of_nav_session": "2026-11-05",
+    "comparable": true,
+    "note": "published holdings against the account's own invested balance (equity minus cash) on the latest NAV session. A non-zero residual means our position records and the broker's balance disagree; the NAV itself is the broker's figure and is unaffected",
+    "positions_market_value": 62830.46,
+    "unreconciled_usd": 49.8
   },
   "released_under_lag_days": 0,
   "session_date": "2026-11-03"
