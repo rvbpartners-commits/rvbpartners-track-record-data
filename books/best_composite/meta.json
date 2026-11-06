@@ -41,9 +41,9 @@
       "weight": 0.81868
     }
   ],
-  "chain_head": "de9d1a96289c3b19d72edb953b8f01dceb295cbf12060a20f6341638778edbc5",
+  "chain_head": "0533eeef39c91e2da1e8e56477420000e2b7b01be4f223ec3614a8afb17fd492",
   "currency": "USD",
-  "desk_manifest_hash": "5cee97dfb5a9d43941eb9be546d268d8ee88d6a13e0acfda4999a3caa6f4a5d7",
+  "desk_manifest_hash": "ad0b707c547296d5f392c826f6b3eabb6e156774c6a1b3ca7623741e57a5d5f0",
   "detail_lag_days": 0,
   "detail_sessions": [
     "2026-10-16",
@@ -68,7 +68,7 @@
   "intraday_pre_trading_sessions": [],
   "intraday_resolution": "5 minutes (broker equity)",
   "intraday_sessions_rejected": [],
-  "last_session": "2026-11-04",
+  "last_session": "2026-11-05",
   "latest_detail_session": "2026-11-03",
   "live": {
     "adj_factor": 1.0,
@@ -86,7 +86,7 @@
     "note": "The source portfolio contained member(s) this book cannot trade (no venue); surviving weights were renormalised pro-rata. The source dossier's metrics include the dropped leg(s); this record measures the book as traded.",
     "source_portfolio_differs": true
   },
-  "published_at": "2026-11-05T23:55:03+00:00",
+  "published_at": "2026-11-06T00:05:03+00:00",
   "record_base_session": "2026-10-16",
   "record_start": "2026-10-19",
   "record_start_anchored": true,
@@ -94,5 +94,5 @@
     "label": "16:00 America/New_York",
     "note": "the desk marks after the close, so a session appears on the curve once it has closed and been marked"
   },
-  "sessions": 14
+  "sessions": 15
 }
