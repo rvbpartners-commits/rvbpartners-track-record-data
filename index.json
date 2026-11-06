@@ -169,15 +169,7 @@
       "label": "RVB-BLEND-CORE",
       "last_session": "2026-11-05",
       "latest_detail_session": "2026-11-03",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-06T20:15:00+00:00",
-        "cumulative_return": -0.005246751176855913,
-        "equity": 985627.86,
-        "marked": false,
-        "session_date": "2026-11-06",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_composite/analytics.json",
         "attributed": "books/best_composite/attributed.csv",
@@ -236,15 +228,7 @@
       "label": "RVB-BLEND-100K",
       "last_session": "2026-11-05",
       "latest_detail_session": "2026-11-03",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-06T20:15:00+00:00",
-        "cumulative_return": -0.0049946574133159505,
-        "equity": 98577.03,
-        "marked": false,
-        "session_date": "2026-11-06",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_composite_100k/analytics.json",
         "attributed": "books/best_composite_100k/attributed.csv",
@@ -303,15 +287,7 @@
       "label": "RVB-DD-DEF",
       "last_session": "2026-11-05",
       "latest_detail_session": "2026-11-03",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-06T20:15:00+00:00",
-        "cumulative_return": -0.002223168749125648,
-        "equity": 994433.77,
-        "marked": false,
-        "session_date": "2026-11-06",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_mdd/analytics.json",
         "attributed": "books/best_mdd/attributed.csv",
@@ -540,7 +516,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-06T20:15:03+00:00",
+  "published_at": "2026-11-06T20:20:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
