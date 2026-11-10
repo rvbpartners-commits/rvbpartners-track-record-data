@@ -112,9 +112,9 @@
       "latest_detail_session": "2026-11-06",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-10T14:40:00+00:00",
-        "cumulative_return": -0.022199247328616223,
-        "equity": 95881.9,
+        "at": "2026-11-10T14:45:00+00:00",
+        "cumulative_return": -0.022105527983077078,
+        "equity": 95891.09,
         "marked": false,
         "session_date": "2026-11-10",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -179,9 +179,9 @@
       "latest_detail_session": "2026-11-06",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-10T14:40:00+00:00",
-        "cumulative_return": 0.0006705008529848122,
-        "equity": 991490.83,
+        "at": "2026-11-10T14:45:00+00:00",
+        "cumulative_return": 0.00055657575885526,
+        "equity": 991377.95,
         "marked": false,
         "session_date": "2026-11-10",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -246,9 +246,9 @@
       "latest_detail_session": "2026-11-06",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-10T14:40:00+00:00",
-        "cumulative_return": 0.0013973695457014657,
-        "equity": 99210.3,
+        "at": "2026-11-10T14:45:00+00:00",
+        "cumulative_return": 0.0012739237963232952,
+        "equity": 99198.07,
         "marked": false,
         "session_date": "2026-11-10",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -311,15 +311,7 @@
       "label": "RVB-DD-DEF",
       "last_session": "2026-11-09",
       "latest_detail_session": "2026-11-06",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-10T14:40:00+00:00",
-        "cumulative_return": 0.0020744404334165356,
-        "equity": 998716.98,
-        "marked": false,
-        "session_date": "2026-11-10",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_mdd/analytics.json",
         "attributed": "books/best_mdd/attributed.csv",
@@ -548,7 +540,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-10T14:40:03+00:00",
+  "published_at": "2026-11-10T14:45:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
