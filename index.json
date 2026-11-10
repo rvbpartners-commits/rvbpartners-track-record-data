@@ -110,15 +110,7 @@
       "label": "RVB-GROWTH-100K",
       "last_session": "2026-11-09",
       "latest_detail_session": "2026-11-06",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-10T20:40:00+00:00",
-        "cumulative_return": -0.01932066629865592,
-        "equity": 96164.17,
-        "marked": false,
-        "session_date": "2026-11-10",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_cagr_100k/analytics.json",
         "attributed": "books/best_cagr_100k/attributed.csv",
@@ -177,7 +169,15 @@
       "label": "RVB-BLEND-CORE",
       "last_session": "2026-11-09",
       "latest_detail_session": "2026-11-06",
-      "live": null,
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-11-10T20:45:00+00:00",
+        "cumulative_return": 0.002015791907378217,
+        "equity": 992823.78,
+        "marked": false,
+        "session_date": "2026-11-10",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
       "paths": {
         "analytics": "books/best_composite/analytics.json",
         "attributed": "books/best_composite/attributed.csv",
@@ -238,9 +238,9 @@
       "latest_detail_session": "2026-11-06",
       "live": {
         "adj_factor": 1.0,
-        "at": "2026-11-10T20:40:00+00:00",
-        "cumulative_return": 0.0027216608227602634,
-        "equity": 99341.5,
+        "at": "2026-11-10T20:45:00+00:00",
+        "cumulative_return": 0.002717219602014209,
+        "equity": 99341.06,
         "marked": false,
         "session_date": "2026-11-10",
         "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
@@ -532,7 +532,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-10T20:40:03+00:00",
+  "published_at": "2026-11-10T20:45:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
