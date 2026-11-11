@@ -313,12 +313,12 @@
           "weight": 0.108135
         }
       ],
-      "cumulative_return": 0.002229871205773337,
+      "cumulative_return": 0.004085899848300434,
       "inception": "2026-10-16",
       "initial_capital": 996649.49,
       "label": "RVB-DD-DEF",
-      "last_session": "2026-11-10",
-      "latest_detail_session": "2026-11-09",
+      "last_session": "2026-11-11",
+      "latest_detail_session": "2026-11-10",
       "live": {
         "adj_factor": 1.0,
         "at": "2026-11-11T21:00:00+00:00",
@@ -342,10 +342,10 @@
       },
       "record_last_session": "2026-11-11",
       "record_start": "2026-10-19",
-      "sessions": 18,
+      "sessions": 19,
       "slug": "rvb-dd-def",
-      "stale": true,
-      "stale_since": "2026-11-10",
+      "stale": false,
+      "stale_since": null,
       "tagline_en": "Selected to limit drawdown",
       "tagline_fr": "Sélectionné pour limiter le drawdown"
     },
@@ -386,15 +386,7 @@
       "label": "RVB-SR-STAB",
       "last_session": "2026-11-11",
       "latest_detail_session": "2026-11-10",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-11T21:00:00+00:00",
-        "cumulative_return": 0.004951690078103255,
-        "equity": 992979.58,
-        "marked": false,
-        "session_date": "2026-11-11",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_sharpe/analytics.json",
         "attributed": "books/best_sharpe/attributed.csv",
@@ -476,7 +468,7 @@
     }
   ],
   "chain": {
-    "entries": 147,
+    "entries": 148,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -564,7 +556,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-11T23:20:03+00:00",
+  "published_at": "2026-11-11T23:40:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
