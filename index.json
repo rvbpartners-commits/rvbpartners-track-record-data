@@ -169,7 +169,15 @@
       "label": "RVB-BLEND-CORE",
       "last_session": "2026-11-11",
       "latest_detail_session": "2026-11-10",
-      "live": null,
+      "live": {
+        "adj_factor": 1.0,
+        "at": "2026-11-12T17:10:00+00:00",
+        "cumulative_return": 0.0029956809390077055,
+        "equity": 993794.68,
+        "marked": false,
+        "session_date": "2026-11-12",
+        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
+      },
       "paths": {
         "analytics": "books/best_composite/analytics.json",
         "attributed": "books/best_composite/attributed.csv",
@@ -516,7 +524,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-12T16:55:03+00:00",
+  "published_at": "2026-11-12T17:10:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
