@@ -163,12 +163,12 @@
           "weight": 0.81868
         }
       ],
-      "cumulative_return": 0.0037245774860599212,
+      "cumulative_return": 0.0003425625039814584,
       "inception": "2026-10-16",
       "initial_capital": 990826.48,
       "label": "RVB-BLEND-CORE",
-      "last_session": "2026-11-11",
-      "latest_detail_session": "2026-11-10",
+      "last_session": "2026-11-12",
+      "latest_detail_session": "2026-11-11",
       "live": null,
       "paths": {
         "analytics": "books/best_composite/analytics.json",
@@ -184,10 +184,10 @@
       },
       "record_last_session": "2026-11-12",
       "record_start": "2026-10-19",
-      "sessions": 19,
+      "sessions": 20,
       "slug": "rvb-blend-core",
-      "stale": true,
-      "stale_since": "2026-11-11",
+      "stale": false,
+      "stale_since": null,
       "tagline_en": "Balanced across all three objectives",
       "tagline_fr": "Équilibré sur les trois objectifs"
     },
@@ -287,15 +287,7 @@
       "label": "RVB-DD-DEF",
       "last_session": "2026-11-12",
       "latest_detail_session": "2026-11-11",
-      "live": {
-        "adj_factor": 1.0,
-        "at": "2026-11-12T21:00:00+00:00",
-        "cumulative_return": 0.002795666909938488,
-        "equity": 999435.79,
-        "marked": false,
-        "session_date": "2026-11-12",
-        "source": "alpaca portfolio history, 5-minute — the latest reading, not an after-close mark: it is not chained evidence and can still move"
-      },
+      "live": null,
       "paths": {
         "analytics": "books/best_mdd/analytics.json",
         "attributed": "books/best_mdd/attributed.csv",
@@ -436,7 +428,7 @@
     }
   ],
   "chain": {
-    "entries": 154,
+    "entries": 155,
     "file": "CHAIN.jsonl"
   },
   "detail_lag_days": 0,
@@ -524,7 +516,7 @@
     }
   ],
   "min_sessions_for_annualised": 60,
-  "published_at": "2026-11-13T00:00:04+00:00",
+  "published_at": "2026-11-13T00:05:03+00:00",
   "publisher": "RVB Partners live track record",
   "schema": "rvb.track-record.index/1"
 }
